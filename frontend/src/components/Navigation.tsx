@@ -45,13 +45,28 @@ const Navigation: React.FC = () => {
         </Link>
       </div>
       
+      {/* Desktop Menu */}
       <Menu
         theme="dark"
         mode="horizontal"
         selectedKeys={[location.pathname]}
         items={menuItems}
-        className="nav-menu"
+        className="nav-menu desktop-menu"
       />
+      
+      {/* Mobile Menu */}
+      <div className="mobile-menu">
+        {navItems.map(item => (
+          <Link
+            key={item.path}
+            to={item.path}
+            className={`mobile-nav-item ${location.pathname === item.path ? 'active' : ''}`}
+          >
+            {item.icon}
+            <span className="mobile-nav-label">{item.label}</span>
+          </Link>
+        ))}
+      </div>
     </Header>
   );
 };

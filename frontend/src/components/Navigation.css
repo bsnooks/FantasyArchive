@@ -42,14 +42,15 @@
   white-space: nowrap;
 }
 
-/* Ant Design Menu overrides */
-.nav-menu {
+/* Ant Design Menu overrides - Desktop */
+.nav-menu.desktop-menu {
   background: transparent !important;
   border-bottom: none !important;
   line-height: 62px !important;
+  display: flex; /* Show desktop menu by default, no !important so media query can override */
 }
 
-.nav-menu .ant-menu-item {
+.nav-menu.desktop-menu .ant-menu-item {
   border-bottom: 2px solid transparent !important;
   margin: 0 8px !important;
   padding: 0 16px !important;
@@ -57,29 +58,71 @@
   font-weight: 500 !important;
 }
 
-.nav-menu .ant-menu-item:hover {
+.nav-menu.desktop-menu .ant-menu-item:hover {
   color: white !important;
   border-bottom-color: rgba(255, 255, 255, 0.3) !important;
   background: rgba(255, 255, 255, 0.1) !important;
 }
 
-.nav-menu .ant-menu-item-selected {
+.nav-menu.desktop-menu .ant-menu-item-selected {
   color: white !important;
   border-bottom-color: white !important;
   background: rgba(255, 255, 255, 0.15) !important;
 }
 
-.nav-menu .ant-menu-item-selected::after {
+.nav-menu.desktop-menu .ant-menu-item-selected::after {
   border-bottom-color: white !important;
 }
 
-.nav-menu .ant-menu-item a {
+.nav-menu.desktop-menu .ant-menu-item a {
   color: inherit !important;
 }
 
-.nav-menu .anticon {
+.nav-menu.desktop-menu .anticon {
   margin-right: 8px !important;
   font-size: 16px !important;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  align-items: center;
+  gap: 4px;
+}
+
+.mobile-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 6px;
+  border-radius: 4px;
+  text-decoration: none !important;
+  color: #b8c6db !important;
+  transition: all 0.2s ease;
+  min-height: 48px;
+  min-width: 48px;
+}
+
+.mobile-nav-item:hover {
+  color: white !important;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav-item.active {
+  color: white !important;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.mobile-nav-item .anticon {
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+
+.mobile-nav-label {
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {
@@ -95,17 +138,14 @@
     height: 32px;
   }
   
-  .nav-menu .ant-menu-item {
-    margin: 0 4px !important;
-    padding: 0 8px !important;
+  /* Hide desktop menu on mobile */
+  .nav-menu.desktop-menu {
+    display: none !important;
   }
   
-  .nav-menu .ant-menu-item span:last-child {
-    display: none;
-  }
-  
-  .nav-menu .anticon {
-    margin-right: 0 !important;
+  /* Show mobile menu */
+  .mobile-menu {
+    display: flex !important;
   }
 }
 
@@ -118,8 +158,20 @@
     height: 28px;
   }
   
-  .nav-menu .ant-menu-item {
-    margin: 0 2px !important;
-    padding: 0 6px !important;
+  .mobile-menu {
+    gap: 2px;
+  }
+  
+  .mobile-nav-item {
+    padding: 6px 4px;
+    min-width: 44px;
+  }
+  
+  .mobile-nav-item .anticon {
+    font-size: 16px;
+  }
+  
+  .mobile-nav-label {
+    font-size: 9px;
   }
 }
