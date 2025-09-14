@@ -1,0 +1,77 @@
+.franchise-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+}
+
+.franchise-logo.small {
+  width: 24px;
+  height: 24px;
+}
+
+.franchise-logo.medium {
+  width: 40px;
+  height: 40px;
+}
+
+.franchise-logo.large {
+  width: 60px;
+  height: 60px;
+}
+
+.franchise-logo.xlarge {
+  width: 100px;
+  height: 100px;
+}
+
+.logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.logo-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: bold;
+}
+
+.franchise-logo.small .logo-initials {
+  font-size: 0.6rem;
+}
+
+.franchise-logo.medium .logo-initials {
+  font-size: 0.8rem;
+}
+
+.franchise-logo.large .logo-initials {
+  font-size: 1.2rem;
+}
+
+.franchise-logo.xlarge .logo-initials {
+  font-size: 2rem;
+}
+
+/* Variations for different contexts */
+.franchise-logo.rounded {
+  border-radius: 50%;
+}
+
+.franchise-logo.shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.franchise-logo.border {
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}

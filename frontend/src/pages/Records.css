@@ -1,0 +1,273 @@
+.records-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.records-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.records-header h1 {
+  font-size: 2.5rem;
+  color: #1a2b4c;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.records-subtitle {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+.records-content {
+  width: 100%;
+}
+
+.records-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 2rem;
+}
+
+.record-group {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.record-group:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.record-group-header {
+  background: linear-gradient(135deg, #1a2b4c 0%, #2c4268 100%);
+  color: white;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.record-icon {
+  font-size: 1.5rem;
+}
+
+.record-icon.trophy {
+  color: #ffc107;
+}
+
+.record-icon.positive {
+  color: #28a745;
+}
+
+.record-icon.negative {
+  color: #dc3545;
+}
+
+.record-group-title {
+  flex: 1;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.record-type {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.record-type.positive {
+  background: rgba(40, 167, 69, 0.2);
+}
+
+.record-type.negative {
+  background: rgba(220, 53, 69, 0.2);
+}
+
+.record-list {
+  padding: 0;
+}
+
+.record-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+  position: relative;
+}
+
+.record-item:last-child {
+  border-bottom: none;
+}
+
+.record-item:hover {
+  background-color: #f8f9fa;
+}
+
+.record-item.rank-1 {
+  background: linear-gradient(90deg, rgba(255, 215, 0, 0.1) 0%, transparent 100%);
+}
+
+.record-item.rank-2 {
+  background: linear-gradient(90deg, rgba(192, 192, 192, 0.1) 0%, transparent 100%);
+}
+
+.record-item.rank-3 {
+  background: linear-gradient(90deg, rgba(205, 127, 50, 0.1) 0%, transparent 100%);
+}
+
+.record-rank {
+  background: #1a2b4c;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.rank-1 .record-rank {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4a 100%);
+  color: #856404;
+}
+
+.rank-2 .record-rank {
+  background: linear-gradient(135deg, #c0c0c0 0%, #e2e8f0 100%);
+  color: #495057;
+}
+
+.rank-3 .record-rank {
+  background: linear-gradient(135deg, #cd7f32 0%, #d4834e 100%);
+  color: white;
+}
+
+.record-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.record-franchise {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.record-franchise-logo {
+  flex-shrink: 0;
+}
+
+.record-franchise-link {
+  font-weight: 600;
+  color: #1a2b4c;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.record-franchise-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.record-player {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.player-name {
+  font-weight: 600;
+  color: #1a2b4c;
+}
+
+.player-position {
+  background: #e9ecef;
+  color: #495057;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.record-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #28a745;
+  font-family: 'Monaco', 'Consolas', monospace;
+}
+
+.record-context {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.record-year-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.record-year-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.record-week {
+  color: #868e96;
+}
+
+.record-medal {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  flex-shrink: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .records-page {
+    padding: 1rem;
+  }
+  
+  .records-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .records-header h1 {
+    font-size: 2rem;
+  }
+  
+  .record-group-header {
+    padding: 1rem;
+  }
+  
+  .record-item {
+    padding: 0.75rem 1rem;
+  }
+  
+  .record-content {
+    gap: 0.25rem;
+  }
+}

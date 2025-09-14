@@ -1,0 +1,97 @@
+.landing-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.landing-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.recent-seasons {
+  margin-top: 3rem;
+}
+
+.seasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.season-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.season-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-decoration: none;
+  color: inherit;
+}
+
+.season-year {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1a2b4c;
+  margin-bottom: 0.5rem;
+}
+
+.season-name {
+  color: #6c757d;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.season-champion {
+  color: #d4a615;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.season-status {
+  color: #868e96;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.view-all-seasons {
+  text-align: center;
+}
+
+.view-all-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #1a2b4c;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.view-all-link:hover {
+  background: #2c4a7a;
+  text-decoration: none;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .landing-page {
+    padding: 1rem;
+  }
+  
+  .seasons-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}

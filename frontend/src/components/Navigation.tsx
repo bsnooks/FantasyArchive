@@ -1,0 +1,59 @@
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Layout, Menu } from 'antd';
+import { 
+  HomeOutlined, 
+  CalendarOutlined, 
+  TeamOutlined, 
+  TrophyOutlined 
+} from '@ant-design/icons';
+import type { MenuProps } from 'antd';
+import './Navigation.css';
+
+const { Header } = Layout;
+
+const Navigation: React.FC = () => {
+  const location = useLocation();
+
+  const navItems = [
+    { path: '/', label: 'Home', icon: <HomeOutlined /> },
+    { path: '/records', label: 'Records', icon: <TrophyOutlined /> },
+    { path: '/seasons', label: 'Seasons', icon: <CalendarOutlined /> },
+    { path: '/franchises', label: 'Franchises', icon: <TeamOutlined /> },
+  ];
+
+  const menuItems: MenuProps['items'] = navItems.map(item => ({
+    key: item.path,
+    icon: item.icon,
+    label: (
+      <Link to={item.path} style={{ textDecoration: 'none' }}>
+        {item.label}
+      </Link>
+    ),
+  }));
+
+  return (
+    <Header className="main-navigation">
+      <div className="nav-brand">
+        <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+          <img 
+            src="/logo_white.png" 
+            alt="Gibsons League" 
+            className="nav-brand-logo"
+          />
+          <span className="nav-brand-text">Gibsons League</span>
+        </Link>
+      </div>
+      
+      <Menu
+        theme="dark"
+        mode="horizontal"
+        selectedKeys={[location.pathname]}
+        items={menuItems}
+        className="nav-menu"
+      />
+    </Header>
+  );
+};
+
+export default Navigation;

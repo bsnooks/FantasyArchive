@@ -1,0 +1,16 @@
+.seasons-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.seasons-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .seasons-page {
+    padding: 1rem;
+  }
+}

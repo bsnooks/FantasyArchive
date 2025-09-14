@@ -1,0 +1,436 @@
+.franchise-detail {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.franchise-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  gap: 2rem;
+}
+
+.franchise-logo-header {
+  flex-shrink: 0;
+}
+
+.franchise-info h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1a2b4c;
+  margin-bottom: 0.5rem;
+  font-family: 'Georgia', serif;
+}
+
+.current-owner {
+  font-size: 1.1rem;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+.historical-owners {
+  font-size: 0.95rem;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+.established {
+  font-size: 0.95rem;
+  color: #6c757d;
+}
+
+.franchise-content {
+  display: grid;
+  gap: 2rem;
+}
+
+.all-time-roster {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.all-time-roster h2 {
+  font-size: 1.8rem;
+  color: #1a2b4c;
+  margin-bottom: 1rem;
+  font-family: 'Georgia', serif;
+}
+
+.roster-note {
+  background: #f8f9fa;
+  border-left: 4px solid #007bff;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.roster-note p {
+  margin: 0 0 0.5rem 0;
+  color: #495057;
+}
+
+.roster-note p:last-child {
+  margin-bottom: 0;
+  font-weight: 600;
+  color: #007bff;
+}
+
+.position-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.position-group {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.position-group h3 {
+  font-size: 1.2rem;
+  color: #1a2b4c;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.position-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.position-header h3 {
+  margin-bottom: 0;
+}
+
+.position-total-ppg {
+  background: #e3f2fd;
+  color: #1565c0;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.player-slots {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.player-slot {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  color: #6c757d;
+  font-style: italic;
+  transition: all 0.3s ease;
+}
+
+.player-slot.filled {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 1px solid #dee2e6;
+  color: #495057;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.player-slot.filled:hover {
+  background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.player-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.player-position {
+  background: #1a2b4c;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  min-width: 3rem;
+  text-align: center;
+}
+
+.player-content {
+  flex: 1;
+}
+
+.player-stats-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.player-rank {
+  background: #1a2b4c;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  min-width: 2.5rem;
+  text-align: center;
+}
+
+/* Bench player styling */
+.player-slot.bench {
+  background: linear-gradient(135deg, #f1f3f4 0%, #e8eaed 100%);
+  border: 1px solid #dadce0;
+  opacity: 0.85;
+}
+
+.player-slot.bench .player-position {
+  background: #dc3545;
+  color: white;
+}
+
+.player-slot.bench .player-name {
+  color: #5f6368;
+}
+
+.player-slot.bench:hover {
+  background: linear-gradient(135deg, #e8eaed 0%, #dadce0 100%);
+}
+
+.player-name {
+  font-weight: 600;
+  color: #1a2b4c;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.player-stats {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-right: 1rem;
+}
+
+.player-stats .stat-number {
+  font-family: 'Monaco', 'Consolas', monospace;
+  font-weight: 600;
+}
+
+.player-ppg {
+  font-size: 0.9rem;
+  color: #28a745;
+  font-weight: 600;
+  font-family: 'Monaco', 'Consolas', monospace;
+}
+
+.player-seasons {
+  font-size: 0.8rem;
+  color: #868e96;
+  line-height: 1.2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.season-tag {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 0.1rem 0.4rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  color: #495057;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  line-height: 1;
+}
+
+.season-tag.champion {
+  background: #fff3cd;
+  border-color: #ffeaa7;
+  color: #856404;
+}
+
+.season-tag.second-place {
+  background: #6c757d;
+  border-color: #5a6268;
+  color: white;
+}
+
+.season-tag .trophy-icon {
+  color: #ffc107;
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+.season-tag .trophy-icon.silver {
+  color: white;
+}
+
+.season-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.trophy-icon {
+  color: #ffc107;
+  font-size: 0.75rem;
+  vertical-align: middle;
+}
+
+.franchise-history {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.franchise-history h2 {
+  font-size: 1.8rem;
+  color: #1a2b4c;
+  margin-bottom: 1.5rem;
+  font-family: 'Georgia', serif;
+}
+
+.seasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.season-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.season-card-link:hover {
+  text-decoration: none;
+  color: inherit;
+  transform: translateY(-2px);
+}
+
+.season-card-link:hover .season-card {
+  background: #e9ecef;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.season-card {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.season-year {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #1a2b4c;
+  margin-bottom: 0.5rem;
+}
+
+.team-name {
+  font-size: 1rem;
+  color: #495057;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.season-record {
+  font-family: 'Monaco', 'Consolas', monospace;
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+.season-standing {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+.season-points {
+  font-family: 'Monaco', 'Consolas', monospace;
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 0.75rem;
+}
+
+.achievement {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.achievement.champion {
+  background: #fff3cd;
+  color: #856404;
+  border-left-color: #ffc107;
+}
+
+.achievement.second {
+  background: #e2e3e5;
+  color: #495057;
+  border-left-color: #6c757d;
+}
+
+.season-card:has(.achievement.champion) {
+  border-left-color: #ffc107;
+}
+
+.season-card:has(.achievement.second) {
+  border-left-color: #6c757d;
+}
+
+@media (max-width: 768px) {
+  .franchise-detail {
+    padding: 1rem;
+  }
+  
+  .franchise-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  .franchise-color-large {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .franchise-info h1 {
+    font-size: 2rem;
+  }
+  
+  .position-groups {
+    grid-template-columns: 1fr;
+  }
+  
+  .seasons-grid {
+    grid-template-columns: 1fr;
+  }
+}

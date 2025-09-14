@@ -1,0 +1,109 @@
+/* Sticky navigation */
+.main-navigation {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+  background: #1a2b4c !important;
+  padding: 0 2rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  height: 64px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
+  border-bottom: none !important;
+}
+
+/* Brand section with logo */
+.nav-brand {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-brand a {
+  display: flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  color: white !important;
+  font-weight: 600 !important;
+  font-size: 1.3rem !important;
+  gap: 12px !important;
+}
+
+.nav-brand-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.nav-brand-text {
+  font-family: 'Georgia', serif;
+  color: white !important;
+}
+
+/* Ant Design Menu overrides */
+.nav-menu {
+  background: transparent !important;
+  border-bottom: none !important;
+  line-height: 62px !important;
+}
+
+.nav-menu .ant-menu-item {
+  border-bottom: 2px solid transparent !important;
+  margin: 0 8px !important;
+  padding: 0 16px !important;
+  color: #b8c6db !important;
+  font-weight: 500 !important;
+}
+
+.nav-menu .ant-menu-item:hover {
+  color: white !important;
+  border-bottom-color: rgba(255, 255, 255, 0.3) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.nav-menu .ant-menu-item-selected {
+  color: white !important;
+  border-bottom-color: white !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+.nav-menu .ant-menu-item-selected::after {
+  border-bottom-color: white !important;
+}
+
+.nav-menu .ant-menu-item a {
+  color: inherit !important;
+}
+
+.nav-menu .anticon {
+  margin-right: 8px !important;
+  font-size: 16px !important;
+}
+
+@media (max-width: 768px) {
+  .main-navigation {
+    padding: 0 1rem !important;
+  }
+  
+  .nav-brand-text {
+    font-size: 1.1rem !important;
+  }
+  
+  .nav-brand-logo {
+    height: 32px;
+  }
+  
+  .nav-menu .ant-menu-item {
+    margin: 0 4px !important;
+    padding: 0 8px !important;
+  }
+  
+  .nav-menu .ant-menu-item span:last-child {
+    display: none;
+  }
+  
+  .nav-menu .anticon {
+    margin-right: 0 !important;
+  }
+}
