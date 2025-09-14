@@ -1,0 +1,488 @@
+{
+  "Id": "f5908944-6efd-40eb-af54-6c53004e0e2f",
+  "Name": "Mad Guys",
+  "Owner": "Dave",
+  "Owners": [
+    "Ben",
+    "Dave",
+    "Justin"
+  ],
+  "EstablishedDate": "2002-08-01T00:00:00",
+  "IsActive": true,
+  "Color": "#ec008c",
+  "Teams": [
+    {
+      "Id": "62d5445a-ff1a-4150-9ed3-63d64f472b3e",
+      "Year": 2002,
+      "TeamName": "betterthanandrew",
+      "Wins": 5,
+      "Losses": 6,
+      "Ties": 1,
+      "Points": 1039,
+      "Standing": 7,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "792c71c4-5105-4c5c-a157-964d86f62db2",
+      "Year": 2003,
+      "TeamName": "Bens blind artists",
+      "Wins": 4,
+      "Losses": 9,
+      "Ties": 1,
+      "Points": 1078,
+      "Standing": 8,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "17295e01-dc3c-4174-b54c-424d739e2f22",
+      "Year": 2004,
+      "TeamName": "baileylynch",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1347,
+      "Standing": 4,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "e6ab46e9-dacb-4363-9f87-e58b511a1625",
+      "Year": 2005,
+      "TeamName": "All Madden 2005",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1383,
+      "Standing": 6,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "38da2548-5cb1-4744-a40d-15de928a5b56",
+      "Year": 2006,
+      "TeamName": "Rod_Smith",
+      "Wins": 5,
+      "Losses": 9,
+      "Ties": 0,
+      "Points": 1395.5,
+      "Standing": 8,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "568dc04c-9468-4c81-8826-7317bc6c762e",
+      "Year": 2007,
+      "TeamName": "Wes Welker ismy team",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1463.4,
+      "Standing": 9,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "b3b61e3e-3c33-4122-a1fa-7f30dbc06686",
+      "Year": 2008,
+      "TeamName": "Lesnar\u0027s bodygaurd",
+      "Wins": 5,
+      "Losses": 9,
+      "Ties": 0,
+      "Points": 1449.02,
+      "Standing": 8,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "6bead162-0796-4496-b74f-5a8e40ab9318",
+      "Year": 2009,
+      "TeamName": "Detroit Lions",
+      "Wins": 5,
+      "Losses": 9,
+      "Ties": 0,
+      "Points": 1442.0200000000002,
+      "Standing": 9,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "8fbde06c-39ba-4440-aff2-55d03f0e0572",
+      "Year": 2010,
+      "TeamName": "The Book of Tebow",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1506.5800000000002,
+      "Standing": 4,
+      "Champion": true,
+      "SecondPlace": false
+    },
+    {
+      "Id": "520279a2-0d7b-49ca-8b14-28c5d2a99bfd",
+      "Year": 2011,
+      "TeamName": "Tebowner",
+      "Wins": 8,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1570.58,
+      "Standing": 5,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "e74c2eb7-5713-4231-afd0-1ebe58e4f33a",
+      "Year": 2012,
+      "TeamName": "Joe Buck Yourself",
+      "Wins": 5,
+      "Losses": 9,
+      "Ties": 0,
+      "Points": 1480.54,
+      "Standing": 9,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "99fa5b02-c4f2-4910-b196-6acc9113025c",
+      "Year": 2013,
+      "TeamName": "Team Name",
+      "Wins": 8,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1586.76,
+      "Standing": 3,
+      "Champion": false,
+      "SecondPlace": true
+    },
+    {
+      "Id": "17843092-a61e-4d0f-928f-a03ef85d6945",
+      "Year": 2014,
+      "TeamName": "Team Name",
+      "Wins": 4,
+      "Losses": 10,
+      "Ties": 0,
+      "Points": 1491.82,
+      "Standing": 8,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "417cdec1-c9fe-4dbf-b6e0-11c5c6a64017",
+      "Year": 2015,
+      "TeamName": "Team Name",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1518.5800000000002,
+      "Standing": 7,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "525afb8d-2048-404c-88d1-894a97f28c15",
+      "Year": 2016,
+      "TeamName": "Team Name",
+      "Wins": 4,
+      "Losses": 10,
+      "Ties": 0,
+      "Points": 1349.88,
+      "Standing": 10,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "21d11caf-b7bc-4faf-b87a-6bc213873c50",
+      "Year": 2017,
+      "TeamName": "Team Name",
+      "Wins": 5,
+      "Losses": 9,
+      "Ties": 0,
+      "Points": 1478.1799999999998,
+      "Standing": 10,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "7a2bdb71-f06b-49b6-881e-78cae3fe1537",
+      "Year": 2018,
+      "TeamName": "Steel Curtain",
+      "Wins": 9,
+      "Losses": 5,
+      "Ties": 0,
+      "Points": 1764.3199999999997,
+      "Standing": 2,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "67ea99e9-f341-4866-8f37-4420c561d04d",
+      "Year": 2019,
+      "TeamName": "Steel Curtain",
+      "Wins": 4,
+      "Losses": 10,
+      "Ties": 0,
+      "Points": 1418.6799999999998,
+      "Standing": 9,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "ea305fbf-1e33-4f2e-b91a-5934bef1bb5e",
+      "Year": 2020,
+      "TeamName": "The Mad Guys",
+      "Wins": 2,
+      "Losses": 12,
+      "Ties": 0,
+      "Points": 1320.72,
+      "Standing": 10,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "9ab422fd-0070-47c6-8d23-4fa918e0b1a9",
+      "Year": 2021,
+      "TeamName": "The Mad Guys",
+      "Wins": 3,
+      "Losses": 12,
+      "Ties": 0,
+      "Points": 1528.6,
+      "Standing": 10,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "eac58fc1-f12a-4174-b28c-de58cd4e1198",
+      "Year": 2022,
+      "TeamName": "The Mad Guys",
+      "Wins": 8,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1698.94,
+      "Standing": 5,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "0e2019ac-a5cb-4114-b82d-84e8f2563cc5",
+      "Year": 2023,
+      "TeamName": "The Mad Guys",
+      "Wins": 8,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1667.08,
+      "Standing": 6,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "7ff7a79c-2781-4316-a7e0-27cac75cdc6c",
+      "Year": 2024,
+      "TeamName": "The Mad Guys",
+      "Wins": 9,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1717.54,
+      "Standing": 6,
+      "Champion": false,
+      "SecondPlace": false
+    }
+  ],
+  "AllTimeRoster": {
+    "Quarterbacks": [
+      {
+        "PlayerId": 32671,
+        "PlayerName": "Joe Burrow",
+        "Position": "QB",
+        "TotalPoints": 1325.6,
+        "WeeksStarted": 72,
+        "AveragePoints": 18.4,
+        "SeasonsWithFranchise": [
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 6763,
+        "PlayerName": "Philip Rivers",
+        "Position": "QB",
+        "TotalPoints": 1078.0,
+        "WeeksStarted": 60,
+        "AveragePoints": 18.0,
+        "SeasonsWithFranchise": [
+          2008,
+          2009,
+          2010,
+          2011
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 25718,
+        "PlayerName": "Ryan Tannehill",
+        "Position": "QB",
+        "TotalPoints": 913.3,
+        "WeeksStarted": 54,
+        "AveragePoints": 16.9,
+        "SeasonsWithFranchise": [
+          2013,
+          2014,
+          2015,
+          2016,
+          2022
+        ],
+        "IsBench": true
+      }
+    ],
+    "RunningBacks": [
+      {
+        "PlayerId": 5937,
+        "PlayerName": "Clinton Portis",
+        "Position": "RB",
+        "TotalPoints": 971.4,
+        "WeeksStarted": 84,
+        "AveragePoints": 11.6,
+        "SeasonsWithFranchise": [
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 30972,
+        "PlayerName": "Saquon Barkley",
+        "Position": "RB",
+        "TotalPoints": 871.1,
+        "WeeksStarted": 81,
+        "AveragePoints": 10.8,
+        "SeasonsWithFranchise": [
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 9317,
+        "PlayerName": "LeSean McCoy",
+        "Position": "RB",
+        "TotalPoints": 337.9,
+        "WeeksStarted": 25,
+        "AveragePoints": 13.5,
+        "SeasonsWithFranchise": [
+          2012,
+          2017
+        ],
+        "IsBench": true
+      }
+    ],
+    "WideReceivers": [
+      {
+        "PlayerId": 29399,
+        "PlayerName": "Tyreek Hill",
+        "Position": "WR",
+        "TotalPoints": 1480.0,
+        "WeeksStarted": 117,
+        "AveragePoints": 12.6,
+        "SeasonsWithFranchise": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 7027,
+        "PlayerName": "Wes Welker",
+        "Position": "WR",
+        "TotalPoints": 631.1,
+        "WeeksStarted": 57,
+        "AveragePoints": 11.1,
+        "SeasonsWithFranchise": [
+          2007,
+          2008,
+          2011,
+          2012
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 25755,
+        "PlayerName": "Alshon Jeffery",
+        "Position": "WR",
+        "TotalPoints": 489.5,
+        "WeeksStarted": 44,
+        "AveragePoints": 11.1,
+        "SeasonsWithFranchise": [
+          2013,
+          2014,
+          2015,
+          2016,
+          2018
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 4262,
+        "PlayerName": "Randy Moss",
+        "Position": "WR",
+        "TotalPoints": 470.5,
+        "WeeksStarted": 55,
+        "AveragePoints": 8.6,
+        "SeasonsWithFranchise": [
+          2002,
+          2003,
+          2008,
+          2009,
+          2010
+        ],
+        "IsBench": true
+      }
+    ],
+    "TightEnds": [
+      {
+        "PlayerId": 24916,
+        "PlayerName": "Julius Thomas",
+        "Position": "TE",
+        "TotalPoints": 254.5,
+        "WeeksStarted": 26,
+        "AveragePoints": 9.8,
+        "SeasonsWithFranchise": [
+          2013,
+          2014
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 24070,
+        "PlayerName": "Jimmy Graham",
+        "Position": "TE",
+        "TotalPoints": 181.3,
+        "WeeksStarted": 15,
+        "AveragePoints": 12.1,
+        "SeasonsWithFranchise": [
+          2011
+        ],
+        "IsBench": true
+      }
+    ]
+  }
+}

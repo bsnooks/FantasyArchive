@@ -1,0 +1,170 @@
+[
+  {
+    "RecordTitle": "Championship Years",
+    "PositiveRecord": true,
+    "RecordType": "Franchise",
+    "Records": [
+      {
+        "Rank": 1,
+        "FranchiseId": "f5908944-6efd-40eb-af54-6c53004e0e2f",
+        "FranchiseName": "Mad Guys",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerId": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "2010 (7-7, 1506.6 pts)",
+        "RecordNumericValue": 2010,
+        "Year": 2010,
+        "Week": null
+      }
+    ]
+  },
+  {
+    "RecordTitle": "Best Seasons",
+    "PositiveRecord": true,
+    "RecordType": "Franchise",
+    "Records": [
+      {
+        "Rank": 1,
+        "FranchiseId": "f5908944-6efd-40eb-af54-6c53004e0e2f",
+        "FranchiseName": "Mad Guys",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerId": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "2018: 9-5 (1764.3 pts)",
+        "RecordNumericValue": 9,
+        "Year": 2018,
+        "Week": null
+      },
+      {
+        "Rank": 2,
+        "FranchiseId": "f5908944-6efd-40eb-af54-6c53004e0e2f",
+        "FranchiseName": "Mad Guys",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerId": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "2024: 9-6 (1717.5 pts)",
+        "RecordNumericValue": 9,
+        "Year": 2024,
+        "Week": null
+      },
+      {
+        "Rank": 3,
+        "FranchiseId": "f5908944-6efd-40eb-af54-6c53004e0e2f",
+        "FranchiseName": "Mad Guys",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerId": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "2022: 8-7 (1698.9 pts)",
+        "RecordNumericValue": 8,
+        "Year": 2022,
+        "Week": null
+      },
+      {
+        "Rank": 4,
+        "FranchiseId": "f5908944-6efd-40eb-af54-6c53004e0e2f",
+        "FranchiseName": "Mad Guys",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerId": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "2023: 8-7 (1667.1 pts)",
+        "RecordNumericValue": 8,
+        "Year": 2023,
+        "Week": null
+      },
+      {
+        "Rank": 5,
+        "FranchiseId": "f5908944-6efd-40eb-af54-6c53004e0e2f",
+        "FranchiseName": "Mad Guys",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerId": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "2013: 8-6 (1586.8 pts)",
+        "RecordNumericValue": 8,
+        "Year": 2013,
+        "Week": null
+      },
+      {
+        "Rank": 6,
+        "FranchiseId": "f5908944-6efd-40eb-af54-6c53004e0e2f",
+        "FranchiseName": "Mad Guys",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerId": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "2011: 8-6 (1570.6 pts)",
+        "RecordNumericValue": 8,
+        "Year": 2011,
+        "Week": null
+      },
+      {
+        "Rank": 7,
+        "FranchiseId": "f5908944-6efd-40eb-af54-6c53004e0e2f",
+        "FranchiseName": "Mad Guys",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerId": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "2010: 7-7 (1506.6 pts)",
+        "RecordNumericValue": 7,
+        "Year": 2010,
+        "Week": null
+      },
+      {
+        "Rank": 8,
+        "FranchiseId": "f5908944-6efd-40eb-af54-6c53004e0e2f",
+        "FranchiseName": "Mad Guys",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerId": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "2005: 7-7 (1383.0 pts)",
+        "RecordNumericValue": 7,
+        "Year": 2005,
+        "Week": null
+      },
+      {
+        "Rank": 9,
+        "FranchiseId": "f5908944-6efd-40eb-af54-6c53004e0e2f",
+        "FranchiseName": "Mad Guys",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerId": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "2004: 7-7 (1347.0 pts)",
+        "RecordNumericValue": 7,
+        "Year": 2004,
+        "Week": null
+      },
+      {
+        "Rank": 10,
+        "FranchiseId": "f5908944-6efd-40eb-af54-6c53004e0e2f",
+        "FranchiseName": "Mad Guys",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerId": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "2015: 6-8 (1518.6 pts)",
+        "RecordNumericValue": 6,
+        "Year": 2015,
+        "Week": null
+      }
+    ]
+  }
+]

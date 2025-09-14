@@ -1,0 +1,498 @@
+{
+  "Id": "f483ecf1-cd17-4991-854b-e52dfc957b45",
+  "Name": "FB in the Groin",
+  "Owner": "Dan",
+  "Owners": [
+    "Dan",
+    "Sara",
+    "Scott"
+  ],
+  "EstablishedDate": "2002-08-01T00:00:00",
+  "IsActive": true,
+  "Color": "#bad80a",
+  "Teams": [
+    {
+      "Id": "31a9a8dd-f850-4727-9a5f-4d71ffe4a579",
+      "Year": 2002,
+      "TeamName": "Sarent",
+      "Wins": 6,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 977.5,
+      "Standing": 6,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "c421ba13-ec91-4030-8e88-d8c5e21559eb",
+      "Year": 2003,
+      "TeamName": "silver92scooty",
+      "Wins": 3,
+      "Losses": 11,
+      "Ties": 0,
+      "Points": 1264.5,
+      "Standing": 10,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "8eb376bb-e142-477c-90c7-a4e7c1302f63",
+      "Year": 2004,
+      "TeamName": "ifyoucanwalkandtalk",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1417,
+      "Standing": 6,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "bf91fff7-3a31-4eb0-a19a-fd066c76ca58",
+      "Year": 2005,
+      "TeamName": "balero_boyz",
+      "Wins": 4,
+      "Losses": 10,
+      "Ties": 0,
+      "Points": 1267,
+      "Standing": 8,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "8c32d580-58b9-4ed3-9723-303f6036b1fb",
+      "Year": 2006,
+      "TeamName": "Gibson\u0027s Team",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1371,
+      "Standing": 6,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "e4680116-b65f-460b-9107-7bc193f93ca1",
+      "Year": 2007,
+      "TeamName": "Jamario Moon",
+      "Wins": 9,
+      "Losses": 5,
+      "Ties": 0,
+      "Points": 1514.3200000000002,
+      "Standing": 2,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "8fe6f618-4afc-470a-88a1-237dcd48fff6",
+      "Year": 2008,
+      "TeamName": "The Isaac Bruces",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1435.7600000000002,
+      "Standing": 7,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "21c491b4-485f-4a6a-b4f6-65f5f926d48e",
+      "Year": 2009,
+      "TeamName": "Kordell Stewart",
+      "Wins": 9,
+      "Losses": 5,
+      "Ties": 0,
+      "Points": 1540.76,
+      "Standing": 2,
+      "Champion": true,
+      "SecondPlace": false
+    },
+    {
+      "Id": "05e3d7fb-3e8b-480b-bb18-5c36b6e1a0c7",
+      "Year": 2010,
+      "TeamName": "\u002793 Jays",
+      "Wins": 10,
+      "Losses": 4,
+      "Ties": 0,
+      "Points": 1583.5200000000002,
+      "Standing": 2,
+      "Champion": false,
+      "SecondPlace": true
+    },
+    {
+      "Id": "744fb0dd-839e-4972-99a9-7a6e9975813b",
+      "Year": 2011,
+      "TeamName": "Island of Misfit QBs",
+      "Wins": 9,
+      "Losses": 5,
+      "Ties": 0,
+      "Points": 1640.96,
+      "Standing": 1,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "0f4ec41e-631b-4762-ba04-1bca26ae610e",
+      "Year": 2012,
+      "TeamName": "93 red",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1480.6799999999998,
+      "Standing": 7,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "ac37bae7-a4d1-4660-af7b-68e2bcfff280",
+      "Year": 2013,
+      "TeamName": "Gibson\u0027s Team",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1508.8799999999999,
+      "Standing": 8,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "63c8d277-abf6-4b37-852a-e7d56e1d312c",
+      "Year": 2014,
+      "TeamName": "Beats by Ray",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1608.0000000000002,
+      "Standing": 7,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "e1aac1fb-5add-40aa-b73c-724d75aed27d",
+      "Year": 2015,
+      "TeamName": "Beats by Ray",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1464.16,
+      "Standing": 8,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "c9538554-ac16-4d34-bf34-aa8b50927761",
+      "Year": 2016,
+      "TeamName": "George C Scott",
+      "Wins": 9,
+      "Losses": 5,
+      "Ties": 0,
+      "Points": 1639.08,
+      "Standing": 2,
+      "Champion": true,
+      "SecondPlace": false
+    },
+    {
+      "Id": "166d417c-e155-4306-8ded-2ddaff812d9f",
+      "Year": 2017,
+      "TeamName": "George C Scott",
+      "Wins": 9,
+      "Losses": 5,
+      "Ties": 0,
+      "Points": 1539.6,
+      "Standing": 1,
+      "Champion": false,
+      "SecondPlace": true
+    },
+    {
+      "Id": "6b523bae-34fc-4d30-b379-f003d8b20297",
+      "Year": 2018,
+      "TeamName": "FB in the Groin",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1650.8799999999999,
+      "Standing": 6,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "8617e871-2740-491e-8948-c686b8f15949",
+      "Year": 2019,
+      "TeamName": "FB in the Groin",
+      "Wins": 9,
+      "Losses": 5,
+      "Ties": 0,
+      "Points": 1736.48,
+      "Standing": 4,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "53a81a88-84a8-44b0-996b-4f777f6f8e5f",
+      "Year": 2020,
+      "TeamName": "FB in the Groin",
+      "Wins": 9,
+      "Losses": 5,
+      "Ties": 0,
+      "Points": 1606.2400000000002,
+      "Standing": 3,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "4118e212-45de-4e3d-a797-0dc1ff3a80eb",
+      "Year": 2021,
+      "TeamName": "FB in the Groin",
+      "Wins": 7,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1552.5,
+      "Standing": 6,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "98e74fbe-9500-4d1b-b398-f9a9e70289d2",
+      "Year": 2022,
+      "TeamName": "FB in the Groin",
+      "Wins": 6,
+      "Losses": 9,
+      "Ties": 0,
+      "Points": 1464.66,
+      "Standing": 9,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "7ee7d3e9-2f52-46d9-af1b-24d0bfa59531",
+      "Year": 2023,
+      "TeamName": "Football in the Groin",
+      "Wins": 7,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1603.96,
+      "Standing": 8,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "03110a8a-b946-4f88-8505-c5432b19de54",
+      "Year": 2024,
+      "TeamName": "Football in the Groin",
+      "Wins": 11,
+      "Losses": 4,
+      "Ties": 0,
+      "Points": 1772.44,
+      "Standing": 1,
+      "Champion": true,
+      "SecondPlace": false
+    }
+  ],
+  "AllTimeRoster": {
+    "Quarterbacks": [
+      {
+        "PlayerId": 25785,
+        "PlayerName": "Russell Wilson",
+        "Position": "QB",
+        "TotalPoints": 2742.0,
+        "WeeksStarted": 137,
+        "AveragePoints": 20.0,
+        "SeasonsWithFranchise": [
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 6763,
+        "PlayerName": "Philip Rivers",
+        "Position": "QB",
+        "TotalPoints": 1348.3,
+        "WeeksStarted": 82,
+        "AveragePoints": 16.4,
+        "SeasonsWithFranchise": [
+          2006,
+          2007,
+          2012,
+          2014,
+          2015,
+          2016,
+          2017
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 30125,
+        "PlayerName": "Deshaun Watson",
+        "Position": "QB",
+        "TotalPoints": 1145.3,
+        "WeeksStarted": 54,
+        "AveragePoints": 21.2,
+        "SeasonsWithFranchise": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "IsBench": true
+      }
+    ],
+    "RunningBacks": [
+      {
+        "PlayerId": 26671,
+        "PlayerName": "Le\u0027Veon Bell",
+        "Position": "RB",
+        "TotalPoints": 850.0,
+        "WeeksStarted": 47,
+        "AveragePoints": 18.1,
+        "SeasonsWithFranchise": [
+          2014,
+          2015,
+          2016,
+          2017
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 9317,
+        "PlayerName": "LeSean McCoy",
+        "Position": "RB",
+        "TotalPoints": 795.3,
+        "WeeksStarted": 49,
+        "AveragePoints": 16.2,
+        "SeasonsWithFranchise": [
+          2009,
+          2010,
+          2011,
+          2013
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 28474,
+        "PlayerName": "David Johnson",
+        "Position": "RB",
+        "TotalPoints": 689.0,
+        "WeeksStarted": 43,
+        "AveragePoints": 16.0,
+        "SeasonsWithFranchise": [
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2021
+        ],
+        "IsBench": true
+      }
+    ],
+    "WideReceivers": [
+      {
+        "PlayerId": 6339,
+        "PlayerName": "Andre Johnson",
+        "Position": "WR",
+        "TotalPoints": 1151.6,
+        "WeeksStarted": 105,
+        "AveragePoints": 11.0,
+        "SeasonsWithFranchise": [
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2013,
+          2014,
+          2015
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 32692,
+        "PlayerName": "Justin Jefferson",
+        "Position": "WR",
+        "TotalPoints": 654.9,
+        "WeeksStarted": 48,
+        "AveragePoints": 13.6,
+        "SeasonsWithFranchise": [
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 4323,
+        "PlayerName": "Hines Ward",
+        "Position": "WR",
+        "TotalPoints": 645.7,
+        "WeeksStarted": 75,
+        "AveragePoints": 8.6,
+        "SeasonsWithFranchise": [
+          2002,
+          2003,
+          2004,
+          2005,
+          2009,
+          2010
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 26699,
+        "PlayerName": "Keenan Allen",
+        "Position": "WR",
+        "TotalPoints": 452.2,
+        "WeeksStarted": 43,
+        "AveragePoints": 10.5,
+        "SeasonsWithFranchise": [
+          2017,
+          2018,
+          2019
+        ],
+        "IsBench": true
+      }
+    ],
+    "TightEnds": [
+      {
+        "PlayerId": 6663,
+        "PlayerName": "Antonio Gates",
+        "Position": "TE",
+        "TotalPoints": 341.5,
+        "WeeksStarted": 36,
+        "AveragePoints": 9.5,
+        "SeasonsWithFranchise": [
+          2004,
+          2005,
+          2011,
+          2015
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 30259,
+        "PlayerName": "George Kittle",
+        "Position": "TE",
+        "TotalPoints": 225.1,
+        "WeeksStarted": 28,
+        "AveragePoints": 8.0,
+        "SeasonsWithFranchise": [
+          2018,
+          2023
+        ],
+        "IsBench": true
+      }
+    ]
+  }
+}

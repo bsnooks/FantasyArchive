@@ -1,0 +1,170 @@
+[
+  {
+    "RecordTitle": "Championship Years",
+    "PositiveRecord": true,
+    "RecordType": "Franchise",
+    "Records": [
+      {
+        "Rank": 1,
+        "FranchiseId": "2feaf03e-fb22-498e-ac8f-e596b6ba7810",
+        "FranchiseName": "Balero Boyz",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerId": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "2004 (10-4, 1468.5 pts)",
+        "RecordNumericValue": 2004,
+        "Year": 2004,
+        "Week": null
+      }
+    ]
+  },
+  {
+    "RecordTitle": "Best Seasons",
+    "PositiveRecord": true,
+    "RecordType": "Franchise",
+    "Records": [
+      {
+        "Rank": 1,
+        "FranchiseId": "2feaf03e-fb22-498e-ac8f-e596b6ba7810",
+        "FranchiseName": "Balero Boyz",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerId": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "2004: 10-4 (1468.5 pts)",
+        "RecordNumericValue": 10,
+        "Year": 2004,
+        "Week": null
+      },
+      {
+        "Rank": 2,
+        "FranchiseId": "2feaf03e-fb22-498e-ac8f-e596b6ba7810",
+        "FranchiseName": "Balero Boyz",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerId": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "2014: 9-5 (1596.8 pts)",
+        "RecordNumericValue": 9,
+        "Year": 2014,
+        "Week": null
+      },
+      {
+        "Rank": 3,
+        "FranchiseId": "2feaf03e-fb22-498e-ac8f-e596b6ba7810",
+        "FranchiseName": "Balero Boyz",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerId": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "2023: 8-7 (1696.7 pts)",
+        "RecordNumericValue": 8,
+        "Year": 2023,
+        "Week": null
+      },
+      {
+        "Rank": 4,
+        "FranchiseId": "2feaf03e-fb22-498e-ac8f-e596b6ba7810",
+        "FranchiseName": "Balero Boyz",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerId": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "2020: 8-6 (1651.2 pts)",
+        "RecordNumericValue": 8,
+        "Year": 2020,
+        "Week": null
+      },
+      {
+        "Rank": 5,
+        "FranchiseId": "2feaf03e-fb22-498e-ac8f-e596b6ba7810",
+        "FranchiseName": "Balero Boyz",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerId": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "2017: 8-6 (1521.1 pts)",
+        "RecordNumericValue": 8,
+        "Year": 2017,
+        "Week": null
+      },
+      {
+        "Rank": 6,
+        "FranchiseId": "2feaf03e-fb22-498e-ac8f-e596b6ba7810",
+        "FranchiseName": "Balero Boyz",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerId": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "2005: 8-6 (1368.5 pts)",
+        "RecordNumericValue": 8,
+        "Year": 2005,
+        "Week": null
+      },
+      {
+        "Rank": 7,
+        "FranchiseId": "2feaf03e-fb22-498e-ac8f-e596b6ba7810",
+        "FranchiseName": "Balero Boyz",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerId": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "2018: 7-7 (1705.7 pts)",
+        "RecordNumericValue": 7,
+        "Year": 2018,
+        "Week": null
+      },
+      {
+        "Rank": 8,
+        "FranchiseId": "2feaf03e-fb22-498e-ac8f-e596b6ba7810",
+        "FranchiseName": "Balero Boyz",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerId": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "2008: 7-7 (1428.2 pts)",
+        "RecordNumericValue": 7,
+        "Year": 2008,
+        "Week": null
+      },
+      {
+        "Rank": 9,
+        "FranchiseId": "2feaf03e-fb22-498e-ac8f-e596b6ba7810",
+        "FranchiseName": "Balero Boyz",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerId": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "2009: 7-7 (1421.3 pts)",
+        "RecordNumericValue": 7,
+        "Year": 2009,
+        "Week": null
+      },
+      {
+        "Rank": 10,
+        "FranchiseId": "2feaf03e-fb22-498e-ac8f-e596b6ba7810",
+        "FranchiseName": "Balero Boyz",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerId": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "2024: 6-9 (1741.9 pts)",
+        "RecordNumericValue": 6,
+        "Year": 2024,
+        "Week": null
+      }
+    ]
+  }
+]

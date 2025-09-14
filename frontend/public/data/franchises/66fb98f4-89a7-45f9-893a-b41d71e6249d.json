@@ -1,0 +1,505 @@
+{
+  "Id": "66fb98f4-89a7-45f9-893a-b41d71e6249d",
+  "Name": "leaf16",
+  "Owner": "Andrew",
+  "Owners": [
+    "Andrew"
+  ],
+  "EstablishedDate": "2002-08-01T00:00:00",
+  "IsActive": true,
+  "Color": "#00188f",
+  "Teams": [
+    {
+      "Id": "e33f6a0b-99a2-4018-9939-2bfad05333c3",
+      "Year": 2002,
+      "TeamName": "leaf16",
+      "Wins": 7,
+      "Losses": 5,
+      "Ties": 0,
+      "Points": 1155,
+      "Standing": 3,
+      "Champion": false,
+      "SecondPlace": true
+    },
+    {
+      "Id": "4ea797b8-7c7a-4c3d-bb21-405f49dbd8a9",
+      "Year": 2003,
+      "TeamName": "leaf16",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1379.5,
+      "Standing": 7,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "81da21fa-c73b-44db-80d0-fc538c180700",
+      "Year": 2004,
+      "TeamName": "leaf16",
+      "Wins": 10,
+      "Losses": 4,
+      "Ties": 0,
+      "Points": 1345.5,
+      "Standing": 2,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "6af0a053-0246-4e91-98a5-374e8e2ce1cd",
+      "Year": 2005,
+      "TeamName": "leaf16",
+      "Wins": 10,
+      "Losses": 4,
+      "Ties": 0,
+      "Points": 1631,
+      "Standing": 2,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "f2ca4293-4db1-4fe1-bdb6-47394905d1e5",
+      "Year": 2006,
+      "TeamName": "leaf16",
+      "Wins": 8,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1448.5,
+      "Standing": 4,
+      "Champion": false,
+      "SecondPlace": true
+    },
+    {
+      "Id": "f5047d48-2aea-428a-bd3c-188397a18019",
+      "Year": 2007,
+      "TeamName": "leaf16",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1537.1000000000001,
+      "Standing": 6,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "4745f672-c0d6-40a5-906b-7e765c373534",
+      "Year": 2008,
+      "TeamName": "leaf16",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1408.86,
+      "Standing": 6,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "4e76c6fb-0cc6-4431-bf3e-9a5e7db618c0",
+      "Year": 2009,
+      "TeamName": "leaf16",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1525.1800000000003,
+      "Standing": 8,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "f02b2793-95dc-4887-9b16-27b7b29045d7",
+      "Year": 2010,
+      "TeamName": "leaf16",
+      "Wins": 9,
+      "Losses": 5,
+      "Ties": 0,
+      "Points": 1589.38,
+      "Standing": 3,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "c7749ff7-4b1c-4837-a826-d9a1821d2e5e",
+      "Year": 2011,
+      "TeamName": "leaf16",
+      "Wins": 8,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1746.76,
+      "Standing": 4,
+      "Champion": true,
+      "SecondPlace": false
+    },
+    {
+      "Id": "2ed41a33-011e-4fd9-a1be-bc49e9484c50",
+      "Year": 2012,
+      "TeamName": "leaf16",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1596.62,
+      "Standing": 4,
+      "Champion": false,
+      "SecondPlace": true
+    },
+    {
+      "Id": "c0622184-7176-47fe-91b7-7766198e46e3",
+      "Year": 2013,
+      "TeamName": "leaf16",
+      "Wins": 8,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1469.8800000000003,
+      "Standing": 5,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "e4337b68-928c-4945-ad4b-9e13efe90c9f",
+      "Year": 2014,
+      "TeamName": "leaf16",
+      "Wins": 8,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1566.06,
+      "Standing": 6,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "c63f4563-483a-4efd-a00d-4e42d6beddab",
+      "Year": 2015,
+      "TeamName": "leaf16",
+      "Wins": 10,
+      "Losses": 4,
+      "Ties": 0,
+      "Points": 1668.9,
+      "Standing": 1,
+      "Champion": false,
+      "SecondPlace": true
+    },
+    {
+      "Id": "454e4c10-5036-4ac9-a0d8-87a83ccaa033",
+      "Year": 2016,
+      "TeamName": "leaf16",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1370.92,
+      "Standing": 9,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "490511ae-37fb-4a0d-9b49-534196b9f7b8",
+      "Year": 2017,
+      "TeamName": "leaf16",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1448.6,
+      "Standing": 6,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "7661197b-1e11-41d6-a847-7356565ff4ed",
+      "Year": 2018,
+      "TeamName": "leaf16",
+      "Wins": 2,
+      "Losses": 12,
+      "Ties": 0,
+      "Points": 1462.6599999999999,
+      "Standing": 9,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "2b43e18b-b0a2-4920-a7c7-92ad6ff266ad",
+      "Year": 2019,
+      "TeamName": "leaf16",
+      "Wins": 10,
+      "Losses": 4,
+      "Ties": 0,
+      "Points": 1493.8000000000002,
+      "Standing": 3,
+      "Champion": false,
+      "SecondPlace": true
+    },
+    {
+      "Id": "7ffff517-8af8-459b-b172-eefff7433bad",
+      "Year": 2020,
+      "TeamName": "leaf16",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1626.46,
+      "Standing": 6,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "76c19cd9-4462-4b1b-9e5c-02da1e2d88bc",
+      "Year": 2021,
+      "TeamName": "leaf16",
+      "Wins": 5,
+      "Losses": 10,
+      "Ties": 0,
+      "Points": 1811.96,
+      "Standing": 8,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "1adae00c-a476-4e5d-9259-243bb98da8cc",
+      "Year": 2022,
+      "TeamName": "leaf16",
+      "Wins": 11,
+      "Losses": 4,
+      "Ties": 0,
+      "Points": 1826.06,
+      "Standing": 1,
+      "Champion": false,
+      "SecondPlace": true
+    },
+    {
+      "Id": "3eb8920b-aaf3-422e-ad25-98b58e72f633",
+      "Year": 2023,
+      "TeamName": "leaf16",
+      "Wins": 9,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1740.62,
+      "Standing": 1,
+      "Champion": true,
+      "SecondPlace": false
+    },
+    {
+      "Id": "9b667262-575d-40b7-816d-574efb13a419",
+      "Year": 2024,
+      "TeamName": "leaf16",
+      "Wins": 8,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1730.72,
+      "Standing": 8,
+      "Champion": false,
+      "SecondPlace": false
+    }
+  ],
+  "AllTimeRoster": {
+    "Quarterbacks": [
+      {
+        "PlayerId": 5228,
+        "PlayerName": "Tom Brady",
+        "Position": "QB",
+        "TotalPoints": 3331.9,
+        "WeeksStarted": 167,
+        "AveragePoints": 20.0,
+        "SeasonsWithFranchise": [
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 24788,
+        "PlayerName": "Cam Newton",
+        "Position": "QB",
+        "TotalPoints": 2338.2,
+        "WeeksStarted": 112,
+        "AveragePoints": 20.9,
+        "SeasonsWithFranchise": [
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 32723,
+        "PlayerName": "Jalen Hurts",
+        "Position": "QB",
+        "TotalPoints": 1303.5,
+        "WeeksStarted": 60,
+        "AveragePoints": 21.7,
+        "SeasonsWithFranchise": [
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "IsBench": true
+      }
+    ],
+    "RunningBacks": [
+      {
+        "PlayerId": 6783,
+        "PlayerName": "Steven Jackson",
+        "Position": "RB",
+        "TotalPoints": 1184.6,
+        "WeeksStarted": 81,
+        "AveragePoints": 14.6,
+        "SeasonsWithFranchise": [
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 7809,
+        "PlayerName": "Maurice Jones-Drew",
+        "Position": "RB",
+        "TotalPoints": 954.2,
+        "WeeksStarted": 64,
+        "AveragePoints": 14.9,
+        "SeasonsWithFranchise": [
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 5048,
+        "PlayerName": "Shaun Alexander",
+        "Position": "RB",
+        "TotalPoints": 718.9,
+        "WeeksStarted": 50,
+        "AveragePoints": 14.4,
+        "SeasonsWithFranchise": [
+          2002,
+          2003,
+          2004,
+          2005,
+          2006
+        ],
+        "IsBench": true
+      }
+    ],
+    "WideReceivers": [
+      {
+        "PlayerId": 5521,
+        "PlayerName": "Steve Smith Sr.",
+        "Position": "WR",
+        "TotalPoints": 995.8,
+        "WeeksStarted": 92,
+        "AveragePoints": 10.8,
+        "SeasonsWithFranchise": [
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2013,
+          2014
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 4654,
+        "PlayerName": "Torry Holt",
+        "Position": "WR",
+        "TotalPoints": 482.4,
+        "WeeksStarted": 58,
+        "AveragePoints": 8.3,
+        "SeasonsWithFranchise": [
+          2002,
+          2003,
+          2004,
+          2005,
+          2007,
+          2008,
+          2009
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 30182,
+        "PlayerName": "Cooper Kupp",
+        "Position": "WR",
+        "TotalPoints": 470.8,
+        "WeeksStarted": 35,
+        "AveragePoints": 13.5,
+        "SeasonsWithFranchise": [
+          2021,
+          2022,
+          2023
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 24057,
+        "PlayerName": "Emmanuel Sanders",
+        "Position": "WR",
+        "TotalPoints": 438.0,
+        "WeeksStarted": 46,
+        "AveragePoints": 9.5,
+        "SeasonsWithFranchise": [
+          2014,
+          2015,
+          2016,
+          2017,
+          2019
+        ],
+        "IsBench": true
+      }
+    ],
+    "TightEnds": [
+      {
+        "PlayerId": 26686,
+        "PlayerName": "Travis Kelce",
+        "Position": "TE",
+        "TotalPoints": 458.1,
+        "WeeksStarted": 46,
+        "AveragePoints": 10.0,
+        "SeasonsWithFranchise": [
+          2021,
+          2022,
+          2023
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 6405,
+        "PlayerName": "Jason Witten",
+        "Position": "TE",
+        "TotalPoints": 238.8,
+        "WeeksStarted": 31,
+        "AveragePoints": 7.7,
+        "SeasonsWithFranchise": [
+          2012,
+          2013,
+          2017,
+          2019
+        ],
+        "IsBench": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,496 @@
+{
+  "Id": "b2220d1a-ff75-4622-9757-09978901110f",
+  "Name": "The Bad Guys",
+  "Owner": "Hogle",
+  "Owners": [
+    "Hogle"
+  ],
+  "EstablishedDate": "2002-08-01T00:00:00",
+  "IsActive": true,
+  "Color": "#ff8c00",
+  "Teams": [
+    {
+      "Id": "12a39224-eef4-4067-ad2e-199220354abe",
+      "Year": 2002,
+      "TeamName": "Football Fever!",
+      "Wins": 5,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 855.5,
+      "Standing": 9,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "42075336-a477-4b01-bc21-8069b7500c6b",
+      "Year": 2003,
+      "TeamName": "Hogles Team",
+      "Wins": 9,
+      "Losses": 5,
+      "Ties": 0,
+      "Points": 1358,
+      "Standing": 3,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "4faf5629-fd79-40ad-9827-cbd43ebffbb7",
+      "Year": 2004,
+      "TeamName": "Hogle\u0027s HOGstars",
+      "Wins": 6,
+      "Losses": 7,
+      "Ties": 1,
+      "Points": 1342.5,
+      "Standing": 5,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "af90bd5d-0e4f-483c-b857-93adc1ce5988",
+      "Year": 2005,
+      "TeamName": "The Hogstars",
+      "Wins": 8,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1516,
+      "Standing": 4,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "550f744d-b8c2-49f5-9d9e-43a2206edf82",
+      "Year": 2006,
+      "TeamName": "The Hogstars",
+      "Wins": 8,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1534.5,
+      "Standing": 3,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "71d877b0-d84a-476d-a80f-477ca558a21c",
+      "Year": 2007,
+      "TeamName": "The Hogstars",
+      "Wins": 8,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1496.46,
+      "Standing": 3,
+      "Champion": false,
+      "SecondPlace": true
+    },
+    {
+      "Id": "d1e32e13-d207-4034-a86a-96f5c5f94afe",
+      "Year": 2008,
+      "TeamName": "Sarent",
+      "Wins": 3,
+      "Losses": 11,
+      "Ties": 0,
+      "Points": 1234.3200000000002,
+      "Standing": 10,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "f1088b61-d477-4b54-bf88-3e6e1173f9a2",
+      "Year": 2009,
+      "TeamName": "East Dillon Lions",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1428.1,
+      "Standing": 4,
+      "Champion": false,
+      "SecondPlace": true
+    },
+    {
+      "Id": "35cad944-41e7-4f2a-a912-27014f61bb42",
+      "Year": 2010,
+      "TeamName": "Double Dwaynebowe!",
+      "Wins": 5,
+      "Losses": 9,
+      "Ties": 0,
+      "Points": 1480.18,
+      "Standing": 7,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "2ed55227-2973-4dc0-8398-6e6686524d5b",
+      "Year": 2011,
+      "TeamName": "Got Heeeem!",
+      "Wins": 5,
+      "Losses": 9,
+      "Ties": 0,
+      "Points": 1439.4199999999998,
+      "Standing": 9,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "62b7d691-bd45-4212-9042-8e1758542f25",
+      "Year": 2012,
+      "TeamName": "Password is Taco",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1540.66,
+      "Standing": 6,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "c7b364d3-b5e0-4645-b8fc-aebaf41dad27",
+      "Year": 2013,
+      "TeamName": "Password is Taco",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1449.9399999999998,
+      "Standing": 9,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "5d6277d1-0575-443e-8542-6961bd70f54a",
+      "Year": 2014,
+      "TeamName": "Password is Taco",
+      "Wins": 3,
+      "Losses": 11,
+      "Ties": 0,
+      "Points": 1410.46,
+      "Standing": 9,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "3915efc3-b07a-43c9-8c54-7e3f7e7b396b",
+      "Year": 2015,
+      "TeamName": "The Bad Guys",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1503.9,
+      "Standing": 6,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "7a2b222b-9419-4aa0-9534-71571d7fb48a",
+      "Year": 2016,
+      "TeamName": "The Bad Guys",
+      "Wins": 8,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1490.96,
+      "Standing": 4,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "50a05346-bf98-4e59-abe2-a97dda967856",
+      "Year": 2017,
+      "TeamName": "The Bad Guys",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1408.6600000000003,
+      "Standing": 8,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "9f7fe077-3863-4673-aadb-a7d6ef8eaa03",
+      "Year": 2018,
+      "TeamName": "The Bad Guys",
+      "Wins": 9,
+      "Losses": 5,
+      "Ties": 0,
+      "Points": 1718.3,
+      "Standing": 3,
+      "Champion": true,
+      "SecondPlace": false
+    },
+    {
+      "Id": "42200c75-2eeb-45f5-9492-e47cecf6e81b",
+      "Year": 2019,
+      "TeamName": "The Bad Guys",
+      "Wins": 10,
+      "Losses": 4,
+      "Ties": 0,
+      "Points": 1754.96,
+      "Standing": 1,
+      "Champion": true,
+      "SecondPlace": false
+    },
+    {
+      "Id": "757228e6-9366-42e5-905e-ae9e33360bea",
+      "Year": 2020,
+      "TeamName": "The Bad Guys",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1459.8600000000001,
+      "Standing": 8,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "74bf9c20-0a44-4536-b0a0-18e6d01b3d8d",
+      "Year": 2021,
+      "TeamName": "The Bad Guys",
+      "Wins": 10,
+      "Losses": 5,
+      "Ties": 0,
+      "Points": 1678.38,
+      "Standing": 2,
+      "Champion": false,
+      "SecondPlace": true
+    },
+    {
+      "Id": "9e047135-736f-47d2-a51d-356e99d62b90",
+      "Year": 2022,
+      "TeamName": "The Bad Guys",
+      "Wins": 7,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1566.82,
+      "Standing": 6,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "c996976a-855e-48be-a572-3be2f71073f1",
+      "Year": 2023,
+      "TeamName": "The Bad Guys",
+      "Wins": 9,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1756.82,
+      "Standing": 3,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "5c394347-9f1c-4a6a-8a3f-3da7f51bb942",
+      "Year": 2024,
+      "TeamName": "The Bad Guys",
+      "Wins": 3,
+      "Losses": 12,
+      "Ties": 0,
+      "Points": 1450.28,
+      "Standing": 10,
+      "Champion": false,
+      "SecondPlace": false
+    }
+  ],
+  "AllTimeRoster": {
+    "Quarterbacks": [
+      {
+        "PlayerId": 31002,
+        "PlayerName": "Lamar Jackson",
+        "Position": "QB",
+        "TotalPoints": 1354.2,
+        "WeeksStarted": 59,
+        "AveragePoints": 23.0,
+        "SeasonsWithFranchise": [
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 28389,
+        "PlayerName": "Jameis Winston",
+        "Position": "QB",
+        "TotalPoints": 826.2,
+        "WeeksStarted": 47,
+        "AveragePoints": 17.6,
+        "SeasonsWithFranchise": [
+          2015,
+          2016,
+          2017,
+          2018,
+          2022
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 6337,
+        "PlayerName": "Carson Palmer",
+        "Position": "QB",
+        "TotalPoints": 710.5,
+        "WeeksStarted": 49,
+        "AveragePoints": 14.5,
+        "SeasonsWithFranchise": [
+          2006,
+          2007,
+          2008,
+          2009
+        ],
+        "IsBench": true
+      }
+    ],
+    "RunningBacks": [
+      {
+        "PlayerId": 30121,
+        "PlayerName": "Christian McCaffrey",
+        "Position": "RB",
+        "TotalPoints": 1486.0,
+        "WeeksStarted": 102,
+        "AveragePoints": 14.6,
+        "SeasonsWithFranchise": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 5977,
+        "PlayerName": "Brian Westbrook",
+        "Position": "RB",
+        "TotalPoints": 614.5,
+        "WeeksStarted": 33,
+        "AveragePoints": 18.6,
+        "SeasonsWithFranchise": [
+          2006,
+          2007,
+          2008
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 8800,
+        "PlayerName": "Rashard Mendenhall",
+        "Position": "RB",
+        "TotalPoints": 514.8,
+        "WeeksStarted": 43,
+        "AveragePoints": 12.0,
+        "SeasonsWithFranchise": [
+          2009,
+          2010,
+          2011,
+          2012,
+          2013
+        ],
+        "IsBench": true
+      }
+    ],
+    "WideReceivers": [
+      {
+        "PlayerId": 27535,
+        "PlayerName": "Mike Evans",
+        "Position": "WR",
+        "TotalPoints": 1421.0,
+        "WeeksStarted": 131,
+        "AveragePoints": 10.8,
+        "SeasonsWithFranchise": [
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 7868,
+        "PlayerName": "Brandon Marshall",
+        "Position": "WR",
+        "TotalPoints": 706.4,
+        "WeeksStarted": 63,
+        "AveragePoints": 11.2,
+        "SeasonsWithFranchise": [
+          2009,
+          2010,
+          2011,
+          2012,
+          2013
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 6762,
+        "PlayerName": "Larry Fitzgerald",
+        "Position": "WR",
+        "TotalPoints": 691.8,
+        "WeeksStarted": 71,
+        "AveragePoints": 9.7,
+        "SeasonsWithFranchise": [
+          2005,
+          2006,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 8277,
+        "PlayerName": "Dwayne Bowe",
+        "Position": "WR",
+        "TotalPoints": 534.8,
+        "WeeksStarted": 51,
+        "AveragePoints": 10.5,
+        "SeasonsWithFranchise": [
+          2008,
+          2009,
+          2010,
+          2011
+        ],
+        "IsBench": true
+      }
+    ],
+    "TightEnds": [
+      {
+        "PlayerId": 31056,
+        "PlayerName": "Mark Andrews",
+        "Position": "TE",
+        "TotalPoints": 672.5,
+        "WeeksStarted": 77,
+        "AveragePoints": 8.7,
+        "SeasonsWithFranchise": [
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 24070,
+        "PlayerName": "Jimmy Graham",
+        "Position": "TE",
+        "TotalPoints": 199.7,
+        "WeeksStarted": 25,
+        "AveragePoints": 8.0,
+        "SeasonsWithFranchise": [
+          2016,
+          2017,
+          2020
+        ],
+        "IsBench": true
+      }
+    ]
+  }
+}

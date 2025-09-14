@@ -1,0 +1,498 @@
+{
+  "Id": "2feaf03e-fb22-498e-ac8f-e596b6ba7810",
+  "Name": "Balero Boyz",
+  "Owner": "Scott",
+  "Owners": [
+    "Josh",
+    "Scott"
+  ],
+  "EstablishedDate": "2002-08-01T00:00:00",
+  "IsActive": true,
+  "Color": "#00b294",
+  "Teams": [
+    {
+      "Id": "e8c443c1-fe19-4fcc-aab7-5379171508a0",
+      "Year": 2002,
+      "TeamName": "The Doorknobs",
+      "Wins": 6,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1105,
+      "Standing": 4,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "950b9d6d-41f3-4e02-bb40-ef705ae6d38b",
+      "Year": 2003,
+      "TeamName": "The Doorknobs",
+      "Wins": 4,
+      "Losses": 10,
+      "Ties": 0,
+      "Points": 1243.5,
+      "Standing": 9,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "0e275711-62d3-47a6-b870-5ae9557da023",
+      "Year": 2004,
+      "TeamName": "The Doorknobs",
+      "Wins": 10,
+      "Losses": 4,
+      "Ties": 0,
+      "Points": 1468.5,
+      "Standing": 1,
+      "Champion": true,
+      "SecondPlace": false
+    },
+    {
+      "Id": "e5a6eb5e-17d4-4833-b61b-915130fe8882",
+      "Year": 2005,
+      "TeamName": "The Doorknobs",
+      "Wins": 8,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1368.5,
+      "Standing": 5,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "42afd0de-dd2a-4da4-b7ab-56ede0ba764d",
+      "Year": 2006,
+      "TeamName": "The Doorknobs",
+      "Wins": 4,
+      "Losses": 9,
+      "Ties": 1,
+      "Points": 1316.5,
+      "Standing": 10,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "34b56856-4c46-4733-acec-e309732ca20c",
+      "Year": 2007,
+      "TeamName": "The Doorknobs",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1356,
+      "Standing": 10,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "2dc61201-8738-4ae7-b562-9797fb562193",
+      "Year": 2008,
+      "TeamName": "The Doorknobs",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1428.2,
+      "Standing": 5,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "520fda49-87d6-4a96-89de-37cc08227fe8",
+      "Year": 2009,
+      "TeamName": "The Doorknobs",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1421.26,
+      "Standing": 5,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "d2ad6c65-f8d6-4357-9fe1-725a8e41ef86",
+      "Year": 2010,
+      "TeamName": "The Doorknobs",
+      "Wins": 4,
+      "Losses": 10,
+      "Ties": 0,
+      "Points": 1216.58,
+      "Standing": 9,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "f93142d0-ebef-420e-a79c-b4a82157bd58",
+      "Year": 2011,
+      "TeamName": "Balero Boyz",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1458.5600000000004,
+      "Standing": 7,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "6dc66387-6752-4f40-8ccd-21356430bde8",
+      "Year": 2012,
+      "TeamName": "Balero Boyz",
+      "Wins": 4,
+      "Losses": 10,
+      "Ties": 0,
+      "Points": 1494.36,
+      "Standing": 10,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "66e4a230-53cc-449e-a473-11bbdd817517",
+      "Year": 2013,
+      "TeamName": "Balero Boyz",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1613.5,
+      "Standing": 7,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "975f7a2f-0b4a-4918-a7b3-54609e4b6c2d",
+      "Year": 2014,
+      "TeamName": "Balero Boyz",
+      "Wins": 9,
+      "Losses": 5,
+      "Ties": 0,
+      "Points": 1596.8400000000001,
+      "Standing": 3,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "79cf61bb-a16b-4baf-bf9b-d98e58d4c61c",
+      "Year": 2015,
+      "TeamName": "Balero Boyz",
+      "Wins": 3,
+      "Losses": 11,
+      "Ties": 0,
+      "Points": 1411.98,
+      "Standing": 10,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "26bae4f5-b715-4e30-a5df-0a1f07f12ce5",
+      "Year": 2016,
+      "TeamName": "Balero Boyz",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1624.6399999999999,
+      "Standing": 6,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "2481ead0-6d3d-4da1-b6fb-a3a9051f1323",
+      "Year": 2017,
+      "TeamName": "Balero Boyz",
+      "Wins": 8,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1521.0999999999997,
+      "Standing": 3,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "18dbd1cd-34af-459c-b383-43b280b477f0",
+      "Year": 2018,
+      "TeamName": "Balero Boyz",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1705.74,
+      "Standing": 5,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "d1e30211-a93d-4181-a29d-33e616f472eb",
+      "Year": 2019,
+      "TeamName": "Balero Boyz",
+      "Wins": 3,
+      "Losses": 11,
+      "Ties": 0,
+      "Points": 1396.94,
+      "Standing": 10,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "3efcd27c-4e12-4d86-ad7a-f21c663edacb",
+      "Year": 2020,
+      "TeamName": "Balero Boyz",
+      "Wins": 8,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1651.1599999999999,
+      "Standing": 5,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "155aaa08-2b30-4306-9948-3a7f4d3f1a1a",
+      "Year": 2021,
+      "TeamName": "Balero Boyz",
+      "Wins": 5,
+      "Losses": 10,
+      "Ties": 0,
+      "Points": 1667.98,
+      "Standing": 9,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "e87adf7b-a23c-4d76-9afd-91671845f641",
+      "Year": 2022,
+      "TeamName": "Balero Boyz",
+      "Wins": 4,
+      "Losses": 11,
+      "Ties": 0,
+      "Points": 1561.04,
+      "Standing": 10,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "17693441-2a82-4280-866b-be215bf1259b",
+      "Year": 2023,
+      "TeamName": "Balero Boyz",
+      "Wins": 8,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1696.68,
+      "Standing": 5,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "4804c2d0-5e31-4f25-9a29-c88bbc0574f7",
+      "Year": 2024,
+      "TeamName": "Balero Boyz",
+      "Wins": 6,
+      "Losses": 9,
+      "Ties": 0,
+      "Points": 1741.9,
+      "Standing": 5,
+      "Champion": false,
+      "SecondPlace": false
+    }
+  ],
+  "AllTimeRoster": {
+    "Quarterbacks": [
+      {
+        "PlayerId": 8780,
+        "PlayerName": "Matt Ryan",
+        "Position": "QB",
+        "TotalPoints": 2663.7,
+        "WeeksStarted": 145,
+        "AveragePoints": 18.4,
+        "SeasonsWithFranchise": [
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 7760,
+        "PlayerName": "Jay Cutler",
+        "Position": "QB",
+        "TotalPoints": 1031.4,
+        "WeeksStarted": 65,
+        "AveragePoints": 15.9,
+        "SeasonsWithFranchise": [
+          2007,
+          2008,
+          2009,
+          2010,
+          2015,
+          2016
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 5228,
+        "PlayerName": "Tom Brady",
+        "Position": "QB",
+        "TotalPoints": 908.7,
+        "WeeksStarted": 47,
+        "AveragePoints": 19.3,
+        "SeasonsWithFranchise": [
+          2002,
+          2019,
+          2020,
+          2021
+        ],
+        "IsBench": true
+      }
+    ],
+    "RunningBacks": [
+      {
+        "PlayerId": 8266,
+        "PlayerName": "Marshawn Lynch",
+        "Position": "RB",
+        "TotalPoints": 847.7,
+        "WeeksStarted": 56,
+        "AveragePoints": 15.1,
+        "SeasonsWithFranchise": [
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2018
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 29238,
+        "PlayerName": "Ezekiel Elliott",
+        "Position": "RB",
+        "TotalPoints": 732.6,
+        "WeeksStarted": 39,
+        "AveragePoints": 18.8,
+        "SeasonsWithFranchise": [
+          2016,
+          2017,
+          2018
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 5036,
+        "PlayerName": "Thomas Jones",
+        "Position": "RB",
+        "TotalPoints": 583.2,
+        "WeeksStarted": 52,
+        "AveragePoints": 11.2,
+        "SeasonsWithFranchise": [
+          2004,
+          2005,
+          2006,
+          2007,
+          2009
+        ],
+        "IsBench": true
+      }
+    ],
+    "WideReceivers": [
+      {
+        "PlayerId": 3514,
+        "PlayerName": "Marvin Harrison",
+        "Position": "WR",
+        "TotalPoints": 768.1,
+        "WeeksStarted": 73,
+        "AveragePoints": 10.5,
+        "SeasonsWithFranchise": [
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 5483,
+        "PlayerName": "Chad Johnson",
+        "Position": "WR",
+        "TotalPoints": 740.9,
+        "WeeksStarted": 80,
+        "AveragePoints": 9.3,
+        "SeasonsWithFranchise": [
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2011
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 32687,
+        "PlayerName": "CeeDee Lamb",
+        "Position": "WR",
+        "TotalPoints": 543.0,
+        "WeeksStarted": 47,
+        "AveragePoints": 11.6,
+        "SeasonsWithFranchise": [
+          2022,
+          2023,
+          2024
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 7868,
+        "PlayerName": "Brandon Marshall",
+        "Position": "WR",
+        "TotalPoints": 542.2,
+        "WeeksStarted": 47,
+        "AveragePoints": 11.5,
+        "SeasonsWithFranchise": [
+          2013,
+          2014,
+          2015,
+          2016
+        ],
+        "IsBench": true
+      }
+    ],
+    "TightEnds": [
+      {
+        "PlayerId": 6405,
+        "PlayerName": "Jason Witten",
+        "Position": "TE",
+        "TotalPoints": 789.8,
+        "WeeksStarted": 104,
+        "AveragePoints": 7.6,
+        "SeasonsWithFranchise": [
+          2004,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2014
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 26658,
+        "PlayerName": "Zach Ertz",
+        "Position": "TE",
+        "TotalPoints": 408.8,
+        "WeeksStarted": 45,
+        "AveragePoints": 9.1,
+        "SeasonsWithFranchise": [
+          2016,
+          2017,
+          2018,
+          2019
+        ],
+        "IsBench": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,506 @@
+{
+  "Id": "825928a9-7194-43aa-b7ae-fc78c2510b16",
+  "Name": "Laters",
+  "Owner": "John",
+  "Owners": [
+    "John"
+  ],
+  "EstablishedDate": "2002-08-01T00:00:00",
+  "IsActive": true,
+  "Color": "#68217a",
+  "Teams": [
+    {
+      "Id": "bf8e0a65-4345-4de9-b51a-7b1897dc5764",
+      "Year": 2002,
+      "TeamName": "the next T.O.",
+      "Wins": 5,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1086,
+      "Standing": 8,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "454677e1-8ce9-48c2-b1a0-aba8515d7822",
+      "Year": 2003,
+      "TeamName": "Laters",
+      "Wins": 11,
+      "Losses": 2,
+      "Ties": 1,
+      "Points": 1526,
+      "Standing": 1,
+      "Champion": true,
+      "SecondPlace": false
+    },
+    {
+      "Id": "103aa4b8-9fca-420c-ae6c-fca1477f35de",
+      "Year": 2004,
+      "TeamName": "Laters",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1324.5,
+      "Standing": 8,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "0a08ad63-e7a6-4b92-a7bb-f9e428120a78",
+      "Year": 2005,
+      "TeamName": "Laters",
+      "Wins": 10,
+      "Losses": 4,
+      "Ties": 0,
+      "Points": 1474,
+      "Standing": 3,
+      "Champion": true,
+      "SecondPlace": false
+    },
+    {
+      "Id": "cf4bc3ce-213d-47c5-9ad2-097d12b396c0",
+      "Year": 2006,
+      "TeamName": "Laters",
+      "Wins": 10,
+      "Losses": 3,
+      "Ties": 1,
+      "Points": 1539.5,
+      "Standing": 1,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "6d872403-48aa-4218-86ea-ae27b66bc792",
+      "Year": 2007,
+      "TeamName": "Laters",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1497.1,
+      "Standing": 8,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "60730afa-0969-4a60-aba3-277721bcbf9d",
+      "Year": 2008,
+      "TeamName": "Laters",
+      "Wins": 9,
+      "Losses": 5,
+      "Ties": 0,
+      "Points": 1632.42,
+      "Standing": 2,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "66f5afc0-2e84-493a-a393-d36068c86995",
+      "Year": 2009,
+      "TeamName": "Laters",
+      "Wins": 4,
+      "Losses": 10,
+      "Ties": 0,
+      "Points": 1444.46,
+      "Standing": 10,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "5454e41d-1557-4456-a6b9-838500e84097",
+      "Year": 2010,
+      "TeamName": "Laters",
+      "Wins": 3,
+      "Losses": 11,
+      "Ties": 0,
+      "Points": 1393.6200000000001,
+      "Standing": 10,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "761b1beb-8d34-49e6-9ae4-b907f32aa8c8",
+      "Year": 2011,
+      "TeamName": "Laters",
+      "Wins": 9,
+      "Losses": 5,
+      "Ties": 0,
+      "Points": 1576.12,
+      "Standing": 3,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "5b6cfd77-98fe-4429-9f05-e56788a23289",
+      "Year": 2012,
+      "TeamName": "Laters",
+      "Wins": 8,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1605.7400000000002,
+      "Standing": 3,
+      "Champion": true,
+      "SecondPlace": false
+    },
+    {
+      "Id": "3ad13d92-f235-4ad2-b3b8-f2efc447a27b",
+      "Year": 2013,
+      "TeamName": "Laters",
+      "Wins": 8,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1554.6,
+      "Standing": 4,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "03bdc866-d989-45ef-b92f-bf2788ba88d1",
+      "Year": 2014,
+      "TeamName": "Laters",
+      "Wins": 10,
+      "Losses": 4,
+      "Ties": 0,
+      "Points": 1798.74,
+      "Standing": 2,
+      "Champion": false,
+      "SecondPlace": true
+    },
+    {
+      "Id": "f8eaa508-185f-4129-82f7-68699748cf13",
+      "Year": 2015,
+      "TeamName": "Laters",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1617.68,
+      "Standing": 5,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "07a5ac06-1c6b-42b0-9957-e37c6fd1692e",
+      "Year": 2016,
+      "TeamName": "Laters",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1551.6200000000003,
+      "Standing": 7,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "2823cb14-c7d5-4d50-aaf4-e37a3a3fe61e",
+      "Year": 2017,
+      "TeamName": "Laters",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1587.7800000000002,
+      "Standing": 7,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "6a56a411-26a7-473b-bd29-38b9bfb4cfa8",
+      "Year": 2018,
+      "TeamName": "Laters",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1785.1,
+      "Standing": 8,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "f7274a74-cae1-4aeb-8cc9-5dc5bccce305",
+      "Year": 2019,
+      "TeamName": "Laters",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1451.1599999999999,
+      "Standing": 6,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "70a5deb1-f5ff-4ed6-b26a-fe6f0e403cad",
+      "Year": 2020,
+      "TeamName": "Laters",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1563.5400000000002,
+      "Standing": 7,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "2217c9e8-81f6-4fcb-a1d0-75cca3269447",
+      "Year": 2021,
+      "TeamName": "Laters",
+      "Wins": 6,
+      "Losses": 9,
+      "Ties": 0,
+      "Points": 1619.9,
+      "Standing": 7,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "8bb1d16e-53ed-4a9f-a25d-2b1bcd5483ca",
+      "Year": 2022,
+      "TeamName": "Laters",
+      "Wins": 8,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1700.22,
+      "Standing": 4,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "3ac6e00e-68bb-4fb1-904a-e972260711cc",
+      "Year": 2023,
+      "TeamName": "Laters",
+      "Wins": 6,
+      "Losses": 9,
+      "Ties": 0,
+      "Points": 1606.32,
+      "Standing": 9,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "0a2262d4-86ae-46f1-a375-31f46102614f",
+      "Year": 2024,
+      "TeamName": "Laters",
+      "Wins": 3,
+      "Losses": 12,
+      "Ties": 0,
+      "Points": 1543.66,
+      "Standing": 9,
+      "Champion": false,
+      "SecondPlace": false
+    }
+  ],
+  "AllTimeRoster": {
+    "Quarterbacks": [
+      {
+        "PlayerId": 5479,
+        "PlayerName": "Drew Brees",
+        "Position": "QB",
+        "TotalPoints": 4139.7,
+        "WeeksStarted": 211,
+        "AveragePoints": 19.6,
+        "SeasonsWithFranchise": [
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 6770,
+        "PlayerName": "Ben Roethlisberger",
+        "Position": "QB",
+        "TotalPoints": 1743.5,
+        "WeeksStarted": 98,
+        "AveragePoints": 17.8,
+        "SeasonsWithFranchise": [
+          2007,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 32676,
+        "PlayerName": "Justin Herbert",
+        "Position": "QB",
+        "TotalPoints": 1268.2,
+        "WeeksStarted": 69,
+        "AveragePoints": 18.4,
+        "SeasonsWithFranchise": [
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "IsBench": true
+      }
+    ],
+    "RunningBacks": [
+      {
+        "PlayerId": 5452,
+        "PlayerName": "LaDainian Tomlinson",
+        "Position": "RB",
+        "TotalPoints": 1707.7,
+        "WeeksStarted": 102,
+        "AveragePoints": 16.7,
+        "SeasonsWithFranchise": [
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 28403,
+        "PlayerName": "Melvin Gordon",
+        "Position": "RB",
+        "TotalPoints": 787.3,
+        "WeeksStarted": 49,
+        "AveragePoints": 16.1,
+        "SeasonsWithFranchise": [
+          2016,
+          2017,
+          2018,
+          2019,
+          2021
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 8821,
+        "PlayerName": "Matt Forte",
+        "Position": "RB",
+        "TotalPoints": 609.3,
+        "WeeksStarted": 42,
+        "AveragePoints": 14.5,
+        "SeasonsWithFranchise": [
+          2012,
+          2013,
+          2014
+        ],
+        "IsBench": true
+      }
+    ],
+    "WideReceivers": [
+      {
+        "PlayerId": 24793,
+        "PlayerName": "Julio Jones",
+        "Position": "WR",
+        "TotalPoints": 1507.8,
+        "WeeksStarted": 121,
+        "AveragePoints": 12.5,
+        "SeasonsWithFranchise": [
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 28534,
+        "PlayerName": "Stefon Diggs",
+        "Position": "WR",
+        "TotalPoints": 891.7,
+        "WeeksStarted": 78,
+        "AveragePoints": 11.4,
+        "SeasonsWithFranchise": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 7801,
+        "PlayerName": "Greg Jennings",
+        "Position": "WR",
+        "TotalPoints": 500.2,
+        "WeeksStarted": 45,
+        "AveragePoints": 11.1,
+        "SeasonsWithFranchise": [
+          2008,
+          2009,
+          2010
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 6390,
+        "PlayerName": "Anquan Boldin",
+        "Position": "WR",
+        "TotalPoints": 448.1,
+        "WeeksStarted": 43,
+        "AveragePoints": 10.4,
+        "SeasonsWithFranchise": [
+          2008,
+          2009,
+          2010,
+          2013
+        ],
+        "IsBench": true
+      }
+    ],
+    "TightEnds": [
+      {
+        "PlayerId": 24017,
+        "PlayerName": "Rob Gronkowski",
+        "Position": "TE",
+        "TotalPoints": 1009.8,
+        "WeeksStarted": 79,
+        "AveragePoints": 12.8,
+        "SeasonsWithFranchise": [
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 27538,
+        "PlayerName": "Eric Ebron",
+        "Position": "TE",
+        "TotalPoints": 146.2,
+        "WeeksStarted": 15,
+        "AveragePoints": 9.7,
+        "SeasonsWithFranchise": [
+          2018
+        ],
+        "IsBench": true
+      }
+    ]
+  }
+}

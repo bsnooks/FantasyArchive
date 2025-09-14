@@ -1,0 +1,491 @@
+{
+  "Id": "bbe2d0ad-54cf-4c22-be82-b2a5f262a157",
+  "Name": "The Mojos",
+  "Owner": "Brent",
+  "Owners": [
+    "Brent",
+    "Mark"
+  ],
+  "EstablishedDate": "2002-08-01T00:00:00",
+  "IsActive": true,
+  "Color": "#009e49",
+  "Teams": [
+    {
+      "Id": "b18cb052-64e7-41e2-8b6a-f83ee19e3182",
+      "Year": 2002,
+      "TeamName": "thebottomoftheberrel",
+      "Wins": 1,
+      "Losses": 11,
+      "Ties": 0,
+      "Points": 900,
+      "Standing": 10,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "c71b3721-0ee1-4467-975b-6842a8e318e6",
+      "Year": 2003,
+      "TeamName": "the B.O.T.B",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1324,
+      "Standing": 6,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "6120fd6b-3046-41ae-b8f2-df5755bc2c12",
+      "Year": 2004,
+      "TeamName": "ashton",
+      "Wins": 5,
+      "Losses": 9,
+      "Ties": 0,
+      "Points": 1258,
+      "Standing": 9,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "0a1aab81-ec8c-4df7-b781-49240ab29bc1",
+      "Year": 2005,
+      "TeamName": "The Mojos",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1321,
+      "Standing": 7,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "0bb68ea0-b655-4e0b-8d18-30156a7f0942",
+      "Year": 2006,
+      "TeamName": "The Mojo\u0027s",
+      "Wins": 5,
+      "Losses": 9,
+      "Ties": 0,
+      "Points": 1274,
+      "Standing": 9,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "6f1b594e-f69b-4431-9ad3-2a61f8016e83",
+      "Year": 2007,
+      "TeamName": "The Mojos",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1587.04,
+      "Standing": 4,
+      "Champion": true,
+      "SecondPlace": false
+    },
+    {
+      "Id": "20b5c93a-500e-477a-95bf-ca7b0246f51d",
+      "Year": 2008,
+      "TeamName": "The Mojos",
+      "Wins": 9,
+      "Losses": 5,
+      "Ties": 0,
+      "Points": 1507.9400000000003,
+      "Standing": 3,
+      "Champion": false,
+      "SecondPlace": true
+    },
+    {
+      "Id": "11936327-2b47-4abf-a265-61961c760062",
+      "Year": 2009,
+      "TeamName": "The Mojos",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1372.8799999999999,
+      "Standing": 6,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "14daf160-b116-46bf-804c-9754c55a1579",
+      "Year": 2010,
+      "TeamName": "The Mojos",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1392.14,
+      "Standing": 6,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "0dd578f7-64be-4745-a788-e02ceb63037d",
+      "Year": 2011,
+      "TeamName": "The Mojos",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1537.1,
+      "Standing": 6,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "e99bbbcb-c11e-43b7-acf6-ce67b5b27004",
+      "Year": 2012,
+      "TeamName": "The Mojos",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1378.02,
+      "Standing": 8,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "97329fc1-3cf0-4246-854a-39a90ddf1911",
+      "Year": 2013,
+      "TeamName": "The Mojos",
+      "Wins": 4,
+      "Losses": 10,
+      "Ties": 0,
+      "Points": 1295.36,
+      "Standing": 10,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "915987e3-1612-459d-8d1b-56ff5cf5dc7d",
+      "Year": 2014,
+      "TeamName": "The Mojos",
+      "Wins": 8,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1703.38,
+      "Standing": 4,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "e3e643dc-2755-4ee1-baa2-57d157e50ff2",
+      "Year": 2015,
+      "TeamName": "The Mojos",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1387.5600000000002,
+      "Standing": 9,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "72850293-0262-4a3f-a5cd-9cbe6cf06085",
+      "Year": 2016,
+      "TeamName": "The Mojos",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1492.58,
+      "Standing": 8,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "e07cb423-4868-4a33-a33a-c37fa690e6c3",
+      "Year": 2017,
+      "TeamName": "The Mojos",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1449.6599999999996,
+      "Standing": 5,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "2727bb26-4f86-48f0-917a-d6fd81f0444c",
+      "Year": 2018,
+      "TeamName": "The Mojos",
+      "Wins": 1,
+      "Losses": 13,
+      "Ties": 0,
+      "Points": 1434.0399999999997,
+      "Standing": 10,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "4bd1a27e-f401-439a-b2b8-6769efa71de6",
+      "Year": 2019,
+      "TeamName": "The Mojos",
+      "Wins": 8,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1653.5599999999997,
+      "Standing": 5,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "f7cc127f-12d5-4b3b-ab1c-67d795601e75",
+      "Year": 2020,
+      "TeamName": "The Mojos",
+      "Wins": 11,
+      "Losses": 3,
+      "Ties": 0,
+      "Points": 1961.86,
+      "Standing": 1,
+      "Champion": true,
+      "SecondPlace": false
+    },
+    {
+      "Id": "03fea09b-930c-4c09-a1c6-763f9008fed2",
+      "Year": 2021,
+      "TeamName": "The Mojos",
+      "Wins": 12,
+      "Losses": 3,
+      "Ties": 0,
+      "Points": 1831.74,
+      "Standing": 1,
+      "Champion": true,
+      "SecondPlace": false
+    },
+    {
+      "Id": "5ece58e7-8b78-4f29-a0e5-9b04aa10c711",
+      "Year": 2022,
+      "TeamName": "The Mojos",
+      "Wins": 10,
+      "Losses": 5,
+      "Ties": 0,
+      "Points": 1787.54,
+      "Standing": 2,
+      "Champion": true,
+      "SecondPlace": false
+    },
+    {
+      "Id": "7b28b1e7-ca5b-424a-9820-bfb3f616247a",
+      "Year": 2023,
+      "TeamName": "The Mojos",
+      "Wins": 8,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1758.66,
+      "Standing": 2,
+      "Champion": false,
+      "SecondPlace": true
+    },
+    {
+      "Id": "1d04cd7d-b6a1-4d11-87a9-8d8af846c132",
+      "Year": 2024,
+      "TeamName": "The Mojos",
+      "Wins": 10,
+      "Losses": 5,
+      "Ties": 0,
+      "Points": 1717.42,
+      "Standing": 2,
+      "Champion": false,
+      "SecondPlace": true
+    }
+  ],
+  "AllTimeRoster": {
+    "Quarterbacks": [
+      {
+        "PlayerId": 6760,
+        "PlayerName": "Eli Manning",
+        "Position": "QB",
+        "TotalPoints": 1901.6,
+        "WeeksStarted": 126,
+        "AveragePoints": 15.1,
+        "SeasonsWithFranchise": [
+          2006,
+          2007,
+          2008,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 25711,
+        "PlayerName": "Andrew Luck",
+        "Position": "QB",
+        "TotalPoints": 1608.9,
+        "WeeksStarted": 80,
+        "AveragePoints": 20.1,
+        "SeasonsWithFranchise": [
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2018
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 30977,
+        "PlayerName": "Josh Allen",
+        "Position": "QB",
+        "TotalPoints": 1404.2,
+        "WeeksStarted": 63,
+        "AveragePoints": 22.3,
+        "SeasonsWithFranchise": [
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "IsBench": true
+      }
+    ],
+    "RunningBacks": [
+      {
+        "PlayerId": 30154,
+        "PlayerName": "Dalvin Cook",
+        "Position": "RB",
+        "TotalPoints": 1068.6,
+        "WeeksStarted": 69,
+        "AveragePoints": 15.5,
+        "SeasonsWithFranchise": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 3937,
+        "PlayerName": "Tiki Barber",
+        "Position": "RB",
+        "TotalPoints": 508.9,
+        "WeeksStarted": 29,
+        "AveragePoints": 17.5,
+        "SeasonsWithFranchise": [
+          2004,
+          2005,
+          2006
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 29279,
+        "PlayerName": "Derrick Henry",
+        "Position": "RB",
+        "TotalPoints": 443.7,
+        "WeeksStarted": 24,
+        "AveragePoints": 18.5,
+        "SeasonsWithFranchise": [
+          2019,
+          2020
+        ],
+        "IsBench": true
+      }
+    ],
+    "WideReceivers": [
+      {
+        "PlayerId": 26650,
+        "PlayerName": "DeAndre Hopkins",
+        "Position": "WR",
+        "TotalPoints": 977.3,
+        "WeeksStarted": 85,
+        "AveragePoints": 11.5,
+        "SeasonsWithFranchise": [
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 27581,
+        "PlayerName": "Davante Adams",
+        "Position": "WR",
+        "TotalPoints": 726.3,
+        "WeeksStarted": 50,
+        "AveragePoints": 14.5,
+        "SeasonsWithFranchise": [
+          2020,
+          2021,
+          2022,
+          2023
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 6762,
+        "PlayerName": "Larry Fitzgerald",
+        "Position": "WR",
+        "TotalPoints": 646.3,
+        "WeeksStarted": 54,
+        "AveragePoints": 12.0,
+        "SeasonsWithFranchise": [
+          2006,
+          2007,
+          2008,
+          2009,
+          2010
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 4262,
+        "PlayerName": "Randy Moss",
+        "Position": "WR",
+        "TotalPoints": 351.0,
+        "WeeksStarted": 25,
+        "AveragePoints": 14.0,
+        "SeasonsWithFranchise": [
+          2006,
+          2007,
+          2008
+        ],
+        "IsBench": true
+      }
+    ],
+    "TightEnds": [
+      {
+        "PlayerId": 8285,
+        "PlayerName": "Greg Olsen",
+        "Position": "TE",
+        "TotalPoints": 450.3,
+        "WeeksStarted": 62,
+        "AveragePoints": 7.3,
+        "SeasonsWithFranchise": [
+          2007,
+          2008,
+          2010,
+          2013,
+          2014,
+          2016,
+          2017
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 28592,
+        "PlayerName": "Darren Waller",
+        "Position": "TE",
+        "TotalPoints": 215.7,
+        "WeeksStarted": 27,
+        "AveragePoints": 8.0,
+        "SeasonsWithFranchise": [
+          2020,
+          2021
+        ],
+        "IsBench": true
+      }
+    ]
+  }
+}

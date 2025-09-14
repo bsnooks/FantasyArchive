@@ -1,0 +1,501 @@
+{
+  "Id": "40f7599b-e68f-4bf4-9553-bf7e10924635",
+  "Name": "Army of Dakness",
+  "Owner": "Braden",
+  "Owners": [
+    "Braden",
+    "Chase"
+  ],
+  "EstablishedDate": "2002-08-01T00:00:00",
+  "IsActive": true,
+  "Color": "#00bcf2",
+  "Teams": [
+    {
+      "Id": "5d6c0531-6c52-4b32-81b9-1f60dbe99597",
+      "Year": 2002,
+      "TeamName": "The Guardians",
+      "Wins": 6,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1080,
+      "Standing": 5,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "74e2f211-7c47-43ed-8fff-6a2e79975441",
+      "Year": 2003,
+      "TeamName": "Chases Team",
+      "Wins": 8,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1325,
+      "Standing": 4,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "6d2cadd1-e2e5-453b-89e7-e28605a5e663",
+      "Year": 2004,
+      "TeamName": "The Evil Chopsticks.",
+      "Wins": 4,
+      "Losses": 10,
+      "Ties": 0,
+      "Points": 1198,
+      "Standing": 10,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "aed933d1-f453-40da-be78-2ae3ea3131cb",
+      "Year": 2005,
+      "TeamName": "THE SKANKS",
+      "Wins": 2,
+      "Losses": 12,
+      "Ties": 0,
+      "Points": 1166.5,
+      "Standing": 10,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "50c6d909-4ea3-42aa-82bc-22494cf329d2",
+      "Year": 2006,
+      "TeamName": "THE SKANKS",
+      "Wins": 6,
+      "Losses": 7,
+      "Ties": 1,
+      "Points": 1349.5,
+      "Standing": 7,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "99de403c-daab-4731-833e-e3124520b643",
+      "Year": 2007,
+      "TeamName": "THE SKANKS",
+      "Wins": 9,
+      "Losses": 5,
+      "Ties": 0,
+      "Points": 1596.0599999999997,
+      "Standing": 1,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "6dfa0fe3-5288-42ce-b8b2-2153d110e1c3",
+      "Year": 2008,
+      "TeamName": "Romophobia",
+      "Wins": 8,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1533.22,
+      "Standing": 4,
+      "Champion": true,
+      "SecondPlace": false
+    },
+    {
+      "Id": "59a913e6-43f1-4a40-a4f0-dc752a117adc",
+      "Year": 2009,
+      "TeamName": "Ben Rapelisberger",
+      "Wins": 8,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1556.1,
+      "Standing": 3,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "001e03fb-0e76-4919-95e4-17fcf74c8bee",
+      "Year": 2010,
+      "TeamName": "Long Gain Rice",
+      "Wins": 5,
+      "Losses": 9,
+      "Ties": 0,
+      "Points": 1438,
+      "Standing": 8,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "46acfc18-a2df-4f0a-841a-545f1c140d05",
+      "Year": 2011,
+      "TeamName": "Dezney Land",
+      "Wins": 5,
+      "Losses": 9,
+      "Ties": 0,
+      "Points": 1467.38,
+      "Standing": 8,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "3075c755-bb98-43e5-a7a3-20de06ea65f1",
+      "Year": 2012,
+      "TeamName": "Dezney Land",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1581.56,
+      "Standing": 5,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "d92a27be-86e0-4af8-bc6d-9bdb5f4b8327",
+      "Year": 2013,
+      "TeamName": "Dezney Land",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1617.46,
+      "Standing": 6,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "fdf852b3-fa1d-4f6e-9a2a-d2e818a7a41b",
+      "Year": 2014,
+      "TeamName": "Dezney Land",
+      "Wins": 8,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1619.92,
+      "Standing": 5,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "22ba4b47-4a34-4b0c-b273-a37a0d33d47e",
+      "Year": 2015,
+      "TeamName": "Dezney Land",
+      "Wins": 9,
+      "Losses": 5,
+      "Ties": 0,
+      "Points": 1557.9600000000005,
+      "Standing": 2,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "64d07009-5702-47b9-bcee-2abc680c046f",
+      "Year": 2016,
+      "TeamName": "Dezney Land",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1563.2200000000003,
+      "Standing": 5,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "fca5cc62-d6dc-4f1e-b505-4cf35f4327f0",
+      "Year": 2017,
+      "TeamName": "Dezney Land",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1352.74,
+      "Standing": 9,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "33059305-f85e-4082-8925-538e4515c35a",
+      "Year": 2018,
+      "TeamName": "Army of Dakness",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1622.8200000000002,
+      "Standing": 7,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "8424ee21-57fb-4744-9ea8-b20e8b0ce5d0",
+      "Year": 2019,
+      "TeamName": "Army of Dakness",
+      "Wins": 10,
+      "Losses": 4,
+      "Ties": 0,
+      "Points": 1656.8799999999999,
+      "Standing": 2,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "b5c83734-c68c-4894-aff9-d83a12d800f4",
+      "Year": 2020,
+      "TeamName": "Army of Dakness",
+      "Wins": 4,
+      "Losses": 10,
+      "Ties": 0,
+      "Points": 1470.7199999999996,
+      "Standing": 9,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "80915027-8bf8-41ae-b703-41f63b3f1448",
+      "Year": 2021,
+      "TeamName": "Army of Dakness",
+      "Wins": 8,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1794.12,
+      "Standing": 5,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "66d814cd-7e41-49cc-a48a-de12e9dc6293",
+      "Year": 2022,
+      "TeamName": "Army of Dakness",
+      "Wins": 6,
+      "Losses": 9,
+      "Ties": 0,
+      "Points": 1651.88,
+      "Standing": 7,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "5eea134f-1660-4116-b5df-c77838877e41",
+      "Year": 2023,
+      "TeamName": "Army of Dakness",
+      "Wins": 9,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1601.58,
+      "Standing": 4,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "e1af6797-c515-410f-8cee-115a4efef936",
+      "Year": 2024,
+      "TeamName": "Army of Dakness",
+      "Wins": 9,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1749.12,
+      "Standing": 3,
+      "Champion": false,
+      "SecondPlace": false
+    }
+  ],
+  "AllTimeRoster": {
+    "Quarterbacks": [
+      {
+        "PlayerId": 30123,
+        "PlayerName": "Patrick Mahomes",
+        "Position": "QB",
+        "TotalPoints": 2318.7,
+        "WeeksStarted": 106,
+        "AveragePoints": 21.9,
+        "SeasonsWithFranchise": [
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 6624,
+        "PlayerName": "Tony Romo",
+        "Position": "QB",
+        "TotalPoints": 2156.3,
+        "WeeksStarted": 119,
+        "AveragePoints": 18.1,
+        "SeasonsWithFranchise": [
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 29369,
+        "PlayerName": "Dak Prescott",
+        "Position": "QB",
+        "TotalPoints": 2019.9,
+        "WeeksStarted": 120,
+        "AveragePoints": 16.8,
+        "SeasonsWithFranchise": [
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "IsBench": true
+      }
+    ],
+    "RunningBacks": [
+      {
+        "PlayerId": 30161,
+        "PlayerName": "Joe Mixon",
+        "Position": "RB",
+        "TotalPoints": 718.6,
+        "WeeksStarted": 66,
+        "AveragePoints": 10.9,
+        "SeasonsWithFranchise": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 8850,
+        "PlayerName": "Jamaal Charles",
+        "Position": "RB",
+        "TotalPoints": 683.4,
+        "WeeksStarted": 39,
+        "AveragePoints": 17.5,
+        "SeasonsWithFranchise": [
+          2012,
+          2013,
+          2014,
+          2015
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 7241,
+        "PlayerName": "Frank Gore",
+        "Position": "RB",
+        "TotalPoints": 587.2,
+        "WeeksStarted": 41,
+        "AveragePoints": 14.3,
+        "SeasonsWithFranchise": [
+          2008,
+          2009,
+          2010,
+          2011,
+          2012
+        ],
+        "IsBench": true
+      }
+    ],
+    "WideReceivers": [
+      {
+        "PlayerId": 23999,
+        "PlayerName": "Dez Bryant",
+        "Position": "WR",
+        "TotalPoints": 1018.7,
+        "WeeksStarted": 91,
+        "AveragePoints": 11.2,
+        "SeasonsWithFranchise": [
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 23997,
+        "PlayerName": "Demaryius Thomas",
+        "Position": "WR",
+        "TotalPoints": 731.3,
+        "WeeksStarted": 62,
+        "AveragePoints": 11.8,
+        "SeasonsWithFranchise": [
+          2012,
+          2013,
+          2014,
+          2015,
+          2016
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 33393,
+        "PlayerName": "Ja\u0027Marr Chase",
+        "Position": "WR",
+        "TotalPoints": 695.6,
+        "WeeksStarted": 55,
+        "AveragePoints": 12.6,
+        "SeasonsWithFranchise": [
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 29281,
+        "PlayerName": "Michael Thomas",
+        "Position": "WR",
+        "TotalPoints": 670.4,
+        "WeeksStarted": 61,
+        "AveragePoints": 11.0,
+        "SeasonsWithFranchise": [
+          2016,
+          2017,
+          2018,
+          2019,
+          2020
+        ],
+        "IsBench": true
+      }
+    ],
+    "TightEnds": [
+      {
+        "PlayerId": 3950,
+        "PlayerName": "Tony Gonzalez",
+        "Position": "TE",
+        "TotalPoints": 274.2,
+        "WeeksStarted": 30,
+        "AveragePoints": 9.1,
+        "SeasonsWithFranchise": [
+          2008,
+          2009
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 6663,
+        "PlayerName": "Antonio Gates",
+        "Position": "TE",
+        "TotalPoints": 241.9,
+        "WeeksStarted": 28,
+        "AveragePoints": 8.6,
+        "SeasonsWithFranchise": [
+          2005,
+          2006,
+          2012,
+          2014,
+          2016
+        ],
+        "IsBench": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,508 @@
+{
+  "Id": "8e9f18ff-62c3-40e8-bb10-32f74cf4ee33",
+  "Name": "Hot Loads",
+  "Owner": "Brad",
+  "Owners": [
+    "Brad"
+  ],
+  "EstablishedDate": "2002-08-01T00:00:00",
+  "IsActive": true,
+  "Color": "#fff100",
+  "Teams": [
+    {
+      "Id": "edaab1cf-5988-4f5a-a3a6-9f578d846356",
+      "Year": 2002,
+      "TeamName": "GAGNON",
+      "Wins": 11,
+      "Losses": 1,
+      "Ties": 0,
+      "Points": 1363,
+      "Standing": 1,
+      "Champion": true,
+      "SecondPlace": false
+    },
+    {
+      "Id": "d26099b3-6327-41ec-b61e-22feab8ad4de",
+      "Year": 2003,
+      "TeamName": "The Defendin Champ",
+      "Wins": 10,
+      "Losses": 4,
+      "Ties": 0,
+      "Points": 1560.5,
+      "Standing": 2,
+      "Champion": false,
+      "SecondPlace": true
+    },
+    {
+      "Id": "05c480fd-f1b9-4850-8490-974315a19e04",
+      "Year": 2004,
+      "TeamName": "13    JINXED    13",
+      "Wins": 9,
+      "Losses": 4,
+      "Ties": 1,
+      "Points": 1754,
+      "Standing": 3,
+      "Champion": false,
+      "SecondPlace": true
+    },
+    {
+      "Id": "0599d679-ad05-487a-a939-5a4a0f1eaf36",
+      "Year": 2005,
+      "TeamName": "Gagnon",
+      "Wins": 11,
+      "Losses": 3,
+      "Ties": 0,
+      "Points": 1587,
+      "Standing": 1,
+      "Champion": false,
+      "SecondPlace": true
+    },
+    {
+      "Id": "f3708339-5cea-4c56-8572-df7fe3616f4c",
+      "Year": 2006,
+      "TeamName": "Gagnon",
+      "Wins": 8,
+      "Losses": 5,
+      "Ties": 1,
+      "Points": 1392.5,
+      "Standing": 2,
+      "Champion": true,
+      "SecondPlace": false
+    },
+    {
+      "Id": "4204a99d-beff-46c0-982b-f78aefc63dca",
+      "Year": 2007,
+      "TeamName": "Gagnon",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1530.22,
+      "Standing": 7,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "bfabfe2f-8492-41a7-980f-7dec6c63d497",
+      "Year": 2008,
+      "TeamName": "Gagnon",
+      "Wins": 11,
+      "Losses": 3,
+      "Ties": 0,
+      "Points": 1518.54,
+      "Standing": 1,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "1a25532a-1e28-45a7-94ec-28cbf208e645",
+      "Year": 2009,
+      "TeamName": "Gagnon",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1611.8600000000001,
+      "Standing": 7,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "f3d9c8ac-fe2a-4818-a7dc-a6d5c390112f",
+      "Year": 2010,
+      "TeamName": "Gagnon",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1468.5,
+      "Standing": 5,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "2ff911f9-3644-402f-85a4-195efe169c6d",
+      "Year": 2011,
+      "TeamName": "Gagnon",
+      "Wins": 4,
+      "Losses": 10,
+      "Ties": 0,
+      "Points": 1526.92,
+      "Standing": 10,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "696deced-a09f-414a-801b-075f2ff44517",
+      "Year": 2012,
+      "TeamName": "Gagnon",
+      "Wins": 10,
+      "Losses": 4,
+      "Ties": 0,
+      "Points": 1689.4200000000003,
+      "Standing": 1,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "a554297d-c6d8-4b68-a805-f3ea7715204f",
+      "Year": 2013,
+      "TeamName": "Gagnon",
+      "Wins": 9,
+      "Losses": 5,
+      "Ties": 0,
+      "Points": 1827.06,
+      "Standing": 1,
+      "Champion": true,
+      "SecondPlace": false
+    },
+    {
+      "Id": "81569252-4597-4d9d-b63f-452a123f5ec4",
+      "Year": 2014,
+      "TeamName": "Gagnon",
+      "Wins": 2,
+      "Losses": 12,
+      "Ties": 0,
+      "Points": 1302.22,
+      "Standing": 10,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "f2526dd4-d3ff-422d-9185-ae1730329af4",
+      "Year": 2015,
+      "TeamName": "Gagnon",
+      "Wins": 8,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1718.02,
+      "Standing": 4,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "0871359d-2567-43a5-b6cf-d3266493716b",
+      "Year": 2016,
+      "TeamName": "Gagnon",
+      "Wins": 8,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1510.1399999999999,
+      "Standing": 3,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "154cb864-26ce-47de-a647-b1e4e8ec7647",
+      "Year": 2017,
+      "TeamName": "Gagnon",
+      "Wins": 8,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1500.1000000000001,
+      "Standing": 4,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "816dd073-80ee-4969-9fbe-2e9b1ad5152a",
+      "Year": 2018,
+      "TeamName": "Gagnon",
+      "Wins": 8,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1604.2600000000002,
+      "Standing": 4,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "3a37895e-bb36-467c-906d-527d91838f88",
+      "Year": 2019,
+      "TeamName": "Gagnon",
+      "Wins": 5,
+      "Losses": 9,
+      "Ties": 0,
+      "Points": 1532.6800000000003,
+      "Standing": 8,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "095adf62-482e-42d4-8bc8-223acebc8df2",
+      "Year": 2020,
+      "TeamName": "Gagnon",
+      "Wins": 8,
+      "Losses": 6,
+      "Ties": 0,
+      "Points": 1658.3,
+      "Standing": 4,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "44364fc4-cd24-41a3-b0ef-c5f7ab84a022",
+      "Year": 2021,
+      "TeamName": "Gagnon",
+      "Wins": 10,
+      "Losses": 5,
+      "Ties": 0,
+      "Points": 1591.2,
+      "Standing": 4,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "e0850a47-79d8-478a-af94-30443d553705",
+      "Year": 2022,
+      "TeamName": "Hot Loads",
+      "Wins": 6,
+      "Losses": 9,
+      "Ties": 0,
+      "Points": 1596.96,
+      "Standing": 8,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "d0c40a52-b952-4973-a35c-df5a2b86529a",
+      "Year": 2023,
+      "TeamName": "Hot Loads",
+      "Wins": 3,
+      "Losses": 12,
+      "Ties": 0,
+      "Points": 1368.92,
+      "Standing": 10,
+      "Champion": false,
+      "SecondPlace": false
+    },
+    {
+      "Id": "95c6a9a9-6005-4d33-8a06-4642082fefe3",
+      "Year": 2024,
+      "TeamName": "Hot Loads",
+      "Wins": 6,
+      "Losses": 9,
+      "Ties": 0,
+      "Points": 1580.46,
+      "Standing": 7,
+      "Champion": false,
+      "SecondPlace": false
+    }
+  ],
+  "AllTimeRoster": {
+    "Quarterbacks": [
+      {
+        "PlayerId": 4256,
+        "PlayerName": "Peyton Manning",
+        "Position": "QB",
+        "TotalPoints": 3237.0,
+        "WeeksStarted": 183,
+        "AveragePoints": 17.7,
+        "SeasonsWithFranchise": [
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2012,
+          2013,
+          2014,
+          2015
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 25812,
+        "PlayerName": "Kirk Cousins",
+        "Position": "QB",
+        "TotalPoints": 1334.8,
+        "WeeksStarted": 67,
+        "AveragePoints": 19.9,
+        "SeasonsWithFranchise": [
+          2015,
+          2016,
+          2017,
+          2018,
+          2019
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 28390,
+        "PlayerName": "Marcus Mariota",
+        "Position": "QB",
+        "TotalPoints": 931.7,
+        "WeeksStarted": 57,
+        "AveragePoints": 16.3,
+        "SeasonsWithFranchise": [
+          2015,
+          2016,
+          2017,
+          2018,
+          2019
+        ],
+        "IsBench": true
+      }
+    ],
+    "RunningBacks": [
+      {
+        "PlayerId": 8261,
+        "PlayerName": "Adrian Peterson",
+        "Position": "RB",
+        "TotalPoints": 1803.4,
+        "WeeksStarted": 111,
+        "AveragePoints": 16.2,
+        "SeasonsWithFranchise": [
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 30180,
+        "PlayerName": "Alvin Kamara",
+        "Position": "RB",
+        "TotalPoints": 1159.4,
+        "WeeksStarted": 77,
+        "AveragePoints": 15.1,
+        "SeasonsWithFranchise": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2024
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 31005,
+        "PlayerName": "Nick Chubb",
+        "Position": "RB",
+        "TotalPoints": 895.9,
+        "WeeksStarted": 61,
+        "AveragePoints": 14.7,
+        "SeasonsWithFranchise": [
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023
+        ],
+        "IsBench": true
+      }
+    ],
+    "WideReceivers": [
+      {
+        "PlayerId": 8256,
+        "PlayerName": "Calvin Johnson",
+        "Position": "WR",
+        "TotalPoints": 1533.1,
+        "WeeksStarted": 124,
+        "AveragePoints": 12.4,
+        "SeasonsWithFranchise": [
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 24791,
+        "PlayerName": "A.J. Green",
+        "Position": "WR",
+        "TotalPoints": 1197.6,
+        "WeeksStarted": 102,
+        "AveragePoints": 11.7,
+        "SeasonsWithFranchise": [
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 3664,
+        "PlayerName": "Terrell Owens",
+        "Position": "WR",
+        "TotalPoints": 536.6,
+        "WeeksStarted": 49,
+        "AveragePoints": 11.0,
+        "SeasonsWithFranchise": [
+          2002,
+          2003,
+          2004,
+          2005,
+          2006
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 9348,
+        "PlayerName": "Mike Wallace",
+        "Position": "WR",
+        "TotalPoints": 435.7,
+        "WeeksStarted": 41,
+        "AveragePoints": 10.6,
+        "SeasonsWithFranchise": [
+          2010,
+          2011,
+          2012
+        ],
+        "IsBench": true
+      }
+    ],
+    "TightEnds": [
+      {
+        "PlayerId": 6663,
+        "PlayerName": "Antonio Gates",
+        "Position": "TE",
+        "TotalPoints": 333.1,
+        "WeeksStarted": 35,
+        "AveragePoints": 9.5,
+        "SeasonsWithFranchise": [
+          2006,
+          2007,
+          2008
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerId": 7755,
+        "PlayerName": "Vernon Davis",
+        "Position": "TE",
+        "TotalPoints": 252.0,
+        "WeeksStarted": 39,
+        "AveragePoints": 6.5,
+        "SeasonsWithFranchise": [
+          2011,
+          2013,
+          2014
+        ],
+        "IsBench": true
+      }
+    ]
+  }
+}
