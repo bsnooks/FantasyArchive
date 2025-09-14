@@ -56,7 +56,7 @@ const App: React.FC = () => {
         }}
       >
         <QueryClientProvider client={queryClient}>
-          <Router>
+          <Router basename={process.env.PUBLIC_URL}>
             <ScrollToTop />
             <ContextInitializer>
               <div className="app">
