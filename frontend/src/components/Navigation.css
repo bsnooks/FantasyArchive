@@ -39,6 +39,7 @@
 .nav-brand-text {
   font-family: 'Georgia', serif;
   color: white !important;
+  white-space: nowrap;
 }
 
 /* Ant Design Menu overrides */
@@ -87,7 +88,7 @@
   }
   
   .nav-brand-text {
-    font-size: 1.1rem !important;
+    display: none;
   }
   
   .nav-brand-logo {
@@ -105,5 +106,20 @@
   
   .nav-menu .anticon {
     margin-right: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-navigation {
+    padding: 0 0.5rem !important;
+  }
+  
+  .nav-brand-logo {
+    height: 28px;
+  }
+  
+  .nav-menu .ant-menu-item {
+    margin: 0 2px !important;
+    padding: 0 6px !important;
   }
 }
