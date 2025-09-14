@@ -2,6 +2,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .season-header {
@@ -20,18 +21,138 @@
   flex-wrap: wrap;
 }
 
+.champion-card,
+.runner-up-card {
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+}
+
+/* Hide/show tag text based on screen size */
+.tag-text-short {
+  display: none;
+}
+
+.tag-text-full {
+  display: inline;
+}
+
 .season-content {
   display: grid;
   gap: 2rem;
 }
 
+/* Mobile responsive improvements */
 @media (max-width: 768px) {
   .season-detail {
-    padding: 1rem;
+    padding: 1rem 0.5rem; /* Reduce side padding more aggressively */
+    max-width: 100vw; /* Ensure we don't exceed viewport width */
+  }
+  
+  .season-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .season-title {
+    margin-bottom: 1.5rem;
   }
   
   .season-champions {
     flex-direction: column;
     align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .champion-card,
+  .runner-up-card {
+    width: 100%;
+    max-width: 280px;
+    margin-bottom: 0;
+  }
+  
+  .season-content {
+    gap: 1.5rem;
+  }
+  
+  /* Show short tag text on mobile */
+  .tag-text-full {
+    display: none;
+  }
+  
+  .tag-text-short {
+    display: inline;
+  }
+  
+  /* Ensure statistics cards don't cause overflow */
+  .season-stats .ant-row {
+    margin-left: -8px !important;
+    margin-right: -8px !important;
+  }
+  
+  .season-stats .ant-col {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+  
+  /* Ensure titles don't cause overflow */
+  .season-detail h1 {
+    font-size: 1.75rem !important;
+    line-height: 1.2;
+    word-break: break-word;
+    text-align: center;
+  }
+  
+  .season-detail h2 {
+    font-size: 1.25rem !important;
+    line-height: 1.3;
+  }
+  
+  /* Compact champion cards */
+  .season-champions .ant-card {
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  /* Ensure Space component wraps properly */
+  .season-title .ant-space {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .season-detail {
+    padding: 0.75rem 0.25rem; /* Even tighter padding for very small screens */
+  }
+  
+  .season-detail h1 {
+    font-size: 1.5rem !important;
+  }
+  
+  .season-detail h2 {
+    font-size: 1.1rem !important;
+  }
+  
+  /* Further reduce gutter on very small screens */
+  .season-stats .ant-row {
+    margin-left: -4px !important;
+    margin-right: -4px !important;
+  }
+  
+  .season-stats .ant-col {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+  }
+  
+  /* More compact champion cards */
+  .champion-card,
+  .runner-up-card {
+    max-width: 100%;
+  }
+  
+  /* Smaller tag text */
+  .ant-tag {
+    font-size: 0.7rem !important;
+    padding: 2px 6px !important;
   }
 }

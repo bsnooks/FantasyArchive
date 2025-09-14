@@ -77,19 +77,32 @@ const SeasonDetail: React.FC = () => {
           <Title level={1} style={{ marginBottom: 0, color: '#1a2b4c' }}>
             {season.Name}
           </Title>
-          <Space size="large" style={{ marginTop: '1rem' }}>
+          <Space 
+            size="middle" 
+            wrap 
+            style={{ 
+              marginTop: '1rem',
+              justifyContent: 'center',
+              width: '100%'
+            }}
+          >
             <Tag 
               color={season.IsActive ? 'processing' : 'success'}
               icon={<CalendarOutlined />}
-              style={{ padding: '4px 12px', fontSize: '0.9rem' }}
+              style={{ 
+                padding: '4px 8px', 
+                fontSize: '0.8rem',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '4px'
+              }}
             >
-              {season.IsActive ? `Week ${season.CurrentWeek} - In Progress` : 'Season Complete'}
-            </Tag>
-            <Tag 
-              icon={<TeamOutlined />}
-              style={{ padding: '4px 12px', fontSize: '0.9rem' }}
-            >
-              {season.Teams.length} Teams
+              <span className="tag-text-full">
+                {season.IsActive ? `Week ${season.CurrentWeek} - In Progress` : 'Season Complete'}
+              </span>
+              <span className="tag-text-short">
+                {season.IsActive ? `Week ${season.CurrentWeek}` : 'Complete'}
+              </span>
             </Tag>
           </Space>
         </div>
@@ -97,11 +110,11 @@ const SeasonDetail: React.FC = () => {
         {(champion || runnerUp) && (
           <div className="season-champions">
             {champion && (
-              <Card size="small" style={{ marginBottom: '1rem' }}>
-                <Space>
-                  <TrophyOutlined style={{ color: '#d4a615', fontSize: '24px' }} />
-                  <div>
-                    <div style={{ fontSize: '0.8rem', color: '#6c757d', textTransform: 'uppercase' }}>
+              <Card size="small" className="champion-card">
+                <Space size="small">
+                  <TrophyOutlined style={{ color: '#d4a615', fontSize: '20px' }} />
+                  <div style={{ minWidth: 0, flex: 1 }}>
+                    <div style={{ fontSize: '0.75rem', color: '#6c757d', textTransform: 'uppercase' }}>
                       Champion
                     </div>
                     <FranchiseLink 
@@ -113,12 +126,22 @@ const SeasonDetail: React.FC = () => {
                         fontWeight: 600, 
                         color: '#1a2b4c',
                         textDecoration: 'none',
-                        fontSize: '1.1rem'
+                        fontSize: '1rem',
+                        display: 'block',
+                        whiteSpace: 'nowrap',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis'
                       }}
                     >
                       {champion.FranchiseName}
                     </FranchiseLink>
-                    <div style={{ color: '#6c757d', fontSize: '0.9rem' }}>
+                    <div style={{ 
+                      color: '#6c757d', 
+                      fontSize: '0.8rem',
+                      whiteSpace: 'nowrap',
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis'
+                    }}>
                       {champion.Wins}-{champion.Losses}
                       {champion.Ties > 0 && `-${champion.Ties}`} • {champion.Points.toFixed(1)} pts
                     </div>
@@ -127,11 +150,11 @@ const SeasonDetail: React.FC = () => {
               </Card>
             )}
             {runnerUp && (
-              <Card size="small">
-                <Space>
-                  <StarOutlined style={{ color: '#c0c0c0', fontSize: '24px' }} />
-                  <div>
-                    <div style={{ fontSize: '0.8rem', color: '#6c757d', textTransform: 'uppercase' }}>
+              <Card size="small" className="runner-up-card">
+                <Space size="small">
+                  <StarOutlined style={{ color: '#c0c0c0', fontSize: '20px' }} />
+                  <div style={{ minWidth: 0, flex: 1 }}>
+                    <div style={{ fontSize: '0.75rem', color: '#6c757d', textTransform: 'uppercase' }}>
                       Runner-up
                     </div>
                     <FranchiseLink 
@@ -143,12 +166,22 @@ const SeasonDetail: React.FC = () => {
                         fontWeight: 600, 
                         color: '#1a2b4c',
                         textDecoration: 'none',
-                        fontSize: '1.1rem'
+                        fontSize: '1rem',
+                        display: 'block',
+                        whiteSpace: 'nowrap',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis'
                       }}
                     >
                       {runnerUp.FranchiseName}
                     </FranchiseLink>
-                    <div style={{ color: '#6c757d', fontSize: '0.9rem' }}>
+                    <div style={{ 
+                      color: '#6c757d', 
+                      fontSize: '0.8rem',
+                      whiteSpace: 'nowrap',
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis'
+                    }}>
                       {runnerUp.Wins}-{runnerUp.Losses}
                       {runnerUp.Ties > 0 && `-${runnerUp.Ties}`} • {runnerUp.Points.toFixed(1)} pts
                     </div>

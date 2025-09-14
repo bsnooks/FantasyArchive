@@ -42,13 +42,13 @@ const SeasonStandingsTable: React.FC<SeasonStandingsTableProps> = ({
     {
       title: 'Pos',
       key: 'standing',
-      width: 60,
+      width: 50,
       align: 'center',
       render: (record: Team) => (
         <span style={{ 
           fontWeight: 600, 
           color: '#495057',
-          fontSize: '1.1rem'
+          fontSize: '1rem'
         }}>
           #{record.Standing}
         </span>
@@ -57,15 +57,16 @@ const SeasonStandingsTable: React.FC<SeasonStandingsTableProps> = ({
     {
       title: 'Team',
       key: 'team',
-      width: 300,
+      minWidth: 180,
+      ellipsis: true,
       render: (record: Team) => (
-        <Space size="middle">
+        <Space size="small">
           <FranchiseLogo 
             franchiseId={record.FranchiseId} 
             franchiseName={record.FranchiseName}
-            size="medium"
+            size="small"
           />
-          <div style={{ lineHeight: 1.2 }}>
+          <div style={{ lineHeight: 1.2, minWidth: 0 }}>
             {showActions ? (
               <FranchiseLink 
                 franchiseId={record.FranchiseId}
@@ -76,7 +77,7 @@ const SeasonStandingsTable: React.FC<SeasonStandingsTableProps> = ({
                   fontWeight: 600, 
                   color: '#1a2b4c',
                   textDecoration: 'none',
-                  fontSize: '1.05rem'
+                  fontSize: '0.95rem'
                 }}
               >
                 {record.FranchiseName}
@@ -85,24 +86,27 @@ const SeasonStandingsTable: React.FC<SeasonStandingsTableProps> = ({
               <span style={{ 
                 fontWeight: 600, 
                 color: '#1a2b4c',
-                fontSize: '1.05rem'
+                fontSize: '0.95rem'
               }}>
                 {record.FranchiseName}
               </span>
             )}
             <div style={{ 
               color: '#6c757d', 
-              fontSize: '0.9rem',
-              marginTop: '2px'
+              fontSize: '0.8rem',
+              marginTop: '2px',
+              whiteSpace: 'nowrap',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis'
             }}>
               {record.TeamName}
             </div>
             <div style={{ 
               color: '#868e96', 
-              fontSize: '0.85rem',
+              fontSize: '0.75rem',
               marginTop: '1px'
             }}>
-              <UserOutlined style={{ marginRight: '4px' }} />
+              <UserOutlined style={{ marginRight: '4px', fontSize: '0.7rem' }} />
               {record.Owner}
             </div>
           </div>
@@ -112,7 +116,7 @@ const SeasonStandingsTable: React.FC<SeasonStandingsTableProps> = ({
     {
       title: 'Record',
       key: 'record',
-      width: 120,
+      width: 80,
       align: 'center',
       sorter: (a: Team, b: Team) => {
         const winPctA = a.Wins / (a.Wins + a.Losses + a.Ties);
@@ -125,13 +129,13 @@ const SeasonStandingsTable: React.FC<SeasonStandingsTableProps> = ({
             fontFamily: 'Monaco, Consolas, monospace', 
             fontWeight: 600, 
             color: '#495057',
-            fontSize: '1rem'
+            fontSize: '0.85rem'
           }}>
             {record.Wins}-{record.Losses}
             {record.Ties > 0 && `-${record.Ties}`}
           </div>
           <div style={{ 
-            fontSize: '0.8rem', 
+            fontSize: '0.7rem', 
             color: '#6c757d',
             marginTop: '2px'
           }}>
@@ -143,7 +147,7 @@ const SeasonStandingsTable: React.FC<SeasonStandingsTableProps> = ({
     {
       title: 'Points',
       key: 'points',
-      width: 120,
+      width: 80,
       align: 'right',
       sorter: (a: Team, b: Team) => a.Points - b.Points,
       render: (record: Team) => (
@@ -152,7 +156,7 @@ const SeasonStandingsTable: React.FC<SeasonStandingsTableProps> = ({
           precision={1}
           valueStyle={{ 
             fontFamily: 'Monaco, Consolas, monospace',
-            fontSize: '1rem',
+            fontSize: '0.85rem',
             color: '#495057'
           }}
         />
@@ -161,19 +165,19 @@ const SeasonStandingsTable: React.FC<SeasonStandingsTableProps> = ({
     {
       title: 'Awards',
       key: 'awards',
-      width: 80,
+      width: 60,
       align: 'center',
       render: (record: Team) => (
         <Space>
           {record.Champion && (
             <TrophyOutlined 
-              style={{ color: '#d4a615', fontSize: '18px' }} 
+              style={{ color: '#d4a615', fontSize: '16px' }} 
               title="Champion"
             />
           )}
           {record.SecondPlace && (
             <StarOutlined 
-              style={{ color: '#c0c0c0', fontSize: '18px' }} 
+              style={{ color: '#c0c0c0', fontSize: '16px' }} 
               title="Runner-up"
             />
           )}
@@ -189,7 +193,7 @@ const SeasonStandingsTable: React.FC<SeasonStandingsTableProps> = ({
       rowKey="Id"
       loading={loading}
       pagination={false}
-      size="middle"
+      size="small"
       style={{
         background: 'white',
         borderRadius: 12,
@@ -201,7 +205,7 @@ const SeasonStandingsTable: React.FC<SeasonStandingsTableProps> = ({
         if (record.SecondPlace) return 'runner-up-row';
         return 'season-standings-row';
       }}
-      scroll={{ x: 600 }}
+      scroll={{ x: 400 }}
     />
   );
 };
