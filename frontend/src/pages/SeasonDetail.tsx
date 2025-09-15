@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Typography, Tag, Card, Row, Col, Statistic, Space, Divider } from 'antd';
-import { CalendarOutlined, TeamOutlined, TrophyOutlined, StarOutlined } from '@ant-design/icons';
+import { CalendarOutlined, TrophyOutlined, StarOutlined } from '@ant-design/icons';
 import { useSeasons } from '../hooks/useFantasyData';
 import LoadingSkeleton from '../components/LoadingSkeleton';
 import EmptyState from '../components/EmptyState';
@@ -13,11 +13,7 @@ const { Title, Paragraph } = Typography;
 
 const SeasonDetail: React.FC = () => {
   const { year } = useParams<{ year: string }>();
-  const { data: seasons, isLoading: seasonsLoading, error: seasonsError } = useSeasons();
-  // const { data: franchises, isLoading: franchisesLoading, error: franchisesError } = useFranchises();
-
-  const isLoading = seasonsLoading; // || franchisesLoading;
-  const error = seasonsError; // || franchisesError;
+  const { data: seasons, isLoading, error } = useSeasons();
 
   if (isLoading) {
     return (
@@ -258,6 +254,22 @@ const SeasonDetail: React.FC = () => {
 
         <Divider />
 
+        <section className="season-weekly-records">
+          <div>
+            <Title level={2} style={{ color: '#1a2b4c', marginBottom: '1.5rem' }}>
+              🏆 Season Records
+            </Title>
+            <Card hoverable>
+              <Paragraph style={{ margin: 0, color: '#6c757d' }}>
+                View weekly high scores, low scores, margins of victory, and other records from this season in the Records section. 
+                Select this season from the context dropdown and navigate to Records to see all season-specific achievements.
+              </Paragraph>
+            </Card>
+          </div>
+        </section>
+
+        <Divider />
+
         <section className="coming-soon-features">
           <Title level={2} style={{ color: '#1a2b4c', marginBottom: '1.5rem' }}>
             🚧 Coming Soon
@@ -265,7 +277,7 @@ const SeasonDetail: React.FC = () => {
           <Row gutter={[16, 16]}>
             <Col xs={24} sm={12} lg={6}>
               <Card hoverable>
-                <Title level={4} style={{ margin: 0, marginBottom: '0.5rem' }}>📊 Weekly Matchups</Title>
+                <Title level={4} style={{ margin: 0, marginBottom: '0.5rem' }}>� Weekly Matchups</Title>
                 <Paragraph style={{ margin: 0, color: '#6c757d' }}>
                   View all matchups and scores for each week of the season
                 </Paragraph>
@@ -273,7 +285,7 @@ const SeasonDetail: React.FC = () => {
             </Col>
             <Col xs={24} sm={12} lg={6}>
               <Card hoverable>
-                <Title level={4} style={{ margin: 0, marginBottom: '0.5rem' }}>📋 Draft Results</Title>
+                <Title level={4} style={{ margin: 0, marginBottom: '0.5rem' }}>� Draft Results</Title>
                 <Paragraph style={{ margin: 0, color: '#6c757d' }}>
                   See the complete draft board and analysis for this season
                 </Paragraph>
@@ -284,14 +296,6 @@ const SeasonDetail: React.FC = () => {
                 <Title level={4} style={{ margin: 0, marginBottom: '0.5rem' }}>🔄 Trade Activity</Title>
                 <Paragraph style={{ margin: 0, color: '#6c757d' }}>
                   All trades that occurred during this season
-                </Paragraph>
-              </Card>
-            </Col>
-            <Col xs={24} sm={12} lg={6}>
-              <Card hoverable>
-                <Title level={4} style={{ margin: 0, marginBottom: '0.5rem' }}>🏆 Awards & Records</Title>
-                <Paragraph style={{ margin: 0, color: '#6c757d' }}>
-                  Weekly high scores, records set, and other achievements
                 </Paragraph>
               </Card>
             </Col>

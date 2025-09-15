@@ -3295,7 +3295,7 @@
         "Id": "e0850a47-79d8-478a-af94-30443d553705",
         "FranchiseId": "8e9f18ff-62c3-40e8-bb10-32f74cf4ee33",
         "FranchiseName": "Hot Loads",
-        "Owner": "Brad",
+        "Owner": "Blake",
         "TeamName": "Hot Loads",
         "Wins": 6,
         "Losses": 9,
@@ -3484,7 +3484,7 @@
         "Id": "d0c40a52-b952-4973-a35c-df5a2b86529a",
         "FranchiseId": "8e9f18ff-62c3-40e8-bb10-32f74cf4ee33",
         "FranchiseName": "Hot Loads",
-        "Owner": "Brad",
+        "Owner": "Blake",
         "TeamName": "Hot Loads",
         "Wins": 3,
         "Losses": 12,
@@ -3500,8 +3500,8 @@
   {
     "Year": 2024,
     "Name": "2024 Season",
-    "IsActive": true,
-    "Finished": false,
+    "IsActive": false,
+    "Finished": true,
     "CurrentWeek": 17,
     "Teams": [
       {
@@ -3598,7 +3598,7 @@
         "Id": "95c6a9a9-6005-4d33-8a06-4642082fefe3",
         "FranchiseId": "8e9f18ff-62c3-40e8-bb10-32f74cf4ee33",
         "FranchiseName": "Hot Loads",
-        "Owner": "Brad",
+        "Owner": "Blake",
         "TeamName": "Hot Loads",
         "Wins": 6,
         "Losses": 9,

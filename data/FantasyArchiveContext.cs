@@ -10,7 +10,9 @@ namespace FantasyArchive.Data
     public DbSet<Team> Teams { get; set; }
     public DbSet<Owner> Owners { get; set; }
     public DbSet<Player> Players { get; set; }
-    public DbSet<PlayerWeek> PlayerWeeks { get; set; }        public FantasyArchiveContext(DbContextOptions<FantasyArchiveContext> options) : base(options)
+    public DbSet<PlayerWeek> PlayerWeeks { get; set; }
+    public DbSet<Match> Matches { get; set; }
+    public DbSet<TeamScore> TeamScores { get; set; }        public FantasyArchiveContext(DbContextOptions<FantasyArchiveContext> options) : base(options)
         {
         }
 
@@ -92,6 +94,42 @@ namespace FantasyArchive.Data
                 entity.HasOne(d => d.Team)
                     .WithMany()
                     .HasForeignKey(d => d.TeamId);
+            });
+
+            // Match configuration - mapping to existing GLA table
+            modelBuilder.Entity<Match>(entity =>
+            {
+                entity.ToTable("Match");
+                entity.HasKey(e => e.MatchID);
+                
+                entity.HasOne(d => d.WinningTeam)
+                    .WithMany()
+                    .HasForeignKey(d => d.WinningTeamID)
+                    .OnDelete(DeleteBehavior.NoAction);
+                    
+                entity.HasOne(d => d.LosingTeam)
+                    .WithMany()
+                    .HasForeignKey(d => d.LosingTeamID)
+                    .OnDelete(DeleteBehavior.NoAction);
+                    
+                entity.HasOne(d => d.Season)
+                    .WithMany()
+                    .HasForeignKey(d => new { d.LeagueID, d.Year });
+            });
+
+            // TeamScore configuration - mapping to existing GLA table
+            modelBuilder.Entity<TeamScore>(entity =>
+            {
+                entity.ToTable("TeamScore");
+                entity.HasKey(e => new { e.TeamID, e.Year, e.Week });
+                
+                entity.HasOne(d => d.Team)
+                    .WithMany()
+                    .HasForeignKey(d => d.TeamID);
+                    
+                entity.HasOne(d => d.Season)
+                    .WithMany()
+                    .HasForeignKey(d => new { d.LeagueID, d.Year });
             });
 
             base.OnModelCreating(modelBuilder);

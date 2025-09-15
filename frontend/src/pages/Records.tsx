@@ -1,5 +1,6 @@
-import React from 'react';
-import { TrophyOutlined, RiseOutlined, FallOutlined } from '@ant-design/icons';
+import React, { useState } from 'react';
+import { TrophyOutlined, RiseOutlined, FallOutlined, DownOutlined, UpOutlined } from '@ant-design/icons';
+import { Button, Typography } from 'antd';
 import { useRecords } from '../hooks/useRecords';
 import { useAppSelector } from '../store/hooks';
 import LoadingSkeleton from '../components/LoadingSkeleton';
@@ -8,12 +9,52 @@ import { FranchiseLink, SeasonLink } from '../components/links';
 import FranchiseLogo from '../components/FranchiseLogo';
 import './Records.css';
 
+const { Text } = Typography;
+
 const Records: React.FC = () => {
   const context = useAppSelector(state => state.context);
   const { data: records, isLoading, error } = useRecords(
     context.selectedFranchiseId || undefined, 
     context.selectedSeason || undefined
   );
+
+  // State for filtering and expansion
+  const [filters, setFilters] = useState({
+    AllTime: true,
+    Season: true,
+    Weekly: true,
+    PlayerStats: true,
+    Franchise: true
+  });
+  const [expandedGroups, setExpandedGroups] = useState<Record<number, boolean>>({});
+
+  // Helper to determine record category from title
+  const getRecordCategory = (recordType: string, recordTitle: string) => {
+    if (recordTitle.toLowerCase().includes('weekly')) return 'Weekly';
+    return recordType;
+  };
+
+  // Filter records based on active filters
+  const filteredRecords = records?.filter(recordGroup => {
+    const category = getRecordCategory(recordGroup.RecordType, recordGroup.RecordTitle);
+    return filters[category as keyof typeof filters];
+  }) || [];
+
+  // Toggle expansion for a record group
+  const toggleExpansion = (groupIndex: number) => {
+    setExpandedGroups(prev => ({
+      ...prev,
+      [groupIndex]: !prev[groupIndex]
+    }));
+  };
+
+  // Toggle filter
+  const toggleFilter = (filterKey: keyof typeof filters) => {
+    setFilters(prev => ({
+      ...prev,
+      [filterKey]: !prev[filterKey]
+    }));
+  };
 
   if (isLoading) {
     return (
@@ -55,11 +96,17 @@ const Records: React.FC = () => {
     }
   };
 
-  const renderRecord = (record: any, index: number) => {
+  const renderRecord = (record: any, index: number, isExpanded: boolean) => {
     const isRanked = record.Rank && record.Rank <= 3;
+    const shouldShow = isExpanded || record.Rank <= 3;
+    
+    if (!shouldShow) return null;
     
     return (
-      <div key={index} className={`record-item ${isRanked ? `rank-${record.Rank}` : ''}`}>
+      <div 
+        key={index} 
+        className={`record-item ${isRanked ? `rank-${record.Rank}` : ''} ${!isExpanded && record.Rank > 3 ? 'faded' : ''}`}
+      >
         <div className="record-rank">
           {record.Rank}
         </div>
@@ -143,33 +190,100 @@ const Records: React.FC = () => {
             League-wide records and achievements across all seasons
           </p>
         )}
+        
+        {/* Filter Controls */}
+        <div className="records-filters">
+          <Text strong style={{ marginRight: 16, display: 'block', marginBottom: 12 }}>Filter by type:</Text>
+          <div className="filter-button-groups">
+            <Button.Group>
+              <Button 
+                type={filters.AllTime ? 'primary' : 'default'}
+                size="small"
+                onClick={() => toggleFilter('AllTime')}
+              >
+                All-Time
+              </Button>
+              <Button 
+                type={filters.Season ? 'primary' : 'default'}
+                size="small"
+                onClick={() => toggleFilter('Season')}
+              >
+                Season
+              </Button>
+              <Button 
+                type={filters.Weekly ? 'primary' : 'default'}
+                size="small"
+                onClick={() => toggleFilter('Weekly')}
+              >
+                Weekly
+              </Button>
+              <Button 
+                type={filters.PlayerStats ? 'primary' : 'default'}
+                size="small"
+                onClick={() => toggleFilter('PlayerStats')}
+              >
+                Player Stats
+              </Button>
+              <Button 
+                type={filters.Franchise ? 'primary' : 'default'}
+                size="small"
+                onClick={() => toggleFilter('Franchise')}
+              >
+                Franchise
+              </Button>
+            </Button.Group>
+          </div>
+        </div>
       </header>
 
       <div className="records-content">
-        {!records || records.length === 0 ? (
+        {!filteredRecords || filteredRecords.length === 0 ? (
           <EmptyState 
             message="No records found" 
-            description="No records are available for the current context."
+            description="No records match the current filters or context."
           />
         ) : (
           <div className="records-grid">
-            {records.map((recordGroup, groupIndex) => (
-              <div key={groupIndex} className="record-group">
-                <div className="record-group-header">
-                  {getRecordIcon(recordGroup.RecordType, recordGroup.PositiveRecord)}
-                  <h2 className="record-group-title">{recordGroup.RecordTitle}</h2>
-                  <span className={`record-type ${recordGroup.PositiveRecord ? 'positive' : 'negative'}`}>
-                    {recordGroup.RecordType}
-                  </span>
+            {filteredRecords.map((recordGroup, groupIndex) => {
+              const isExpanded = expandedGroups[groupIndex];
+              const hasMoreThan3 = recordGroup.Records.length > 3;
+              
+              return (
+                <div key={groupIndex} className="record-group">
+                  <div className="record-group-header">
+                    {getRecordIcon(recordGroup.RecordType, recordGroup.PositiveRecord)}
+                    <h2 className="record-group-title">{recordGroup.RecordTitle}</h2>
+                    <span className={`record-type ${recordGroup.PositiveRecord ? 'positive' : 'negative'}`}>
+                      {getRecordCategory(recordGroup.RecordType, recordGroup.RecordTitle)}
+                    </span>
+                  </div>
+                  
+                  <div className="record-list">
+                    {recordGroup.Records.map((record, recordIndex) => 
+                      renderRecord(record, recordIndex, isExpanded || !hasMoreThan3)
+                    )}
+                    
+                    {hasMoreThan3 && (
+                      <div className="record-expand-button">
+                        <Button
+                          type="text"
+                          size="small"
+                          icon={isExpanded ? <UpOutlined /> : <DownOutlined />}
+                          onClick={() => toggleExpansion(groupIndex)}
+                          style={{ 
+                            color: '#6c757d',
+                            fontSize: '12px',
+                            height: '24px'
+                          }}
+                        >
+                          {isExpanded ? 'Show less' : `Show all ${recordGroup.Records.length}`}
+                        </Button>
+                      </div>
+                    )}
+                  </div>
                 </div>
-                
-                <div className="record-list">
-                  {recordGroup.Records.map((record, recordIndex) => 
-                    renderRecord(record, recordIndex)
-                  )}
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         )}
       </div>

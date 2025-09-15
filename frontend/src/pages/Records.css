@@ -22,6 +22,51 @@
   margin: 0;
 }
 
+.records-filters {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.filter-button-groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.filter-button-groups .ant-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter-button-groups .ant-btn-group .ant-btn {
+  border-radius: 6px;
+  margin: 0 2px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.filter-button-groups .ant-btn-group .ant-btn:first-child {
+  margin-left: 0;
+}
+
+.filter-button-groups .ant-btn-group .ant-btn:last-child {
+  margin-right: 0;
+}
+
+.filter-button-groups .ant-btn-group .ant-btn-primary {
+  background: #1a2b4c;
+  border-color: #1a2b4c;
+}
+
+.filter-button-groups .ant-btn-group .ant-btn-primary:hover {
+  background: #2c4268;
+  border-color: #2c4268;
+}
+
 .records-content {
   width: 100%;
 }
@@ -126,6 +171,22 @@
 
 .record-item.rank-3 {
   background: linear-gradient(90deg, rgba(205, 127, 50, 0.1) 0%, transparent 100%);
+}
+
+.record-item.faded {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.record-expand-button {
+  text-align: center;
+  padding: 0.5rem;
+  border-top: 1px solid #f0f0f0;
+  background: #fafbfc;
+}
+
+.record-expand-button:hover {
+  background: #f0f2f5;
 }
 
 .record-rank {
@@ -269,5 +330,21 @@
   
   .record-content {
     gap: 0.25rem;
+  }
+
+  .records-filters {
+    padding: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .filter-button-groups .ant-btn-group {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .filter-button-groups .ant-btn-group .ant-btn {
+    flex: 1;
+    margin: 2px;
+    font-size: 0.8rem;
   }
 }

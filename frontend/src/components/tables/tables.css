@@ -75,6 +75,46 @@
   .ant-space-item {
     margin-bottom: 2px !important;
   }
+  
+  /* Mobile-specific column adjustments - override desktop widths */
+  .ant-table-thead > tr > th:nth-child(1) { /* Pos column */
+    width: 50px !important;
+    min-width: 50px !important;
+  }
+  
+  .ant-table-thead > tr > th:nth-child(2) { /* Team column */
+    width: 180px !important;
+    min-width: 180px !important;
+  }
+  
+  .ant-table-thead > tr > th:nth-child(3) { /* Record column */
+    width: 80px !important;
+    min-width: 80px !important;
+  }
+  
+  .ant-table-thead > tr > th:nth-child(4) { /* Points column */
+    width: 80px !important;
+    min-width: 80px !important;
+  }
+  
+  .ant-table-thead > tr > th:nth-child(5) { /* Awards column */
+    width: 60px !important;
+    min-width: 60px !important;
+  }
+  
+  /* Make mobile content more compact */
+  .ant-table-tbody .ant-space {
+    gap: 4px !important;
+  }
+  
+  .ant-table-tbody .ant-space-item .anticon {
+    font-size: 14px !important;
+  }
+  
+  /* Smaller text for mobile */
+  .ant-table-tbody .ant-statistic-content-value {
+    font-size: 0.85rem !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -86,5 +126,31 @@
   .ant-table-thead > tr > th {
     padding: 6px 2px !important;
     font-size: 11px;
+  }
+  
+  /* Further reduce column widths on very small screens */
+  .ant-table-thead > tr > th:nth-child(1) { /* Pos column */
+    width: 45px !important;
+    min-width: 45px !important;
+  }
+  
+  .ant-table-thead > tr > th:nth-child(2) { /* Team column */
+    width: 160px !important;
+    min-width: 160px !important;
+  }
+  
+  .ant-table-thead > tr > th:nth-child(3) { /* Record column */
+    width: 70px !important;
+    min-width: 70px !important;
+  }
+  
+  .ant-table-thead > tr > th:nth-child(4) { /* Points column */
+    width: 70px !important;
+    min-width: 70px !important;
+  }
+  
+  .ant-table-thead > tr > th:nth-child(5) { /* Awards column */
+    width: 55px !important;
+    min-width: 55px !important;
   }
 }

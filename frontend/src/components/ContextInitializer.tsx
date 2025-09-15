@@ -79,6 +79,10 @@ const ContextInitializer: React.FC<{ children: React.ReactNode }> = ({ children 
         } else {
           console.log('ContextInitializer: Franchise context already set');
         }
+
+        if (selectedSeason) {
+          dispatch(clearSelectedSeason());
+        }
       }
       // Handle season detail page: /season/:year
       else {
@@ -94,6 +98,10 @@ const ContextInitializer: React.FC<{ children: React.ReactNode }> = ({ children 
           } else {
             console.log('ContextInitializer: Season context already set');
           }
+        }
+
+        if (selectedFranchiseId) {
+          dispatch(clearSelectedFranchise());
         }
       }
     }

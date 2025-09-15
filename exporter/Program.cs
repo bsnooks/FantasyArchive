@@ -47,7 +47,6 @@ try
     
     Console.WriteLine("Exporting records...");
     await ExportRecords(context, outputPath);
-    
     Console.WriteLine("Export completed successfully!");
 }
 catch (Exception ex)
@@ -333,7 +332,8 @@ static async Task<AllTimeRosterJson> CalculateAllTimeRoster(FantasyArchiveContex
 
 static async Task ExportRecords(FantasyArchiveContext context, string outputPath)
 {
-    var recordsService = new RecordsService(context);
+    var weeklyRecordsService = new WeeklyRecordsService(context);
+    var recordsService = new RecordsService(context, weeklyRecordsService);
     
     // Export all-time records
     Console.WriteLine("  Exporting all-time records...");

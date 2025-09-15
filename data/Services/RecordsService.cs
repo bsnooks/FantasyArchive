@@ -26,10 +26,12 @@ namespace FantasyArchive.Data.Services
     public class RecordsService
     {
         private readonly FantasyArchiveContext _context;
+        private readonly WeeklyRecordsService _weeklyRecordsService;
 
-        public RecordsService(FantasyArchiveContext context)
+        public RecordsService(FantasyArchiveContext context, WeeklyRecordsService weeklyRecordsService)
         {
             _context = context;
+            _weeklyRecordsService = weeklyRecordsService;
         }
 
         public async Task<List<LeagueRecords>> GetRecordsAsync(
@@ -75,6 +77,10 @@ namespace FantasyArchive.Data.Services
             records.Add(await GetMostSeasonPointsRecord(number));
             records.Add(await GetWorstSeasonRecordRecord(number));
 
+            // Weekly Records
+            var weeklyRecords = await _weeklyRecordsService.GetAllTimeWeeklyRecordsAsync();
+            records.AddRange(ConvertWeeklyRecordsToLeagueRecords(weeklyRecords, null));
+
             // Skip player records for now until we fix the column mapping
             // records.Add(await GetBestPlayerWeekRecord("QB", number));
             // records.Add(await GetBestPlayerWeekRecord("RB", number));
@@ -91,6 +97,11 @@ namespace FantasyArchive.Data.Services
             // Season-specific records
             records.Add(await GetSeasonTeamStandingsRecord(year));
             records.Add(await GetSeasonMostPointsRecord(year, number));
+
+            // Weekly Records for this season
+            var weeklyRecords = await _weeklyRecordsService.GetSeasonWeeklyRecordsAsync(year);
+            records.AddRange(ConvertWeeklyRecordsToLeagueRecords(weeklyRecords, year));
+
             // Skip player records for now
             // records.Add(await GetSeasonBestPlayerWeekRecord("QB", year, number));
             // records.Add(await GetSeasonBestPlayerWeekRecord("RB", year, number));
@@ -508,6 +519,97 @@ namespace FantasyArchive.Data.Services
                     Week = pw.Week
                 }).ToList()
             };
+        }
+
+        private List<LeagueRecords> ConvertWeeklyRecordsToLeagueRecords(WeeklyRecordsCollection weeklyRecords, int? year)
+        {
+            var records = new List<LeagueRecords>();
+
+            // Convert high scores
+            if (weeklyRecords.HighestScores.Any())
+            {
+                records.Add(new LeagueRecords
+                {
+                    RecordTitle = year.HasValue ? $"{year} Weekly High Scores" : "Weekly High Scores",
+                    PositiveRecord = true,
+                    RecordType = year.HasValue ? RecordType.Season : RecordType.AllTime,
+                    Records = weeklyRecords.HighestScores.Take(10).Select((wr, index) => new LeagueRecord
+                    {
+                        Rank = index + 1,
+                        FranchiseId = wr.FranchiseId,
+                        Franchise = wr.FranchiseId != Guid.Empty ? new Franchise { FranchiseId = wr.FranchiseId, MainName = wr.FranchiseName ?? "Unknown" } : null,
+                        RecordValue = $"{wr.Value:F1} pts",
+                        RecordNumericValue = wr.Value,
+                        Year = wr.Year,
+                        Week = wr.Week
+                    }).ToList()
+                });
+            }
+
+            // Convert low scores
+            if (weeklyRecords.LowestScores.Any())
+            {
+                records.Add(new LeagueRecords
+                {
+                    RecordTitle = year.HasValue ? $"{year} Weekly Low Scores" : "Weekly Low Scores",
+                    PositiveRecord = false,
+                    RecordType = year.HasValue ? RecordType.Season : RecordType.AllTime,
+                    Records = weeklyRecords.LowestScores.Take(10).Select((wr, index) => new LeagueRecord
+                    {
+                        Rank = index + 1,
+                        FranchiseId = wr.FranchiseId,
+                        Franchise = wr.FranchiseId != Guid.Empty ? new Franchise { FranchiseId = wr.FranchiseId, MainName = wr.FranchiseName ?? "Unknown" } : null,
+                        RecordValue = $"{wr.Value:F1} pts",
+                        RecordNumericValue = wr.Value,
+                        Year = wr.Year,
+                        Week = wr.Week
+                    }).ToList()
+                });
+            }
+
+            // Convert largest victory margins
+            if (weeklyRecords.LargestMarginsOfVictory.Any())
+            {
+                records.Add(new LeagueRecords
+                {
+                    RecordTitle = year.HasValue ? $"{year} Largest Victory Margins" : "Largest Victory Margins",
+                    PositiveRecord = true,
+                    RecordType = year.HasValue ? RecordType.Season : RecordType.AllTime,
+                    Records = weeklyRecords.LargestMarginsOfVictory.Take(10).Select((wr, index) => new LeagueRecord
+                    {
+                        Rank = index + 1,
+                        FranchiseId = wr.FranchiseId,
+                        Franchise = wr.FranchiseId != Guid.Empty ? new Franchise { FranchiseId = wr.FranchiseId, MainName = wr.FranchiseName ?? "Unknown" } : null,
+                        RecordValue = $"{wr.Value:F1} pts",
+                        RecordNumericValue = wr.Value,
+                        Year = wr.Year,
+                        Week = wr.Week
+                    }).ToList()
+                });
+            }
+
+            // Convert highest matchup totals
+            if (weeklyRecords.HighestScoringMatchups.Any())
+            {
+                records.Add(new LeagueRecords
+                {
+                    RecordTitle = year.HasValue ? $"{year} Highest Matchup Totals" : "Highest Matchup Totals",
+                    PositiveRecord = true,
+                    RecordType = year.HasValue ? RecordType.Season : RecordType.AllTime,
+                    Records = weeklyRecords.HighestScoringMatchups.Take(10).Select((wr, index) => new LeagueRecord
+                    {
+                        Rank = index + 1,
+                        FranchiseId = wr.FranchiseId,
+                        Franchise = wr.FranchiseId != Guid.Empty ? new Franchise { FranchiseId = wr.FranchiseId, MainName = wr.FranchiseName ?? "Unknown" } : null,
+                        RecordValue = $"{wr.Value:F1} pts",
+                        RecordNumericValue = wr.Value,
+                        Year = wr.Year,
+                        Week = wr.Week
+                    }).ToList()
+                });
+            }
+
+            return records;
         }
     }
 }

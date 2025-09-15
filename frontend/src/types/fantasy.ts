@@ -129,7 +129,6 @@ export interface TradePick {
 export interface RecordBook {
   LeagueRecords: Record[];
   SeasonRecords: Record[];
-  WeeklyRecords: Record[];
 }
 
 export interface Record {

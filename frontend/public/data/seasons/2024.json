@@ -1,8 +1,8 @@
 {
   "Year": 2024,
   "Name": "2024 Season",
-  "IsActive": true,
-  "Finished": false,
+  "IsActive": false,
+  "Finished": true,
   "CurrentWeek": 17,
   "Teams": [
     {
@@ -99,7 +99,7 @@
       "Id": "95c6a9a9-6005-4d33-8a06-4642082fefe3",
       "FranchiseId": "8e9f18ff-62c3-40e8-bb10-32f74cf4ee33",
       "FranchiseName": "Hot Loads",
-      "Owner": "Brad",
+      "Owner": "Blake",
       "TeamName": "Hot Loads",
       "Wins": 6,
       "Losses": 9,

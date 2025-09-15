@@ -1,8 +1,9 @@
 {
   "Id": "8e9f18ff-62c3-40e8-bb10-32f74cf4ee33",
   "Name": "Hot Loads",
-  "Owner": "Brad",
+  "Owner": "Blake",
   "Owners": [
+    "Blake",
     "Brad"
   ],
   "EstablishedDate": "2002-08-01T00:00:00",
