@@ -1,0 +1,43 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 20, 2021")
+    TEAM_1("Laters")
+    TEAM_2("Army of Dakness")
+    NODE_4d6cf91a-13b0-4d02-925d-c13d7621b71e("🔄 Austin Ekeler - Nov 20, 2021")
+    NODE_bb9c8b4a-b7f5-4a49-b3b1-d1b0d9e7260c("🔒 Austin Ekeler - Kept - Sep 8, 2022")
+    TRADE_5a76fc85-475f-48c2-aa65-be54a3c9237d_3("🔄 Trade - Aug 26, 2023")
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_4["The Bad Guys"]
+    NODE_6a8c0e8f-ec43-41b0-b11d-9819c411127a("🔄 Austin Ekeler - Aug 26, 2023")
+    NODE_07a45acd-130a-422a-ae42-31f806f3a986("🔄 Chris Olave - Aug 26, 2023")
+    NODE_8693b68b-52d4-41b9-a27e-deb74f13b0fd("🔄 Stefon Diggs - Aug 26, 2023")
+    TEAM_825928a9-7194-43aa-b7ae-fc78c2510b16_5["Laters"]
+    NODE_9ea91788-ae08-495b-b3a7-b8ff0b925014("🔄 Lamar Jackson - Aug 26, 2023")
+    NODE_c452ef52-b38f-4f9c-b12c-edb79c80b4e4("🔄 CeeDee Lamb - Nov 20, 2021")
+    NODE_f1573b14-4f7f-43c1-a1f1-f4122d3e78de("🔄 Carson Wentz - Nov 20, 2021")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_4d6cf91a-13b0-4d02-925d-c13d7621b71e
+    NODE_4d6cf91a-13b0-4d02-925d-c13d7621b71e --> NODE_bb9c8b4a-b7f5-4a49-b3b1-d1b0d9e7260c
+    NODE_bb9c8b4a-b7f5-4a49-b3b1-d1b0d9e7260c --> TRADE_5a76fc85-475f-48c2-aa65-be54a3c9237d_3
+    TRADE_5a76fc85-475f-48c2-aa65-be54a3c9237d_3 --> TEAM_b2220d1a-ff75-4622-9757-09978901110f_4
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_4 --> NODE_6a8c0e8f-ec43-41b0-b11d-9819c411127a
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_4 --> NODE_07a45acd-130a-422a-ae42-31f806f3a986
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_4 --> NODE_8693b68b-52d4-41b9-a27e-deb74f13b0fd
+    TRADE_5a76fc85-475f-48c2-aa65-be54a3c9237d_3 --> TEAM_825928a9-7194-43aa-b7ae-fc78c2510b16_5
+    TEAM_825928a9-7194-43aa-b7ae-fc78c2510b16_5 --> NODE_9ea91788-ae08-495b-b3a7-b8ff0b925014
+    TEAM_2 --> NODE_c452ef52-b38f-4f9c-b12c-edb79c80b4e4
+    TEAM_2 --> NODE_f1573b14-4f7f-43c1-a1f1-f4122d3e78de
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_b2220d1a-ff75-4622-9757-09978901110f_4,TEAM_825928a9-7194-43aa-b7ae-fc78c2510b16_5 teamNode
+    class NODE_6a8c0e8f-ec43-41b0-b11d-9819c411127a,NODE_07a45acd-130a-422a-ae42-31f806f3a986,NODE_8693b68b-52d4-41b9-a27e-deb74f13b0fd nonRootPlayerNode
+    class TRADE_MAIN tradeNode

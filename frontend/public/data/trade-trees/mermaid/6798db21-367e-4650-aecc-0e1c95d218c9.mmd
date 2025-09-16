@@ -1,0 +1,64 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 11, 2008")
+    TEAM_1("Mad Guys")
+    TEAM_2("The Mojos")
+    NODE_b8ffbf1c-7a5f-46fa-a1d3-1191d35db114("🔄 Dominic Rhodes - Nov 11, 2008")
+    NODE_ad03f81a-4fb3-4ddd-af19-16136dca43ea("🔄 Joseph Addai - Nov 11, 2008")
+    NODE_9f1b91c7-3766-403e-a565-1e431d45c342("🔄 Marshawn Lynch - Nov 11, 2008")
+    NODE_60b83268-80d6-48f6-8e5c-746f73fab6b7("🔒 Marshawn Lynch - Kept - Sep 2, 2009")
+    NODE_3fce7705-dd16-41d8-832f-99c179faf58b("🔄 Randy Moss - Nov 11, 2008")
+    NODE_f95d2b46-697f-407c-b0fa-b1da97fdc045("🔒 Randy Moss - Kept - Sep 2, 2009")
+    NODE_5245c67e-9bea-48b6-a31f-d4d43de0ad0b("🔒 Randy Moss - Kept - Sep 4, 2010")
+    CHAMP_f5908944-6efd-40eb-af54-6c53004e0e2f_2010["🏆 Mad Guys - 2010 Champions!"]
+    NODE_0e11436e-f6b8-4944-83b9-a01495af4281("🔄 Fred Jackson - Nov 11, 2008")
+    NODE_bae7b97b-9cd3-465f-96e8-dccd9024c915("🔄 Marques Colston - Nov 11, 2008")
+    NODE_af7b6e3c-8f91-4c67-8653-db82c43cebcb("🔒 Marques Colston - Kept - Sep 2, 2009")
+    TRADE_e8c7b327-7c15-4132-8918-1ccb803d3cb3_3("🔄 Trade - Dec 3, 2009")
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_4["She's the Fastest"]
+    NODE_8f183324-b3dc-46b4-bbe0-76f206cb24ee("🔄 Marques Colston - Dec 3, 2009")
+    NODE_6bc2416f-f57e-4b16-8235-be0b7609e651("🔄 Kurt Warner - Dec 3, 2009")
+    NODE_1ef12492-61ee-4b66-bd62-daa01556b535("🔄 Matt Leinart - Dec 3, 2009")
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_5["The Mojos"]
+    NODE_8ad98370-e765-4528-899b-039fc791b409("🔄 Braylon Edwards - Dec 3, 2009")
+    NODE_16e44121-7fef-4e60-a4d8-39d87a019805("🔄 Laurence Maroney - Dec 3, 2009")
+    NODE_fb21570f-4fa7-4277-b242-752759ecd6ca("🔄 Beanie Wells - Dec 3, 2009")
+    NODE_7ae52589-c36b-4b14-8fb9-f6b745ba608d("🔄 Matt Ryan - Dec 3, 2009")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_b8ffbf1c-7a5f-46fa-a1d3-1191d35db114
+    TEAM_1 --> NODE_ad03f81a-4fb3-4ddd-af19-16136dca43ea
+    TEAM_2 --> NODE_9f1b91c7-3766-403e-a565-1e431d45c342
+    NODE_9f1b91c7-3766-403e-a565-1e431d45c342 --> NODE_60b83268-80d6-48f6-8e5c-746f73fab6b7
+    TEAM_1 --> NODE_3fce7705-dd16-41d8-832f-99c179faf58b
+    NODE_3fce7705-dd16-41d8-832f-99c179faf58b --> NODE_f95d2b46-697f-407c-b0fa-b1da97fdc045
+    NODE_f95d2b46-697f-407c-b0fa-b1da97fdc045 --> NODE_5245c67e-9bea-48b6-a31f-d4d43de0ad0b
+    NODE_5245c67e-9bea-48b6-a31f-d4d43de0ad0b --> CHAMP_f5908944-6efd-40eb-af54-6c53004e0e2f_2010
+    TEAM_2 --> NODE_0e11436e-f6b8-4944-83b9-a01495af4281
+    TEAM_2 --> NODE_bae7b97b-9cd3-465f-96e8-dccd9024c915
+    NODE_bae7b97b-9cd3-465f-96e8-dccd9024c915 --> NODE_af7b6e3c-8f91-4c67-8653-db82c43cebcb
+    NODE_af7b6e3c-8f91-4c67-8653-db82c43cebcb --> TRADE_e8c7b327-7c15-4132-8918-1ccb803d3cb3_3
+    TRADE_e8c7b327-7c15-4132-8918-1ccb803d3cb3_3 --> TEAM_4449259f-64af-44fd-9235-1facc0926234_4
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_4 --> NODE_8f183324-b3dc-46b4-bbe0-76f206cb24ee
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_4 --> NODE_6bc2416f-f57e-4b16-8235-be0b7609e651
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_4 --> NODE_1ef12492-61ee-4b66-bd62-daa01556b535
+    TRADE_e8c7b327-7c15-4132-8918-1ccb803d3cb3_3 --> TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_5
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_5 --> NODE_8ad98370-e765-4528-899b-039fc791b409
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_5 --> NODE_16e44121-7fef-4e60-a4d8-39d87a019805
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_5 --> NODE_fb21570f-4fa7-4277-b242-752759ecd6ca
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_5 --> NODE_7ae52589-c36b-4b14-8fb9-f6b745ba608d
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_4449259f-64af-44fd-9235-1facc0926234_4,TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_5 teamNode
+    class CHAMP_f5908944-6efd-40eb-af54-6c53004e0e2f_2010 championshipNode
+    class NODE_8f183324-b3dc-46b4-bbe0-76f206cb24ee,NODE_6bc2416f-f57e-4b16-8235-be0b7609e651,NODE_1ef12492-61ee-4b66-bd62-daa01556b535 nonRootPlayerNode
+    class TRADE_MAIN tradeNode

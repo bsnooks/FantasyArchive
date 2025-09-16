@@ -1,0 +1,26 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Aug 31, 2004")
+    TEAM_1("Laters")
+    TEAM_2("leaf16")
+    NODE_e4ebd739-6d40-4ce7-b4c2-7a542ab173a1("🔄 Philip Rivers - Aug 31, 2004")
+    NODE_19811a51-3857-44b0-b3b5-8705a5e3d3dc("🔄 Andre' Davis - Aug 31, 2004")
+    NODE_17c6bd83-56f8-4880-8dde-db23c1bbf812("🔄 Amani Toomer - Aug 31, 2004")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_e4ebd739-6d40-4ce7-b4c2-7a542ab173a1
+    TEAM_1 --> NODE_19811a51-3857-44b0-b3b5-8705a5e3d3dc
+    TEAM_2 --> NODE_17c6bd83-56f8-4880-8dde-db23c1bbf812
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

@@ -27,8 +27,8 @@ const ContextBreadcrumb: React.FC = () => {
   const { data: franchises } = useFranchises();
   const { data: seasons } = useSeasons();
 
-  // Don't show breadcrumb on homepage
-  if (location.pathname === '/') {
+  // Don't show breadcrumb on homepage or trade detail pages
+  if (location.pathname === '/' || location.pathname.startsWith('/trade/')) {
     return null;
   }
 

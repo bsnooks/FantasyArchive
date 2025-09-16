@@ -1,0 +1,40 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 13, 2018")
+    TEAM_1("Mad Guys")
+    TEAM_2("leaf16")
+    NODE_48d34fc7-64b0-40fc-a2f7-5070efe85ac5("🔄 Tom Brady - Nov 13, 2018")
+    NODE_042035f4-e889-4a12-9d3b-6d381a41e476("🔄 Leonard Fournette - Nov 13, 2018")
+    NODE_7d9dff9a-6804-4749-8dc7-449f0c4ef28d("🔒 Leonard Fournette - Kept - Sep 1, 2019")
+    NODE_39d6fee8-69ee-4c7f-8923-c42ccde87213("🔒 Leonard Fournette - Kept - Sep 8, 2020")
+    NODE_7744e2af-5009-4007-8abb-6f69f1b655f4("🔄 Devonta Freeman - Nov 13, 2018")
+    NODE_1890d1d2-cb42-4002-8937-7f27c92ad735("🔄 Tarik Cohen - Nov 13, 2018")
+    NODE_b9ea11fb-8b61-4a37-972f-ae12e52f0997("🔄 Carson Wentz - Nov 13, 2018")
+    NODE_7522e404-3a3f-4197-b88d-617a0a9375c2("🔒 Carson Wentz - Kept - Sep 1, 2019")
+    NODE_a3b0775a-b01d-433a-93a1-27d8a40e9b51("🔒 Carson Wentz - Kept - Sep 8, 2020")
+    NODE_0d10ae17-3629-4234-a0f6-d95769896b3e("🔄 Calvin Ridley - Nov 13, 2018")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_48d34fc7-64b0-40fc-a2f7-5070efe85ac5
+    TEAM_1 --> NODE_042035f4-e889-4a12-9d3b-6d381a41e476
+    NODE_042035f4-e889-4a12-9d3b-6d381a41e476 --> NODE_7d9dff9a-6804-4749-8dc7-449f0c4ef28d
+    NODE_7d9dff9a-6804-4749-8dc7-449f0c4ef28d --> NODE_39d6fee8-69ee-4c7f-8923-c42ccde87213
+    TEAM_2 --> NODE_7744e2af-5009-4007-8abb-6f69f1b655f4
+    TEAM_2 --> NODE_1890d1d2-cb42-4002-8937-7f27c92ad735
+    TEAM_2 --> NODE_b9ea11fb-8b61-4a37-972f-ae12e52f0997
+    NODE_b9ea11fb-8b61-4a37-972f-ae12e52f0997 --> NODE_7522e404-3a3f-4197-b88d-617a0a9375c2
+    NODE_7522e404-3a3f-4197-b88d-617a0a9375c2 --> NODE_a3b0775a-b01d-433a-93a1-27d8a40e9b51
+    TEAM_1 --> NODE_0d10ae17-3629-4234-a0f6-d95769896b3e
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

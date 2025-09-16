@@ -1,0 +1,30 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 6, 2013")
+    TEAM_1("FB in the Groin")
+    TEAM_2("Laters")
+    NODE_82a58e87-8cce-45cd-9468-24feaae025b2("🔄 Anquan Boldin - Oct 6, 2013")
+    NODE_af543afc-622f-4805-8fe4-8adbf2a5e6f8("🔄 Stevie Johnson - Oct 6, 2013")
+    NODE_10761ed7-32e8-472b-b7f5-9378cd1468de("🔄 Matt Cassel - Oct 6, 2013")
+    NODE_8f7afed9-9fe9-4595-965b-9d346e5c855d("🔄 Alex Smith - Oct 6, 2013")
+    NODE_7f3a88fd-55ba-4eff-88ad-f0815a5cbb42("🔄 Christian Ponder - Oct 6, 2013")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_82a58e87-8cce-45cd-9468-24feaae025b2
+    TEAM_2 --> NODE_af543afc-622f-4805-8fe4-8adbf2a5e6f8
+    TEAM_1 --> NODE_10761ed7-32e8-472b-b7f5-9378cd1468de
+    TEAM_2 --> NODE_8f7afed9-9fe9-4595-965b-9d346e5c855d
+    TEAM_1 --> NODE_7f3a88fd-55ba-4eff-88ad-f0815a5cbb42
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

@@ -12,7 +12,11 @@ namespace FantasyArchive.Data
     public DbSet<Player> Players { get; set; }
     public DbSet<PlayerWeek> PlayerWeeks { get; set; }
     public DbSet<Match> Matches { get; set; }
-    public DbSet<TeamScore> TeamScores { get; set; }        public FantasyArchiveContext(DbContextOptions<FantasyArchiveContext> options) : base(options)
+    public DbSet<TeamScore> TeamScores { get; set; }
+    public DbSet<Transaction> Transactions { get; set; }
+    public DbSet<TransactionGroup> TransactionGroups { get; set; }
+
+    public FantasyArchiveContext(DbContextOptions<FantasyArchiveContext> options) : base(options)
         {
         }
 
@@ -130,6 +134,40 @@ namespace FantasyArchive.Data
                 entity.HasOne(d => d.Season)
                     .WithMany()
                     .HasForeignKey(d => new { d.LeagueID, d.Year });
+            });
+
+            // Transaction configuration - mapping to existing GLA table
+            modelBuilder.Entity<Transaction>(entity =>
+            {
+                entity.ToTable("Transaction");
+                entity.HasKey(e => e.TransactionId);
+                entity.Property(e => e.TransactionId).HasColumnName("TransactionID");
+                entity.Property(e => e.TransactionGroupId).HasColumnName("TransactionGroupID");
+                entity.Property(e => e.TeamId).HasColumnName("TeamID");
+                entity.Property(e => e.TransactionType).HasColumnName("TransactionType");
+                entity.Property(e => e.PlayerId).HasColumnName("PlayerID");
+                entity.Property(e => e.DraftPickId).HasColumnName("DraftPickID");
+                entity.Property(e => e.Description).HasMaxLength(255);
+                
+                entity.HasOne(d => d.TransactionGroup)
+                    .WithMany(p => p.Transactions)
+                    .HasForeignKey(d => d.TransactionGroupId);
+                    
+                entity.HasOne(d => d.Team)
+                    .WithMany()
+                    .HasForeignKey(d => d.TeamId);
+                    
+                entity.HasOne(d => d.Player)
+                    .WithMany()
+                    .HasForeignKey(d => d.PlayerId);
+            });
+
+            // TransactionGroup configuration - mapping to existing GLA table
+            modelBuilder.Entity<TransactionGroup>(entity =>
+            {
+                entity.ToTable("TransactionGroup");
+                entity.HasKey(e => e.TransactionGroupId);
+                entity.Property(e => e.TransactionGroupId).HasColumnName("TransactionGroupID");
             });
 
             base.OnModelCreating(modelBuilder);

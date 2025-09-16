@@ -1,0 +1,26 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 11, 2017")
+    TEAM_1("leaf16")
+    TEAM_2("The Mojos")
+    NODE_2a73f550-b8ae-4770-8201-39be3973e824("🔄 Eli Manning - Oct 11, 2017")
+    NODE_61c2bb77-4550-49c3-99ab-ebe0d013a07e("🔄 Sam Bradford - Oct 11, 2017")
+    NODE_454b1e99-6c60-4fd7-be51-fbebaf5b1140("🔄 Eddie Lacy - Oct 11, 2017")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_2a73f550-b8ae-4770-8201-39be3973e824
+    TEAM_2 --> NODE_61c2bb77-4550-49c3-99ab-ebe0d013a07e
+    TEAM_2 --> NODE_454b1e99-6c60-4fd7-be51-fbebaf5b1140
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

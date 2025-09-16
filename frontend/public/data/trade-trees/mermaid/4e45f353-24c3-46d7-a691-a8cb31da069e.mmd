@@ -1,0 +1,55 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Aug 27, 2019")
+    TEAM_1("Balero Boyz")
+    TEAM_2("FB in the Groin")
+    NODE_59268d5b-f355-4b6e-bca4-070815370b04("🔄 Le'Veon Bell - Aug 27, 2019")
+    NODE_7117999e-bab4-42ae-9d78-d07847302724("🔒 Le'Veon Bell - Kept - Sep 1, 2019")
+    NODE_cbe60832-3c71-4196-aa36-cf78c53f7f2d("🔄 James Conner - Aug 27, 2019")
+    NODE_23598f52-9505-4803-ad3c-ef7c43cfefed("🔒 James Conner - Kept - Sep 1, 2019")
+    NODE_45a0bd28-03b2-44dc-a3a1-ec8a0bca96ce("🔄 Ezekiel Elliott - Aug 27, 2019")
+    NODE_8c26cca0-aacf-430d-ad2c-aa79ed5d716f("🔒 Ezekiel Elliott - Kept - Sep 1, 2019")
+    NODE_829e811b-ead8-402d-8bbe-92cb60a3a834("🔒 Ezekiel Elliott - Kept - Sep 8, 2020")
+    NODE_ae6d5939-886f-49ae-a831-34feee078b3d("🔒 Ezekiel Elliott - Kept - Aug 31, 2021")
+    TRADE_451b2038-42ba-4ba2-9eed-7d7e59e4281d_3("🔄 Trade - Nov 11, 2021")
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_4["The Mojos"]
+    NODE_4d79c91c-098e-498f-9aa9-ee835c90d399("🔄 Ezekiel Elliott - Nov 11, 2021")
+    CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2021["🏆 The Mojos - 2021 Champions!"]
+    NODE_5d5d8e60-bf6b-445b-a0d4-1c55e9fa6097("🔄 Tony Pollard - Nov 11, 2021")
+    TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5["FB in the Groin"]
+    NODE_e07cacc3-49e5-4e21-a75f-83405ff4f57b("🔄 Justin Jefferson - Nov 11, 2021")
+    NODE_580e8901-5bae-437e-8fae-ca50a9ef5c01("🔄 Zack Moss - Nov 11, 2021")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_59268d5b-f355-4b6e-bca4-070815370b04
+    NODE_59268d5b-f355-4b6e-bca4-070815370b04 --> NODE_7117999e-bab4-42ae-9d78-d07847302724
+    TEAM_1 --> NODE_cbe60832-3c71-4196-aa36-cf78c53f7f2d
+    NODE_cbe60832-3c71-4196-aa36-cf78c53f7f2d --> NODE_23598f52-9505-4803-ad3c-ef7c43cfefed
+    TEAM_2 --> NODE_45a0bd28-03b2-44dc-a3a1-ec8a0bca96ce
+    NODE_45a0bd28-03b2-44dc-a3a1-ec8a0bca96ce --> NODE_8c26cca0-aacf-430d-ad2c-aa79ed5d716f
+    NODE_8c26cca0-aacf-430d-ad2c-aa79ed5d716f --> NODE_829e811b-ead8-402d-8bbe-92cb60a3a834
+    NODE_829e811b-ead8-402d-8bbe-92cb60a3a834 --> NODE_ae6d5939-886f-49ae-a831-34feee078b3d
+    NODE_ae6d5939-886f-49ae-a831-34feee078b3d --> TRADE_451b2038-42ba-4ba2-9eed-7d7e59e4281d_3
+    TRADE_451b2038-42ba-4ba2-9eed-7d7e59e4281d_3 --> TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_4
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_4 --> NODE_4d79c91c-098e-498f-9aa9-ee835c90d399
+    NODE_4d79c91c-098e-498f-9aa9-ee835c90d399 --> CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2021
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_4 --> NODE_5d5d8e60-bf6b-445b-a0d4-1c55e9fa6097
+    NODE_5d5d8e60-bf6b-445b-a0d4-1c55e9fa6097 --> CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2021
+    TRADE_451b2038-42ba-4ba2-9eed-7d7e59e4281d_3 --> TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5
+    TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5 --> NODE_e07cacc3-49e5-4e21-a75f-83405ff4f57b
+    TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5 --> NODE_580e8901-5bae-437e-8fae-ca50a9ef5c01
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_4,TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5 teamNode
+    class CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2021 championshipNode
+    class NODE_4d79c91c-098e-498f-9aa9-ee835c90d399,NODE_5d5d8e60-bf6b-445b-a0d4-1c55e9fa6097 nonRootPlayerNode
+    class TRADE_MAIN tradeNode

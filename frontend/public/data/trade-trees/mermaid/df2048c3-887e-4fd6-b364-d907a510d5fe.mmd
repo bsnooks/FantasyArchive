@@ -1,0 +1,42 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Aug 24, 2004")
+    TEAM_1("Hot Loads")
+    TEAM_2("Mad Guys")
+    NODE_6b7e669c-30b8-4d49-93cd-18d2d2ded362("🔄 Brian Westbrook - Aug 26, 2004")
+    NODE_e3dea235-b25e-465a-a74d-052101e471bd("🔒 Brian Westbrook - Kept - Aug 31, 2005")
+    TRADE_7f4637e4-4da1-4a72-8274-2515752ca9db_3("🔄 Trade - Aug 29, 2006")
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_4["The Bad Guys"]
+    NODE_419e01c3-c7a1-4345-8911-157bb4e5f526("🔄 Brian Westbrook - Aug 29, 2006")
+    NODE_4fcfbb74-d396-426f-b80b-a9e22eabd6be("🔄 Carson Palmer - Aug 29, 2006")
+    TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_5["Hot Loads"]
+    NODE_5b1c2069-8707-4e09-823a-ce670e4fba0e("🔄 Edgerrin James - Aug 29, 2006")
+    CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2006["🏆 Hot Loads - 2006 Champions!"]
+    NODE_f75451dd-77b7-4e89-9ba8-d7a27d04dc71("🔄 Byron Leftwich - Aug 26, 2004")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_6b7e669c-30b8-4d49-93cd-18d2d2ded362
+    NODE_6b7e669c-30b8-4d49-93cd-18d2d2ded362 --> NODE_e3dea235-b25e-465a-a74d-052101e471bd
+    NODE_e3dea235-b25e-465a-a74d-052101e471bd --> TRADE_7f4637e4-4da1-4a72-8274-2515752ca9db_3
+    TRADE_7f4637e4-4da1-4a72-8274-2515752ca9db_3 --> TEAM_b2220d1a-ff75-4622-9757-09978901110f_4
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_4 --> NODE_419e01c3-c7a1-4345-8911-157bb4e5f526
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_4 --> NODE_4fcfbb74-d396-426f-b80b-a9e22eabd6be
+    TRADE_7f4637e4-4da1-4a72-8274-2515752ca9db_3 --> TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_5
+    TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_5 --> NODE_5b1c2069-8707-4e09-823a-ce670e4fba0e
+    NODE_5b1c2069-8707-4e09-823a-ce670e4fba0e --> CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2006
+    TEAM_2 --> NODE_f75451dd-77b7-4e89-9ba8-d7a27d04dc71
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_b2220d1a-ff75-4622-9757-09978901110f_4,TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_5 teamNode
+    class CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2006 championshipNode
+    class NODE_419e01c3-c7a1-4345-8911-157bb4e5f526,NODE_4fcfbb74-d396-426f-b80b-a9e22eabd6be nonRootPlayerNode
+    class TRADE_MAIN tradeNode

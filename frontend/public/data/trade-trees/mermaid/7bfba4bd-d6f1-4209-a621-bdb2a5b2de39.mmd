@@ -1,0 +1,54 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Sep 4, 2017")
+    TEAM_1("She's the Fastest")
+    TEAM_2("Mad Guys")
+    NODE_342070a1-be0c-42aa-aedd-0ccad980b574("🔄 Jay Ajayi - Sep 4, 2017")
+    CHAMP_4449259f-64af-44fd-9235-1facc0926234_2017["🏆 She's the Fastest - 2017 Champions!"]
+    NODE_c26b55c1-4a85-45e4-8cc0-589e05ed701f("🔒 Jay Ajayi - Kept - Sep 9, 2017")
+    TRADE_c1f694f3-bcd6-4c48-88ac-be7badfd3a46_3("🔄 Trade - Oct 24, 2017")
+    TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_4["FB in the Groin"]
+    NODE_e0a1586e-d2fc-4385-96de-c3277cf46910("🔄 Jay Ajayi - Oct 24, 2017")
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_5["She's the Fastest"]
+    NODE_bb510a60-4949-4ed5-8b26-bff6b0df9152("🔄 Philip Rivers - Oct 24, 2017")
+    NODE_c0f8a169-bc6c-495e-9c45-26181e5bda87("🔄 Todd Gurley - Sep 4, 2017")
+    NODE_26ed1213-fc70-4ae3-8fe1-8bc04cad9ad9("🔒 Todd Gurley - Kept - Sep 9, 2017")
+    NODE_2b1dd8e1-8389-44d4-a07e-3600515cddf1("🔒 Todd Gurley - Kept - Sep 6, 2018")
+    NODE_c0e9293b-aaf0-4dd4-9a98-3a27f21525aa("🔒 Todd Gurley - Kept - Sep 1, 2019")
+    NODE_8b63d102-f4c2-48a5-a58b-8dcd4ba73548("🔄 LeSean McCoy - Sep 4, 2017")
+    NODE_8fd8328b-07ef-4e44-af7d-528aa1559bf6("🔒 LeSean McCoy - Kept - Sep 9, 2017")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_342070a1-be0c-42aa-aedd-0ccad980b574
+    NODE_342070a1-be0c-42aa-aedd-0ccad980b574 --> CHAMP_4449259f-64af-44fd-9235-1facc0926234_2017
+    NODE_342070a1-be0c-42aa-aedd-0ccad980b574 --> NODE_c26b55c1-4a85-45e4-8cc0-589e05ed701f
+    NODE_c26b55c1-4a85-45e4-8cc0-589e05ed701f --> CHAMP_4449259f-64af-44fd-9235-1facc0926234_2017
+    NODE_c26b55c1-4a85-45e4-8cc0-589e05ed701f --> TRADE_c1f694f3-bcd6-4c48-88ac-be7badfd3a46_3
+    TRADE_c1f694f3-bcd6-4c48-88ac-be7badfd3a46_3 --> TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_4
+    TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_4 --> NODE_e0a1586e-d2fc-4385-96de-c3277cf46910
+    TRADE_c1f694f3-bcd6-4c48-88ac-be7badfd3a46_3 --> TEAM_4449259f-64af-44fd-9235-1facc0926234_5
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_5 --> NODE_bb510a60-4949-4ed5-8b26-bff6b0df9152
+    NODE_bb510a60-4949-4ed5-8b26-bff6b0df9152 --> CHAMP_4449259f-64af-44fd-9235-1facc0926234_2017
+    TEAM_1 --> NODE_c0f8a169-bc6c-495e-9c45-26181e5bda87
+    NODE_c0f8a169-bc6c-495e-9c45-26181e5bda87 --> CHAMP_4449259f-64af-44fd-9235-1facc0926234_2017
+    NODE_c0f8a169-bc6c-495e-9c45-26181e5bda87 --> NODE_26ed1213-fc70-4ae3-8fe1-8bc04cad9ad9
+    NODE_26ed1213-fc70-4ae3-8fe1-8bc04cad9ad9 --> CHAMP_4449259f-64af-44fd-9235-1facc0926234_2017
+    NODE_26ed1213-fc70-4ae3-8fe1-8bc04cad9ad9 --> NODE_2b1dd8e1-8389-44d4-a07e-3600515cddf1
+    NODE_2b1dd8e1-8389-44d4-a07e-3600515cddf1 --> NODE_c0e9293b-aaf0-4dd4-9a98-3a27f21525aa
+    TEAM_2 --> NODE_8b63d102-f4c2-48a5-a58b-8dcd4ba73548
+    NODE_8b63d102-f4c2-48a5-a58b-8dcd4ba73548 --> NODE_8fd8328b-07ef-4e44-af7d-528aa1559bf6
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_4,TEAM_4449259f-64af-44fd-9235-1facc0926234_5 teamNode
+    class CHAMP_4449259f-64af-44fd-9235-1facc0926234_2017 championshipNode
+    class NODE_e0a1586e-d2fc-4385-96de-c3277cf46910 nonRootPlayerNode
+    class TRADE_MAIN tradeNode

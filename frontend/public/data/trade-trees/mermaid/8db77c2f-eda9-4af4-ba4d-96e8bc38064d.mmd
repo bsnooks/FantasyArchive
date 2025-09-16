@@ -1,0 +1,32 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 10, 2012")
+    TEAM_1("Army of Dakness")
+    TEAM_2("The Mojos")
+    NODE_f3ebed60-8b27-4047-8418-3ff5dd640452("🔄 Mike Williams - Nov 10, 2012")
+    NODE_5f8b57bc-1125-46e9-ab87-4c99c739324b("🔄 Hakeem Nicks - Nov 10, 2012")
+    NODE_3594fb08-5185-4f3e-91ce-3c11b50a68f0("🔒 Hakeem Nicks - Kept - Aug 31, 2013")
+    NODE_91ddf306-e3a7-496c-9d53-5cd827bac85a("🔄 Josh Freeman - Nov 10, 2012")
+    NODE_2512f286-16a9-4a8a-b63c-68fdf720ebc8("🔄 Taiwan Jones - Nov 10, 2012")
+    NODE_76084560-cef0-4fdb-8751-cc75d6bcda57("🔄 Mark Sanchez - Nov 10, 2012")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_f3ebed60-8b27-4047-8418-3ff5dd640452
+    TEAM_2 --> NODE_5f8b57bc-1125-46e9-ab87-4c99c739324b
+    NODE_5f8b57bc-1125-46e9-ab87-4c99c739324b --> NODE_3594fb08-5185-4f3e-91ce-3c11b50a68f0
+    TEAM_1 --> NODE_91ddf306-e3a7-496c-9d53-5cd827bac85a
+    TEAM_2 --> NODE_2512f286-16a9-4a8a-b63c-68fdf720ebc8
+    TEAM_2 --> NODE_76084560-cef0-4fdb-8751-cc75d6bcda57
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

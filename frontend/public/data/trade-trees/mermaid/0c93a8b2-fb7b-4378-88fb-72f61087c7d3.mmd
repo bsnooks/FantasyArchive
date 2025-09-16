@@ -1,0 +1,65 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Aug 29, 2006")
+    TEAM_1("Army of Dakness")
+    TEAM_2("FB in the Groin")
+    NODE_4975cb93-1846-45e7-86f8-42e51fc28268("🔄 Drew Bledsoe - Aug 29, 2006")
+    NODE_9dc3377f-b08b-4a30-8142-5c9bf831e1a8("🔒 Drew Bledsoe - Kept - Aug 30, 2006")
+    NODE_1719bf61-3f86-4103-99ee-a61bd0a814b5("🔄 Joe Horn - Aug 29, 2006")
+    NODE_2de67f2d-30e7-4006-8b20-ae2ceadb8548("🔒 Joe Horn - Kept - Aug 30, 2006")
+    TRADE_ec8047e7-9914-4c8f-8182-dfe15f74e699_3("🔄 Trade - Oct 5, 2006")
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_4["She's the Fastest"]
+    NODE_b3d96c99-6169-4838-a146-0ccb6553a40f("🔄 Joe Horn - Oct 5, 2006")
+    NODE_5641278b-5d11-44ac-bd94-4078d5654562("🔄 Ben Roethlisberger - Oct 5, 2006")
+    TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5["FB in the Groin"]
+    NODE_c57e70ab-6f35-4286-b3f0-13b79a160e15("🔄 Jeremy Shockey - Oct 5, 2006")
+    NODE_69ecdbbe-6332-4926-9a78-c7965cbc96dc("🔄 Jake Plummer - Oct 5, 2006")
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_6["The Mojos"]
+    NODE_4f2e1c6d-1dd5-435e-b749-6d920df6f007("🔄 Jake Plummer - Nov 3, 2006")
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_7["The Mojos"]
+    NODE_833a3afd-a1cf-4864-a958-8fba61ae431f("🔄 Jamal Lewis - Nov 3, 2006")
+    NODE_dedea1c5-c834-4810-a8c4-d54e5cc8302e("🔄 Jake Delhomme - Nov 3, 2006")
+    NODE_444c6e1b-4de0-497e-bb5f-f65850abe6c6("🔄 Muhsin Muhammad - Oct 5, 2006")
+    NODE_2f5836c2-94e7-4eaf-9e67-d26196bfa48d("🔄 Jamal Lewis - Aug 29, 2006")
+    NODE_d5e52601-c32f-4965-be23-0e866fff0e23("🔒 Jamal Lewis - Kept - Aug 30, 2006")
+    TRADE_9b49d5bc-6ef6-48f2-ac4c-c398452727b4_8("🔄 Trade - Nov 3, 2006")
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_9["The Mojos"]
+    TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_10["FB in the Groin"]
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_4975cb93-1846-45e7-86f8-42e51fc28268
+    NODE_4975cb93-1846-45e7-86f8-42e51fc28268 --> NODE_9dc3377f-b08b-4a30-8142-5c9bf831e1a8
+    TEAM_2 --> NODE_1719bf61-3f86-4103-99ee-a61bd0a814b5
+    NODE_1719bf61-3f86-4103-99ee-a61bd0a814b5 --> NODE_2de67f2d-30e7-4006-8b20-ae2ceadb8548
+    NODE_2de67f2d-30e7-4006-8b20-ae2ceadb8548 --> TRADE_ec8047e7-9914-4c8f-8182-dfe15f74e699_3
+    TRADE_ec8047e7-9914-4c8f-8182-dfe15f74e699_3 --> TEAM_4449259f-64af-44fd-9235-1facc0926234_4
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_4 --> NODE_b3d96c99-6169-4838-a146-0ccb6553a40f
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_4 --> NODE_5641278b-5d11-44ac-bd94-4078d5654562
+    TRADE_ec8047e7-9914-4c8f-8182-dfe15f74e699_3 --> TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5
+    TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5 --> NODE_c57e70ab-6f35-4286-b3f0-13b79a160e15
+    TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5 --> NODE_69ecdbbe-6332-4926-9a78-c7965cbc96dc
+    NODE_69ecdbbe-6332-4926-9a78-c7965cbc96dc --> TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_6
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_6 --> NODE_4f2e1c6d-1dd5-435e-b749-6d920df6f007
+    NODE_69ecdbbe-6332-4926-9a78-c7965cbc96dc --> TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_7
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_7 --> NODE_833a3afd-a1cf-4864-a958-8fba61ae431f
+    NODE_69ecdbbe-6332-4926-9a78-c7965cbc96dc --> NODE_dedea1c5-c834-4810-a8c4-d54e5cc8302e
+    TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5 --> NODE_444c6e1b-4de0-497e-bb5f-f65850abe6c6
+    TEAM_2 --> NODE_2f5836c2-94e7-4eaf-9e67-d26196bfa48d
+    NODE_2f5836c2-94e7-4eaf-9e67-d26196bfa48d --> NODE_d5e52601-c32f-4965-be23-0e866fff0e23
+    NODE_d5e52601-c32f-4965-be23-0e866fff0e23 --> TRADE_9b49d5bc-6ef6-48f2-ac4c-c398452727b4_8
+    TRADE_9b49d5bc-6ef6-48f2-ac4c-c398452727b4_8 --> TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_9
+    TRADE_9b49d5bc-6ef6-48f2-ac4c-c398452727b4_8 --> TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_10
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_4449259f-64af-44fd-9235-1facc0926234_4,TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5,TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_6,TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_7,TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_9,TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_10 teamNode
+    class NODE_b3d96c99-6169-4838-a146-0ccb6553a40f,NODE_5641278b-5d11-44ac-bd94-4078d5654562,NODE_4f2e1c6d-1dd5-435e-b749-6d920df6f007,NODE_833a3afd-a1cf-4864-a958-8fba61ae431f nonRootPlayerNode
+    class TRADE_MAIN tradeNode

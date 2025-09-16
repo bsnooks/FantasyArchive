@@ -1,0 +1,37 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Sep 22, 2004")
+    TEAM_1("Mad Guys")
+    TEAM_2("She's the Fastest")
+    NODE_ae8fab57-9c3e-46c3-9165-14960db5b412("🔄 Michael Clayton - Sep 22, 2004")
+    TRADE_8a76fddf-8e47-4c29-9852-a44f8e99516a_3("🔄 Trade - Oct 19, 2004")
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_4["The Bad Guys"]
+    NODE_eaf92e72-7d5d-457f-8127-f0091e49f5ee("🔄 Michael Clayton - Oct 19, 2004")
+    TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_5["Mad Guys"]
+    NODE_f7c5df15-d298-4461-8bc4-21f509a33407("🔄 Michael Pittman - Oct 19, 2004")
+    NODE_7a663254-7d9d-416c-be48-c03631f45549("🔄 Donte' Stallworth - Oct 19, 2004")
+    NODE_67a9f7dd-bf9e-42f6-a067-b12e6ca10c7e("🔄 Rex Grossman - Sep 22, 2004")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_ae8fab57-9c3e-46c3-9165-14960db5b412
+    NODE_ae8fab57-9c3e-46c3-9165-14960db5b412 --> TRADE_8a76fddf-8e47-4c29-9852-a44f8e99516a_3
+    TRADE_8a76fddf-8e47-4c29-9852-a44f8e99516a_3 --> TEAM_b2220d1a-ff75-4622-9757-09978901110f_4
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_4 --> NODE_eaf92e72-7d5d-457f-8127-f0091e49f5ee
+    TRADE_8a76fddf-8e47-4c29-9852-a44f8e99516a_3 --> TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_5
+    TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_5 --> NODE_f7c5df15-d298-4461-8bc4-21f509a33407
+    TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_5 --> NODE_7a663254-7d9d-416c-be48-c03631f45549
+    TEAM_2 --> NODE_67a9f7dd-bf9e-42f6-a067-b12e6ca10c7e
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_b2220d1a-ff75-4622-9757-09978901110f_4,TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_5 teamNode
+    class NODE_eaf92e72-7d5d-457f-8127-f0091e49f5ee nonRootPlayerNode
+    class TRADE_MAIN tradeNode

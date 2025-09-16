@@ -1,0 +1,29 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 10, 2006")
+    TEAM_1("leaf16")
+    TEAM_2("The Mojos")
+    NODE_f2609826-7228-491b-8c05-aa4dc79f68f8("🔄 Mike Vick - Nov 10, 2006")
+    NODE_25c0e312-1d80-422f-b66e-ea37f6225fb5("🔄 Eli Manning - Nov 10, 2006")
+    NODE_710a7036-8feb-4856-86b9-8554d5786d8b("🔒 Eli Manning - Kept - Aug 23, 2007")
+    CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2007["🏆 The Mojos - 2007 Champions!"]
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_f2609826-7228-491b-8c05-aa4dc79f68f8
+    TEAM_2 --> NODE_25c0e312-1d80-422f-b66e-ea37f6225fb5
+    NODE_25c0e312-1d80-422f-b66e-ea37f6225fb5 --> NODE_710a7036-8feb-4856-86b9-8554d5786d8b
+    NODE_710a7036-8feb-4856-86b9-8554d5786d8b --> CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2007
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2007 championshipNode
+    class TRADE_MAIN tradeNode

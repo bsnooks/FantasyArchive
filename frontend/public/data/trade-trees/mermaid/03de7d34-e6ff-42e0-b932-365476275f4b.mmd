@@ -1,0 +1,24 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Dec 11, 2009")
+    TEAM_1("Army of Dakness")
+    TEAM_2("The Mojos")
+    NODE_853fe56d-b675-4b03-8b8a-10bfc46328cd("🔄 Donnie Avery - Dec 11, 2009")
+    NODE_add13df1-3ab2-4089-8057-69c81f65d1a0("🔄 Fred Jackson - Dec 11, 2009")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_853fe56d-b675-4b03-8b8a-10bfc46328cd
+    TEAM_2 --> NODE_add13df1-3ab2-4089-8057-69c81f65d1a0
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

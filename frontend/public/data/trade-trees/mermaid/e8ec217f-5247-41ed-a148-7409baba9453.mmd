@@ -1,0 +1,41 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 28, 2007")
+    TEAM_1("The Bad Guys")
+    TEAM_2("leaf16")
+    NODE_bd096a5b-7df1-4e61-968b-16445248e9b5("🔄 Jamal Lewis - Nov 28, 2007")
+    NODE_3b8e6e8d-8c4c-4940-9353-de7c8286ba2a("🔒 Jamal Lewis - Kept - Aug 14, 2008")
+    NODE_96f932f5-54fd-481d-9668-89a9a4668c42("🔄 Maurice Jones-Drew - Nov 28, 2007")
+    NODE_cce942d7-12d0-40d6-9652-56ef64134315("🔒 Maurice Jones-Drew - Kept - Aug 14, 2008")
+    NODE_9902ab99-4ae7-479b-83ab-e6f976ab5a07("🔒 Maurice Jones-Drew - Kept - Sep 2, 2009")
+    NODE_6c9e0b15-169d-4e08-b9fc-6b2ea9699d4a("🔒 Maurice Jones-Drew - Kept - Sep 4, 2010")
+    NODE_9f9d1cf2-6625-4b0f-b889-1187fe1676f4("🔒 Maurice Jones-Drew - Kept - Sep 8, 2011")
+    CHAMP_66fb98f4-89a7-45f9-893a-b41d71e6249d_2011["🏆 leaf16 - 2011 Champions!"]
+    NODE_fb6cf526-6de7-412b-b325-a0f4b2d3b7fa("🔒 Maurice Jones-Drew - Kept - Sep 6, 2012")
+    NODE_def3d5a9-b9d7-416e-8fa3-4b453b4446d1("🔒 Maurice Jones-Drew - Kept - Aug 31, 2013")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_bd096a5b-7df1-4e61-968b-16445248e9b5
+    NODE_bd096a5b-7df1-4e61-968b-16445248e9b5 --> NODE_3b8e6e8d-8c4c-4940-9353-de7c8286ba2a
+    TEAM_2 --> NODE_96f932f5-54fd-481d-9668-89a9a4668c42
+    NODE_96f932f5-54fd-481d-9668-89a9a4668c42 --> NODE_cce942d7-12d0-40d6-9652-56ef64134315
+    NODE_cce942d7-12d0-40d6-9652-56ef64134315 --> NODE_9902ab99-4ae7-479b-83ab-e6f976ab5a07
+    NODE_9902ab99-4ae7-479b-83ab-e6f976ab5a07 --> NODE_6c9e0b15-169d-4e08-b9fc-6b2ea9699d4a
+    NODE_6c9e0b15-169d-4e08-b9fc-6b2ea9699d4a --> NODE_9f9d1cf2-6625-4b0f-b889-1187fe1676f4
+    NODE_9f9d1cf2-6625-4b0f-b889-1187fe1676f4 --> CHAMP_66fb98f4-89a7-45f9-893a-b41d71e6249d_2011
+    NODE_9f9d1cf2-6625-4b0f-b889-1187fe1676f4 --> NODE_fb6cf526-6de7-412b-b325-a0f4b2d3b7fa
+    NODE_fb6cf526-6de7-412b-b325-a0f4b2d3b7fa --> NODE_def3d5a9-b9d7-416e-8fa3-4b453b4446d1
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class CHAMP_66fb98f4-89a7-45f9-893a-b41d71e6249d_2011 championshipNode
+    class TRADE_MAIN tradeNode

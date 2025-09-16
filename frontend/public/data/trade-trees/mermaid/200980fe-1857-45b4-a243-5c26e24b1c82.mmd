@@ -1,0 +1,35 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 5, 2022")
+    TEAM_1("The Bad Guys")
+    TEAM_2("FB in the Groin")
+    NODE_37d01e76-cad0-4bff-80f6-acec656d6d25("🔄 Curtis Samuel - Oct 5, 2022")
+    NODE_a64aab16-2735-4b3c-8619-e4f6d710dc04("🔄 AJ Dillon - Oct 5, 2022")
+    TRADE_1ae5af1b-0cfd-4039-a840-4f3acc20b506_3("🔄 Trade - Nov 2, 2022")
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4["leaf16"]
+    NODE_4617ad57-25da-4746-ba9f-8da25a714cce("🔄 AJ Dillon - Nov 2, 2022")
+    TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5["FB in the Groin"]
+    NODE_b63e0f53-75a2-43f9-8849-63fb7c8f56d3("🔄 Mac Jones - Nov 2, 2022")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_37d01e76-cad0-4bff-80f6-acec656d6d25
+    TEAM_2 --> NODE_a64aab16-2735-4b3c-8619-e4f6d710dc04
+    NODE_a64aab16-2735-4b3c-8619-e4f6d710dc04 --> TRADE_1ae5af1b-0cfd-4039-a840-4f3acc20b506_3
+    TRADE_1ae5af1b-0cfd-4039-a840-4f3acc20b506_3 --> TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4 --> NODE_4617ad57-25da-4746-ba9f-8da25a714cce
+    TRADE_1ae5af1b-0cfd-4039-a840-4f3acc20b506_3 --> TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5
+    TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5 --> NODE_b63e0f53-75a2-43f9-8849-63fb7c8f56d3
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4,TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5 teamNode
+    class NODE_4617ad57-25da-4746-ba9f-8da25a714cce nonRootPlayerNode
+    class TRADE_MAIN tradeNode

@@ -1,0 +1,40 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 6, 2006")
+    TEAM_1("The Bad Guys")
+    TEAM_2("The Mojos")
+    NODE_1ca513a3-4529-474d-bb11-75329be4fb57("🔄 Domanick Williams - Oct 6, 2006")
+    NODE_33f474a2-05ff-42fa-9c12-a8e4886a1beb("🔄 Todd Heap - Oct 6, 2006")
+    TRADE_b1259762-0dc2-4aee-875c-ec8fc2f157d6_3("🔄 Trade - Nov 23, 2006")
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_4["The Bad Guys"]
+    NODE_bfd07014-2cd3-4af7-a9c3-dbb78d75c36a("🔄 Todd Heap - Nov 23, 2006")
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_5["The Mojos"]
+    NODE_93f6e619-6b9a-4a3d-8c53-dd7dccabd943("🔄 Greg Jennings - Nov 23, 2006")
+    NODE_2fb38eab-3f9b-4adf-9ca6-ad8d6f4a428f("🔄 Carnell Williams - Oct 6, 2006")
+    NODE_16596f91-3ff7-4052-9a5d-c2706e97e8d2("🔄 Tiki Barber - Oct 6, 2006")
+    NODE_684c2bfd-9996-4e0c-b7c8-fb86669287aa("🔄 Alex Smith - Oct 6, 2006")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_1ca513a3-4529-474d-bb11-75329be4fb57
+    TEAM_2 --> NODE_33f474a2-05ff-42fa-9c12-a8e4886a1beb
+    NODE_33f474a2-05ff-42fa-9c12-a8e4886a1beb --> TRADE_b1259762-0dc2-4aee-875c-ec8fc2f157d6_3
+    TRADE_b1259762-0dc2-4aee-875c-ec8fc2f157d6_3 --> TEAM_b2220d1a-ff75-4622-9757-09978901110f_4
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_4 --> NODE_bfd07014-2cd3-4af7-a9c3-dbb78d75c36a
+    TRADE_b1259762-0dc2-4aee-875c-ec8fc2f157d6_3 --> TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_5
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_5 --> NODE_93f6e619-6b9a-4a3d-8c53-dd7dccabd943
+    TEAM_2 --> NODE_2fb38eab-3f9b-4adf-9ca6-ad8d6f4a428f
+    TEAM_1 --> NODE_16596f91-3ff7-4052-9a5d-c2706e97e8d2
+    TEAM_2 --> NODE_684c2bfd-9996-4e0c-b7c8-fb86669287aa
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_b2220d1a-ff75-4622-9757-09978901110f_4,TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_5 teamNode
+    class TRADE_MAIN tradeNode

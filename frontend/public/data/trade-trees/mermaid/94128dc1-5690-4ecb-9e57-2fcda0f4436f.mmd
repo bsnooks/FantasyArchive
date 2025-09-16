@@ -1,0 +1,61 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 28, 2006")
+    TEAM_1("Hot Loads")
+    TEAM_2("The Mojos")
+    NODE_0f1d9e0e-cd1c-4a60-b92e-202e6d935f55("🔄 Jamal Lewis - Nov 28, 2006")
+    CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2006["🏆 Hot Loads - 2006 Champions!"]
+    NODE_ea837e1f-1038-4fb7-b95d-79f8daf5279e("🔄 Randy Moss - Nov 28, 2006")
+    NODE_948023de-1be7-4fea-a6b1-ce74c8ea2703("🔒 Randy Moss - Kept - Aug 23, 2007")
+    CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2007["🏆 The Mojos - 2007 Champions!"]
+    NODE_76c11a40-51fb-4a0d-8c8c-2dd318625f2d("🔒 Randy Moss - Kept - Aug 14, 2008")
+    TRADE_6798db21-367e-4650-aecc-0e1c95d218c9_3("🔄 Trade - Nov 11, 2008")
+    TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_4["Mad Guys"]
+    NODE_3fce7705-dd16-41d8-832f-99c179faf58b("🔄 Randy Moss - Nov 11, 2008")
+    NODE_b8ffbf1c-7a5f-46fa-a1d3-1191d35db114("🔄 Dominic Rhodes - Nov 11, 2008")
+    NODE_ad03f81a-4fb3-4ddd-af19-16136dca43ea("🔄 Joseph Addai - Nov 11, 2008")
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_5["The Mojos"]
+    NODE_9f1b91c7-3766-403e-a565-1e431d45c342("🔄 Marshawn Lynch - Nov 11, 2008")
+    NODE_0e11436e-f6b8-4944-83b9-a01495af4281("🔄 Fred Jackson - Nov 11, 2008")
+    NODE_bae7b97b-9cd3-465f-96e8-dccd9024c915("🔄 Marques Colston - Nov 11, 2008")
+    NODE_4a66e6f4-6850-46cb-ae70-91890578144f("🔄 Reggie Williams - Nov 28, 2006")
+    NODE_7aed24a6-71ce-4ad3-8218-d5b6b4b8e796("🔄 Bernard Berrian - Nov 28, 2006")
+    NODE_1695e839-8cd2-4d8b-ad6e-df55e29c78d9("🔄 Dominic Rhodes - Nov 28, 2006")
+    NODE_cdf5dcda-2005-467e-afdb-f4c01462b89a("🔄 Jerious Norwood - Nov 28, 2006")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_0f1d9e0e-cd1c-4a60-b92e-202e6d935f55
+    NODE_0f1d9e0e-cd1c-4a60-b92e-202e6d935f55 --> CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2006
+    TEAM_2 --> NODE_ea837e1f-1038-4fb7-b95d-79f8daf5279e
+    NODE_ea837e1f-1038-4fb7-b95d-79f8daf5279e --> NODE_948023de-1be7-4fea-a6b1-ce74c8ea2703
+    NODE_948023de-1be7-4fea-a6b1-ce74c8ea2703 --> CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2007
+    NODE_948023de-1be7-4fea-a6b1-ce74c8ea2703 --> NODE_76c11a40-51fb-4a0d-8c8c-2dd318625f2d
+    NODE_76c11a40-51fb-4a0d-8c8c-2dd318625f2d --> TRADE_6798db21-367e-4650-aecc-0e1c95d218c9_3
+    TRADE_6798db21-367e-4650-aecc-0e1c95d218c9_3 --> TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_4
+    TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_4 --> NODE_3fce7705-dd16-41d8-832f-99c179faf58b
+    TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_4 --> NODE_b8ffbf1c-7a5f-46fa-a1d3-1191d35db114
+    TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_4 --> NODE_ad03f81a-4fb3-4ddd-af19-16136dca43ea
+    TRADE_6798db21-367e-4650-aecc-0e1c95d218c9_3 --> TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_5
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_5 --> NODE_9f1b91c7-3766-403e-a565-1e431d45c342
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_5 --> NODE_0e11436e-f6b8-4944-83b9-a01495af4281
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_5 --> NODE_bae7b97b-9cd3-465f-96e8-dccd9024c915
+    TEAM_2 --> NODE_4a66e6f4-6850-46cb-ae70-91890578144f
+    TEAM_1 --> NODE_7aed24a6-71ce-4ad3-8218-d5b6b4b8e796
+    NODE_7aed24a6-71ce-4ad3-8218-d5b6b4b8e796 --> CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2006
+    TEAM_2 --> NODE_1695e839-8cd2-4d8b-ad6e-df55e29c78d9
+    TEAM_2 --> NODE_cdf5dcda-2005-467e-afdb-f4c01462b89a
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_4,TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_5 teamNode
+    class CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2006,CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2007 championshipNode
+    class NODE_3fce7705-dd16-41d8-832f-99c179faf58b,NODE_b8ffbf1c-7a5f-46fa-a1d3-1191d35db114,NODE_ad03f81a-4fb3-4ddd-af19-16136dca43ea nonRootPlayerNode
+    class TRADE_MAIN tradeNode

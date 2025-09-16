@@ -1,0 +1,24 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 12, 2008")
+    TEAM_1("FB in the Groin")
+    TEAM_2("The Mojos")
+    NODE_1c0dcf48-1b04-486a-a3cc-57a0f3dcd372("🔄 Byron Leftwich - Nov 12, 2008")
+    NODE_578cf005-3b63-436f-9750-80744fbe1a67("🔄 Zach Miller - Nov 12, 2008")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_1c0dcf48-1b04-486a-a3cc-57a0f3dcd372
+    TEAM_2 --> NODE_578cf005-3b63-436f-9750-80744fbe1a67
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

@@ -1,0 +1,27 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 20, 2015")
+    TEAM_1("The Mojos")
+    TEAM_2("She's the Fastest")
+    NODE_7f8de2db-f125-4bb6-b31f-98044106c4a9("🔄 Brock Osweiler - Nov 20, 2015")
+    NODE_3fe025ba-a8b0-4ad7-8961-ec916ddcb5ff("🔄 DeSean Jackson - Nov 20, 2015")
+    CHAMP_4449259f-64af-44fd-9235-1facc0926234_2015["🏆 She's the Fastest - 2015 Champions!"]
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_7f8de2db-f125-4bb6-b31f-98044106c4a9
+    TEAM_2 --> NODE_3fe025ba-a8b0-4ad7-8961-ec916ddcb5ff
+    NODE_3fe025ba-a8b0-4ad7-8961-ec916ddcb5ff --> CHAMP_4449259f-64af-44fd-9235-1facc0926234_2015
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class CHAMP_4449259f-64af-44fd-9235-1facc0926234_2015 championshipNode
+    class TRADE_MAIN tradeNode

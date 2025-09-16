@@ -1,0 +1,27 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 17, 2018")
+    TEAM_1("Laters")
+    TEAM_2("The Bad Guys")
+    NODE_24d12440-4d16-4678-9798-8761c4016de6("🔄 Doug Martin - Nov 17, 2018")
+    NODE_ea9637ea-1973-4650-ba90-d31430f50683("🔄 John Brown - Nov 17, 2018")
+    CHAMP_b2220d1a-ff75-4622-9757-09978901110f_2018["🏆 The Bad Guys - 2018 Champions!"]
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_24d12440-4d16-4678-9798-8761c4016de6
+    TEAM_2 --> NODE_ea9637ea-1973-4650-ba90-d31430f50683
+    NODE_ea9637ea-1973-4650-ba90-d31430f50683 --> CHAMP_b2220d1a-ff75-4622-9757-09978901110f_2018
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class CHAMP_b2220d1a-ff75-4622-9757-09978901110f_2018 championshipNode
+    class TRADE_MAIN tradeNode

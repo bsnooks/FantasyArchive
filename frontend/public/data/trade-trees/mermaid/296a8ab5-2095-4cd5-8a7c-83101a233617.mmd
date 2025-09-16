@@ -1,0 +1,27 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 12, 2023")
+    TEAM_1("leaf16")
+    TEAM_2("The Mojos")
+    NODE_db944cf8-73f0-46a5-99c1-3fa383a4b960("🔄 Jahan Dotson - Nov 12, 2023")
+    CHAMP_66fb98f4-89a7-45f9-893a-b41d71e6249d_2023["🏆 leaf16 - 2023 Champions!"]
+    NODE_a64a8f83-f570-4f5e-afd6-a326a06ce4c7("🔄 Devin Singletary - Nov 12, 2023")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_db944cf8-73f0-46a5-99c1-3fa383a4b960
+    NODE_db944cf8-73f0-46a5-99c1-3fa383a4b960 --> CHAMP_66fb98f4-89a7-45f9-893a-b41d71e6249d_2023
+    TEAM_2 --> NODE_a64a8f83-f570-4f5e-afd6-a326a06ce4c7
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class CHAMP_66fb98f4-89a7-45f9-893a-b41d71e6249d_2023 championshipNode
+    class TRADE_MAIN tradeNode

@@ -1,0 +1,48 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 13, 2011")
+    TEAM_1("Mad Guys")
+    TEAM_2("leaf16")
+    NODE_98dd0f74-ae65-4c0e-bc1e-0334a5e71f0a("🔄 Ryan Fitzpatrick - Oct 13, 2011")
+    TRADE_8ab45a4d-fc81-4a69-b148-6d5b67501daa_3("🔄 Trade - Oct 22, 2011")
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4["leaf16"]
+    NODE_13ac1331-c23d-4b5e-b4e4-4acc0a117b8f("🔄 Ryan Fitzpatrick - Oct 22, 2011")
+    CHAMP_66fb98f4-89a7-45f9-893a-b41d71e6249d_2011["🏆 leaf16 - 2011 Champions!"]
+    NODE_b708b08d-9b71-48df-aee3-13280a459525("🔄 Kyle Orton - Oct 22, 2011")
+    TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_5["Mad Guys"]
+    NODE_b4648a1f-2621-4237-8133-66d22a949324("🔄 Demaryius Thomas - Oct 22, 2011")
+    NODE_a64f7dd6-d909-4a4b-8d06-8007e62bf98e("🔄 Kevin Kolb - Oct 22, 2011")
+    NODE_874bb423-0bf4-4a74-bb1e-0aaa8eeb7711("🔄 Johnny Knox - Oct 13, 2011")
+    NODE_2287f065-a684-41e4-98cf-583800446e55("🔄 Aaron Hernandez - Oct 13, 2011")
+    NODE_e42a7add-5f66-44be-b797-58e2800a81ab("🔄 Marques Colston - Oct 13, 2011")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_98dd0f74-ae65-4c0e-bc1e-0334a5e71f0a
+    NODE_98dd0f74-ae65-4c0e-bc1e-0334a5e71f0a --> TRADE_8ab45a4d-fc81-4a69-b148-6d5b67501daa_3
+    TRADE_8ab45a4d-fc81-4a69-b148-6d5b67501daa_3 --> TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4 --> NODE_13ac1331-c23d-4b5e-b4e4-4acc0a117b8f
+    NODE_13ac1331-c23d-4b5e-b4e4-4acc0a117b8f --> CHAMP_66fb98f4-89a7-45f9-893a-b41d71e6249d_2011
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4 --> NODE_b708b08d-9b71-48df-aee3-13280a459525
+    NODE_b708b08d-9b71-48df-aee3-13280a459525 --> CHAMP_66fb98f4-89a7-45f9-893a-b41d71e6249d_2011
+    TRADE_8ab45a4d-fc81-4a69-b148-6d5b67501daa_3 --> TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_5
+    TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_5 --> NODE_b4648a1f-2621-4237-8133-66d22a949324
+    TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_5 --> NODE_a64f7dd6-d909-4a4b-8d06-8007e62bf98e
+    TEAM_1 --> NODE_874bb423-0bf4-4a74-bb1e-0aaa8eeb7711
+    TEAM_2 --> NODE_2287f065-a684-41e4-98cf-583800446e55
+    NODE_2287f065-a684-41e4-98cf-583800446e55 --> CHAMP_66fb98f4-89a7-45f9-893a-b41d71e6249d_2011
+    TEAM_2 --> NODE_e42a7add-5f66-44be-b797-58e2800a81ab
+    NODE_e42a7add-5f66-44be-b797-58e2800a81ab --> CHAMP_66fb98f4-89a7-45f9-893a-b41d71e6249d_2011
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4,TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_5 teamNode
+    class CHAMP_66fb98f4-89a7-45f9-893a-b41d71e6249d_2011 championshipNode
+    class TRADE_MAIN tradeNode

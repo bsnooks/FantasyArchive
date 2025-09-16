@@ -1,0 +1,28 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 30, 2023")
+    TEAM_1("Mad Guys")
+    TEAM_2("She's the Fastest")
+    NODE_f5a98a16-479e-4c27-9224-25333b890b82("🔄 Desmond Ridder - Nov 30, 2023")
+    NODE_a9e4648c-fddb-4b64-8f97-620df10e1ec5("🔄 Tyler Allgeier - Nov 30, 2023")
+    NODE_12b061b5-21ea-488b-bcb6-9ee053f7c88b("🔄 Dorian Thompson-Robinson - Nov 30, 2023")
+    NODE_c24f434b-acb5-41e3-af28-e996975f9f14("🔄 Derek Carr - Nov 30, 2023")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_f5a98a16-479e-4c27-9224-25333b890b82
+    TEAM_2 --> NODE_a9e4648c-fddb-4b64-8f97-620df10e1ec5
+    TEAM_1 --> NODE_12b061b5-21ea-488b-bcb6-9ee053f7c88b
+    TEAM_2 --> NODE_c24f434b-acb5-41e3-af28-e996975f9f14
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

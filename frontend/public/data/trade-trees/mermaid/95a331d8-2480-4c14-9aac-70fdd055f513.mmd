@@ -1,0 +1,44 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 2, 2022")
+    TEAM_1("Balero Boyz")
+    TEAM_2("The Mojos")
+    NODE_162ce81f-bec7-437d-a20b-00c821c86d1d("🔄 Calvin Ridley - Nov 2, 2022")
+    NODE_7d9592cd-181b-4eba-b6e9-1c40a2da9e5c("🔒 Calvin Ridley - Kept - Sep 7, 2023")
+    TRADE_e48f96f4-8b7d-42ca-abe5-7baf4945be3e_3("🔄 Trade - Oct 25, 2023")
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_4["The Mojos"]
+    NODE_dfcea8a6-3bc7-4929-b68b-5291ed19a4b1("🔄 Calvin Ridley - Oct 25, 2023")
+    TEAM_2feaf03e-fb22-498e-ac8f-e596b6ba7810_5["Balero Boyz"]
+    NODE_bf1da95b-f854-40dc-9bb0-c555d7a1b2f3("🔄 Isiah Pacheco - Oct 25, 2023")
+    NODE_7dd58285-608c-46b1-af7d-80376e00ae98("🔄 JuJu Smith-Schuster - Nov 2, 2022")
+    NODE_2d4d9b9a-8a59-4f27-bd67-dc95c0e76547("🔄 Jared Goff - Nov 2, 2022")
+    CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2022["🏆 The Mojos - 2022 Champions!"]
+    NODE_dd6a899c-541a-4397-9c82-e87e259534ad("🔄 Rashod Bateman - Nov 2, 2022")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_162ce81f-bec7-437d-a20b-00c821c86d1d
+    NODE_162ce81f-bec7-437d-a20b-00c821c86d1d --> NODE_7d9592cd-181b-4eba-b6e9-1c40a2da9e5c
+    NODE_7d9592cd-181b-4eba-b6e9-1c40a2da9e5c --> TRADE_e48f96f4-8b7d-42ca-abe5-7baf4945be3e_3
+    TRADE_e48f96f4-8b7d-42ca-abe5-7baf4945be3e_3 --> TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_4
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_4 --> NODE_dfcea8a6-3bc7-4929-b68b-5291ed19a4b1
+    TRADE_e48f96f4-8b7d-42ca-abe5-7baf4945be3e_3 --> TEAM_2feaf03e-fb22-498e-ac8f-e596b6ba7810_5
+    TEAM_2feaf03e-fb22-498e-ac8f-e596b6ba7810_5 --> NODE_bf1da95b-f854-40dc-9bb0-c555d7a1b2f3
+    TEAM_1 --> NODE_7dd58285-608c-46b1-af7d-80376e00ae98
+    TEAM_2 --> NODE_2d4d9b9a-8a59-4f27-bd67-dc95c0e76547
+    NODE_2d4d9b9a-8a59-4f27-bd67-dc95c0e76547 --> CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2022
+    TEAM_2 --> NODE_dd6a899c-541a-4397-9c82-e87e259534ad
+    NODE_dd6a899c-541a-4397-9c82-e87e259534ad --> CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2022
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_4,TEAM_2feaf03e-fb22-498e-ac8f-e596b6ba7810_5 teamNode
+    class CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2022 championshipNode
+    class TRADE_MAIN tradeNode

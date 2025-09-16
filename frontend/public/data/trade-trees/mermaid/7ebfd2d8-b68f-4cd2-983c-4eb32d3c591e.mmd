@@ -1,0 +1,35 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 15, 2023")
+    TEAM_1("Army of Dakness")
+    TEAM_2("FB in the Groin")
+    NODE_ec10909e-c348-4aa2-a6d0-184cbd992fb1("🔄 Adam Thielen - Oct 15, 2023")
+    NODE_ddfc4e31-e4aa-4050-b1ab-8eea224877ef("🔄 Josh Jacobs - Oct 15, 2023")
+    NODE_123ad766-bd86-424a-939a-3ac837584923("🔒 Josh Jacobs - Kept - Sep 5, 2024")
+    NODE_c97d5ea7-3f41-4d0c-9ef5-f03daa0b31d3("🔄 Christian Watson - Oct 15, 2023")
+    NODE_d00bc519-c621-45b4-a6d5-fc400992378f("🔄 Jahmyr Gibbs - Oct 15, 2023")
+    NODE_1ca29f3e-255d-4d72-a377-25823a0c7414("🔒 Jahmyr Gibbs - Kept - Sep 5, 2024")
+    CHAMP_f483ecf1-cd17-4991-854b-e52dfc957b45_2024["🏆 FB in the Groin - 2024 Champions!"]
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_ec10909e-c348-4aa2-a6d0-184cbd992fb1
+    TEAM_1 --> NODE_ddfc4e31-e4aa-4050-b1ab-8eea224877ef
+    NODE_ddfc4e31-e4aa-4050-b1ab-8eea224877ef --> NODE_123ad766-bd86-424a-939a-3ac837584923
+    TEAM_2 --> NODE_c97d5ea7-3f41-4d0c-9ef5-f03daa0b31d3
+    TEAM_2 --> NODE_d00bc519-c621-45b4-a6d5-fc400992378f
+    NODE_d00bc519-c621-45b4-a6d5-fc400992378f --> NODE_1ca29f3e-255d-4d72-a377-25823a0c7414
+    NODE_1ca29f3e-255d-4d72-a377-25823a0c7414 --> CHAMP_f483ecf1-cd17-4991-854b-e52dfc957b45_2024
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class CHAMP_f483ecf1-cd17-4991-854b-e52dfc957b45_2024 championshipNode
+    class TRADE_MAIN tradeNode

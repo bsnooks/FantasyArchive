@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ConfigProvider, theme } from "antd";
@@ -15,7 +15,8 @@ import SeasonDetail from "./pages/SeasonDetail";
 import Seasons from "./pages/Seasons";
 import Franchises from "./pages/Franchises";
 import Drafts from "./pages/Drafts";
-import Trades from "./pages/Trades";
+import TradeTrees from "./pages/TradeTrees";
+import TradeDetail from "./pages/TradeDetail";
 import Records from "./pages/Records";
 import PlayerProfile from "./pages/PlayerProfile";
 import "./App.css";
@@ -31,6 +32,77 @@ const queryClient = new QueryClient({
 });
 
 const App: React.FC = () => {
+  // Suppress ResizeObserver errors globally - comprehensive approach for dev
+  useEffect(() => {
+    // Only in development
+    if (process.env.NODE_ENV === 'development') {
+      // Suppress console errors
+      const originalError = console.error;
+      const originalWarn = console.warn;
+      
+      console.error = (...args) => {
+        if (
+          typeof args[0] === 'string' && 
+          args[0].includes('ResizeObserver')
+        ) {
+          return;
+        }
+        originalError(...args);
+      };
+
+      console.warn = (...args) => {
+        if (typeof args[0] === 'string' && args[0].includes('ResizeObserver')) {
+          return;
+        }
+        originalWarn(...args);
+      };
+
+      // Suppress window errors
+      const handleError = (event: ErrorEvent) => {
+        if (event.message && (
+          event.message.includes('ResizeObserver') ||
+          event.message.includes('Non-Error promise rejection captured')
+        )) {
+          event.preventDefault();
+          event.stopPropagation();
+          return false;
+        }
+      };
+
+      // Suppress unhandled promise rejections
+      const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
+        if (event.reason && typeof event.reason === 'string' && 
+            event.reason.includes('ResizeObserver')) {
+          event.preventDefault();
+          return false;
+        }
+      };
+
+      window.addEventListener('error', handleError);
+      window.addEventListener('unhandledrejection', handleUnhandledRejection);
+
+      // Try to disable React error overlay
+      if (process.env.REACT_APP_DISABLE_OVERLAY === 'true') {
+        try {
+          // Hide error overlay if it exists
+          const errorOverlay = document.querySelector('iframe[data-react-error-overlay]');
+          if (errorOverlay) {
+            (errorOverlay as HTMLElement).style.display = 'none';
+          }
+        } catch (e) {
+          // Ignore errors when trying to hide overlay
+        }
+      }
+
+      return () => {
+        console.error = originalError;
+        console.warn = originalWarn;
+        window.removeEventListener('error', handleError);
+        window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+      };
+    }
+  }, []);
+
   return (
     <Provider store={store}>
       <ConfigProvider
@@ -77,7 +149,8 @@ const App: React.FC = () => {
                     />
                     <Route path="/season/:year" element={<SeasonDetail />} />
                     <Route path="/drafts" element={<Drafts />} />
-                    <Route path="/trades" element={<Trades />} />
+                    <Route path="/trade-trees" element={<TradeTrees />} />
+                    <Route path="/trade/:tradeId" element={<TradeDetail />} />
                     <Route path="/records" element={<Records />} />
                     <Route
                       path="/player/:playerId"

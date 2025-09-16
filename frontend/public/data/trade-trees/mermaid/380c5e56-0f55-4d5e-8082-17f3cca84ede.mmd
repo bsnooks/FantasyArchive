@@ -1,0 +1,42 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Sep 11, 2007")
+    TEAM_1("The Mojos")
+    TEAM_2("Army of Dakness")
+    NODE_61c59213-9a1b-4742-b580-b83e1a8baef3("🔄 Jared Lorenzen - Sep 11, 2007")
+    CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2007["🏆 The Mojos - 2007 Champions!"]
+    NODE_d4894948-df0c-48ce-8c62-fda7c98599d9("🔄 Adrian N Peterson - Sep 11, 2007")
+    TRADE_a8858d3e-5784-433d-a9c2-e70b9d3074fd_3("🔄 Trade - Dec 2, 2007")
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4["leaf16"]
+    NODE_5cfca515-e52a-465d-88b6-4665adffc2b2("🔄 Adrian N Peterson - Dec 2, 2007")
+    NODE_c01021a8-364f-44ae-85ee-edb0b66a6f95("🔄 Cedric Benson - Dec 2, 2007")
+    TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_5["Army of Dakness"]
+    NODE_54b224c4-8273-469b-8dcc-06171bff5694("🔄 Brad Johnson - Dec 2, 2007")
+    NODE_f0478f46-4cc2-4b3d-9c0b-64c510c19e50("🔄 Jeremy Shockey - Dec 2, 2007")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_61c59213-9a1b-4742-b580-b83e1a8baef3
+    NODE_61c59213-9a1b-4742-b580-b83e1a8baef3 --> CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2007
+    TEAM_2 --> NODE_d4894948-df0c-48ce-8c62-fda7c98599d9
+    NODE_d4894948-df0c-48ce-8c62-fda7c98599d9 --> TRADE_a8858d3e-5784-433d-a9c2-e70b9d3074fd_3
+    TRADE_a8858d3e-5784-433d-a9c2-e70b9d3074fd_3 --> TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4 --> NODE_5cfca515-e52a-465d-88b6-4665adffc2b2
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4 --> NODE_c01021a8-364f-44ae-85ee-edb0b66a6f95
+    TRADE_a8858d3e-5784-433d-a9c2-e70b9d3074fd_3 --> TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_5
+    TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_5 --> NODE_54b224c4-8273-469b-8dcc-06171bff5694
+    TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_5 --> NODE_f0478f46-4cc2-4b3d-9c0b-64c510c19e50
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4,TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_5 teamNode
+    class CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2007 championshipNode
+    class NODE_5cfca515-e52a-465d-88b6-4665adffc2b2,NODE_c01021a8-364f-44ae-85ee-edb0b66a6f95 nonRootPlayerNode
+    class TRADE_MAIN tradeNode

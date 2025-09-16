@@ -1,0 +1,57 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 10, 2005")
+    TEAM_1("Hot Loads")
+    TEAM_2("The Bad Guys")
+    NODE_4c2932d7-1e1a-4421-9aad-61642ade541c("🔄 Jake Plummer - Nov 10, 2005")
+    TRADE_481a314d-2bf1-4e89-b525-27336309fb27_3("🔄 Trade - Nov 16, 2005")
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_4["She's the Fastest"]
+    NODE_dd9740e3-ccfd-4b02-bbff-1935a00722bb("🔄 Jake Plummer - Nov 16, 2005")
+    NODE_920ec44a-401f-4b74-b240-5a0ec0fbc8bb("🔄 Lee Evans - Nov 16, 2005")
+    TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_5["Hot Loads"]
+    NODE_91e1931d-f9b7-453e-aa07-7162e3caa4c2("🔄 Isaac Bruce - Nov 16, 2005")
+    NODE_b6e4e873-9023-4563-8c44-ce1008afc077("🔄 Derrick Mason - Nov 16, 2005")
+    NODE_8cacbb06-010a-4956-b5a0-ac4db901d506("🔄 Carnell Williams - Nov 10, 2005")
+    NODE_d39189fb-0cee-4b30-b271-e3ee16a00da7("🔒 Carnell Williams - Kept - Aug 30, 2006")
+    TRADE_0dbfafdb-2985-4837-abb6-429b8ad3f91c_6("🔄 Trade - Oct 6, 2006")
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_7["The Mojos"]
+    NODE_2fb38eab-3f9b-4adf-9ca6-ad8d6f4a428f("🔄 Carnell Williams - Oct 6, 2006")
+    NODE_33f474a2-05ff-42fa-9c12-a8e4886a1beb("🔄 Todd Heap - Oct 6, 2006")
+    NODE_684c2bfd-9996-4e0c-b7c8-fb86669287aa("🔄 Alex Smith - Oct 6, 2006")
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_8["The Bad Guys"]
+    NODE_1ca513a3-4529-474d-bb11-75329be4fb57("🔄 Domanick Williams - Oct 6, 2006")
+    NODE_16596f91-3ff7-4052-9a5d-c2706e97e8d2("🔄 Tiki Barber - Oct 6, 2006")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_4c2932d7-1e1a-4421-9aad-61642ade541c
+    NODE_4c2932d7-1e1a-4421-9aad-61642ade541c --> TRADE_481a314d-2bf1-4e89-b525-27336309fb27_3
+    TRADE_481a314d-2bf1-4e89-b525-27336309fb27_3 --> TEAM_4449259f-64af-44fd-9235-1facc0926234_4
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_4 --> NODE_dd9740e3-ccfd-4b02-bbff-1935a00722bb
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_4 --> NODE_920ec44a-401f-4b74-b240-5a0ec0fbc8bb
+    TRADE_481a314d-2bf1-4e89-b525-27336309fb27_3 --> TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_5
+    TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_5 --> NODE_91e1931d-f9b7-453e-aa07-7162e3caa4c2
+    TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_5 --> NODE_b6e4e873-9023-4563-8c44-ce1008afc077
+    TEAM_2 --> NODE_8cacbb06-010a-4956-b5a0-ac4db901d506
+    NODE_8cacbb06-010a-4956-b5a0-ac4db901d506 --> NODE_d39189fb-0cee-4b30-b271-e3ee16a00da7
+    NODE_d39189fb-0cee-4b30-b271-e3ee16a00da7 --> TRADE_0dbfafdb-2985-4837-abb6-429b8ad3f91c_6
+    TRADE_0dbfafdb-2985-4837-abb6-429b8ad3f91c_6 --> TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_7
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_7 --> NODE_2fb38eab-3f9b-4adf-9ca6-ad8d6f4a428f
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_7 --> NODE_33f474a2-05ff-42fa-9c12-a8e4886a1beb
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_7 --> NODE_684c2bfd-9996-4e0c-b7c8-fb86669287aa
+    TRADE_0dbfafdb-2985-4837-abb6-429b8ad3f91c_6 --> TEAM_b2220d1a-ff75-4622-9757-09978901110f_8
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_8 --> NODE_1ca513a3-4529-474d-bb11-75329be4fb57
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_8 --> NODE_16596f91-3ff7-4052-9a5d-c2706e97e8d2
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_4449259f-64af-44fd-9235-1facc0926234_4,TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_5,TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_7,TEAM_b2220d1a-ff75-4622-9757-09978901110f_8 teamNode
+    class NODE_dd9740e3-ccfd-4b02-bbff-1935a00722bb,NODE_920ec44a-401f-4b74-b240-5a0ec0fbc8bb,NODE_2fb38eab-3f9b-4adf-9ca6-ad8d6f4a428f,NODE_33f474a2-05ff-42fa-9c12-a8e4886a1beb,NODE_684c2bfd-9996-4e0c-b7c8-fb86669287aa nonRootPlayerNode
+    class TRADE_MAIN tradeNode

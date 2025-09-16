@@ -1,0 +1,59 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Sep 26, 2024")
+    TEAM_1("She's the Fastest")
+    TEAM_2("Laters")
+    NODE_ab875753-e618-4227-8602-1e045f42fe74("🔄 Jayden Reed - Sep 26, 2024")
+    TRADE_f0b59f44-b3c9-4da4-a932-35e737b726f8_3("🔄 Trade - Nov 7, 2024")
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_4["The Bad Guys"]
+    NODE_3b42a806-e1a5-4804-9033-748803fe5c38("🔄 Jayden Reed - Nov 7, 2024")
+    NODE_7486b713-436b-4ebb-977f-a5eee3be411f("🔄 DK Metcalf - Nov 7, 2024")
+    NODE_32b27ada-9ca3-4df8-aa54-cdedae0327d7("🔄 Jalen McMillan - Nov 7, 2024")
+    NODE_639ff1b9-3f43-48f5-b518-e62da10b0078("🔄 Tank Bigsby - Nov 7, 2024")
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_5["She's the Fastest"]
+    NODE_01a06424-c7b2-40d0-a9a6-0bf4476c878d("🔄 Davante Adams - Nov 7, 2024")
+    NODE_61b63a42-68ef-4dd1-b255-24d63f7d3db2("🔄 Cooper Kupp - Nov 7, 2024")
+    NODE_667ad38f-c2bd-4f79-8981-c251035800f2("🔄 James Conner - Nov 7, 2024")
+    NODE_e9079c1a-2a24-4736-b966-f1f288f3723f("🔄 Cade Otton - Nov 7, 2024")
+    TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_6["Army of Dakness"]
+    NODE_9cb7f2ea-2dbb-4c0d-8722-31b51e3a2885("🔄 Cade Otton - Nov 22, 2024")
+    NODE_586497a1-618d-4b4e-bde1-24c5150caf78("🔄 Jake Ferguson - Nov 22, 2024")
+    TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_7["Army of Dakness"]
+    NODE_bff925fd-413c-4e1b-bd5f-9d54cb007e7c("🔄 Tommy DeVito - Nov 22, 2024")
+    NODE_282e4726-e801-47e6-9874-df90f99fe84c("🔄 T.J. Watt - Nov 22, 2024")
+    NODE_8c12d5f0-8c2e-44e4-8ce6-4daca624a615("🔄 J.K. Dobbins - Sep 26, 2024")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_ab875753-e618-4227-8602-1e045f42fe74
+    NODE_ab875753-e618-4227-8602-1e045f42fe74 --> TRADE_f0b59f44-b3c9-4da4-a932-35e737b726f8_3
+    TRADE_f0b59f44-b3c9-4da4-a932-35e737b726f8_3 --> TEAM_b2220d1a-ff75-4622-9757-09978901110f_4
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_4 --> NODE_3b42a806-e1a5-4804-9033-748803fe5c38
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_4 --> NODE_7486b713-436b-4ebb-977f-a5eee3be411f
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_4 --> NODE_32b27ada-9ca3-4df8-aa54-cdedae0327d7
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_4 --> NODE_639ff1b9-3f43-48f5-b518-e62da10b0078
+    TRADE_f0b59f44-b3c9-4da4-a932-35e737b726f8_3 --> TEAM_4449259f-64af-44fd-9235-1facc0926234_5
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_5 --> NODE_01a06424-c7b2-40d0-a9a6-0bf4476c878d
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_5 --> NODE_61b63a42-68ef-4dd1-b255-24d63f7d3db2
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_5 --> NODE_667ad38f-c2bd-4f79-8981-c251035800f2
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_5 --> NODE_e9079c1a-2a24-4736-b966-f1f288f3723f
+    NODE_e9079c1a-2a24-4736-b966-f1f288f3723f --> TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_6
+    TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_6 --> NODE_9cb7f2ea-2dbb-4c0d-8722-31b51e3a2885
+    NODE_e9079c1a-2a24-4736-b966-f1f288f3723f --> NODE_586497a1-618d-4b4e-bde1-24c5150caf78
+    NODE_e9079c1a-2a24-4736-b966-f1f288f3723f --> TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_7
+    TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_7 --> NODE_bff925fd-413c-4e1b-bd5f-9d54cb007e7c
+    NODE_e9079c1a-2a24-4736-b966-f1f288f3723f --> NODE_282e4726-e801-47e6-9874-df90f99fe84c
+    TEAM_2 --> NODE_8c12d5f0-8c2e-44e4-8ce6-4daca624a615
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_b2220d1a-ff75-4622-9757-09978901110f_4,TEAM_4449259f-64af-44fd-9235-1facc0926234_5,TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_6,TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_7 teamNode
+    class NODE_3b42a806-e1a5-4804-9033-748803fe5c38,NODE_7486b713-436b-4ebb-977f-a5eee3be411f,NODE_32b27ada-9ca3-4df8-aa54-cdedae0327d7,NODE_639ff1b9-3f43-48f5-b518-e62da10b0078,NODE_9cb7f2ea-2dbb-4c0d-8722-31b51e3a2885,NODE_bff925fd-413c-4e1b-bd5f-9d54cb007e7c nonRootPlayerNode
+    class TRADE_MAIN tradeNode

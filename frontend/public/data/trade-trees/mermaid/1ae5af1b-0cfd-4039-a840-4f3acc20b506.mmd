@@ -1,0 +1,35 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 2, 2022")
+    TEAM_1("FB in the Groin")
+    TEAM_2("leaf16")
+    NODE_b63e0f53-75a2-43f9-8849-63fb7c8f56d3("🔄 Mac Jones - Nov 2, 2022")
+    NODE_4617ad57-25da-4746-ba9f-8da25a714cce("🔄 AJ Dillon - Nov 2, 2022")
+    TRADE_d59b92db-9774-406b-b773-3b3248ac1e99_3("🔄 Trade - Dec 2, 2022")
+    TEAM_2feaf03e-fb22-498e-ac8f-e596b6ba7810_4["Balero Boyz"]
+    NODE_af3ad74d-8740-43d6-a8f5-43b817f8ecc1("🔄 AJ Dillon - Dec 2, 2022")
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_5["leaf16"]
+    NODE_808ba701-bad1-4bac-b607-84c68a48c5d6("🔄 Courtland Sutton - Dec 2, 2022")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_b63e0f53-75a2-43f9-8849-63fb7c8f56d3
+    TEAM_2 --> NODE_4617ad57-25da-4746-ba9f-8da25a714cce
+    NODE_4617ad57-25da-4746-ba9f-8da25a714cce --> TRADE_d59b92db-9774-406b-b773-3b3248ac1e99_3
+    TRADE_d59b92db-9774-406b-b773-3b3248ac1e99_3 --> TEAM_2feaf03e-fb22-498e-ac8f-e596b6ba7810_4
+    TEAM_2feaf03e-fb22-498e-ac8f-e596b6ba7810_4 --> NODE_af3ad74d-8740-43d6-a8f5-43b817f8ecc1
+    TRADE_d59b92db-9774-406b-b773-3b3248ac1e99_3 --> TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_5
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_5 --> NODE_808ba701-bad1-4bac-b607-84c68a48c5d6
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_2feaf03e-fb22-498e-ac8f-e596b6ba7810_4,TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_5 teamNode
+    class NODE_af3ad74d-8740-43d6-a8f5-43b817f8ecc1 nonRootPlayerNode
+    class TRADE_MAIN tradeNode

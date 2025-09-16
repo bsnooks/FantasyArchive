@@ -1,0 +1,26 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 4, 2003")
+    TEAM_1("FB in the Groin")
+    TEAM_2("Army of Dakness")
+    NODE_4ed9ace5-3a66-4c8a-8d45-a94a09fb8c77("🔄 Peerless Price - Oct 4, 2003")
+    NODE_dc86bb3b-f68b-4dd1-87a8-bbac53efac61("🔒 Peerless Price - Kept - Aug 26, 2004")
+    NODE_d198fa06-ff72-4ff5-8d1b-f8fd90cfa458("🔄 David Boston - Oct 4, 2003")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_4ed9ace5-3a66-4c8a-8d45-a94a09fb8c77
+    NODE_4ed9ace5-3a66-4c8a-8d45-a94a09fb8c77 --> NODE_dc86bb3b-f68b-4dd1-87a8-bbac53efac61
+    TEAM_2 --> NODE_d198fa06-ff72-4ff5-8d1b-f8fd90cfa458
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

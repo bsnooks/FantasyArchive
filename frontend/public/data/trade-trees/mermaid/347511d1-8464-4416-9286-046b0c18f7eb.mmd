@@ -1,0 +1,24 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 5, 2011")
+    TEAM_1("Laters")
+    TEAM_2("The Mojos")
+    NODE_08403eed-b672-4fb3-986a-4554094ea2d0("🔄 Matt Hasselbeck - Nov 5, 2011")
+    NODE_9cce0738-0e27-49f7-9e4b-701bbb3eec7c("🔄 Reggie Wayne - Nov 5, 2011")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_08403eed-b672-4fb3-986a-4554094ea2d0
+    TEAM_2 --> NODE_9cce0738-0e27-49f7-9e4b-701bbb3eec7c
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

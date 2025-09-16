@@ -1,0 +1,28 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 24, 2022")
+    TEAM_1("Balero Boyz")
+    TEAM_2("FB in the Groin")
+    NODE_f903327d-5537-4a97-941a-7d80035df23e("🔄 Kenny Pickett - Nov 24, 2022")
+    NODE_9be127b4-a3d5-401c-acf7-930b29fba8bb("🔄 Jimmy Garoppolo - Nov 24, 2022")
+    NODE_f5eadd9c-975d-4a02-8aed-9554a48dad40("🔄 Javonte Williams - Nov 24, 2022")
+    NODE_9cd60e06-6251-46a6-b284-c1979aa7e5cc("🔄 Raheem Mostert - Nov 24, 2022")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_f903327d-5537-4a97-941a-7d80035df23e
+    TEAM_2 --> NODE_9be127b4-a3d5-401c-acf7-930b29fba8bb
+    TEAM_1 --> NODE_f5eadd9c-975d-4a02-8aed-9554a48dad40
+    TEAM_2 --> NODE_9cd60e06-6251-46a6-b284-c1979aa7e5cc
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

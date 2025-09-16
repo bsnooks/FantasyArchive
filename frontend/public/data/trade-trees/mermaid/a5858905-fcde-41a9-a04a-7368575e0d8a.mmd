@@ -1,0 +1,28 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 13, 2006")
+    TEAM_1("The Mojos")
+    TEAM_2("leaf16")
+    NODE_7e7b5d41-2182-43ab-b4b3-3bfeee9698ca("🔄 Devery Henderson - Nov 13, 2006")
+    NODE_ee7b7439-87a4-4e2e-a91f-b623e80e3761("🔹 Devery Henderson - VetoedTrade - Nov 13, 2006")
+    NODE_b834bfcc-32d4-44f6-b0c0-40df0be37d24("🔄 Matt Schaub - Nov 13, 2006")
+    NODE_7bfac3b5-7540-44b3-8a5e-865e770d6a20("🔹 Matt Schaub - VetoedTrade - Nov 13, 2006")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_7e7b5d41-2182-43ab-b4b3-3bfeee9698ca
+    NODE_7e7b5d41-2182-43ab-b4b3-3bfeee9698ca --> NODE_ee7b7439-87a4-4e2e-a91f-b623e80e3761
+    TEAM_2 --> NODE_b834bfcc-32d4-44f6-b0c0-40df0be37d24
+    NODE_b834bfcc-32d4-44f6-b0c0-40df0be37d24 --> NODE_7bfac3b5-7540-44b3-8a5e-865e770d6a20
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

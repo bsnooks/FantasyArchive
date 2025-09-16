@@ -16,6 +16,16 @@
   box-sizing: border-box;
 }
 
+/* Hide React Error Overlay in development for ResizeObserver errors */
+iframe[data-react-error-overlay] {
+  display: none !important;
+}
+
+/* Hide any error overlays that might interfere with development */
+#react-error-overlay {
+  display: none !important;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

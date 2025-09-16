@@ -1,0 +1,30 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 29, 2002")
+    TEAM_1("The Mojos")
+    TEAM_2("The Bad Guys")
+    NODE_f2152f98-34a3-4a33-bee9-0f2e0c5152a5("🔄 Eddie Kennison - Nov 29, 2002")
+    NODE_b5362f4e-346c-4f00-b9a5-5e460f041fa2("🔄 Laveranues Coles - Nov 29, 2002")
+    NODE_06126cb0-297b-495a-9f09-e50909ec9b9e("🔒 Laveranues Coles - Kept - Aug 31, 2003")
+    NODE_baad8c24-568c-47d7-886f-9084027ade24("🔒 Laveranues Coles - Kept - Aug 26, 2004")
+    NODE_a02273d4-fc99-409c-9c6f-9a24aaf38250("🔄 Duce Staley - Nov 29, 2002")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_f2152f98-34a3-4a33-bee9-0f2e0c5152a5
+    TEAM_2 --> NODE_b5362f4e-346c-4f00-b9a5-5e460f041fa2
+    NODE_b5362f4e-346c-4f00-b9a5-5e460f041fa2 --> NODE_06126cb0-297b-495a-9f09-e50909ec9b9e
+    NODE_06126cb0-297b-495a-9f09-e50909ec9b9e --> NODE_baad8c24-568c-47d7-886f-9084027ade24
+    TEAM_1 --> NODE_a02273d4-fc99-409c-9c6f-9a24aaf38250
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

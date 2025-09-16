@@ -1,0 +1,37 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 23, 2013")
+    TEAM_1("Hot Loads")
+    TEAM_2("Army of Dakness")
+    NODE_3ae05b6b-76fe-4e9f-84d0-145459bb4590("🔄 Donald Brown - Nov 23, 2013")
+    CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2013["🏆 Hot Loads - 2013 Champions!"]
+    NODE_b3a14ee6-4268-4177-aaaf-2d2e072635c6("🔄 Scott Tolzien - Nov 23, 2013")
+    NODE_3e533fcb-2947-4afb-adc6-300469202a59("🔄 Jordan Reed - Nov 23, 2013")
+    NODE_f300c330-5f52-40f7-953e-375ce7ddbd06("🔄 T.Y. Hilton - Nov 23, 2013")
+    NODE_f80d1716-ac4e-4ac8-bd9b-80643adeebd8("🔄 Andre Brown - Nov 23, 2013")
+    NODE_d585fae3-df18-4f45-9d49-a582a653cefa("🔄 Riley Cooper - Nov 23, 2013")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_3ae05b6b-76fe-4e9f-84d0-145459bb4590
+    NODE_3ae05b6b-76fe-4e9f-84d0-145459bb4590 --> CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2013
+    TEAM_1 --> NODE_b3a14ee6-4268-4177-aaaf-2d2e072635c6
+    NODE_b3a14ee6-4268-4177-aaaf-2d2e072635c6 --> CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2013
+    TEAM_2 --> NODE_3e533fcb-2947-4afb-adc6-300469202a59
+    TEAM_1 --> NODE_f300c330-5f52-40f7-953e-375ce7ddbd06
+    NODE_f300c330-5f52-40f7-953e-375ce7ddbd06 --> CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2013
+    TEAM_2 --> NODE_f80d1716-ac4e-4ac8-bd9b-80643adeebd8
+    TEAM_2 --> NODE_d585fae3-df18-4f45-9d49-a582a653cefa
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2013 championshipNode
+    class TRADE_MAIN tradeNode

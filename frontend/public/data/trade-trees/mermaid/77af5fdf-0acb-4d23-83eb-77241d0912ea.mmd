@@ -1,0 +1,43 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Aug 25, 2004")
+    TEAM_1("Laters")
+    TEAM_2("Army of Dakness")
+    NODE_52cdb07e-b47f-4837-8811-28bf8e65f6cd("🔄 Plaxico Burress - Aug 25, 2004")
+    NODE_17e264bc-67cc-47ed-b510-6fc3201345d8("🔒 Plaxico Burress - Kept - Aug 26, 2004")
+    NODE_7c641532-ec72-48b5-be22-2fb2e1f4dbf5("🔄 Aaron Brooks - Aug 25, 2004")
+    NODE_6134f9a8-3879-4dca-8eb8-e2824a53cd97("🔒 Aaron Brooks - Kept - Aug 26, 2004")
+    NODE_7b75ad0e-0dc8-41ab-aa5b-d28cc6f9b4c5("🔒 Aaron Brooks - Kept - Aug 31, 2005")
+    NODE_6f18452a-fce0-4c4b-b8dd-5ae37a1243c0("🔄 Santana Moss - Aug 25, 2004")
+    NODE_19f60f5b-7198-41c1-a6f9-952233544a78("🔒 Santana Moss - Kept - Aug 26, 2004")
+    NODE_65eafb6a-57b0-4bae-8c6f-2060449cbf2d("🔒 Santana Moss - Kept - Aug 31, 2005")
+    CHAMP_825928a9-7194-43aa-b7ae-fc78c2510b16_2005["🏆 Laters - 2005 Champions!"]
+    NODE_6e622fad-478f-4ea5-9936-d1049d8bad6c("🔒 Santana Moss - Kept - Aug 30, 2006")
+    NODE_188288af-7dd1-47a0-9083-040435691ac1("🔒 Santana Moss - Kept - Aug 23, 2007")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_52cdb07e-b47f-4837-8811-28bf8e65f6cd
+    NODE_52cdb07e-b47f-4837-8811-28bf8e65f6cd --> NODE_17e264bc-67cc-47ed-b510-6fc3201345d8
+    TEAM_2 --> NODE_7c641532-ec72-48b5-be22-2fb2e1f4dbf5
+    NODE_7c641532-ec72-48b5-be22-2fb2e1f4dbf5 --> NODE_6134f9a8-3879-4dca-8eb8-e2824a53cd97
+    NODE_6134f9a8-3879-4dca-8eb8-e2824a53cd97 --> NODE_7b75ad0e-0dc8-41ab-aa5b-d28cc6f9b4c5
+    TEAM_1 --> NODE_6f18452a-fce0-4c4b-b8dd-5ae37a1243c0
+    NODE_6f18452a-fce0-4c4b-b8dd-5ae37a1243c0 --> NODE_19f60f5b-7198-41c1-a6f9-952233544a78
+    NODE_19f60f5b-7198-41c1-a6f9-952233544a78 --> NODE_65eafb6a-57b0-4bae-8c6f-2060449cbf2d
+    NODE_65eafb6a-57b0-4bae-8c6f-2060449cbf2d --> CHAMP_825928a9-7194-43aa-b7ae-fc78c2510b16_2005
+    NODE_65eafb6a-57b0-4bae-8c6f-2060449cbf2d --> NODE_6e622fad-478f-4ea5-9936-d1049d8bad6c
+    NODE_6e622fad-478f-4ea5-9936-d1049d8bad6c --> NODE_188288af-7dd1-47a0-9083-040435691ac1
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class CHAMP_825928a9-7194-43aa-b7ae-fc78c2510b16_2005 championshipNode
+    class TRADE_MAIN tradeNode

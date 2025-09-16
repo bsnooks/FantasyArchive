@@ -1,0 +1,52 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Sep 3, 2010")
+    TEAM_1("leaf16")
+    TEAM_2("The Bad Guys")
+    NODE_05cce13b-a7f3-4088-a054-12d6130266fc("🔄 Miles Austin - Sep 3, 2010")
+    NODE_89c784da-ab54-4235-abaa-89c56409dac8("🔒 Miles Austin - Kept - Sep 4, 2010")
+    NODE_501803fa-77a9-46b5-93a3-6369a93fdcca("🔒 Miles Austin - Kept - Sep 8, 2011")
+    CHAMP_66fb98f4-89a7-45f9-893a-b41d71e6249d_2011["🏆 leaf16 - 2011 Champions!"]
+    NODE_8072aa96-9db8-4327-b496-7d8d8e8eb006("🔒 Miles Austin - Kept - Sep 6, 2012")
+    NODE_d1396b25-1175-48ec-a7ef-a1cbb763c71e("🔄 Joe Flacco - Sep 3, 2010")
+    NODE_84aa083e-9fee-411b-b691-ec8cadd17250("🔒 Joe Flacco - Kept - Sep 4, 2010")
+    NODE_58e18be6-44b7-4ffe-9167-1fea40c621f7("🔒 Joe Flacco - Kept - Sep 8, 2011")
+    TRADE_bcb4a126-762f-4d19-8fb6-c8ca16556f52_3("🔄 Trade - Oct 9, 2011")
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_4["She's the Fastest"]
+    NODE_9b7b1421-4047-480b-90ad-2a9db1c3a6cb("🔄 Joe Flacco - Oct 9, 2011")
+    NODE_95ddd3ad-2805-48c0-9d53-c9626a495376("🔄 Austin Collie - Oct 9, 2011")
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_5["The Bad Guys"]
+    NODE_7b24f0f4-5111-4ea5-b2d1-404d17ddbd4c("🔄 Donovan McNabb - Oct 9, 2011")
+    NODE_4cb96c05-3e60-49ce-a9e0-43ed5f14986e("🔄 Colt McCoy - Oct 9, 2011")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_05cce13b-a7f3-4088-a054-12d6130266fc
+    NODE_05cce13b-a7f3-4088-a054-12d6130266fc --> NODE_89c784da-ab54-4235-abaa-89c56409dac8
+    NODE_89c784da-ab54-4235-abaa-89c56409dac8 --> NODE_501803fa-77a9-46b5-93a3-6369a93fdcca
+    NODE_501803fa-77a9-46b5-93a3-6369a93fdcca --> CHAMP_66fb98f4-89a7-45f9-893a-b41d71e6249d_2011
+    NODE_501803fa-77a9-46b5-93a3-6369a93fdcca --> NODE_8072aa96-9db8-4327-b496-7d8d8e8eb006
+    TEAM_2 --> NODE_d1396b25-1175-48ec-a7ef-a1cbb763c71e
+    NODE_d1396b25-1175-48ec-a7ef-a1cbb763c71e --> NODE_84aa083e-9fee-411b-b691-ec8cadd17250
+    NODE_84aa083e-9fee-411b-b691-ec8cadd17250 --> NODE_58e18be6-44b7-4ffe-9167-1fea40c621f7
+    NODE_58e18be6-44b7-4ffe-9167-1fea40c621f7 --> TRADE_bcb4a126-762f-4d19-8fb6-c8ca16556f52_3
+    TRADE_bcb4a126-762f-4d19-8fb6-c8ca16556f52_3 --> TEAM_4449259f-64af-44fd-9235-1facc0926234_4
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_4 --> NODE_9b7b1421-4047-480b-90ad-2a9db1c3a6cb
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_4 --> NODE_95ddd3ad-2805-48c0-9d53-c9626a495376
+    TRADE_bcb4a126-762f-4d19-8fb6-c8ca16556f52_3 --> TEAM_b2220d1a-ff75-4622-9757-09978901110f_5
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_5 --> NODE_7b24f0f4-5111-4ea5-b2d1-404d17ddbd4c
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_5 --> NODE_4cb96c05-3e60-49ce-a9e0-43ed5f14986e
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_4449259f-64af-44fd-9235-1facc0926234_4,TEAM_b2220d1a-ff75-4622-9757-09978901110f_5 teamNode
+    class CHAMP_66fb98f4-89a7-45f9-893a-b41d71e6249d_2011 championshipNode
+    class NODE_9b7b1421-4047-480b-90ad-2a9db1c3a6cb,NODE_95ddd3ad-2805-48c0-9d53-c9626a495376 nonRootPlayerNode
+    class TRADE_MAIN tradeNode

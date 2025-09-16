@@ -1,0 +1,54 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 18, 2013")
+    TEAM_1("Mad Guys")
+    TEAM_2("She's the Fastest")
+    NODE_9d13b4e9-0e3a-4c8a-937c-9a8b6d86865c("🔄 Darren Sproles - Oct 18, 2013")
+    NODE_dc4213e3-83d0-4c44-97a8-ef709d55d525("🔄 Antonio Brown - Oct 18, 2013")
+    NODE_a21bbd78-3158-45a8-9cd8-d972bca5132f("🔒 Antonio Brown - Kept - Sep 4, 2014")
+    CHAMP_4449259f-64af-44fd-9235-1facc0926234_2014["🏆 She's the Fastest - 2014 Champions!"]
+    NODE_b8553a39-233d-4a29-ab1a-c86fd9f7de90("🔒 Antonio Brown - Kept - Sep 3, 2015")
+    CHAMP_4449259f-64af-44fd-9235-1facc0926234_2015["🏆 She's the Fastest - 2015 Champions!"]
+    NODE_23cc7bbc-1c18-4ee8-9dbf-d4d208ebe82e("🔒 Antonio Brown - Kept - Sep 8, 2016")
+    NODE_d7a9ab7b-b95e-49f6-b982-02470a0b0cc2("🔒 Antonio Brown - Kept - Sep 9, 2017")
+    CHAMP_4449259f-64af-44fd-9235-1facc0926234_2017["🏆 She's the Fastest - 2017 Champions!"]
+    NODE_2f56f8e5-c492-47e2-ad8e-9003fb19e2e2("🔒 Antonio Brown - Kept - Sep 6, 2018")
+    TRADE_d258c2f9-80ee-4344-8358-e8ab6684ede3_3("🔄 Trade - Aug 22, 2019")
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4["leaf16"]
+    NODE_3a8b07ba-d616-4a49-b7f8-be8a5f459826("🔄 Antonio Brown - Aug 22, 2019")
+    NODE_c69b04fc-2a53-45cf-b893-b1ad70c630d3("🔄 Amari Cooper - Aug 22, 2019")
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_5["She's the Fastest"]
+    NODE_52a8ca6d-3d29-4d14-989e-6ffc63c651e0("🔄 Cam Newton - Aug 22, 2019")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_9d13b4e9-0e3a-4c8a-937c-9a8b6d86865c
+    TEAM_2 --> NODE_dc4213e3-83d0-4c44-97a8-ef709d55d525
+    NODE_dc4213e3-83d0-4c44-97a8-ef709d55d525 --> NODE_a21bbd78-3158-45a8-9cd8-d972bca5132f
+    NODE_a21bbd78-3158-45a8-9cd8-d972bca5132f --> CHAMP_4449259f-64af-44fd-9235-1facc0926234_2014
+    NODE_a21bbd78-3158-45a8-9cd8-d972bca5132f --> NODE_b8553a39-233d-4a29-ab1a-c86fd9f7de90
+    NODE_b8553a39-233d-4a29-ab1a-c86fd9f7de90 --> CHAMP_4449259f-64af-44fd-9235-1facc0926234_2015
+    NODE_b8553a39-233d-4a29-ab1a-c86fd9f7de90 --> NODE_23cc7bbc-1c18-4ee8-9dbf-d4d208ebe82e
+    NODE_23cc7bbc-1c18-4ee8-9dbf-d4d208ebe82e --> NODE_d7a9ab7b-b95e-49f6-b982-02470a0b0cc2
+    NODE_d7a9ab7b-b95e-49f6-b982-02470a0b0cc2 --> CHAMP_4449259f-64af-44fd-9235-1facc0926234_2017
+    NODE_d7a9ab7b-b95e-49f6-b982-02470a0b0cc2 --> NODE_2f56f8e5-c492-47e2-ad8e-9003fb19e2e2
+    NODE_2f56f8e5-c492-47e2-ad8e-9003fb19e2e2 --> TRADE_d258c2f9-80ee-4344-8358-e8ab6684ede3_3
+    TRADE_d258c2f9-80ee-4344-8358-e8ab6684ede3_3 --> TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4 --> NODE_3a8b07ba-d616-4a49-b7f8-be8a5f459826
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4 --> NODE_c69b04fc-2a53-45cf-b893-b1ad70c630d3
+    TRADE_d258c2f9-80ee-4344-8358-e8ab6684ede3_3 --> TEAM_4449259f-64af-44fd-9235-1facc0926234_5
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_5 --> NODE_52a8ca6d-3d29-4d14-989e-6ffc63c651e0
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4,TEAM_4449259f-64af-44fd-9235-1facc0926234_5 teamNode
+    class CHAMP_4449259f-64af-44fd-9235-1facc0926234_2014,CHAMP_4449259f-64af-44fd-9235-1facc0926234_2015,CHAMP_4449259f-64af-44fd-9235-1facc0926234_2017 championshipNode
+    class NODE_3a8b07ba-d616-4a49-b7f8-be8a5f459826,NODE_c69b04fc-2a53-45cf-b893-b1ad70c630d3 nonRootPlayerNode
+    class TRADE_MAIN tradeNode

@@ -1,0 +1,36 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Sep 11, 2004")
+    TEAM_1("leaf16")
+    TEAM_2("FB in the Groin")
+    NODE_ca06fba2-df2b-4ba6-8feb-5334ea6297e3("🔄 William Green - Sep 11, 2004")
+    NODE_6bc8de83-899e-470b-b9cf-c2b6af7d0366("🔄 Onterrio Smith - Sep 11, 2004")
+    TRADE_0119732f-f03e-406e-bf7e-8bcd5a43b74f_3("🔄 Trade - Oct 19, 2004")
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4["leaf16"]
+    NODE_f27fb2d5-1979-407d-a5a6-63b6030c9618("🔄 Onterrio Smith - Oct 19, 2004")
+    NODE_e2d07bbd-5ca5-4ce4-bd94-28641b61d32e("🔄 Tim Rattay - Oct 19, 2004")
+    TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5["FB in the Groin"]
+    NODE_308d9cd3-959a-4eb0-887f-1b5b79c9ab29("🔄 Larry Fitzgerald - Oct 19, 2004")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_ca06fba2-df2b-4ba6-8feb-5334ea6297e3
+    TEAM_2 --> NODE_6bc8de83-899e-470b-b9cf-c2b6af7d0366
+    NODE_6bc8de83-899e-470b-b9cf-c2b6af7d0366 --> TRADE_0119732f-f03e-406e-bf7e-8bcd5a43b74f_3
+    TRADE_0119732f-f03e-406e-bf7e-8bcd5a43b74f_3 --> TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4 --> NODE_f27fb2d5-1979-407d-a5a6-63b6030c9618
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4 --> NODE_e2d07bbd-5ca5-4ce4-bd94-28641b61d32e
+    TRADE_0119732f-f03e-406e-bf7e-8bcd5a43b74f_3 --> TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5
+    TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5 --> NODE_308d9cd3-959a-4eb0-887f-1b5b79c9ab29
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4,TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5 teamNode
+    class TRADE_MAIN tradeNode

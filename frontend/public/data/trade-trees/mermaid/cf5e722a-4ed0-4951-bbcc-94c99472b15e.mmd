@@ -1,0 +1,31 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 13, 2003")
+    TEAM_1("She's the Fastest")
+    TEAM_2("Balero Boyz")
+    NODE_24ed5307-dd72-454c-8c1d-2a8aa8fe4af3("🔄 Keenan McCardell - Nov 13, 2003")
+    NODE_1ad0e338-97fc-4283-bea8-c80bf7f258e0("🔄 Jeff Garcia - Nov 13, 2003")
+    NODE_31f26106-f8a4-48f2-908c-e048a9735c15("🔄 Michael Bennett - Nov 13, 2003")
+    NODE_7e394d03-4d33-43a1-a282-1855cd713008("🔒 Michael Bennett - Kept - Aug 26, 2004")
+    CHAMP_2feaf03e-fb22-498e-ac8f-e596b6ba7810_2004["🏆 Balero Boyz - 2004 Champions!"]
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_24ed5307-dd72-454c-8c1d-2a8aa8fe4af3
+    TEAM_1 --> NODE_1ad0e338-97fc-4283-bea8-c80bf7f258e0
+    TEAM_2 --> NODE_31f26106-f8a4-48f2-908c-e048a9735c15
+    NODE_31f26106-f8a4-48f2-908c-e048a9735c15 --> NODE_7e394d03-4d33-43a1-a282-1855cd713008
+    NODE_7e394d03-4d33-43a1-a282-1855cd713008 --> CHAMP_2feaf03e-fb22-498e-ac8f-e596b6ba7810_2004
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class CHAMP_2feaf03e-fb22-498e-ac8f-e596b6ba7810_2004 championshipNode
+    class TRADE_MAIN tradeNode

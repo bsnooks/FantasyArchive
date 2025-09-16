@@ -1,0 +1,48 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 26, 2003")
+    TEAM_1("Army of Dakness")
+    TEAM_2("The Bad Guys")
+    NODE_ca07ae5a-6886-45b3-9712-8bc5c20aba87("🔄 Kevin Faulk - Oct 26, 2003")
+    NODE_775f3b52-1103-4d9c-8eb5-cbec0e8c4aad("🔄 Chad Pennington - Oct 26, 2003")
+    NODE_4d34478c-02d5-4bff-b7f2-ed48f28b85f5("🔒 Chad Pennington - Kept - Aug 26, 2004")
+    NODE_b3a78454-9e43-4673-b41a-e786f87bc6db("🔄 Edgerrin James - Oct 26, 2003")
+    NODE_107a6885-0c4f-40d5-9509-8974b4923a4e("🔒 Edgerrin James - Kept - Aug 26, 2004")
+    NODE_1b1401f7-4822-4afe-bc79-b0d53e566bb8("🔒 Edgerrin James - Kept - Aug 31, 2005")
+    TRADE_7f4637e4-4da1-4a72-8274-2515752ca9db_3("🔄 Trade - Aug 29, 2006")
+    TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_4["Hot Loads"]
+    NODE_5b1c2069-8707-4e09-823a-ce670e4fba0e("🔄 Edgerrin James - Aug 29, 2006")
+    CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2006["🏆 Hot Loads - 2006 Champions!"]
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_5["The Bad Guys"]
+    NODE_419e01c3-c7a1-4345-8911-157bb4e5f526("🔄 Brian Westbrook - Aug 29, 2006")
+    NODE_4fcfbb74-d396-426f-b80b-a9e22eabd6be("🔄 Carson Palmer - Aug 29, 2006")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_ca07ae5a-6886-45b3-9712-8bc5c20aba87
+    TEAM_1 --> NODE_775f3b52-1103-4d9c-8eb5-cbec0e8c4aad
+    NODE_775f3b52-1103-4d9c-8eb5-cbec0e8c4aad --> NODE_4d34478c-02d5-4bff-b7f2-ed48f28b85f5
+    TEAM_2 --> NODE_b3a78454-9e43-4673-b41a-e786f87bc6db
+    NODE_b3a78454-9e43-4673-b41a-e786f87bc6db --> NODE_107a6885-0c4f-40d5-9509-8974b4923a4e
+    NODE_107a6885-0c4f-40d5-9509-8974b4923a4e --> NODE_1b1401f7-4822-4afe-bc79-b0d53e566bb8
+    NODE_1b1401f7-4822-4afe-bc79-b0d53e566bb8 --> TRADE_7f4637e4-4da1-4a72-8274-2515752ca9db_3
+    TRADE_7f4637e4-4da1-4a72-8274-2515752ca9db_3 --> TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_4
+    TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_4 --> NODE_5b1c2069-8707-4e09-823a-ce670e4fba0e
+    NODE_5b1c2069-8707-4e09-823a-ce670e4fba0e --> CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2006
+    TRADE_7f4637e4-4da1-4a72-8274-2515752ca9db_3 --> TEAM_b2220d1a-ff75-4622-9757-09978901110f_5
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_5 --> NODE_419e01c3-c7a1-4345-8911-157bb4e5f526
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_5 --> NODE_4fcfbb74-d396-426f-b80b-a9e22eabd6be
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_4,TEAM_b2220d1a-ff75-4622-9757-09978901110f_5 teamNode
+    class CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2006 championshipNode
+    class NODE_5b1c2069-8707-4e09-823a-ce670e4fba0e nonRootPlayerNode
+    class TRADE_MAIN tradeNode

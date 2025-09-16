@@ -1,0 +1,50 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 15, 2002")
+    TEAM_1("Hot Loads")
+    TEAM_2("The Bad Guys")
+    NODE_168d8bfd-f5a9-4582-b7ba-0dab1f664b26("🔄 Derrick Mason - Nov 15, 2002")
+    CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2002["🏆 Hot Loads - 2002 Champions!"]
+    NODE_b23975bd-4e50-4477-8c93-e1a9ea76b9c2("🔄 Chris Chambers - Nov 15, 2002")
+    NODE_99e85435-9d01-4e87-b3cd-9b630036dfc5("🔒 Chris Chambers - Kept - Aug 31, 2003")
+    NODE_83ff0682-0a59-407a-b3a4-d703e66e439a("🔒 Chris Chambers - Kept - Aug 26, 2004")
+    NODE_345116ad-1af3-40ea-bd0c-d12a42775688("🔒 Chris Chambers - Kept - Aug 31, 2005")
+    TRADE_94c3ac07-4f3c-42c7-aea9-5935b2df725b_3("🔄 Trade - Sep 22, 2005")
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_4["She's the Fastest"]
+    NODE_c630ca3c-b2e7-455c-80ce-a2d6c442f8b9("🔄 Chris Chambers - Sep 22, 2005")
+    NODE_7dc2d18a-f92b-44d2-8921-2792adf02e2b("🔄 Cedric Benson - Sep 22, 2005")
+    NODE_839561a6-b6b1-4452-ba57-dc14f39dbe8e("🔄 Kurt Warner - Sep 22, 2005")
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_5["The Bad Guys"]
+    NODE_739da06f-9327-461b-9db7-1a41100da2db("🔄 Charles Rogers - Sep 22, 2005")
+    NODE_4722c5ef-4314-475a-8f40-a396b6b35cde("🔄 Kerry Collins - Sep 22, 2005")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_168d8bfd-f5a9-4582-b7ba-0dab1f664b26
+    NODE_168d8bfd-f5a9-4582-b7ba-0dab1f664b26 --> CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2002
+    TEAM_2 --> NODE_b23975bd-4e50-4477-8c93-e1a9ea76b9c2
+    NODE_b23975bd-4e50-4477-8c93-e1a9ea76b9c2 --> NODE_99e85435-9d01-4e87-b3cd-9b630036dfc5
+    NODE_99e85435-9d01-4e87-b3cd-9b630036dfc5 --> NODE_83ff0682-0a59-407a-b3a4-d703e66e439a
+    NODE_83ff0682-0a59-407a-b3a4-d703e66e439a --> NODE_345116ad-1af3-40ea-bd0c-d12a42775688
+    NODE_345116ad-1af3-40ea-bd0c-d12a42775688 --> TRADE_94c3ac07-4f3c-42c7-aea9-5935b2df725b_3
+    TRADE_94c3ac07-4f3c-42c7-aea9-5935b2df725b_3 --> TEAM_4449259f-64af-44fd-9235-1facc0926234_4
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_4 --> NODE_c630ca3c-b2e7-455c-80ce-a2d6c442f8b9
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_4 --> NODE_7dc2d18a-f92b-44d2-8921-2792adf02e2b
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_4 --> NODE_839561a6-b6b1-4452-ba57-dc14f39dbe8e
+    TRADE_94c3ac07-4f3c-42c7-aea9-5935b2df725b_3 --> TEAM_b2220d1a-ff75-4622-9757-09978901110f_5
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_5 --> NODE_739da06f-9327-461b-9db7-1a41100da2db
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_5 --> NODE_4722c5ef-4314-475a-8f40-a396b6b35cde
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_4449259f-64af-44fd-9235-1facc0926234_4,TEAM_b2220d1a-ff75-4622-9757-09978901110f_5 teamNode
+    class CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2002 championshipNode
+    class NODE_c630ca3c-b2e7-455c-80ce-a2d6c442f8b9,NODE_7dc2d18a-f92b-44d2-8921-2792adf02e2b,NODE_839561a6-b6b1-4452-ba57-dc14f39dbe8e nonRootPlayerNode
+    class TRADE_MAIN tradeNode

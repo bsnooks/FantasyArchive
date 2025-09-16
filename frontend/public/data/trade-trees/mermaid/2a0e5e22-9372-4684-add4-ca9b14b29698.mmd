@@ -1,0 +1,80 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 6, 2006")
+    TEAM_1("Army of Dakness")
+    TEAM_2("Hot Loads")
+    NODE_a42cb939-12fe-41c6-a87f-39914a5982fb("🔄 Nate Burleson - Oct 6, 2006")
+    NODE_b053cb77-7eee-4707-97dd-407b50a0828f("🔄 Chris Cooley - Oct 6, 2006")
+    TRADE_710540ab-88d8-4343-94b2-9493cc2491a8_3("🔄 Trade - Oct 7, 2006")
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4["leaf16"]
+    NODE_7e73dde1-02b1-4d9d-ab47-c62c42bbfa25("🔄 Chris Cooley - Oct 7, 2006")
+    TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_5["Army of Dakness"]
+    NODE_4af5ba05-be34-4ec5-b244-3befa00adbb4("🔄 Alge Crumpler - Oct 7, 2006")
+    NODE_6c7783e6-4c3b-43a3-a365-553e4ae897b0("🔄 Lee Evans - Oct 6, 2006")
+    CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2006["🏆 Hot Loads - 2006 Champions!"]
+    NODE_355b9e1d-dd1d-40da-b431-b496404d4867("🔒 Lee Evans - Kept - Aug 23, 2007")
+    NODE_a050a184-3709-4905-aa75-94dbe5e8be44("🔄 Chad Pennington - Oct 6, 2006")
+    NODE_7064159a-9d89-4db3-86be-ac33c463fb23("🔄 Antonio Gates - Oct 6, 2006")
+    NODE_56b47567-3016-46c8-bf0e-a79ca5a48a34("🔒 Antonio Gates - Kept - Aug 23, 2007")
+    NODE_43a4564d-3e19-4d30-92b8-939e4a0b2782("🔒 Antonio Gates - Kept - Aug 14, 2008")
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_6["leaf16"]
+    NODE_84816aa6-74dc-4cd2-9f3a-5f90cb6ca145("🔹 Antonio Gates - VetoedTrade - Oct 30, 2008")
+    TRADE_87ce9d09-06a8-404c-b199-cfe247cf878a_7("🔄 Trade - Oct 30, 2008")
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_8["leaf16"]
+    NODE_2844b707-0034-4eab-92f1-9bcb2950aa01("🔄 Antonio Gates - Oct 30, 2008")
+    NODE_15251d5e-06a7-4f76-b8c7-1c5f2f68fccd("🔄 Joe Flacco - Oct 30, 2008")
+    TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_9["Hot Loads"]
+    NODE_cf22c20c-fbee-488f-8600-8951bb925abd("🔄 Chester Taylor - Oct 30, 2008")
+    NODE_0e3144bd-53ce-49b2-92f0-94ae2e584153("🔄 Brandon Jacobs - Oct 30, 2008")
+    NODE_b2159c8e-a5b5-4093-871c-ed731fcbd902("🔄 Terrell Owens - Oct 6, 2006")
+    NODE_87b0f2e0-7965-49ec-aad3-70f65251aebe("🔒 Terrell Owens - Kept - Aug 23, 2007")
+    NODE_cd43b0bf-4071-46ba-b3b8-21499efa5545("🔒 Terrell Owens - Kept - Aug 14, 2008")
+    CHAMP_40f7599b-e68f-4bf4-9553-bf7e10924635_2008["🏆 Army of Dakness - 2008 Champions!"]
+    NODE_e67e5f8f-9eb1-4ace-b6f0-438f9b8283c1("🔒 Terrell Owens - Kept - Sep 2, 2009")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_a42cb939-12fe-41c6-a87f-39914a5982fb
+    TEAM_1 --> NODE_b053cb77-7eee-4707-97dd-407b50a0828f
+    NODE_b053cb77-7eee-4707-97dd-407b50a0828f --> TRADE_710540ab-88d8-4343-94b2-9493cc2491a8_3
+    TRADE_710540ab-88d8-4343-94b2-9493cc2491a8_3 --> TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4 --> NODE_7e73dde1-02b1-4d9d-ab47-c62c42bbfa25
+    TRADE_710540ab-88d8-4343-94b2-9493cc2491a8_3 --> TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_5
+    TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_5 --> NODE_4af5ba05-be34-4ec5-b244-3befa00adbb4
+    TEAM_2 --> NODE_6c7783e6-4c3b-43a3-a365-553e4ae897b0
+    NODE_6c7783e6-4c3b-43a3-a365-553e4ae897b0 --> CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2006
+    NODE_6c7783e6-4c3b-43a3-a365-553e4ae897b0 --> NODE_355b9e1d-dd1d-40da-b431-b496404d4867
+    TEAM_2 --> NODE_a050a184-3709-4905-aa75-94dbe5e8be44
+    NODE_a050a184-3709-4905-aa75-94dbe5e8be44 --> CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2006
+    TEAM_2 --> NODE_7064159a-9d89-4db3-86be-ac33c463fb23
+    NODE_7064159a-9d89-4db3-86be-ac33c463fb23 --> CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2006
+    NODE_7064159a-9d89-4db3-86be-ac33c463fb23 --> NODE_56b47567-3016-46c8-bf0e-a79ca5a48a34
+    NODE_56b47567-3016-46c8-bf0e-a79ca5a48a34 --> NODE_43a4564d-3e19-4d30-92b8-939e4a0b2782
+    NODE_43a4564d-3e19-4d30-92b8-939e4a0b2782 --> TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_6
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_6 --> NODE_84816aa6-74dc-4cd2-9f3a-5f90cb6ca145
+    NODE_84816aa6-74dc-4cd2-9f3a-5f90cb6ca145 --> TRADE_87ce9d09-06a8-404c-b199-cfe247cf878a_7
+    TRADE_87ce9d09-06a8-404c-b199-cfe247cf878a_7 --> TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_8
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_8 --> NODE_2844b707-0034-4eab-92f1-9bcb2950aa01
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_8 --> NODE_15251d5e-06a7-4f76-b8c7-1c5f2f68fccd
+    TRADE_87ce9d09-06a8-404c-b199-cfe247cf878a_7 --> TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_9
+    TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_9 --> NODE_cf22c20c-fbee-488f-8600-8951bb925abd
+    TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_9 --> NODE_0e3144bd-53ce-49b2-92f0-94ae2e584153
+    TEAM_1 --> NODE_b2159c8e-a5b5-4093-871c-ed731fcbd902
+    NODE_b2159c8e-a5b5-4093-871c-ed731fcbd902 --> NODE_87b0f2e0-7965-49ec-aad3-70f65251aebe
+    NODE_87b0f2e0-7965-49ec-aad3-70f65251aebe --> NODE_cd43b0bf-4071-46ba-b3b8-21499efa5545
+    NODE_cd43b0bf-4071-46ba-b3b8-21499efa5545 --> CHAMP_40f7599b-e68f-4bf4-9553-bf7e10924635_2008
+    NODE_cd43b0bf-4071-46ba-b3b8-21499efa5545 --> NODE_e67e5f8f-9eb1-4ace-b6f0-438f9b8283c1
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4,TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_5,TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_6,TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_8,TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_9 teamNode
+    class CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2006,CHAMP_40f7599b-e68f-4bf4-9553-bf7e10924635_2008 championshipNode
+    class NODE_7e73dde1-02b1-4d9d-ab47-c62c42bbfa25,NODE_84816aa6-74dc-4cd2-9f3a-5f90cb6ca145,NODE_2844b707-0034-4eab-92f1-9bcb2950aa01,NODE_15251d5e-06a7-4f76-b8c7-1c5f2f68fccd nonRootPlayerNode
+    class TRADE_MAIN tradeNode

@@ -1,0 +1,35 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 8, 2009")
+    TEAM_1("Mad Guys")
+    TEAM_2("She's the Fastest")
+    NODE_fe13f67c-e519-4a4c-8aee-8aaf23063a80("🔄 Jonathan Stewart - Oct 8, 2009")
+    NODE_fbfaf51f-03b6-4534-b969-acd4e484e752("🔒 Jonathan Stewart - Kept - Sep 4, 2010")
+    CHAMP_f5908944-6efd-40eb-af54-6c53004e0e2f_2010["🏆 Mad Guys - 2010 Champions!"]
+    NODE_53a5d3f6-2275-4eaa-95eb-9d27ae6fc171("🔄 John Carlson - Oct 8, 2009")
+    NODE_ef973909-1ab1-4e36-ad3a-ab44db4210d9("🔄 Clinton Portis - Oct 8, 2009")
+    NODE_6f7575c2-0315-4245-ba61-c41c2e2dfed5("🔄 Josh Johnson - Oct 8, 2009")
+    NODE_005c917d-55e3-4e5e-986e-d32250664d36("🔄 Leon Washington - Oct 8, 2009")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_fe13f67c-e519-4a4c-8aee-8aaf23063a80
+    NODE_fe13f67c-e519-4a4c-8aee-8aaf23063a80 --> NODE_fbfaf51f-03b6-4534-b969-acd4e484e752
+    NODE_fbfaf51f-03b6-4534-b969-acd4e484e752 --> CHAMP_f5908944-6efd-40eb-af54-6c53004e0e2f_2010
+    TEAM_2 --> NODE_53a5d3f6-2275-4eaa-95eb-9d27ae6fc171
+    TEAM_2 --> NODE_ef973909-1ab1-4e36-ad3a-ab44db4210d9
+    TEAM_1 --> NODE_6f7575c2-0315-4245-ba61-c41c2e2dfed5
+    TEAM_1 --> NODE_005c917d-55e3-4e5e-986e-d32250664d36
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class CHAMP_f5908944-6efd-40eb-af54-6c53004e0e2f_2010 championshipNode
+    class TRADE_MAIN tradeNode

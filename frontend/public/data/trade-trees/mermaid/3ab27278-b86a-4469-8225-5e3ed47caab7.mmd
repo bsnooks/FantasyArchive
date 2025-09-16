@@ -1,0 +1,35 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 10, 2020")
+    TEAM_1("Balero Boyz")
+    TEAM_2("The Mojos")
+    NODE_9efc4ed5-b7f7-4b48-b921-14bf38922052("🔄 Raheem Mostert - Oct 10, 2020")
+    NODE_6f7a1521-903c-49fe-9eaf-279c372d30a8("🔄 Devonta Freeman - Oct 10, 2020")
+    CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2020["🏆 The Mojos - 2020 Champions!"]
+    NODE_c58a06a1-e9f5-4a46-a1a1-9092ed02f1a4("🔄 Robert Tonyan - Oct 10, 2020")
+    NODE_47caf34a-2998-41b9-a9b0-d30f8e205eea("🔄 David Montgomery - Oct 10, 2020")
+    NODE_ed08d386-51f7-4dd8-8242-e29fcc6ea4e3("🔄 Henry Ruggs III - Oct 10, 2020")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_9efc4ed5-b7f7-4b48-b921-14bf38922052
+    TEAM_2 --> NODE_6f7a1521-903c-49fe-9eaf-279c372d30a8
+    NODE_6f7a1521-903c-49fe-9eaf-279c372d30a8 --> CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2020
+    TEAM_2 --> NODE_c58a06a1-e9f5-4a46-a1a1-9092ed02f1a4
+    NODE_c58a06a1-e9f5-4a46-a1a1-9092ed02f1a4 --> CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2020
+    TEAM_2 --> NODE_47caf34a-2998-41b9-a9b0-d30f8e205eea
+    NODE_47caf34a-2998-41b9-a9b0-d30f8e205eea --> CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2020
+    TEAM_1 --> NODE_ed08d386-51f7-4dd8-8242-e29fcc6ea4e3
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2020 championshipNode
+    class TRADE_MAIN tradeNode

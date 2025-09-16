@@ -1,0 +1,30 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Aug 31, 2012")
+    TEAM_1("The Bad Guys")
+    TEAM_2("The Mojos")
+    NODE_74b7aade-ec1b-4132-ab56-0f74462f6a4a("🔄 Fred Jackson - Aug 31, 2012")
+    NODE_02abcf49-70dd-4802-a1b1-e9faa4dee407("🔒 Fred Jackson - Kept - Sep 6, 2012")
+    NODE_27f6f21f-1cd3-4424-a909-af0cc92c44f8("🔄 Dwayne Bowe - Aug 31, 2012")
+    NODE_e7e8c4ee-6d2f-40a7-b084-284ab547dc1f("🔒 Dwayne Bowe - Kept - Sep 6, 2012")
+    NODE_8876dea4-f66a-445d-8b1f-308c37ee8da7("🔒 Dwayne Bowe - Kept - Aug 31, 2013")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_74b7aade-ec1b-4132-ab56-0f74462f6a4a
+    NODE_74b7aade-ec1b-4132-ab56-0f74462f6a4a --> NODE_02abcf49-70dd-4802-a1b1-e9faa4dee407
+    TEAM_2 --> NODE_27f6f21f-1cd3-4424-a909-af0cc92c44f8
+    NODE_27f6f21f-1cd3-4424-a909-af0cc92c44f8 --> NODE_e7e8c4ee-6d2f-40a7-b084-284ab547dc1f
+    NODE_e7e8c4ee-6d2f-40a7-b084-284ab547dc1f --> NODE_8876dea4-f66a-445d-8b1f-308c37ee8da7
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

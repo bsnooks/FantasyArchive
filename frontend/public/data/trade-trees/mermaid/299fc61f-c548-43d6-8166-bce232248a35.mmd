@@ -1,0 +1,26 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 29, 2006")
+    TEAM_1("Army of Dakness")
+    TEAM_2("Laters")
+    NODE_7c97ec20-dd5f-4843-b70f-039fa9d5a0da("🔄 Keenan McCardell - Oct 29, 2006")
+    NODE_0c7a8bdc-42f8-4756-bd53-14971730ce90("🔄 Chris Simms - Oct 29, 2006")
+    NODE_6c67ff4a-c69d-43df-8b49-3dc84c5fbc83("🔄 David Garrard - Oct 29, 2006")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_7c97ec20-dd5f-4843-b70f-039fa9d5a0da
+    TEAM_1 --> NODE_0c7a8bdc-42f8-4756-bd53-14971730ce90
+    TEAM_2 --> NODE_6c67ff4a-c69d-43df-8b49-3dc84c5fbc83
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

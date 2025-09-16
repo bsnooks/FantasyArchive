@@ -1,0 +1,24 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 4, 2023")
+    TEAM_1("The Bad Guys")
+    TEAM_2("The Mojos")
+    NODE_c7ed6c33-0e6c-48e3-acf7-a2a02d978adc("🔄 Brett Rypien - Nov 4, 2023")
+    NODE_625b69bf-8f71-4747-b573-f300f296de9d("🔄 Kendrick Bourne - Nov 4, 2023")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_c7ed6c33-0e6c-48e3-acf7-a2a02d978adc
+    TEAM_2 --> NODE_625b69bf-8f71-4747-b573-f300f296de9d
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

@@ -1,0 +1,38 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Aug 27, 2018")
+    TEAM_1("Mad Guys")
+    TEAM_2("Laters")
+    NODE_34399eb1-7af4-49ce-88fa-7e1eda142ce4("🔄 Ben Roethlisberger - Aug 27, 2018")
+    NODE_4d4d4bc9-69f9-4bf3-8c7a-238816bec2e9("🔒 Ben Roethlisberger - Kept - Sep 6, 2018")
+    NODE_5baa4479-1385-42eb-adf5-b03fc6287dd7("🔒 Ben Roethlisberger - Kept - Sep 1, 2019")
+    NODE_579c84ce-db8e-4124-807c-b46740300dee("🔄 Jared Goff - Aug 27, 2018")
+    NODE_d43cf8a7-cdaf-4bbe-ba8f-92f827f69380("🔒 Jared Goff - Kept - Sep 6, 2018")
+    NODE_9bdb69d4-1541-4328-b113-7fc4cbd55219("🔒 Jared Goff - Kept - Sep 1, 2019")
+    NODE_024c0f11-7d1f-4aee-9fde-6d5c744778a4("🔒 Jared Goff - Kept - Sep 8, 2020")
+    NODE_b45fa4c8-b974-47f3-b697-cb85e118b640("🔄 Rob Gronkowski - Aug 27, 2018")
+    NODE_b2a6c7a8-0b66-4bdd-ada8-17036166971b("🔒 Rob Gronkowski - Kept - Sep 6, 2018")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_34399eb1-7af4-49ce-88fa-7e1eda142ce4
+    NODE_34399eb1-7af4-49ce-88fa-7e1eda142ce4 --> NODE_4d4d4bc9-69f9-4bf3-8c7a-238816bec2e9
+    NODE_4d4d4bc9-69f9-4bf3-8c7a-238816bec2e9 --> NODE_5baa4479-1385-42eb-adf5-b03fc6287dd7
+    TEAM_2 --> NODE_579c84ce-db8e-4124-807c-b46740300dee
+    NODE_579c84ce-db8e-4124-807c-b46740300dee --> NODE_d43cf8a7-cdaf-4bbe-ba8f-92f827f69380
+    NODE_d43cf8a7-cdaf-4bbe-ba8f-92f827f69380 --> NODE_9bdb69d4-1541-4328-b113-7fc4cbd55219
+    NODE_9bdb69d4-1541-4328-b113-7fc4cbd55219 --> NODE_024c0f11-7d1f-4aee-9fde-6d5c744778a4
+    TEAM_1 --> NODE_b45fa4c8-b974-47f3-b697-cb85e118b640
+    NODE_b45fa4c8-b974-47f3-b697-cb85e118b640 --> NODE_b2a6c7a8-0b66-4bdd-ada8-17036166971b
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

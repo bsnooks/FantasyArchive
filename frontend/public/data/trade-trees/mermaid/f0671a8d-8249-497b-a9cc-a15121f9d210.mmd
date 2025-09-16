@@ -1,0 +1,24 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 7, 2022")
+    TEAM_1("FB in the Groin")
+    TEAM_2("leaf16")
+    NODE_96127625-cc8f-456f-ac4d-8458a5b3b8b6("🔄 Zach Ertz - Oct 7, 2022")
+    NODE_c93f9f96-32d7-448f-8e56-a2c5e255bda4("🔄 Jahan Dotson - Oct 7, 2022")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_96127625-cc8f-456f-ac4d-8458a5b3b8b6
+    TEAM_2 --> NODE_c93f9f96-32d7-448f-8e56-a2c5e255bda4
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

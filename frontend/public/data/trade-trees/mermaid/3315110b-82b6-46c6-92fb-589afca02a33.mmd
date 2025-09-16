@@ -1,0 +1,35 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 8, 2011")
+    TEAM_1("Army of Dakness")
+    TEAM_2("Balero Boyz")
+    NODE_a2459a63-a069-45c8-b483-c3cfdc645708("🔄 Curtis Painter - Oct 8, 2011")
+    NODE_9f225499-36e9-48d6-9967-fce967eb11a3("🔄 Dallas Clark - Oct 8, 2011")
+    TRADE_41396ae9-c090-4e0b-bca6-e09bd5c17472_3("🔄 Trade - Oct 23, 2011")
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_4["The Mojos"]
+    NODE_3d5905e4-3d6a-4f33-a7d6-17d243460088("🔄 Dallas Clark - Oct 23, 2011")
+    TEAM_2feaf03e-fb22-498e-ac8f-e596b6ba7810_5["Balero Boyz"]
+    NODE_04da6ffb-946d-48fe-bf25-1a6cdb62ba86("🔄 A.J. Feeley - Oct 23, 2011")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_a2459a63-a069-45c8-b483-c3cfdc645708
+    TEAM_2 --> NODE_9f225499-36e9-48d6-9967-fce967eb11a3
+    NODE_9f225499-36e9-48d6-9967-fce967eb11a3 --> TRADE_41396ae9-c090-4e0b-bca6-e09bd5c17472_3
+    TRADE_41396ae9-c090-4e0b-bca6-e09bd5c17472_3 --> TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_4
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_4 --> NODE_3d5905e4-3d6a-4f33-a7d6-17d243460088
+    TRADE_41396ae9-c090-4e0b-bca6-e09bd5c17472_3 --> TEAM_2feaf03e-fb22-498e-ac8f-e596b6ba7810_5
+    TEAM_2feaf03e-fb22-498e-ac8f-e596b6ba7810_5 --> NODE_04da6ffb-946d-48fe-bf25-1a6cdb62ba86
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_4,TEAM_2feaf03e-fb22-498e-ac8f-e596b6ba7810_5 teamNode
+    class NODE_3d5905e4-3d6a-4f33-a7d6-17d243460088 nonRootPlayerNode
+    class TRADE_MAIN tradeNode

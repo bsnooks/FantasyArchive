@@ -1,0 +1,30 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 8, 2005")
+    TEAM_1("She's the Fastest")
+    TEAM_2("The Mojos")
+    NODE_a984137f-4a5a-4a83-9815-054c0f2aaaac("🔄 Chris Brown - Oct 8, 2005")
+    NODE_afabe833-f607-425f-a62c-2b3aca15d977("🔄 Alex Smith - Oct 8, 2005")
+    NODE_a2dcf430-d316-4b37-b35d-cf3ed0dca282("🔄 Travis Henry - Oct 8, 2005")
+    NODE_5b2543a1-e7eb-408a-aa25-e48f4df3097f("🔄 Ahman Green - Oct 8, 2005")
+    NODE_f1432809-2834-46aa-a414-f2f0be38821d("🔄 Najeh Davenport - Oct 8, 2005")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_a984137f-4a5a-4a83-9815-054c0f2aaaac
+    TEAM_1 --> NODE_afabe833-f607-425f-a62c-2b3aca15d977
+    TEAM_1 --> NODE_a2dcf430-d316-4b37-b35d-cf3ed0dca282
+    TEAM_2 --> NODE_5b2543a1-e7eb-408a-aa25-e48f4df3097f
+    TEAM_2 --> NODE_f1432809-2834-46aa-a414-f2f0be38821d
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

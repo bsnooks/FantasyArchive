@@ -1,0 +1,24 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 2, 2013")
+    TEAM_1("Balero Boyz")
+    TEAM_2("FB in the Groin")
+    NODE_f8f36c81-1d05-439e-89f0-681707f947dc("🔄 Brian Hoyer - Oct 2, 2013")
+    NODE_abf2809c-5105-4088-8e8f-b5a4c421837d("🔄 Willis McGahee - Oct 2, 2013")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_f8f36c81-1d05-439e-89f0-681707f947dc
+    TEAM_2 --> NODE_abf2809c-5105-4088-8e8f-b5a4c421837d
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

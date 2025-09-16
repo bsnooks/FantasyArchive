@@ -1,0 +1,32 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Sep 11, 2014")
+    TEAM_1("FB in the Groin")
+    TEAM_2("She's the Fastest")
+    NODE_6847b226-6b49-47e8-ae46-251d652cac9f("🔄 Steven Jackson - Sep 11, 2014")
+    NODE_78000aa5-7db4-427d-b892-89e97d3e073e("🔄 Chris Ivory - Sep 11, 2014")
+    CHAMP_4449259f-64af-44fd-9235-1facc0926234_2014["🏆 She's the Fastest - 2014 Champions!"]
+    NODE_bbbd6bc0-635b-4955-8050-c4e4cf90a811("🔄 Dennis Pitta - Sep 11, 2014")
+    NODE_aba64db3-8dc3-4d09-b5f4-f8eccefee73d("🔄 Chris Johnson - Sep 11, 2014")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_6847b226-6b49-47e8-ae46-251d652cac9f
+    TEAM_2 --> NODE_78000aa5-7db4-427d-b892-89e97d3e073e
+    NODE_78000aa5-7db4-427d-b892-89e97d3e073e --> CHAMP_4449259f-64af-44fd-9235-1facc0926234_2014
+    TEAM_1 --> NODE_bbbd6bc0-635b-4955-8050-c4e4cf90a811
+    TEAM_2 --> NODE_aba64db3-8dc3-4d09-b5f4-f8eccefee73d
+    NODE_aba64db3-8dc3-4d09-b5f4-f8eccefee73d --> CHAMP_4449259f-64af-44fd-9235-1facc0926234_2014
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class CHAMP_4449259f-64af-44fd-9235-1facc0926234_2014 championshipNode
+    class TRADE_MAIN tradeNode

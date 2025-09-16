@@ -1,0 +1,32 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 4, 2010")
+    TEAM_1("leaf16")
+    TEAM_2("Mad Guys")
+    NODE_ab357e16-44c9-4fc9-ac20-4aa894ea28fe("🔄 Reggie Bush - Nov 4, 2010")
+    NODE_8108a6aa-d4dc-47fe-9ec2-a3feb02d5f75("🔄 Darren Sproles - Nov 4, 2010")
+    NODE_bf1eea8e-4bf0-47c3-a5d5-d442f0a8b594("🔄 Derrick Mason - Nov 4, 2010")
+    CHAMP_f5908944-6efd-40eb-af54-6c53004e0e2f_2010["🏆 Mad Guys - 2010 Champions!"]
+    NODE_8f872ba7-552a-4573-ac0c-d4ee4d46a6e1("🔄 Lance Moore - Nov 4, 2010")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_ab357e16-44c9-4fc9-ac20-4aa894ea28fe
+    TEAM_1 --> NODE_8108a6aa-d4dc-47fe-9ec2-a3feb02d5f75
+    TEAM_2 --> NODE_bf1eea8e-4bf0-47c3-a5d5-d442f0a8b594
+    NODE_bf1eea8e-4bf0-47c3-a5d5-d442f0a8b594 --> CHAMP_f5908944-6efd-40eb-af54-6c53004e0e2f_2010
+    TEAM_2 --> NODE_8f872ba7-552a-4573-ac0c-d4ee4d46a6e1
+    NODE_8f872ba7-552a-4573-ac0c-d4ee4d46a6e1 --> CHAMP_f5908944-6efd-40eb-af54-6c53004e0e2f_2010
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class CHAMP_f5908944-6efd-40eb-af54-6c53004e0e2f_2010 championshipNode
+    class TRADE_MAIN tradeNode

@@ -1,0 +1,46 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 20, 2021")
+    TEAM_1("The Mojos")
+    TEAM_2("Balero Boyz")
+    NODE_cc5c2f75-ece0-4cb5-a7bb-41919b865434("🔄 Dawson Knox - Oct 20, 2021")
+    CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2021["🏆 The Mojos - 2021 Champions!"]
+    NODE_fcb752ba-2575-43ff-b2dc-ca8d8f7af233("🔄 Zach Wilson - Oct 20, 2021")
+    TRADE_814078af-0aa6-40ad-ac68-c7b1c1929d82_3("🔄 Trade - Nov 3, 2021")
+    TEAM_825928a9-7194-43aa-b7ae-fc78c2510b16_4["Laters"]
+    NODE_15cf19b1-693a-43f6-b98a-478b3c7cd06b("🔄 Zach Wilson - Nov 3, 2021")
+    NODE_f846e29c-0725-4ed1-a877-950b3efe9b6d("🔄 J.K. Dobbins - Nov 3, 2021")
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_5["The Mojos"]
+    NODE_2c25df32-3eb2-46f1-9ce5-0d5c3c429f05("🔄 Trevor Siemian - Nov 3, 2021")
+    NODE_22f11b84-8760-42a1-8f73-e2f3b4a6c6bd("🔄 Sterling Shepard - Oct 20, 2021")
+    NODE_4aa3b63c-0768-477f-9354-e7fc7a7c4a9e("🔄 Tim Patrick - Oct 20, 2021")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_cc5c2f75-ece0-4cb5-a7bb-41919b865434
+    NODE_cc5c2f75-ece0-4cb5-a7bb-41919b865434 --> CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2021
+    TEAM_1 --> NODE_fcb752ba-2575-43ff-b2dc-ca8d8f7af233
+    NODE_fcb752ba-2575-43ff-b2dc-ca8d8f7af233 --> CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2021
+    NODE_fcb752ba-2575-43ff-b2dc-ca8d8f7af233 --> TRADE_814078af-0aa6-40ad-ac68-c7b1c1929d82_3
+    TRADE_814078af-0aa6-40ad-ac68-c7b1c1929d82_3 --> TEAM_825928a9-7194-43aa-b7ae-fc78c2510b16_4
+    TEAM_825928a9-7194-43aa-b7ae-fc78c2510b16_4 --> NODE_15cf19b1-693a-43f6-b98a-478b3c7cd06b
+    TEAM_825928a9-7194-43aa-b7ae-fc78c2510b16_4 --> NODE_f846e29c-0725-4ed1-a877-950b3efe9b6d
+    TRADE_814078af-0aa6-40ad-ac68-c7b1c1929d82_3 --> TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_5
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_5 --> NODE_2c25df32-3eb2-46f1-9ce5-0d5c3c429f05
+    NODE_2c25df32-3eb2-46f1-9ce5-0d5c3c429f05 --> CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2021
+    TEAM_2 --> NODE_22f11b84-8760-42a1-8f73-e2f3b4a6c6bd
+    TEAM_2 --> NODE_4aa3b63c-0768-477f-9354-e7fc7a7c4a9e
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_825928a9-7194-43aa-b7ae-fc78c2510b16_4,TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_5 teamNode
+    class CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2021 championshipNode
+    class NODE_15cf19b1-693a-43f6-b98a-478b3c7cd06b,NODE_f846e29c-0725-4ed1-a877-950b3efe9b6d nonRootPlayerNode
+    class TRADE_MAIN tradeNode

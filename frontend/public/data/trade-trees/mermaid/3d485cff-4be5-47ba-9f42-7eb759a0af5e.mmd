@@ -1,0 +1,26 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 16, 2015")
+    TEAM_1("leaf16")
+    TEAM_2("The Bad Guys")
+    NODE_332ce70e-f332-44ac-8cf3-535431547d2d("🔄 Julius Thomas - Oct 16, 2015")
+    NODE_9a8e40f1-5fe8-45e4-9ab3-732eaf6ff0f7("🔄 Charcandrick West - Oct 16, 2015")
+    NODE_92b04e95-0325-43a2-9e5c-c994c9e42e7d("🔄 Brian Hoyer - Oct 16, 2015")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_332ce70e-f332-44ac-8cf3-535431547d2d
+    TEAM_1 --> NODE_9a8e40f1-5fe8-45e4-9ab3-732eaf6ff0f7
+    TEAM_2 --> NODE_92b04e95-0325-43a2-9e5c-c994c9e42e7d
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

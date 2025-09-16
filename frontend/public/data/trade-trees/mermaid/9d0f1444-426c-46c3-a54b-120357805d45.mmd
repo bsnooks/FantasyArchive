@@ -1,0 +1,37 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 26, 2015")
+    TEAM_1("FB in the Groin")
+    TEAM_2("She's the Fastest")
+    NODE_c1c08c0f-eff3-4159-98fe-478bf04f82ba("🔄 T.Y. Hilton - Nov 26, 2015")
+    NODE_18b916e9-e2ee-42d4-a1ef-b88e66350bcc("🔒 T.Y. Hilton - Kept - Sep 8, 2016")
+    CHAMP_f483ecf1-cd17-4991-854b-e52dfc957b45_2016["🏆 FB in the Groin - 2016 Champions!"]
+    NODE_e1d54a87-f101-43a3-9688-626955b7e823("🔒 T.Y. Hilton - Kept - Sep 9, 2017")
+    NODE_a09f5579-b9e8-4c33-8b6b-6ddb25a8392a("🔄 Blake Bortles - Nov 26, 2015")
+    CHAMP_4449259f-64af-44fd-9235-1facc0926234_2015["🏆 She's the Fastest - 2015 Champions!"]
+    NODE_c0189ab0-4f28-44f2-8b72-ef3b03205b1b("🔒 Blake Bortles - Kept - Sep 8, 2016")
+    NODE_44dbebca-f23f-480d-bd24-89e8e0380788("🔄 Alex Smith - Nov 26, 2015")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_c1c08c0f-eff3-4159-98fe-478bf04f82ba
+    NODE_c1c08c0f-eff3-4159-98fe-478bf04f82ba --> NODE_18b916e9-e2ee-42d4-a1ef-b88e66350bcc
+    NODE_18b916e9-e2ee-42d4-a1ef-b88e66350bcc --> CHAMP_f483ecf1-cd17-4991-854b-e52dfc957b45_2016
+    NODE_18b916e9-e2ee-42d4-a1ef-b88e66350bcc --> NODE_e1d54a87-f101-43a3-9688-626955b7e823
+    TEAM_2 --> NODE_a09f5579-b9e8-4c33-8b6b-6ddb25a8392a
+    NODE_a09f5579-b9e8-4c33-8b6b-6ddb25a8392a --> CHAMP_4449259f-64af-44fd-9235-1facc0926234_2015
+    NODE_a09f5579-b9e8-4c33-8b6b-6ddb25a8392a --> NODE_c0189ab0-4f28-44f2-8b72-ef3b03205b1b
+    TEAM_1 --> NODE_44dbebca-f23f-480d-bd24-89e8e0380788
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class CHAMP_f483ecf1-cd17-4991-854b-e52dfc957b45_2016,CHAMP_4449259f-64af-44fd-9235-1facc0926234_2015 championshipNode
+    class TRADE_MAIN tradeNode

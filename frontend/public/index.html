@@ -26,6 +26,74 @@
     -->
     <title>Gibsons League - Fantasy Football Archive</title>
     
+    <!-- Suppress ResizeObserver errors in development -->
+    <script type="text/javascript">
+      // Global error suppression for ResizeObserver (development only)
+      if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        // Suppress console errors
+        const originalError = console.error;
+        console.error = function(...args) {
+          if (typeof args[0] === 'string' && args[0].includes('ResizeObserver')) {
+            return;
+          }
+          originalError.apply(console, args);
+        };
+        
+        // Suppress window errors
+        window.addEventListener('error', function(event) {
+          if (event.message && event.message.includes('ResizeObserver')) {
+            event.preventDefault();
+            event.stopPropagation();
+            return false;
+          }
+        });
+        
+        // Suppress unhandled rejections
+        window.addEventListener('unhandledrejection', function(event) {
+          if (event.reason && typeof event.reason === 'string' && event.reason.includes('ResizeObserver')) {
+            event.preventDefault();
+            return false;
+          }
+        });
+        
+        // Aggressive suppression for React dev overlay
+        const originalAddEventListener = window.addEventListener;
+        window.addEventListener = function(type, listener, options) {
+          if (type === 'error' || type === 'unhandledrejection') {
+            const wrappedListener = function(event) {
+              if (event.message && event.message.includes('ResizeObserver')) {
+                event.preventDefault();
+                event.stopPropagation();
+                return false;
+              }
+              if (event.reason && typeof event.reason === 'string' && event.reason.includes('ResizeObserver')) {
+                event.preventDefault();
+                return false;
+              }
+              return listener.call(this, event);
+            };
+            return originalAddEventListener.call(this, type, wrappedListener, options);
+          }
+          return originalAddEventListener.call(this, type, listener, options);
+        };
+        
+        // Block React error overlay for ResizeObserver errors
+        setTimeout(() => {
+          if (window.__REACT_ERROR_OVERLAY_GLOBAL_HOOK__) {
+            const originalCaptureConsoleIntegration = window.__REACT_ERROR_OVERLAY_GLOBAL_HOOK__.onError;
+            window.__REACT_ERROR_OVERLAY_GLOBAL_HOOK__.onError = function(error) {
+              if (error && error.message && error.message.includes('ResizeObserver')) {
+                return;
+              }
+              if (originalCaptureConsoleIntegration) {
+                originalCaptureConsoleIntegration.call(this, error);
+              }
+            };
+          }
+        }, 100);
+      }
+    </script>
+    
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages

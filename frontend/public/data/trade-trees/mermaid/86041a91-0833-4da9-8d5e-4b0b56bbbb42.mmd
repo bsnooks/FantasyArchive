@@ -1,0 +1,26 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 12, 2022")
+    TEAM_1("She's the Fastest")
+    TEAM_2("Laters")
+    NODE_fd027af1-9c5b-40d1-b22c-1f45d7ae8a46("🔄 Derek Carr - Nov 12, 2022")
+    NODE_788e0048-0dcd-476b-8827-3dcae6ce33e4("🔄 Kirk Cousins - Nov 12, 2022")
+    NODE_a847cd9b-edb9-4a62-9213-7b6f32191225("🔄 Brandon Aiyuk - Nov 12, 2022")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_fd027af1-9c5b-40d1-b22c-1f45d7ae8a46
+    TEAM_2 --> NODE_788e0048-0dcd-476b-8827-3dcae6ce33e4
+    TEAM_1 --> NODE_a847cd9b-edb9-4a62-9213-7b6f32191225
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

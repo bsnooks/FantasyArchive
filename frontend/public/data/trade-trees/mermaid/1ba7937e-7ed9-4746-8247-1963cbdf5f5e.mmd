@@ -1,0 +1,36 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 1, 2008")
+    TEAM_1("Balero Boyz")
+    TEAM_2("Army of Dakness")
+    NODE_5c54e7f5-0e6f-4be2-b602-06800da87817("🔄 Ryan Grant - Nov 1, 2008")
+    NODE_210751c5-46c7-4fcd-9cae-159a63e3543e("🔒 Ryan Grant - Kept - Sep 2, 2009")
+    NODE_52eddc66-b2c0-4c98-88e5-59cea1d7e5b8("🔒 Ryan Grant - Kept - Sep 4, 2010")
+    NODE_2792841a-854c-4128-ac63-3a313165257a("🔄 Lee Evans - Nov 1, 2008")
+    CHAMP_40f7599b-e68f-4bf4-9553-bf7e10924635_2008["🏆 Army of Dakness - 2008 Champions!"]
+    NODE_7cd4850e-c4ec-42d4-8845-bcb2bd42967e("🔄 Pierre Thomas - Nov 1, 2008")
+    NODE_d19d073a-36cb-4566-84fa-ce368352a833("🔄 Kevin Walter - Nov 1, 2008")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_5c54e7f5-0e6f-4be2-b602-06800da87817
+    NODE_5c54e7f5-0e6f-4be2-b602-06800da87817 --> NODE_210751c5-46c7-4fcd-9cae-159a63e3543e
+    NODE_210751c5-46c7-4fcd-9cae-159a63e3543e --> NODE_52eddc66-b2c0-4c98-88e5-59cea1d7e5b8
+    TEAM_2 --> NODE_2792841a-854c-4128-ac63-3a313165257a
+    NODE_2792841a-854c-4128-ac63-3a313165257a --> CHAMP_40f7599b-e68f-4bf4-9553-bf7e10924635_2008
+    TEAM_2 --> NODE_7cd4850e-c4ec-42d4-8845-bcb2bd42967e
+    NODE_7cd4850e-c4ec-42d4-8845-bcb2bd42967e --> CHAMP_40f7599b-e68f-4bf4-9553-bf7e10924635_2008
+    TEAM_1 --> NODE_d19d073a-36cb-4566-84fa-ce368352a833
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class CHAMP_40f7599b-e68f-4bf4-9553-bf7e10924635_2008 championshipNode
+    class TRADE_MAIN tradeNode

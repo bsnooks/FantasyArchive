@@ -1,0 +1,26 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 3, 2012")
+    TEAM_1("Balero Boyz")
+    TEAM_2("She's the Fastest")
+    NODE_d658db76-f15a-4f96-ab00-0e1799749223("🔄 Greg Jennings - Nov 3, 2012")
+    NODE_3f22fd97-4f77-4668-b6f9-a9ae6df8b3b0("🔒 Greg Jennings - Kept - Aug 31, 2013")
+    NODE_e7d3d32f-c4d7-4fd6-8fa4-6d0a73298021("🔄 Reggie Wayne - Nov 3, 2012")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_d658db76-f15a-4f96-ab00-0e1799749223
+    NODE_d658db76-f15a-4f96-ab00-0e1799749223 --> NODE_3f22fd97-4f77-4668-b6f9-a9ae6df8b3b0
+    TEAM_2 --> NODE_e7d3d32f-c4d7-4fd6-8fa4-6d0a73298021
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

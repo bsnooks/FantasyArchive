@@ -29,6 +29,8 @@ Directory.CreateDirectory(Path.Combine(outputPath, "records"));
 Directory.CreateDirectory(Path.Combine(outputPath, "records", "all-time"));
 Directory.CreateDirectory(Path.Combine(outputPath, "records", "seasons"));
 Directory.CreateDirectory(Path.Combine(outputPath, "records", "franchises"));
+Directory.CreateDirectory(Path.Combine(outputPath, "trade-trees"));
+Directory.CreateDirectory(Path.Combine(outputPath, "trade-trees", "mermaid"));
 
 // Setup Entity Framework
 var options = new DbContextOptionsBuilder<FantasyArchiveContext>()
@@ -47,6 +49,13 @@ try
     
     Console.WriteLine("Exporting records...");
     await ExportRecords(context, outputPath);
+    
+    Console.WriteLine("Exporting trade trees...");
+    await ExportTradeTrees(context, outputPath);
+    
+    // Console.WriteLine("Testing specific trade tree...");
+    // await TestSpecificTradeTree(context);
+    
     Console.WriteLine("Export completed successfully!");
 }
 catch (Exception ex)
@@ -394,4 +403,123 @@ static List<LeagueRecordsJson> ConvertToJsonRecords(List<FantasyArchive.Data.Mod
             Week = record.Week
         }).ToList()
     }).ToList();
+}
+
+static async Task TestSpecificTradeTree(FantasyArchiveContext context)
+{
+    var tradeTreeService = new TradeTreeService(context);
+    var targetId = Guid.Parse("A667E923-B77E-43EB-954F-25CCBA06A2E8");
+    
+    Console.WriteLine($"Testing transaction group: {targetId}");
+    
+    try 
+    {
+        var tradeTree = await tradeTreeService.CalculateTradeTreeAsync(targetId);
+        
+        Console.WriteLine($"Trade tree completed successfully!");
+        Console.WriteLine($"Description: {tradeTree.Description}");
+        Console.WriteLine($"Root nodes: {tradeTree.RootNodes.Count}");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error: {ex.Message}");
+        Console.WriteLine($"Stack trace: {ex.StackTrace}");
+    }
+}
+
+static async Task ExportTradeTrees(FantasyArchiveContext context, string outputPath)
+{
+    var tradeTreeService = new TradeTreeService(context);
+    
+    // Export trades by year
+    Console.WriteLine("  Exporting trades by year...");
+    var tradesByYear = await tradeTreeService.GetTradesByYearAsync();
+    var tradesByYearJson = tradesByYear.Select(kvp => new TradesByYearJson
+    {
+        Year = kvp.Key,
+        Trades = kvp.Value.Select(t => new TradeGroupJson
+        {
+            TransactionGroupId = t.TransactionGroupId.ToString(),
+            Date = t.Date,
+            Description = t.Description,
+            PlayersInvolved = t.PlayersInvolved,
+            TradeSides = t.TradeSides.Select(ts => new TradeSideJson
+            {
+                FranchiseId = ts.FranchiseId,
+                FranchiseName = ts.FranchiseName,
+                FranchiseColor = ts.FranchiseColor,
+                Players = ts.Players.Select(p => new TradedPlayerJson
+                {
+                    PlayerId = p.PlayerId,
+                    PlayerName = p.PlayerName,
+                    PrimaryPosition = p.PrimaryPosition
+                }).ToList()
+            }).ToList()
+        }).ToList()
+    }).OrderBy(t => t.Year).ToList();
+    
+    var tradesByYearJsonString = JsonSerializer.Serialize(tradesByYearJson, new JsonSerializerOptions { WriteIndented = true });
+    var tradesByYearFilename = Path.Combine(outputPath, "trade-trees", "index.json");
+    await File.WriteAllTextAsync(tradesByYearFilename, tradesByYearJsonString);
+    Console.WriteLine($"    Exported: {tradesByYearFilename}");
+
+    // Export individual trade tree Mermaid diagrams only
+    foreach (var yearTrades in tradesByYear)
+    {
+        foreach (var trade in yearTrades.Value)
+        {
+            Console.WriteLine($"  Exporting trade tree for {trade.Description}...");
+            try
+            {
+                var tradeTree = await tradeTreeService.CalculateTradeTreeAsync(trade.TransactionGroupId);
+                var tradeTreeJson = ConvertToJsonTradeTree(tradeTree);
+                
+                // Export Mermaid diagram file only (no individual JSON files)
+                var mermaidDiagram = await MermaidGeneratorService.GenerateDetailedMermaidDiagramAsync(tradeTreeJson, context);
+                var mermaidFilename = Path.Combine(outputPath, "trade-trees", "mermaid", $"{trade.TransactionGroupId}.mmd");
+                await File.WriteAllTextAsync(mermaidFilename, mermaidDiagram);
+                Console.WriteLine($"    Exported: {mermaidFilename}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"    Error exporting trade tree for {trade.TransactionGroupId}: {ex.Message}");
+            }
+        }
+    }
+}
+
+static TradeTreeJson ConvertToJsonTradeTree(TradeTree tradeTree)
+{
+    return new TradeTreeJson
+    {
+        TransactionGroupId = tradeTree.TransactionGroupId.ToString(),
+        TradeDate = tradeTree.TradeDate,
+        Description = tradeTree.Description,
+        RootNodes = tradeTree.RootNodes.Select(ConvertToJsonTradeTreeNode).ToList()
+    };
+}
+
+static TradeTreeNodeJson ConvertToJsonTradeTreeNode(TradeTreeNode node)
+{
+    return new TradeTreeNodeJson
+    {
+        Transaction = new TransactionJson
+        {
+            TransactionId = node.Transaction.TransactionId.ToString(),
+            TransactionGroupId = node.Transaction.TransactionGroupId?.ToString(),
+            TeamId = node.Transaction.TeamId.ToString(),
+            TeamName = node.Transaction.Team?.Name ?? "Unknown Team",
+            FranchiseId = node.Transaction.Team?.FranchiseId.ToString() ?? string.Empty,
+            FranchiseName = node.Transaction.Team?.Franchise?.MainName ?? "Unknown Franchise",
+            TransactionType = node.Transaction.TransactionType.ToString(),
+            PlayerId = node.Transaction.PlayerId,
+            PlayerName = node.Transaction.Player?.Name ?? "Unknown Player",
+            Date = node.Transaction.Date,
+            Description = node.Transaction.Description,
+            Year = node.Transaction.Year,
+            PlayerTransactionIndex = node.Transaction.PlayerTransactionIndex
+        },
+        Children = node.Children.Select(ConvertToJsonTradeTreeNode).ToList(),
+        IsEndNode = node.IsEndNode
+    };
 }

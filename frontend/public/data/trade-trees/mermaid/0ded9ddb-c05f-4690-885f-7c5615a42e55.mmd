@@ -1,0 +1,33 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 28, 2013")
+    TEAM_1("The Mojos")
+    TEAM_2("She's the Fastest")
+    NODE_4f5d45ce-ecc7-4ae4-a143-0b055f240c09("🔄 Roddy White - Nov 28, 2013")
+    NODE_a1f67030-e285-43fa-a007-7bc0e573655e("🔒 Roddy White - Kept - Sep 4, 2014")
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_3["She's the Fastest"]
+    NODE_3ee4cb8a-9d7d-4301-bf15-53b630ff2cbd("🔹 Roddy White - VetoedTrade - Nov 21, 2014")
+    CHAMP_4449259f-64af-44fd-9235-1facc0926234_2014["🏆 She's the Fastest - 2014 Champions!"]
+    NODE_d8b30ecd-e75e-4fa9-a32d-edb51a22a96e("🔄 Joe Flacco - Nov 28, 2013")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_4f5d45ce-ecc7-4ae4-a143-0b055f240c09
+    NODE_4f5d45ce-ecc7-4ae4-a143-0b055f240c09 --> NODE_a1f67030-e285-43fa-a007-7bc0e573655e
+    NODE_a1f67030-e285-43fa-a007-7bc0e573655e --> TEAM_4449259f-64af-44fd-9235-1facc0926234_3
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_3 --> NODE_3ee4cb8a-9d7d-4301-bf15-53b630ff2cbd
+    NODE_3ee4cb8a-9d7d-4301-bf15-53b630ff2cbd --> CHAMP_4449259f-64af-44fd-9235-1facc0926234_2014
+    TEAM_2 --> NODE_d8b30ecd-e75e-4fa9-a32d-edb51a22a96e
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_4449259f-64af-44fd-9235-1facc0926234_3 teamNode
+    class CHAMP_4449259f-64af-44fd-9235-1facc0926234_2014 championshipNode
+    class TRADE_MAIN tradeNode

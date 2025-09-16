@@ -1,0 +1,54 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 15, 2005")
+    TEAM_1("Army of Dakness")
+    TEAM_2("FB in the Groin")
+    NODE_dbc662f2-046f-48c4-b938-1a2ccb5fdbd6("🔄 Antonio Gates - Oct 15, 2005")
+    NODE_210912e8-5c14-4e95-8332-a70dee8b1b2c("🔒 Antonio Gates - Kept - Aug 30, 2006")
+    TRADE_2a0e5e22-9372-4684-add4-ca9b14b29698_3("🔄 Trade - Oct 6, 2006")
+    TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_4["Hot Loads"]
+    NODE_7064159a-9d89-4db3-86be-ac33c463fb23("🔄 Antonio Gates - Oct 6, 2006")
+    CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2006["🏆 Hot Loads - 2006 Champions!"]
+    NODE_6c7783e6-4c3b-43a3-a365-553e4ae897b0("🔄 Lee Evans - Oct 6, 2006")
+    NODE_a050a184-3709-4905-aa75-94dbe5e8be44("🔄 Chad Pennington - Oct 6, 2006")
+    TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_5["Army of Dakness"]
+    NODE_a42cb939-12fe-41c6-a87f-39914a5982fb("🔄 Nate Burleson - Oct 6, 2006")
+    NODE_b053cb77-7eee-4707-97dd-407b50a0828f("🔄 Chris Cooley - Oct 6, 2006")
+    NODE_b2159c8e-a5b5-4093-871c-ed731fcbd902("🔄 Terrell Owens - Oct 6, 2006")
+    NODE_7a47323e-28e6-489f-8557-e3e176e09be2("🔄 Randy McMichael - Oct 15, 2005")
+    NODE_2a1eae5d-9ba4-4e4a-9c37-e48fe696ce77("🔄 Reuben Droughns - Oct 15, 2005")
+    NODE_c64296d1-f4d1-4014-b346-f62d0c4786b1("🔄 Stephen Davis - Oct 15, 2005")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_dbc662f2-046f-48c4-b938-1a2ccb5fdbd6
+    NODE_dbc662f2-046f-48c4-b938-1a2ccb5fdbd6 --> NODE_210912e8-5c14-4e95-8332-a70dee8b1b2c
+    NODE_210912e8-5c14-4e95-8332-a70dee8b1b2c --> TRADE_2a0e5e22-9372-4684-add4-ca9b14b29698_3
+    TRADE_2a0e5e22-9372-4684-add4-ca9b14b29698_3 --> TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_4
+    TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_4 --> NODE_7064159a-9d89-4db3-86be-ac33c463fb23
+    NODE_7064159a-9d89-4db3-86be-ac33c463fb23 --> CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2006
+    TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_4 --> NODE_6c7783e6-4c3b-43a3-a365-553e4ae897b0
+    NODE_6c7783e6-4c3b-43a3-a365-553e4ae897b0 --> CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2006
+    TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_4 --> NODE_a050a184-3709-4905-aa75-94dbe5e8be44
+    NODE_a050a184-3709-4905-aa75-94dbe5e8be44 --> CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2006
+    TRADE_2a0e5e22-9372-4684-add4-ca9b14b29698_3 --> TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_5
+    TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_5 --> NODE_a42cb939-12fe-41c6-a87f-39914a5982fb
+    TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_5 --> NODE_b053cb77-7eee-4707-97dd-407b50a0828f
+    TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_5 --> NODE_b2159c8e-a5b5-4093-871c-ed731fcbd902
+    TEAM_2 --> NODE_7a47323e-28e6-489f-8557-e3e176e09be2
+    TEAM_1 --> NODE_2a1eae5d-9ba4-4e4a-9c37-e48fe696ce77
+    TEAM_2 --> NODE_c64296d1-f4d1-4014-b346-f62d0c4786b1
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_4,TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_5 teamNode
+    class CHAMP_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2006 championshipNode
+    class NODE_7064159a-9d89-4db3-86be-ac33c463fb23,NODE_6c7783e6-4c3b-43a3-a365-553e4ae897b0,NODE_a050a184-3709-4905-aa75-94dbe5e8be44 nonRootPlayerNode
+    class TRADE_MAIN tradeNode

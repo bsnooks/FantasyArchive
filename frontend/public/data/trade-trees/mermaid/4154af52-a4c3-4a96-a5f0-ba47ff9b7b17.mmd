@@ -1,0 +1,27 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 25, 2009")
+    TEAM_1("Hot Loads")
+    TEAM_2("FB in the Groin")
+    NODE_68ca6722-228f-4964-a1c3-f00718420aad("🔄 Kellen Winslow - Nov 25, 2009")
+    NODE_15937124-98cf-4021-aac5-fcf923b63746("🔄 Tim Hightower - Nov 25, 2009")
+    CHAMP_f483ecf1-cd17-4991-854b-e52dfc957b45_2009["🏆 FB in the Groin - 2009 Champions!"]
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_68ca6722-228f-4964-a1c3-f00718420aad
+    TEAM_2 --> NODE_15937124-98cf-4021-aac5-fcf923b63746
+    NODE_15937124-98cf-4021-aac5-fcf923b63746 --> CHAMP_f483ecf1-cd17-4991-854b-e52dfc957b45_2009
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class CHAMP_f483ecf1-cd17-4991-854b-e52dfc957b45_2009 championshipNode
+    class TRADE_MAIN tradeNode

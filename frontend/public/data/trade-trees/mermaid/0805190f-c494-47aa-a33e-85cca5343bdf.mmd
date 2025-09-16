@@ -1,0 +1,24 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 21, 2011")
+    TEAM_1("She's the Fastest")
+    TEAM_2("The Bad Guys")
+    NODE_2db55ee5-ab4d-42a4-98de-9eba27848274("🔄 Darrius Heyward-Bey - Oct 21, 2011")
+    NODE_21be9954-e1ae-4df7-8a80-9fd3504a8064("🔄 Christian Ponder - Oct 21, 2011")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_2db55ee5-ab4d-42a4-98de-9eba27848274
+    TEAM_2 --> NODE_21be9954-e1ae-4df7-8a80-9fd3504a8064
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

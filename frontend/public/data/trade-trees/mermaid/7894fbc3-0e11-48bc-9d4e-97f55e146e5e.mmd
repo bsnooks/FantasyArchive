@@ -1,0 +1,45 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 13, 2004")
+    TEAM_1("She's the Fastest")
+    TEAM_2("Hot Loads")
+    NODE_d4e7ecd3-8064-43da-b9e3-2a9c97526bf4("🔄 Anquan Boldin - Oct 13, 2004")
+    TRADE_3e8166c5-2cf4-482a-af3b-988d12a8fe40_3("🔄 Trade - Aug 30, 2005")
+    TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_4["Mad Guys"]
+    NODE_823fcf0c-26a0-4283-a598-96483eff2af4("🔄 Anquan Boldin - Aug 30, 2005")
+    NODE_faa8433e-2e6e-4d9b-8d35-4258945e65d7("🔄 Domanick Williams - Aug 30, 2005")
+    NODE_e0e66322-a781-4316-bcdd-ef861350610d("🔄 Tony Gonzalez - Aug 30, 2005")
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_5["She's the Fastest"]
+    NODE_fb3d7a03-375f-42a8-abe7-a753f9fe0eb4("🔄 Willis McGahee - Aug 30, 2005")
+    NODE_02c66201-ab4d-4208-bf29-44ac4a4b5e71("🔄 Mark Brunell - Oct 13, 2004")
+    NODE_6c9ce7fd-dc24-440b-9be2-7dc3b347fb0a("🔄 David Patten - Oct 13, 2004")
+    NODE_90d15b95-66ee-4390-a5f2-950d5190055c("🔄 Jay Fiedler - Oct 13, 2004")
+    NODE_0f8a40b5-50b1-4d6b-b460-bf055e03ded8("🔄 Josh McCown - Oct 13, 2004")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_d4e7ecd3-8064-43da-b9e3-2a9c97526bf4
+    NODE_d4e7ecd3-8064-43da-b9e3-2a9c97526bf4 --> TRADE_3e8166c5-2cf4-482a-af3b-988d12a8fe40_3
+    TRADE_3e8166c5-2cf4-482a-af3b-988d12a8fe40_3 --> TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_4
+    TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_4 --> NODE_823fcf0c-26a0-4283-a598-96483eff2af4
+    TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_4 --> NODE_faa8433e-2e6e-4d9b-8d35-4258945e65d7
+    TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_4 --> NODE_e0e66322-a781-4316-bcdd-ef861350610d
+    TRADE_3e8166c5-2cf4-482a-af3b-988d12a8fe40_3 --> TEAM_4449259f-64af-44fd-9235-1facc0926234_5
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_5 --> NODE_fb3d7a03-375f-42a8-abe7-a753f9fe0eb4
+    TEAM_2 --> NODE_02c66201-ab4d-4208-bf29-44ac4a4b5e71
+    TEAM_2 --> NODE_6c9ce7fd-dc24-440b-9be2-7dc3b347fb0a
+    TEAM_2 --> NODE_90d15b95-66ee-4390-a5f2-950d5190055c
+    TEAM_1 --> NODE_0f8a40b5-50b1-4d6b-b460-bf055e03ded8
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_4,TEAM_4449259f-64af-44fd-9235-1facc0926234_5 teamNode
+    class NODE_823fcf0c-26a0-4283-a598-96483eff2af4,NODE_faa8433e-2e6e-4d9b-8d35-4258945e65d7,NODE_e0e66322-a781-4316-bcdd-ef861350610d nonRootPlayerNode
+    class TRADE_MAIN tradeNode

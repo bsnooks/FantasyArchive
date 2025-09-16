@@ -1,0 +1,32 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 3, 2015")
+    TEAM_1("The Bad Guys")
+    TEAM_2("She's the Fastest")
+    NODE_feafd560-f009-46e0-88f2-64f343e67a06("🔄 Isaiah Crowell - Oct 3, 2015")
+    NODE_4cece60a-588d-4a01-a99c-7fc95039cd62("🔄 John Brown - Oct 3, 2015")
+    CHAMP_4449259f-64af-44fd-9235-1facc0926234_2015["🏆 She's the Fastest - 2015 Champions!"]
+    NODE_4dab659d-6220-4efe-bcfc-8d74cc6ef414("🔄 Chris Johnson - Oct 3, 2015")
+    NODE_8da184c8-fc2f-45d8-9987-9f3b7c88bac6("🔄 Martavis Bryant - Oct 3, 2015")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_feafd560-f009-46e0-88f2-64f343e67a06
+    TEAM_2 --> NODE_4cece60a-588d-4a01-a99c-7fc95039cd62
+    NODE_4cece60a-588d-4a01-a99c-7fc95039cd62 --> CHAMP_4449259f-64af-44fd-9235-1facc0926234_2015
+    TEAM_2 --> NODE_4dab659d-6220-4efe-bcfc-8d74cc6ef414
+    NODE_4dab659d-6220-4efe-bcfc-8d74cc6ef414 --> CHAMP_4449259f-64af-44fd-9235-1facc0926234_2015
+    TEAM_1 --> NODE_8da184c8-fc2f-45d8-9987-9f3b7c88bac6
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class CHAMP_4449259f-64af-44fd-9235-1facc0926234_2015 championshipNode
+    class TRADE_MAIN tradeNode

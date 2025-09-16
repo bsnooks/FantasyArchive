@@ -1,0 +1,56 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 20, 2007")
+    TEAM_1("The Mojos")
+    TEAM_2("She's the Fastest")
+    NODE_592e0c36-e3dc-4677-b534-5298543c9bbd("🔄 Michael Turner - Oct 20, 2007")
+    CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2007["🏆 The Mojos - 2007 Champions!"]
+    TRADE_3a8d80a6-db8a-4d63-98e8-c495b5e26639_3("🔄 Trade - Nov 28, 2007")
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4["leaf16"]
+    NODE_d8df4f38-ad56-4192-a87e-5ff6f2166d58("🔄 Michael Turner - Nov 28, 2007")
+    NODE_91e372ce-59bc-47bb-9e88-cf79be62c936("🔄 Hines Ward - Nov 28, 2007")
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_5["The Mojos"]
+    NODE_4103b6d7-a28f-4a7d-8b6a-1ce4f5695239("🔄 Marc Bulger - Nov 28, 2007")
+    NODE_420928ec-cddd-4579-b112-ce77f0f2fd56("🔄 Gus Frerotte - Nov 28, 2007")
+    NODE_783a0d42-bfe2-4d3b-bbca-96b7762737db("🔄 Alge Crumpler - Oct 20, 2007")
+    TRADE_f2af289f-bcd0-4cc3-b282-34caa5fbc5af_6("🔄 Trade - Nov 16, 2007")
+    TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_7["Mad Guys"]
+    NODE_2968b211-6807-4585-8ee9-1c2febd14e73("🔄 Alge Crumpler - Nov 16, 2007")
+    NODE_6a83272e-31f3-4092-932d-b86963be4505("🔄 Kyle Boller - Nov 16, 2007")
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_8["She's the Fastest"]
+    NODE_4905cfb4-f8bb-4be6-aac1-7a80e9744fc6("🔄 Chris Cooley - Nov 16, 2007")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_592e0c36-e3dc-4677-b534-5298543c9bbd
+    NODE_592e0c36-e3dc-4677-b534-5298543c9bbd --> CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2007
+    NODE_592e0c36-e3dc-4677-b534-5298543c9bbd --> TRADE_3a8d80a6-db8a-4d63-98e8-c495b5e26639_3
+    TRADE_3a8d80a6-db8a-4d63-98e8-c495b5e26639_3 --> TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4 --> NODE_d8df4f38-ad56-4192-a87e-5ff6f2166d58
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4 --> NODE_91e372ce-59bc-47bb-9e88-cf79be62c936
+    TRADE_3a8d80a6-db8a-4d63-98e8-c495b5e26639_3 --> TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_5
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_5 --> NODE_4103b6d7-a28f-4a7d-8b6a-1ce4f5695239
+    NODE_4103b6d7-a28f-4a7d-8b6a-1ce4f5695239 --> CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2007
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_5 --> NODE_420928ec-cddd-4579-b112-ce77f0f2fd56
+    NODE_420928ec-cddd-4579-b112-ce77f0f2fd56 --> CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2007
+    TEAM_2 --> NODE_783a0d42-bfe2-4d3b-bbca-96b7762737db
+    NODE_783a0d42-bfe2-4d3b-bbca-96b7762737db --> TRADE_f2af289f-bcd0-4cc3-b282-34caa5fbc5af_6
+    TRADE_f2af289f-bcd0-4cc3-b282-34caa5fbc5af_6 --> TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_7
+    TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_7 --> NODE_2968b211-6807-4585-8ee9-1c2febd14e73
+    TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_7 --> NODE_6a83272e-31f3-4092-932d-b86963be4505
+    TRADE_f2af289f-bcd0-4cc3-b282-34caa5fbc5af_6 --> TEAM_4449259f-64af-44fd-9235-1facc0926234_8
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_8 --> NODE_4905cfb4-f8bb-4be6-aac1-7a80e9744fc6
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4,TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_5,TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_7,TEAM_4449259f-64af-44fd-9235-1facc0926234_8 teamNode
+    class CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2007 championshipNode
+    class NODE_d8df4f38-ad56-4192-a87e-5ff6f2166d58,NODE_91e372ce-59bc-47bb-9e88-cf79be62c936,NODE_2968b211-6807-4585-8ee9-1c2febd14e73,NODE_6a83272e-31f3-4092-932d-b86963be4505 nonRootPlayerNode
+    class TRADE_MAIN tradeNode

@@ -1,0 +1,34 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 12, 2007")
+    TEAM_1("Balero Boyz")
+    TEAM_2("FB in the Groin")
+    NODE_4b2db09d-a586-4f4c-bcbb-21d1fd59a90c("🔄 DeAngelo Williams - Oct 12, 2007")
+    NODE_1d73cfb1-e4a3-422d-a93b-495a6ca7e188("🔄 Chester Taylor - Oct 12, 2007")
+    NODE_7dcbf54f-bea1-41b1-ae40-5be39b0c8d27("🔄 Tony Gonzalez - Oct 12, 2007")
+    NODE_ad34ba97-60e9-4632-8f97-631e8992ac7b("🔄 David Garrard - Oct 12, 2007")
+    NODE_7891d6ab-964f-4cbf-a307-0ca42e8d86d4("🔒 David Garrard - Kept - Aug 14, 2008")
+    NODE_7738063b-0ea9-4778-93bb-9ec676e9b2d2("🔄 DeShaun Foster - Oct 12, 2007")
+    NODE_415730ac-42fa-4971-8228-db326fadd3f4("🔄 Vernon Davis - Oct 12, 2007")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_4b2db09d-a586-4f4c-bcbb-21d1fd59a90c
+    TEAM_2 --> NODE_1d73cfb1-e4a3-422d-a93b-495a6ca7e188
+    TEAM_2 --> NODE_7dcbf54f-bea1-41b1-ae40-5be39b0c8d27
+    TEAM_2 --> NODE_ad34ba97-60e9-4632-8f97-631e8992ac7b
+    NODE_ad34ba97-60e9-4632-8f97-631e8992ac7b --> NODE_7891d6ab-964f-4cbf-a307-0ca42e8d86d4
+    TEAM_1 --> NODE_7738063b-0ea9-4778-93bb-9ec676e9b2d2
+    TEAM_1 --> NODE_415730ac-42fa-4971-8228-db326fadd3f4
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

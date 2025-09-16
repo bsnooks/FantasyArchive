@@ -1,0 +1,28 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 28, 2024")
+    TEAM_1("Army of Dakness")
+    TEAM_2("Mad Guys")
+    NODE_e99f8f4c-28ff-4d95-8c5c-135cad89451f("🔄 Travis Kelce - Nov 28, 2024")
+    NODE_37c356de-5dd5-4d3d-a67f-c554b1295d7a("🔄 Brian Robinson Jr. - Nov 28, 2024")
+    NODE_dbc4e501-d753-4818-9720-d2a2af1d1157("🔄 Cade Otton - Nov 28, 2024")
+    NODE_53ff248d-984f-43ad-af2b-ed5afc47dd22("🔄 Najee Harris - Nov 28, 2024")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_e99f8f4c-28ff-4d95-8c5c-135cad89451f
+    TEAM_1 --> NODE_37c356de-5dd5-4d3d-a67f-c554b1295d7a
+    TEAM_2 --> NODE_dbc4e501-d753-4818-9720-d2a2af1d1157
+    TEAM_2 --> NODE_53ff248d-984f-43ad-af2b-ed5afc47dd22
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

@@ -1,0 +1,30 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Sep 1, 2009")
+    TEAM_1("Hot Loads")
+    TEAM_2("Mad Guys")
+    NODE_30b99330-c15b-4954-bbb8-56491c929d34("🔄 Wes Welker - Sep 1, 2009")
+    NODE_367ea105-ac96-460b-a403-2c889e07370e("🔒 Wes Welker - Kept - Sep 2, 2009")
+    NODE_2fbde6d5-64a4-4eb1-9bb4-c3401c773496("🔒 Wes Welker - Kept - Sep 4, 2010")
+    NODE_3360e970-8045-4a90-bc00-9c7d62b8aed7("🔄 Larry Johnson - Sep 1, 2009")
+    NODE_1d1e4dbc-9a98-4736-b7eb-7c829786b06d("🔒 Larry Johnson - Kept - Sep 2, 2009")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_30b99330-c15b-4954-bbb8-56491c929d34
+    NODE_30b99330-c15b-4954-bbb8-56491c929d34 --> NODE_367ea105-ac96-460b-a403-2c889e07370e
+    NODE_367ea105-ac96-460b-a403-2c889e07370e --> NODE_2fbde6d5-64a4-4eb1-9bb4-c3401c773496
+    TEAM_2 --> NODE_3360e970-8045-4a90-bc00-9c7d62b8aed7
+    NODE_3360e970-8045-4a90-bc00-9c7d62b8aed7 --> NODE_1d1e4dbc-9a98-4736-b7eb-7c829786b06d
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

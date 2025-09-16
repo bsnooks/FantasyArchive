@@ -1,0 +1,32 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 28, 2007")
+    TEAM_1("The Mojos")
+    TEAM_2("leaf16")
+    NODE_4103b6d7-a28f-4a7d-8b6a-1ce4f5695239("🔄 Marc Bulger - Nov 28, 2007")
+    CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2007["🏆 The Mojos - 2007 Champions!"]
+    NODE_d8df4f38-ad56-4192-a87e-5ff6f2166d58("🔄 Michael Turner - Nov 28, 2007")
+    NODE_420928ec-cddd-4579-b112-ce77f0f2fd56("🔄 Gus Frerotte - Nov 28, 2007")
+    NODE_91e372ce-59bc-47bb-9e88-cf79be62c936("🔄 Hines Ward - Nov 28, 2007")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_4103b6d7-a28f-4a7d-8b6a-1ce4f5695239
+    NODE_4103b6d7-a28f-4a7d-8b6a-1ce4f5695239 --> CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2007
+    TEAM_2 --> NODE_d8df4f38-ad56-4192-a87e-5ff6f2166d58
+    TEAM_1 --> NODE_420928ec-cddd-4579-b112-ce77f0f2fd56
+    NODE_420928ec-cddd-4579-b112-ce77f0f2fd56 --> CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2007
+    TEAM_2 --> NODE_91e372ce-59bc-47bb-9e88-cf79be62c936
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2007 championshipNode
+    class TRADE_MAIN tradeNode

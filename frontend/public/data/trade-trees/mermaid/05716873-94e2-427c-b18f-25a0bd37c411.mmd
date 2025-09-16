@@ -1,0 +1,24 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 30, 2007")
+    TEAM_1("Army of Dakness")
+    TEAM_2("FB in the Groin")
+    NODE_84b31363-20c3-4286-a76c-16da00c71cba("🔄 Vinny Testaverde - Oct 30, 2007")
+    NODE_c5c5b644-0ef7-4181-a31c-2d15d9f0dfce("🔄 Quinn Gray - Oct 30, 2007")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_84b31363-20c3-4286-a76c-16da00c71cba
+    TEAM_2 --> NODE_c5c5b644-0ef7-4181-a31c-2d15d9f0dfce
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

@@ -1,0 +1,55 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Aug 26, 2023")
+    TEAM_1("The Bad Guys")
+    TEAM_2("Laters")
+    NODE_07a45acd-130a-422a-ae42-31f806f3a986("🔄 Chris Olave - Aug 26, 2023")
+    NODE_4e92b912-6330-4a91-bcb4-be6613c49675("🔒 Chris Olave - Kept - Sep 7, 2023")
+    TRADE_ac48007c-bb8e-46e7-a9c7-f232e3286c8c_3("🔄 Trade - Nov 8, 2023")
+    TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_4["FB in the Groin"]
+    NODE_c8b8b145-a006-44e6-9a8a-b8546978fe55("🔄 Chris Olave - Nov 8, 2023")
+    NODE_0a1485a5-a2d9-4007-b6af-215ab4a0b28f("🔄 Zach Wilson - Nov 8, 2023")
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_5["The Bad Guys"]
+    NODE_81308adc-8bb6-43fe-a3e0-8f5a18ab76b4("🔄 Brock Purdy - Nov 8, 2023")
+    NODE_c8009533-1d69-4df2-aecc-3a409fa78941("🔒 Brock Purdy - Kept - Sep 5, 2024")
+    NODE_64133a3e-5b41-41a4-9a1e-97f6cc6de114("🔄 Jerry Jeudy - Nov 8, 2023")
+    NODE_6a8c0e8f-ec43-41b0-b11d-9819c411127a("🔄 Austin Ekeler - Aug 26, 2023")
+    NODE_833794dd-effb-4796-9b4d-73655ce0fed5("🔒 Austin Ekeler - Kept - Sep 7, 2023")
+    NODE_9ea91788-ae08-495b-b3a7-b8ff0b925014("🔄 Lamar Jackson - Aug 26, 2023")
+    NODE_e5015bab-df7d-485f-b42f-14c4e4b42969("🔒 Lamar Jackson - Kept - Sep 7, 2023")
+    NODE_29f2638b-f53e-4faf-948a-772548197e37("🔒 Lamar Jackson - Kept - Sep 5, 2024")
+    NODE_8693b68b-52d4-41b9-a27e-deb74f13b0fd("🔄 Stefon Diggs - Aug 26, 2023")
+    NODE_e7825483-b433-440d-a306-9668434479bc("🔒 Stefon Diggs - Kept - Sep 7, 2023")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_07a45acd-130a-422a-ae42-31f806f3a986
+    NODE_07a45acd-130a-422a-ae42-31f806f3a986 --> NODE_4e92b912-6330-4a91-bcb4-be6613c49675
+    NODE_4e92b912-6330-4a91-bcb4-be6613c49675 --> TRADE_ac48007c-bb8e-46e7-a9c7-f232e3286c8c_3
+    TRADE_ac48007c-bb8e-46e7-a9c7-f232e3286c8c_3 --> TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_4
+    TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_4 --> NODE_c8b8b145-a006-44e6-9a8a-b8546978fe55
+    TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_4 --> NODE_0a1485a5-a2d9-4007-b6af-215ab4a0b28f
+    TRADE_ac48007c-bb8e-46e7-a9c7-f232e3286c8c_3 --> TEAM_b2220d1a-ff75-4622-9757-09978901110f_5
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_5 --> NODE_81308adc-8bb6-43fe-a3e0-8f5a18ab76b4
+    NODE_81308adc-8bb6-43fe-a3e0-8f5a18ab76b4 --> NODE_c8009533-1d69-4df2-aecc-3a409fa78941
+    TEAM_b2220d1a-ff75-4622-9757-09978901110f_5 --> NODE_64133a3e-5b41-41a4-9a1e-97f6cc6de114
+    TEAM_1 --> NODE_6a8c0e8f-ec43-41b0-b11d-9819c411127a
+    NODE_6a8c0e8f-ec43-41b0-b11d-9819c411127a --> NODE_833794dd-effb-4796-9b4d-73655ce0fed5
+    TEAM_2 --> NODE_9ea91788-ae08-495b-b3a7-b8ff0b925014
+    NODE_9ea91788-ae08-495b-b3a7-b8ff0b925014 --> NODE_e5015bab-df7d-485f-b42f-14c4e4b42969
+    NODE_e5015bab-df7d-485f-b42f-14c4e4b42969 --> NODE_29f2638b-f53e-4faf-948a-772548197e37
+    TEAM_1 --> NODE_8693b68b-52d4-41b9-a27e-deb74f13b0fd
+    NODE_8693b68b-52d4-41b9-a27e-deb74f13b0fd --> NODE_e7825483-b433-440d-a306-9668434479bc
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_4,TEAM_b2220d1a-ff75-4622-9757-09978901110f_5 teamNode
+    class NODE_c8b8b145-a006-44e6-9a8a-b8546978fe55,NODE_0a1485a5-a2d9-4007-b6af-215ab4a0b28f nonRootPlayerNode
+    class TRADE_MAIN tradeNode

@@ -1,0 +1,28 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Sep 4, 2017")
+    TEAM_1("The Bad Guys")
+    TEAM_2("leaf16")
+    NODE_89047b12-141f-4bfb-8cf8-1267ab5d96e1("🔄 Andy Dalton - Sep 4, 2017")
+    NODE_c07fbd96-24e1-46a8-a7bf-abce6742f93b("🔒 Andy Dalton - Kept - Sep 9, 2017")
+    NODE_2c3bc6e7-2502-4bd6-ae30-b5ac1199f0ac("🔄 Allen Robinson - Sep 4, 2017")
+    NODE_02481f54-1db4-42be-b29b-81a60c715f59("🔒 Allen Robinson - Kept - Sep 9, 2017")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_89047b12-141f-4bfb-8cf8-1267ab5d96e1
+    NODE_89047b12-141f-4bfb-8cf8-1267ab5d96e1 --> NODE_c07fbd96-24e1-46a8-a7bf-abce6742f93b
+    TEAM_2 --> NODE_2c3bc6e7-2502-4bd6-ae30-b5ac1199f0ac
+    NODE_2c3bc6e7-2502-4bd6-ae30-b5ac1199f0ac --> NODE_02481f54-1db4-42be-b29b-81a60c715f59
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

@@ -1,0 +1,42 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 20, 2016")
+    TEAM_1("Mad Guys")
+    TEAM_2("Laters")
+    NODE_cb5e5008-c655-47c3-92de-35482e201a81("🔄 Tyreek Hill - Nov 20, 2016")
+    NODE_5c667e73-a4e7-40ae-86b2-a7c729b5268e("🔒 Tyreek Hill - Kept - Sep 9, 2017")
+    NODE_d6196b16-8b26-41f1-b1ef-069851be39dd("🔒 Tyreek Hill - Kept - Sep 6, 2018")
+    NODE_d9222978-6e47-4676-8487-3116d96d604d("🔒 Tyreek Hill - Kept - Sep 1, 2019")
+    NODE_b1bfde38-d701-4689-9404-be68fd8c7bc8("🔒 Tyreek Hill - Kept - Sep 8, 2020")
+    NODE_e404fe45-0068-42cf-a190-2ce0a595d228("🔒 Tyreek Hill - Kept - Aug 31, 2021")
+    NODE_9054af06-f7ec-472c-9216-2c2e4903052e("🔒 Tyreek Hill - Kept - Sep 8, 2022")
+    NODE_657e38f1-97c9-462d-b9bd-9cd64f45ce10("🔒 Tyreek Hill - Kept - Sep 7, 2023")
+    NODE_a83e97dc-e54c-48b2-8509-25bf2281dc6f("🔒 Tyreek Hill - Kept - Sep 5, 2024")
+    NODE_10dd79a1-6570-4431-a771-3df24329d81d("🔄 Giovani Bernard - Nov 20, 2016")
+    NODE_04609d83-2252-4de2-b79c-563486ff81d1("🔄 Bilal Powell - Nov 20, 2016")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_cb5e5008-c655-47c3-92de-35482e201a81
+    NODE_cb5e5008-c655-47c3-92de-35482e201a81 --> NODE_5c667e73-a4e7-40ae-86b2-a7c729b5268e
+    NODE_5c667e73-a4e7-40ae-86b2-a7c729b5268e --> NODE_d6196b16-8b26-41f1-b1ef-069851be39dd
+    NODE_d6196b16-8b26-41f1-b1ef-069851be39dd --> NODE_d9222978-6e47-4676-8487-3116d96d604d
+    NODE_d9222978-6e47-4676-8487-3116d96d604d --> NODE_b1bfde38-d701-4689-9404-be68fd8c7bc8
+    NODE_b1bfde38-d701-4689-9404-be68fd8c7bc8 --> NODE_e404fe45-0068-42cf-a190-2ce0a595d228
+    NODE_e404fe45-0068-42cf-a190-2ce0a595d228 --> NODE_9054af06-f7ec-472c-9216-2c2e4903052e
+    NODE_9054af06-f7ec-472c-9216-2c2e4903052e --> NODE_657e38f1-97c9-462d-b9bd-9cd64f45ce10
+    NODE_657e38f1-97c9-462d-b9bd-9cd64f45ce10 --> NODE_a83e97dc-e54c-48b2-8509-25bf2281dc6f
+    TEAM_2 --> NODE_10dd79a1-6570-4431-a771-3df24329d81d
+    TEAM_1 --> NODE_04609d83-2252-4de2-b79c-563486ff81d1
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

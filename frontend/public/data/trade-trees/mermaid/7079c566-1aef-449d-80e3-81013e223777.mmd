@@ -1,0 +1,36 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Dec 5, 2010")
+    TEAM_1("The Bad Guys")
+    TEAM_2("She's the Fastest")
+    NODE_fbf9d819-d0b8-4ee4-afe1-0b279afe083d("🔄 Larry Fitzgerald - Dec 5, 2010")
+    NODE_f3803d55-b4c8-4abf-92ed-3f33d3852896("🔒 Larry Fitzgerald - Kept - Sep 8, 2011")
+    NODE_1316b4e4-350f-42c6-a15b-010781198045("🔒 Larry Fitzgerald - Kept - Sep 6, 2012")
+    NODE_73df40e7-7080-4c35-83a6-d96045ef6ceb("🔒 Larry Fitzgerald - Kept - Aug 31, 2013")
+    NODE_d47a05c9-52b5-45d2-a97e-ebb1516073d8("🔒 Larry Fitzgerald - Kept - Sep 4, 2014")
+    NODE_3f49242f-c13a-4378-b163-959d8092b13e("🔄 Michael Crabtree - Dec 5, 2010")
+    NODE_e3eeb034-e4c6-4be5-a812-b2c48eba0d53("🔄 Knowshon Moreno - Dec 5, 2010")
+    NODE_e2188277-78ab-4766-9782-da39ab3295ef("🔄 Antonio Gates - Dec 5, 2010")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_fbf9d819-d0b8-4ee4-afe1-0b279afe083d
+    NODE_fbf9d819-d0b8-4ee4-afe1-0b279afe083d --> NODE_f3803d55-b4c8-4abf-92ed-3f33d3852896
+    NODE_f3803d55-b4c8-4abf-92ed-3f33d3852896 --> NODE_1316b4e4-350f-42c6-a15b-010781198045
+    NODE_1316b4e4-350f-42c6-a15b-010781198045 --> NODE_73df40e7-7080-4c35-83a6-d96045ef6ceb
+    NODE_73df40e7-7080-4c35-83a6-d96045ef6ceb --> NODE_d47a05c9-52b5-45d2-a97e-ebb1516073d8
+    TEAM_2 --> NODE_3f49242f-c13a-4378-b163-959d8092b13e
+    TEAM_1 --> NODE_e3eeb034-e4c6-4be5-a812-b2c48eba0d53
+    TEAM_2 --> NODE_e2188277-78ab-4766-9782-da39ab3295ef
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

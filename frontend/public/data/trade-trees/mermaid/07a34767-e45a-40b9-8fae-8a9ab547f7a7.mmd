@@ -1,0 +1,28 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 2, 2014")
+    TEAM_1("Army of Dakness")
+    TEAM_2("Mad Guys")
+    NODE_97a28ab5-d9dd-4c32-af82-239f7a85b2a3("🔄 Jordan Matthews - Nov 2, 2014")
+    NODE_9d5ad968-f71e-4479-8f90-7c99f69bd7b2("🔄 Antonio Gates - Nov 2, 2014")
+    NODE_4679a4ba-4706-4e48-bada-80afcd96fbfa("🔄 Rueben Randle - Nov 2, 2014")
+    NODE_e87e81da-d6c0-4c42-8af4-b39344b249ea("🔄 Zach Ertz - Nov 2, 2014")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_97a28ab5-d9dd-4c32-af82-239f7a85b2a3
+    TEAM_1 --> NODE_9d5ad968-f71e-4479-8f90-7c99f69bd7b2
+    TEAM_2 --> NODE_4679a4ba-4706-4e48-bada-80afcd96fbfa
+    TEAM_2 --> NODE_e87e81da-d6c0-4c42-8af4-b39344b249ea
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

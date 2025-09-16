@@ -1,0 +1,41 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Sep 26, 2008")
+    TEAM_1("leaf16")
+    TEAM_2("FB in the Groin")
+    NODE_f6283f98-d4e0-4556-ba50-3b9c539e38a9("🔄 Matt Cassel - Sep 26, 2008")
+    NODE_80fe1479-fb68-49b5-9a77-a2f7643490f1("🔄 Matt Schaub - Sep 26, 2008")
+    NODE_726d7ac3-931c-4f4a-9728-92945de0d729("🔒 Matt Schaub - Kept - Sep 2, 2009")
+    CHAMP_f483ecf1-cd17-4991-854b-e52dfc957b45_2009["🏆 FB in the Groin - 2009 Champions!"]
+    NODE_d2ccfb73-7305-4dc9-81e8-3ab1185714e5("🔒 Matt Schaub - Kept - Sep 4, 2010")
+    NODE_d6d5e62c-5a0b-448d-b171-fb11cbb16ff3("🔒 Matt Schaub - Kept - Sep 8, 2011")
+    NODE_dd0f2844-9f92-4e12-b3d7-0440e08c67fe("🔒 Matt Schaub - Kept - Sep 6, 2012")
+    NODE_3c4c1045-0f0e-476c-aa84-d71204a0019c("🔄 Torry Holt - Sep 26, 2008")
+    NODE_b4480c41-fd86-467f-a24b-fb59f08029b3("🔄 T.J. Houshmandzadeh - Sep 26, 2008")
+    NODE_f4d0e011-bc28-4b46-b217-2e1028779dc1("🔒 T.J. Houshmandzadeh - Kept - Sep 2, 2009")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_f6283f98-d4e0-4556-ba50-3b9c539e38a9
+    TEAM_2 --> NODE_80fe1479-fb68-49b5-9a77-a2f7643490f1
+    NODE_80fe1479-fb68-49b5-9a77-a2f7643490f1 --> NODE_726d7ac3-931c-4f4a-9728-92945de0d729
+    NODE_726d7ac3-931c-4f4a-9728-92945de0d729 --> CHAMP_f483ecf1-cd17-4991-854b-e52dfc957b45_2009
+    NODE_726d7ac3-931c-4f4a-9728-92945de0d729 --> NODE_d2ccfb73-7305-4dc9-81e8-3ab1185714e5
+    NODE_d2ccfb73-7305-4dc9-81e8-3ab1185714e5 --> NODE_d6d5e62c-5a0b-448d-b171-fb11cbb16ff3
+    NODE_d6d5e62c-5a0b-448d-b171-fb11cbb16ff3 --> NODE_dd0f2844-9f92-4e12-b3d7-0440e08c67fe
+    TEAM_2 --> NODE_3c4c1045-0f0e-476c-aa84-d71204a0019c
+    TEAM_1 --> NODE_b4480c41-fd86-467f-a24b-fb59f08029b3
+    NODE_b4480c41-fd86-467f-a24b-fb59f08029b3 --> NODE_f4d0e011-bc28-4b46-b217-2e1028779dc1
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class CHAMP_f483ecf1-cd17-4991-854b-e52dfc957b45_2009 championshipNode
+    class TRADE_MAIN tradeNode
