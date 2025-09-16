@@ -38,13 +38,16 @@ const MermaidRenderer: React.FC<MermaidRendererProps> = ({
     );
   }, []);
 
-  // Update SVG transform for pan/zoom
+  // Update SVG transform for pan/zoom with performance optimization
   const updateSVGTransform = useCallback(() => {
     if (svgRef.current && enablePanZoom) {
       const g = svgRef.current.querySelector('g');
       if (g) {
-        g.style.transform = `translate(${pan.x}px, ${pan.y}px) scale(${zoom})`;
-        g.style.transformOrigin = '0 0';
+        // Use requestAnimationFrame for smoother updates on mobile
+        requestAnimationFrame(() => {
+          g.style.transform = `translate(${pan.x}px, ${pan.y}px) scale(${zoom})`;
+          g.style.transformOrigin = '0 0';
+        });
       }
     }
   }, [pan, zoom, enablePanZoom]);
@@ -53,11 +56,13 @@ const MermaidRenderer: React.FC<MermaidRendererProps> = ({
   const handleMouseDown = useCallback((e: React.MouseEvent) => {
     if (!enablePanZoom) return;
     setIsDragging(true);
-    setDragStart({ x: e.clientX - pan.x, y: e.clientY - pan.y });
+    // Store the starting mouse position relative to current pan, accounting for zoom sensitivity
+    const sensitivity = Math.max(1, zoom * 0.5);
+    setDragStart({ x: e.clientX - pan.x / sensitivity, y: e.clientY - pan.y / sensitivity });
     if (svgRef.current) {
       svgRef.current.style.cursor = 'grabbing';
     }
-  }, [enablePanZoom, pan]);
+  }, [enablePanZoom, pan, zoom]);
 
   const handleTouchStart = useCallback((e: React.TouchEvent) => {
     if (!enablePanZoom) return;
@@ -66,26 +71,41 @@ const MermaidRenderer: React.FC<MermaidRendererProps> = ({
     e.preventDefault();
     
     if (e.touches.length === 1) {
-      // Single touch - start panning
+      // Single touch - start panning with zoom-sensitive positioning
       setIsDragging(true);
       const touch = e.touches[0];
-      setDragStart({ x: touch.clientX - pan.x, y: touch.clientY - pan.y });
+      const sensitivity = Math.max(1, zoom * 0.5);
+      setDragStart({ x: touch.clientX - pan.x / sensitivity, y: touch.clientY - pan.y / sensitivity });
+      
+      // Add visual feedback for touch start
+      if (svgRef.current) {
+        svgRef.current.style.cursor = 'grabbing';
+      }
     } else if (e.touches.length === 2) {
       // Two touches - start pinch zoom
       setIsDragging(false);
       const distance = getTouchDistance(e.touches);
       setLastTouchDistance(distance);
+      
+      // Reset cursor for pinch zoom
+      if (svgRef.current) {
+        svgRef.current.style.cursor = 'grab';
+      }
     }
-  }, [enablePanZoom, pan, getTouchDistance]);
+  }, [enablePanZoom, pan, zoom, getTouchDistance]);
 
   const handleMouseMove = useCallback((e: React.MouseEvent) => {
     if (!enablePanZoom || !isDragging) return;
+    // Apply zoom-based sensitivity - more movement at higher zoom levels
+    const sensitivity = Math.max(1, zoom * 0.5);
+    const deltaX = (e.clientX - dragStart.x) * sensitivity;
+    const deltaY = (e.clientY - dragStart.y) * sensitivity;
     const newPan = {
-      x: e.clientX - dragStart.x,
-      y: e.clientY - dragStart.y
+      x: deltaX,
+      y: deltaY
     };
     setPan(newPan);
-  }, [enablePanZoom, isDragging, dragStart]);
+  }, [enablePanZoom, isDragging, dragStart, zoom]);
 
   const handleTouchMove = useCallback((e: React.TouchEvent) => {
     if (!enablePanZoom) return;
@@ -94,19 +114,22 @@ const MermaidRenderer: React.FC<MermaidRendererProps> = ({
     e.preventDefault();
     
     if (e.touches.length === 1 && isDragging) {
-      // Single touch - panning
+      // Single touch - panning with zoom-based sensitivity for better navigation at high zoom
       const touch = e.touches[0];
+      const sensitivity = Math.max(1, zoom * 0.5); // Increase sensitivity at higher zoom levels
+      const deltaX = (touch.clientX - dragStart.x) * sensitivity;
+      const deltaY = (touch.clientY - dragStart.y) * sensitivity;
       const newPan = {
-        x: touch.clientX - dragStart.x,
-        y: touch.clientY - dragStart.y
+        x: deltaX,
+        y: deltaY
       };
       setPan(newPan);
     } else if (e.touches.length === 2) {
-      // Two touches - pinch zoom
+      // Two touches - pinch zoom with higher max zoom for mobile
       const distance = getTouchDistance(e.touches);
       if (lastTouchDistance > 0) {
         const scale = distance / lastTouchDistance;
-        const newZoom = Math.max(0.1, Math.min(3, zoom * scale));
+        const newZoom = Math.max(0.1, Math.min(10, zoom * scale)); // Increased max zoom to 1000%
         setZoom(newZoom);
       }
       setLastTouchDistance(distance);
@@ -128,29 +151,36 @@ const MermaidRenderer: React.FC<MermaidRendererProps> = ({
     e.preventDefault();
     
     if (e.touches.length === 0) {
-      // All touches ended
+      // All touches ended - restore grab cursor
       setIsDragging(false);
       setLastTouchDistance(0);
+      if (svgRef.current) {
+        svgRef.current.style.cursor = 'grab';
+      }
     } else if (e.touches.length === 1) {
-      // One touch remaining - switch back to pan mode
+      // One touch remaining - switch back to pan mode with zoom-sensitive positioning
       setIsDragging(true);
       const touch = e.touches[0];
-      setDragStart({ x: touch.clientX - pan.x, y: touch.clientY - pan.y });
+      const sensitivity = Math.max(1, zoom * 0.5);
+      setDragStart({ x: touch.clientX - pan.x / sensitivity, y: touch.clientY - pan.y / sensitivity });
       setLastTouchDistance(0);
+      if (svgRef.current) {
+        svgRef.current.style.cursor = 'grabbing';
+      }
     }
-  }, [enablePanZoom, pan]);
+  }, [enablePanZoom, pan, zoom]);
 
   const handleWheel = useCallback((e: React.WheelEvent) => {
     if (!enablePanZoom) return;
     e.preventDefault();
     const delta = e.deltaY > 0 ? 0.9 : 1.1;
-    const newZoom = Math.max(0.1, Math.min(3, zoom * delta));
+    const newZoom = Math.max(0.1, Math.min(10, zoom * delta)); // Increased max zoom to 1000%
     setZoom(newZoom);
   }, [enablePanZoom, zoom]);
 
   // Control functions
   const handleZoomIn = useCallback(() => {
-    setZoom(prev => Math.min(3, prev * 1.2));
+    setZoom(prev => Math.min(10, prev * 1.2)); // Increased max zoom to 1000%
   }, []);
 
   const handleZoomOut = useCallback(() => {
@@ -339,7 +369,11 @@ const MermaidRenderer: React.FC<MermaidRendererProps> = ({
                 position: 'relative',
                 touchAction: enablePanZoom ? 'none' : 'auto',
                 WebkitUserSelect: enablePanZoom ? 'none' : 'auto',
-                userSelect: enablePanZoom ? 'none' : 'auto'
+                userSelect: enablePanZoom ? 'none' : 'auto',
+                // Additional mobile optimizations
+                WebkitTapHighlightColor: enablePanZoom ? 'transparent' : 'inherit',
+                WebkitTouchCallout: enablePanZoom ? 'none' : 'default',
+                transform: enablePanZoom ? 'translateZ(0)' : 'none' // Hardware acceleration
               }
         }
         onMouseDown={handleMouseDown}
@@ -400,7 +434,12 @@ const MermaidRenderer: React.FC<MermaidRendererProps> = ({
             WebkitOverflowScrolling: usePageScroll ? 'touch' : 'auto',
             userSelect: enablePanZoom ? 'none' : 'auto',
             touchAction: enablePanZoom ? 'none' : 'auto',
-            WebkitTouchCallout: enablePanZoom ? 'none' : 'default'
+            WebkitTouchCallout: enablePanZoom ? 'none' : 'default',
+            // Performance optimizations for mobile
+            transform: enablePanZoom ? 'translateZ(0)' : 'none', // Enable hardware acceleration
+            backfaceVisibility: enablePanZoom ? 'hidden' : 'visible',
+            perspective: enablePanZoom ? '1000px' : 'none',
+            willChange: enablePanZoom ? 'transform' : 'auto'
           }}
         />
       </div>
