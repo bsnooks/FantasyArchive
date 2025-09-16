@@ -59,12 +59,14 @@ namespace FantasyArchive.Data.Services
         private static async Task<string> GenerateMermaidDiagramAsync(TradeTreeJson tradeTree, MermaidConfig config, FantasyArchiveContext context)
         {
             var nodes = new List<string>();
-            var edges = new List<string>();
+            var edges = new HashSet<string>(); // Use HashSet to automatically prevent duplicate edges
             var nodeIds = new HashSet<string>();
             var teamNodeIds = new HashSet<string>();
             var championshipNodeIds = new HashSet<string>();
             var nonRootPlayerNodeIds = new HashSet<string>(); // Track non-root team players
             var championshipNodes = new Dictionary<string, string>(); // Track championship nodes by team-year
+            var tradeNodes = new Dictionary<string, string>(); // Track trade nodes by transaction group ID
+            var tradeNodeIds = new HashSet<string>(); // Track all trade node IDs for styling
             var nodeCounter = new NodeCounter(); // For unique team node generation
 
             // Get original trade teams for scope control
@@ -81,6 +83,7 @@ namespace FantasyArchive.Data.Services
 
             nodes.Add($"{mainTradeId}(\"🔄 Initial Trade{tradeDateText}\")");
             nodeIds.Add(mainTradeId);
+            tradeNodeIds.Add(mainTradeId);
 
             // Group root nodes by franchise to create initial team nodes
             var franchiseGroups = tradeTree.RootNodes
@@ -119,6 +122,8 @@ namespace FantasyArchive.Data.Services
                     championshipNodeIds,
                     nonRootPlayerNodeIds,
                     championshipNodes,
+                    tradeNodes,
+                    tradeNodeIds,
                     originalTradeTeamIds,
                     config,
                     context,
@@ -172,7 +177,10 @@ namespace FantasyArchive.Data.Services
                 diagram.AppendLine($"    class {string.Join(",", nonRootPlayerNodeIds)} nonRootPlayerNode");
             }
 
-            diagram.AppendLine($"    class {mainTradeId} tradeNode");
+            if (tradeNodeIds.Count > 0)
+            {
+                diagram.AppendLine($"    class {string.Join(",", tradeNodeIds)} tradeNode");
+            }
 
             return diagram.ToString();
         }
@@ -181,12 +189,14 @@ namespace FantasyArchive.Data.Services
             TradeTreeNodeJson node,
             string parentNodeId,
             List<string> nodes,
-            List<string> edges,
+            HashSet<string> edges,
             HashSet<string> nodeIds,
             HashSet<string> teamNodeIds,
             HashSet<string> championshipNodeIds,
             HashSet<string> nonRootPlayerNodeIds,
             Dictionary<string, string> championshipNodes,
+            Dictionary<string, string> tradeNodes,
+            HashSet<string> tradeNodeIds,
             HashSet<string> originalTradeTeamIds,
             MermaidConfig config,
             FantasyArchiveContext context,
@@ -210,17 +220,51 @@ namespace FantasyArchive.Data.Services
                 return;
             }
 
-            // Determine if we need a team node
+            // Determine if we need a team node or trade node
             bool needsTeamNode = false;
+            bool needsTradeNode = false;
             string? teamNodeId = null;
+            string? tradeNodeId = null;
+            
+            // Check if this is a trade transaction that needs a trade node
+            // For root connections, we don't create additional trade nodes since we already have TRADE_MAIN
+            if (transaction.TransactionType == "Traded" && !isRootConnection)
+            {
+                needsTradeNode = true;
+                
+                // Create unique trade node key based on date and transaction details  
+                // This should align with the grouping logic in ProcessTradeGroup
+                var tradeGroupKey = transaction.TransactionGroupId ?? transaction.TransactionId.ToString();
+                
+                // Check if we've already created a node for this trade
+                if (!tradeNodes.TryGetValue(tradeGroupKey, out tradeNodeId))
+                {
+                    var tradeIdForNode = transaction.TransactionGroupId ?? transaction.TransactionId.ToString();
+                    tradeNodeId = $"TRADE_{tradeIdForNode}_{nodeCounter.Next()}";
+                    var tradeLabel = $"🔄 Trade - {FormatDate(transaction.Date)}";
+                    nodes.Add($"{tradeNodeId}(\"{EscapeNodeLabel(tradeLabel)}\")");
+                    nodeIds.Add(tradeNodeId);
+                    tradeNodeIds.Add(tradeNodeId);
+                    
+                    // Track this trade node for future reuse
+                    tradeNodes[tradeGroupKey] = tradeNodeId;
+                }
+            }
             
             if (config.IncludeTeamNodes)
             {
-                // For root connections from the initial trade, we never need a team node
-                // For subsequent transactions, only create team node if franchise changes
+                // For root connections, we don't need additional team nodes since they're already created
+                // For subsequent transactions, create team node if franchise changes or if we have a trade node
                 if (!isRootConnection)
                 {
-                    needsTeamNode = previousFranchiseId != null && previousFranchiseId != transaction.FranchiseId;
+                    needsTeamNode = (previousFranchiseId != null && previousFranchiseId != transaction.FranchiseId) || needsTradeNode;
+                }
+                
+                // Special case: If we have a trade node but no team node was set above, create one anyway
+                // This ensures trade nodes are properly connected through team nodes
+                if (needsTradeNode && !needsTeamNode)
+                {
+                    needsTeamNode = true;
                 }
                 
                 if (needsTeamNode)
@@ -275,8 +319,29 @@ namespace FantasyArchive.Data.Services
                 }
             }
 
-            // Connect nodes based on whether we have a team transition
-            if (needsTeamNode && teamNodeId != null)
+            // Connect nodes based on whether we have trade and/or team transitions
+            if (needsTradeNode && tradeNodeId != null)
+            {
+                // Parent -> Trade Node -> Team -> Transaction (or Parent -> Trade Node -> Transaction if no team)
+                edges.Add($"{parentNodeId} --> {tradeNodeId}");
+                
+                if (needsTeamNode && teamNodeId != null)
+                {
+                    edges.Add($"{tradeNodeId} --> {teamNodeId}");
+                    edges.Add($"{teamNodeId} --> {nodeId}");
+                }
+                else
+                {
+                    edges.Add($"{tradeNodeId} --> {nodeId}");
+                }
+                
+                // Connect to championship if applicable
+                if (championshipNodeId != null)
+                {
+                    edges.Add($"{nodeId} --> {championshipNodeId}");
+                }
+            }
+            else if (needsTeamNode && teamNodeId != null)
             {
                 // Parent -> Team -> Transaction
                 edges.Add($"{parentNodeId} --> {teamNodeId}");
@@ -303,29 +368,28 @@ namespace FantasyArchive.Data.Services
             // Process children recursively
             if (node.Children != null && node.Children.Count > 0)
             {
-                // Check if we have multiple trade children from the same transaction group and date
+                // Group all trade children by date to ensure proper trade → team → player structure
                 var tradeGroups = node.Children
                     .Where(child => child.Transaction.TransactionType == "Traded")
-                    .GroupBy(child => new { child.Transaction.TransactionGroupId, child.Transaction.Date })
-                    .Where(group => group.Count() > 1)
+                    .GroupBy(child => child.Transaction.Date)
+                    .Where(group => group.Count() >= 1)
                     .ToList();
 
                 var processedChildrenIds = new HashSet<string>();
 
-                // Process trade groups first
-                foreach (var tradeGroup in tradeGroups)
+            // Process trade groups first
+            foreach (var tradeGroup in tradeGroups)
+            {
+                var tradeChildren = tradeGroup.ToList();
+                
+                await ProcessTradeGroup(tradeChildren, nodeId, nodes, edges, nodeIds, teamNodeIds, championshipNodeIds, nonRootPlayerNodeIds, championshipNodes, tradeNodes, tradeNodeIds, originalTradeTeamIds, config, context, nodeCounter, depth);
+                
+                // Mark these children as processed
+                foreach (var child in tradeChildren)
                 {
-                    var tradeChildren = tradeGroup.ToList();
-                    await ProcessTradeGroup(tradeChildren, nodeId, nodes, edges, nodeIds, teamNodeIds, championshipNodeIds, nonRootPlayerNodeIds, championshipNodes, originalTradeTeamIds, config, context, nodeCounter, depth);
-                    
-                    // Mark these children as processed
-                    foreach (var child in tradeChildren)
-                    {
-                        processedChildrenIds.Add(child.Transaction.TransactionId);
-                    }
+                    processedChildrenIds.Add(child.Transaction.TransactionId);
                 }
-
-                // Process remaining children individually
+            }                // Process remaining children individually
                 foreach (var childNode in node.Children)
                 {
                     if (!processedChildrenIds.Contains(childNode.Transaction.TransactionId))
@@ -340,6 +404,8 @@ namespace FantasyArchive.Data.Services
                             championshipNodeIds,
                             nonRootPlayerNodeIds,
                             championshipNodes,
+                            tradeNodes,
+                            tradeNodeIds,
                             originalTradeTeamIds,
                             config,
                             context,
@@ -360,12 +426,14 @@ namespace FantasyArchive.Data.Services
             List<TradeTreeNodeJson> tradeChildren,
             string parentNodeId,
             List<string> nodes,
-            List<string> edges,
+            HashSet<string> edges,
             HashSet<string> nodeIds,
             HashSet<string> teamNodeIds,
             HashSet<string> championshipNodeIds,
             HashSet<string> nonRootPlayerNodeIds,
             Dictionary<string, string> championshipNodes,
+            Dictionary<string, string> tradeNodes,
+            HashSet<string> tradeNodeIds,
             HashSet<string> originalTradeTeamIds,
             MermaidConfig config,
             FantasyArchiveContext context,
@@ -376,11 +444,32 @@ namespace FantasyArchive.Data.Services
 
             var firstTrade = tradeChildren.First().Transaction;
             
-            // Create a trade node for this transaction group
-            var tradeNodeId = $"TRADE_{firstTrade.TransactionGroupId}_{nodeCounter.Next()}";
+            // Create a unique key for this trade group based on date and participating teams
+            var participatingTeams = tradeChildren
+                .Select(child => child.Transaction.FranchiseId)
+                .Distinct()
+                .OrderBy(id => id)
+                .ToList();
+            var tradeGroupKey = $"{firstTrade.Date:yyyy-MM-dd}_{string.Join("_", participatingTeams)}";
+            
+            // Check if we've already created a node for this trade
+            if (tradeNodes.TryGetValue(tradeGroupKey, out var existingTradeNodeId))
+            {
+                // Trade already exists, just connect parent to existing trade node
+                edges.Add($"{parentNodeId} --> {existingTradeNodeId}");
+                return;
+            }
+            
+            // Create a new trade node for this transaction group
+            var tradeIdForNode = firstTrade.TransactionGroupId ?? firstTrade.TransactionId.ToString();
+            var tradeNodeId = $"TRADE_{tradeIdForNode}_{nodeCounter.Next()}";
             var tradeLabel = $"🔄 Trade - {FormatDate(firstTrade.Date)}";
             nodes.Add($"{tradeNodeId}(\"{EscapeNodeLabel(tradeLabel)}\")");
             nodeIds.Add(tradeNodeId);
+            tradeNodeIds.Add(tradeNodeId);
+            
+            // Track this trade node for future reuse
+            tradeNodes[tradeGroupKey] = tradeNodeId;
             
             // Connect parent to trade node
             edges.Add($"{parentNodeId} --> {tradeNodeId}");
@@ -465,6 +554,8 @@ namespace FantasyArchive.Data.Services
                                 championshipNodeIds,
                                 nonRootPlayerNodeIds,
                                 championshipNodes,
+                                tradeNodes,
+                                tradeNodeIds,
                                 originalTradeTeamIds,
                                 config,
                                 context,

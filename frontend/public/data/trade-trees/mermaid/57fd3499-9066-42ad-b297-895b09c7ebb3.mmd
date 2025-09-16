@@ -15,11 +15,14 @@ flowchart TD
     NODE_61b63a42-68ef-4dd1-b255-24d63f7d3db2("🔄 Cooper Kupp - Nov 7, 2024")
     NODE_667ad38f-c2bd-4f79-8981-c251035800f2("🔄 James Conner - Nov 7, 2024")
     NODE_e9079c1a-2a24-4736-b966-f1f288f3723f("🔄 Cade Otton - Nov 7, 2024")
-    TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_6["Army of Dakness"]
-    NODE_9cb7f2ea-2dbb-4c0d-8722-31b51e3a2885("🔄 Cade Otton - Nov 22, 2024")
-    NODE_586497a1-618d-4b4e-bde1-24c5150caf78("🔄 Jake Ferguson - Nov 22, 2024")
+    TRADE_c5f7ffe4-03f4-4934-a180-962c6df2332d_6("🔄 Trade - Nov 22, 2024")
     TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_7["Army of Dakness"]
+    NODE_9cb7f2ea-2dbb-4c0d-8722-31b51e3a2885("🔄 Cade Otton - Nov 22, 2024")
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_8["She's the Fastest"]
+    NODE_586497a1-618d-4b4e-bde1-24c5150caf78("🔄 Jake Ferguson - Nov 22, 2024")
+    TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_9["Army of Dakness"]
     NODE_bff925fd-413c-4e1b-bd5f-9d54cb007e7c("🔄 Tommy DeVito - Nov 22, 2024")
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_10["She's the Fastest"]
     NODE_282e4726-e801-47e6-9874-df90f99fe84c("🔄 T.J. Watt - Nov 22, 2024")
     NODE_8c12d5f0-8c2e-44e4-8ce6-4daca624a615("🔄 J.K. Dobbins - Sep 26, 2024")
 
@@ -37,12 +40,15 @@ flowchart TD
     TEAM_4449259f-64af-44fd-9235-1facc0926234_5 --> NODE_61b63a42-68ef-4dd1-b255-24d63f7d3db2
     TEAM_4449259f-64af-44fd-9235-1facc0926234_5 --> NODE_667ad38f-c2bd-4f79-8981-c251035800f2
     TEAM_4449259f-64af-44fd-9235-1facc0926234_5 --> NODE_e9079c1a-2a24-4736-b966-f1f288f3723f
-    NODE_e9079c1a-2a24-4736-b966-f1f288f3723f --> TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_6
-    TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_6 --> NODE_9cb7f2ea-2dbb-4c0d-8722-31b51e3a2885
-    NODE_e9079c1a-2a24-4736-b966-f1f288f3723f --> NODE_586497a1-618d-4b4e-bde1-24c5150caf78
-    NODE_e9079c1a-2a24-4736-b966-f1f288f3723f --> TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_7
-    TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_7 --> NODE_bff925fd-413c-4e1b-bd5f-9d54cb007e7c
-    NODE_e9079c1a-2a24-4736-b966-f1f288f3723f --> NODE_282e4726-e801-47e6-9874-df90f99fe84c
+    NODE_e9079c1a-2a24-4736-b966-f1f288f3723f --> TRADE_c5f7ffe4-03f4-4934-a180-962c6df2332d_6
+    TRADE_c5f7ffe4-03f4-4934-a180-962c6df2332d_6 --> TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_7
+    TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_7 --> NODE_9cb7f2ea-2dbb-4c0d-8722-31b51e3a2885
+    TRADE_c5f7ffe4-03f4-4934-a180-962c6df2332d_6 --> TEAM_4449259f-64af-44fd-9235-1facc0926234_8
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_8 --> NODE_586497a1-618d-4b4e-bde1-24c5150caf78
+    TRADE_c5f7ffe4-03f4-4934-a180-962c6df2332d_6 --> TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_9
+    TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_9 --> NODE_bff925fd-413c-4e1b-bd5f-9d54cb007e7c
+    TRADE_c5f7ffe4-03f4-4934-a180-962c6df2332d_6 --> TEAM_4449259f-64af-44fd-9235-1facc0926234_10
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_10 --> NODE_282e4726-e801-47e6-9874-df90f99fe84c
     TEAM_2 --> NODE_8c12d5f0-8c2e-44e4-8ce6-4daca624a615
 
     %% Node styling
@@ -54,6 +60,6 @@ flowchart TD
     classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
     classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
 
-    class TEAM_1,TEAM_2,TEAM_b2220d1a-ff75-4622-9757-09978901110f_4,TEAM_4449259f-64af-44fd-9235-1facc0926234_5,TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_6,TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_7 teamNode
+    class TEAM_1,TEAM_2,TEAM_b2220d1a-ff75-4622-9757-09978901110f_4,TEAM_4449259f-64af-44fd-9235-1facc0926234_5,TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_7,TEAM_4449259f-64af-44fd-9235-1facc0926234_8,TEAM_40f7599b-e68f-4bf4-9553-bf7e10924635_9,TEAM_4449259f-64af-44fd-9235-1facc0926234_10 teamNode
     class NODE_3b42a806-e1a5-4804-9033-748803fe5c38,NODE_7486b713-436b-4ebb-977f-a5eee3be411f,NODE_32b27ada-9ca3-4df8-aa54-cdedae0327d7,NODE_639ff1b9-3f43-48f5-b518-e62da10b0078,NODE_9cb7f2ea-2dbb-4c0d-8722-31b51e3a2885,NODE_bff925fd-413c-4e1b-bd5f-9d54cb007e7c nonRootPlayerNode
-    class TRADE_MAIN tradeNode
+    class TRADE_MAIN,TRADE_f0b59f44-b3c9-4da4-a932-35e737b726f8_3,TRADE_c5f7ffe4-03f4-4934-a180-962c6df2332d_6 tradeNode

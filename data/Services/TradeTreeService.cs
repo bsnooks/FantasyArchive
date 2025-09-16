@@ -122,7 +122,7 @@ namespace FantasyArchive.Data.Services
                 .ToList();
 
             // Create root nodes for each traded player
-            var originalTradeTeamIds = tradedTransactions.Select(t => t.TeamId).Distinct().ToHashSet();
+            var originalTradeTeamIds = tradedTransactions.Select(t => t.Team!.FranchiseId).Distinct().ToHashSet();
             
             foreach (var tradedTransaction in tradedTransactions)
             {
@@ -251,7 +251,7 @@ namespace FantasyArchive.Data.Services
             currentNode.Children.Add(currentPlayerChildNode);
 
             // Only continue following the current player's path if they go to an original trade team
-            if (originalTradeTeamIds == null || originalTradeTeamIds.Contains(tradeTransaction.TeamId))
+            if (originalTradeTeamIds == null || originalTradeTeamIds.Contains(tradeTransaction.Team!.FranchiseId))
             {
                 await BuildTreeForward(currentPlayerChildNode, tradeTransaction.PlayerId, tradeTransaction.Date, tradeTransaction.TransactionId.ToString(), visitedTransactions, originalTradeTeamIds);
             }
@@ -272,7 +272,7 @@ namespace FantasyArchive.Data.Services
                 currentNode.Children.Add(childNode);
 
                 // Only continue following each player's path if they go to an original trade team
-                if (originalTradeTeamIds == null || originalTradeTeamIds.Contains(tradedTx.TeamId))
+                if (originalTradeTeamIds == null || originalTradeTeamIds.Contains(tradedTx.Team!.FranchiseId))
                 {
                     await BuildTreeForward(childNode, tradedTx.PlayerId, tradedTx.Date, tradedTx.TransactionId.ToString(), visitedTransactions, originalTradeTeamIds);
                 }

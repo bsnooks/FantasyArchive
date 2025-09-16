@@ -21,9 +21,6 @@ flowchart TD
     NODE_2dea93f1-599b-466b-a1ef-435fbc28b617("🔄 Alexander Mattison - Nov 3, 2021")
     NODE_0aabc8b9-5654-402a-9daa-6380be0715bb("🔄 Rashod Bateman - Nov 3, 2021")
     NODE_851afeda-f894-44df-a160-8034b7471846("🔄 Zack Moss - Nov 3, 2021")
-    TRADE_451b2038-42ba-4ba2-9eed-7d7e59e4281d_6("🔄 Trade - Nov 11, 2021")
-    TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_7["FB in the Groin"]
-    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_8["The Mojos"]
 
     TRADE_MAIN --> TEAM_1
     TRADE_MAIN --> TEAM_2
@@ -48,9 +45,7 @@ flowchart TD
     TEAM_1 --> NODE_0aabc8b9-5654-402a-9daa-6380be0715bb
     TEAM_2 --> NODE_851afeda-f894-44df-a160-8034b7471846
     NODE_851afeda-f894-44df-a160-8034b7471846 --> CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2021
-    NODE_851afeda-f894-44df-a160-8034b7471846 --> TRADE_451b2038-42ba-4ba2-9eed-7d7e59e4281d_6
-    TRADE_451b2038-42ba-4ba2-9eed-7d7e59e4281d_6 --> TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_7
-    TRADE_451b2038-42ba-4ba2-9eed-7d7e59e4281d_6 --> TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_8
+    NODE_851afeda-f894-44df-a160-8034b7471846 --> TRADE_451b2038-42ba-4ba2-9eed-7d7e59e4281d_3
 
     %% Node styling
     classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
@@ -61,6 +56,6 @@ flowchart TD
     classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
     classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
 
-    class TEAM_1,TEAM_2,TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_4,TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5,TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_7,TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_8 teamNode
+    class TEAM_1,TEAM_2,TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_4,TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5 teamNode
     class CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2021,CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2022,CHAMP_f483ecf1-cd17-4991-854b-e52dfc957b45_2024 championshipNode
-    class TRADE_MAIN tradeNode
+    class TRADE_MAIN,TRADE_451b2038-42ba-4ba2-9eed-7d7e59e4281d_3 tradeNode

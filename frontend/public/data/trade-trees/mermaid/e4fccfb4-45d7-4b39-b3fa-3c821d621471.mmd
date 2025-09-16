@@ -13,6 +13,8 @@ flowchart TD
     TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_5["leaf16"]
     NODE_d94a3670-dfbf-4c37-91c1-d9776711e83b("🔄 A.J. Brown - Aug 26, 2023")
     CHAMP_66fb98f4-89a7-45f9-893a-b41d71e6249d_2023["🏆 leaf16 - 2023 Champions!"]
+    NODE_66ce661e-c7b3-47f3-b522-24e21946dbba("🔒 A.J. Brown - Kept - Sep 7, 2023")
+    NODE_5c3d7ce1-e559-4d1e-8be6-e87ae55e700a("🔒 A.J. Brown - Kept - Sep 5, 2024")
     NODE_5e353109-3472-43ef-a0e0-668c3c5fc77f("🔄 Jalen Hurts - Aug 13, 2021")
     NODE_36c720dc-547d-4abb-9f99-a771c77a73dd("🔒 Jalen Hurts - Kept - Aug 31, 2021")
     NODE_24ecc5d2-74ae-4ca9-bb7d-bdf761878425("🔒 Jalen Hurts - Kept - Sep 8, 2022")
@@ -46,6 +48,9 @@ flowchart TD
     TRADE_1e0f92f5-f740-452e-960a-a92c22afa115_3 --> TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_5
     TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_5 --> NODE_d94a3670-dfbf-4c37-91c1-d9776711e83b
     NODE_d94a3670-dfbf-4c37-91c1-d9776711e83b --> CHAMP_66fb98f4-89a7-45f9-893a-b41d71e6249d_2023
+    NODE_d94a3670-dfbf-4c37-91c1-d9776711e83b --> NODE_66ce661e-c7b3-47f3-b522-24e21946dbba
+    NODE_66ce661e-c7b3-47f3-b522-24e21946dbba --> CHAMP_66fb98f4-89a7-45f9-893a-b41d71e6249d_2023
+    NODE_66ce661e-c7b3-47f3-b522-24e21946dbba --> NODE_5c3d7ce1-e559-4d1e-8be6-e87ae55e700a
     TEAM_1 --> NODE_5e353109-3472-43ef-a0e0-668c3c5fc77f
     NODE_5e353109-3472-43ef-a0e0-668c3c5fc77f --> NODE_36c720dc-547d-4abb-9f99-a771c77a73dd
     NODE_36c720dc-547d-4abb-9f99-a771c77a73dd --> NODE_24ecc5d2-74ae-4ca9-bb7d-bdf761878425
@@ -82,4 +87,4 @@ flowchart TD
     class TEAM_1,TEAM_2,TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_4,TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_5,TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_6 teamNode
     class CHAMP_66fb98f4-89a7-45f9-893a-b41d71e6249d_2023,CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2021,CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2022 championshipNode
     class NODE_8aa48c5d-0248-4f37-b939-44a21820aa03,NODE_e0000e36-700d-493f-b3eb-b050938564e6,NODE_b78b4765-cfe3-4682-a60a-e86c37e169f1 nonRootPlayerNode
-    class TRADE_MAIN tradeNode
+    class TRADE_MAIN,TRADE_1e0f92f5-f740-452e-960a-a92c22afa115_3 tradeNode

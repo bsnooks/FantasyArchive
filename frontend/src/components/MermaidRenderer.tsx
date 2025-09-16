@@ -25,6 +25,18 @@ const MermaidRenderer: React.FC<MermaidRendererProps> = ({
   const [pan, setPan] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const [lastTouchDistance, setLastTouchDistance] = useState(0);
+
+  // Helper function to calculate distance between two touches
+  const getTouchDistance = useCallback((touches: React.TouchList) => {
+    if (touches.length < 2) return 0;
+    const touch1 = touches[0];
+    const touch2 = touches[1];
+    return Math.sqrt(
+      Math.pow(touch2.clientX - touch1.clientX, 2) + 
+      Math.pow(touch2.clientY - touch1.clientY, 2)
+    );
+  }, []);
 
   // Update SVG transform for pan/zoom
   const updateSVGTransform = useCallback(() => {
@@ -37,85 +49,6 @@ const MermaidRenderer: React.FC<MermaidRendererProps> = ({
     }
   }, [pan, zoom, enablePanZoom]);
 
-  const renderDiagram = useCallback(async () => {
-    if (!diagram || !containerRef.current) {
-      return;
-    }
-
-    try {
-      setLoading(true);
-      setError(null);
-      
-      // Clear container
-      containerRef.current.innerHTML = '';
-      
-      // Import mermaid dynamically to avoid initialization issues
-      const mermaid = await import('mermaid');
-      
-      // Initialize with safe settings
-      mermaid.default.initialize({
-        startOnLoad: false,
-        theme: 'default',
-        securityLevel: 'loose',
-        fontFamily: 'Arial, sans-serif',
-        flowchart: {
-          useMaxWidth: !enablePanZoom && usePageScroll,
-          htmlLabels: false,
-          curve: 'linear',
-          diagramPadding: usePageScroll ? 10 : 20,
-          nodeSpacing: 50,
-          rankSpacing: 60
-        },
-        layout: 'dagre'
-      });
-
-      // Create a unique ID
-      const id = `diagram-${Date.now()}`;
-      
-      // Try to render using the parse + render approach
-      const isValid = await mermaid.default.parse(diagram);
-      if (!isValid) {
-        throw new Error('Invalid Mermaid syntax');
-      }
-
-      const { svg } = await mermaid.default.render(id, diagram);
-      
-      // Insert the SVG
-      containerRef.current.innerHTML = svg;
-      
-      // Get the SVG element and set up pan/zoom if enabled
-      const svgElement = containerRef.current.querySelector('svg');
-      if (svgElement) {
-        svgRef.current = svgElement;
-        
-        if (enablePanZoom) {
-          // Set up SVG for pan/zoom
-          svgElement.style.cursor = 'grab';
-          svgElement.style.width = '100%';
-          svgElement.style.height = '100%';
-          svgElement.style.display = 'block';
-          
-          // Apply initial transform
-          updateSVGTransform();
-        } else if (usePageScroll) {
-          // For page scroll mode, ensure SVG is properly sized for mobile
-          svgElement.style.maxWidth = '100%';
-          svgElement.style.height = 'auto';
-          svgElement.style.display = 'block';
-          svgElement.style.margin = '0 auto';
-        }
-      }
-      
-      console.log('MermaidRenderer: Render successful');
-      setLoading(false);
-      
-    } catch (err) {
-      console.error('MermaidRenderer: Render failed:', err);
-      setError(err instanceof Error ? err.message : 'Failed to render diagram');
-      setLoading(false);
-    }
-  }, [diagram, usePageScroll, enablePanZoom, updateSVGTransform]);
-
   // Mouse and touch event handlers for pan/zoom
   const handleMouseDown = useCallback((e: React.MouseEvent) => {
     if (!enablePanZoom) return;
@@ -127,11 +60,23 @@ const MermaidRenderer: React.FC<MermaidRendererProps> = ({
   }, [enablePanZoom, pan]);
 
   const handleTouchStart = useCallback((e: React.TouchEvent) => {
-    if (!enablePanZoom || e.touches.length !== 1) return;
-    setIsDragging(true);
-    const touch = e.touches[0];
-    setDragStart({ x: touch.clientX - pan.x, y: touch.clientY - pan.y });
-  }, [enablePanZoom, pan]);
+    if (!enablePanZoom) return;
+    
+    // Prevent default to avoid page zoom/scroll
+    e.preventDefault();
+    
+    if (e.touches.length === 1) {
+      // Single touch - start panning
+      setIsDragging(true);
+      const touch = e.touches[0];
+      setDragStart({ x: touch.clientX - pan.x, y: touch.clientY - pan.y });
+    } else if (e.touches.length === 2) {
+      // Two touches - start pinch zoom
+      setIsDragging(false);
+      const distance = getTouchDistance(e.touches);
+      setLastTouchDistance(distance);
+    }
+  }, [enablePanZoom, pan, getTouchDistance]);
 
   const handleMouseMove = useCallback((e: React.MouseEvent) => {
     if (!enablePanZoom || !isDragging) return;
@@ -143,15 +88,30 @@ const MermaidRenderer: React.FC<MermaidRendererProps> = ({
   }, [enablePanZoom, isDragging, dragStart]);
 
   const handleTouchMove = useCallback((e: React.TouchEvent) => {
-    if (!enablePanZoom || !isDragging || e.touches.length !== 1) return;
+    if (!enablePanZoom) return;
+    
+    // Always prevent default to stop page zoom/scroll
     e.preventDefault();
-    const touch = e.touches[0];
-    const newPan = {
-      x: touch.clientX - dragStart.x,
-      y: touch.clientY - dragStart.y
-    };
-    setPan(newPan);
-  }, [enablePanZoom, isDragging, dragStart]);
+    
+    if (e.touches.length === 1 && isDragging) {
+      // Single touch - panning
+      const touch = e.touches[0];
+      const newPan = {
+        x: touch.clientX - dragStart.x,
+        y: touch.clientY - dragStart.y
+      };
+      setPan(newPan);
+    } else if (e.touches.length === 2) {
+      // Two touches - pinch zoom
+      const distance = getTouchDistance(e.touches);
+      if (lastTouchDistance > 0) {
+        const scale = distance / lastTouchDistance;
+        const newZoom = Math.max(0.1, Math.min(3, zoom * scale));
+        setZoom(newZoom);
+      }
+      setLastTouchDistance(distance);
+    }
+  }, [enablePanZoom, isDragging, dragStart, getTouchDistance, lastTouchDistance, zoom]);
 
   const handleMouseUp = useCallback(() => {
     if (!enablePanZoom) return;
@@ -161,10 +121,24 @@ const MermaidRenderer: React.FC<MermaidRendererProps> = ({
     }
   }, [enablePanZoom]);
 
-  const handleTouchEnd = useCallback(() => {
+  const handleTouchEnd = useCallback((e: React.TouchEvent) => {
     if (!enablePanZoom) return;
-    setIsDragging(false);
-  }, [enablePanZoom]);
+    
+    // Prevent default to avoid page interactions
+    e.preventDefault();
+    
+    if (e.touches.length === 0) {
+      // All touches ended
+      setIsDragging(false);
+      setLastTouchDistance(0);
+    } else if (e.touches.length === 1) {
+      // One touch remaining - switch back to pan mode
+      setIsDragging(true);
+      const touch = e.touches[0];
+      setDragStart({ x: touch.clientX - pan.x, y: touch.clientY - pan.y });
+      setLastTouchDistance(0);
+    }
+  }, [enablePanZoom, pan]);
 
   const handleWheel = useCallback((e: React.WheelEvent) => {
     if (!enablePanZoom) return;
@@ -207,11 +181,99 @@ const MermaidRenderer: React.FC<MermaidRendererProps> = ({
     updateSVGTransform();
   }, [updateSVGTransform]);
 
+  // Only re-render diagram when diagram content or basic props change
   useEffect(() => {
+    const renderDiagramInternal = async () => {
+      if (!diagram || !containerRef.current) {
+        return;
+      }
+
+      try {
+        setLoading(true);
+        setError(null);
+        
+        // Reset pan/zoom state for new diagrams
+        setZoom(1);
+        setPan({ x: 0, y: 0 });
+        
+        // Clear container
+        containerRef.current.innerHTML = '';
+        
+        // Import mermaid dynamically to avoid initialization issues
+        const mermaid = await import('mermaid');
+        
+        // Initialize with safe settings
+        mermaid.default.initialize({
+          startOnLoad: false,
+          theme: 'default',
+          securityLevel: 'loose',
+          fontFamily: 'Arial, sans-serif',
+          flowchart: {
+            useMaxWidth: !enablePanZoom && usePageScroll,
+            htmlLabels: false,
+            curve: 'linear',
+            diagramPadding: usePageScroll ? 10 : 20,
+            nodeSpacing: 50,
+            rankSpacing: 60
+          },
+          layout: 'dagre'
+        });
+
+        // Create a unique ID
+        const id = `diagram-${Date.now()}`;
+        
+        // Try to render using the parse + render approach
+        const isValid = await mermaid.default.parse(diagram);
+        if (!isValid) {
+          throw new Error('Invalid Mermaid syntax');
+        }
+
+        const { svg } = await mermaid.default.render(id, diagram);
+        
+        // Insert the SVG
+        containerRef.current.innerHTML = svg;
+        
+        // Get the SVG element and set up pan/zoom if enabled
+        const svgElement = containerRef.current.querySelector('svg');
+        if (svgElement) {
+          svgRef.current = svgElement;
+          
+          if (enablePanZoom) {
+            // Set up SVG for pan/zoom
+            svgElement.style.cursor = 'grab';
+            svgElement.style.width = '100%';
+            svgElement.style.height = '100%';
+            svgElement.style.display = 'block';
+            
+            // Apply current transform state (use current values, not state dependencies)
+            const g = svgElement.querySelector('g');
+            if (g) {
+              g.style.transform = `translate(0px, 0px) scale(1)`;
+              g.style.transformOrigin = '0 0';
+            }
+          } else if (usePageScroll) {
+            // For page scroll mode, ensure SVG is properly sized for mobile
+            svgElement.style.maxWidth = '100%';
+            svgElement.style.height = 'auto';
+            svgElement.style.display = 'block';
+            svgElement.style.margin = '0 auto';
+          }
+        }
+        
+        console.log('MermaidRenderer: Render successful');
+        setLoading(false);
+        
+      } catch (err) {
+        console.error('MermaidRenderer: Render failed:', err);
+        setError(err instanceof Error ? err.message : 'Failed to render diagram');
+        setLoading(false);
+      }
+    };
+
     if (diagram) {
-      renderDiagram();
+      renderDiagramInternal();
     }
-  }, [diagram, renderDiagram]);
+  }, [diagram, usePageScroll, enablePanZoom]); // Only depend on diagram content and basic props
 
   return (
     <Card 
@@ -274,7 +336,10 @@ const MermaidRenderer: React.FC<MermaidRendererProps> = ({
             : { 
                 height: 'calc(100% - 60px)', 
                 overflow: enablePanZoom ? 'hidden' : 'auto', 
-                position: 'relative' 
+                position: 'relative',
+                touchAction: enablePanZoom ? 'none' : 'auto',
+                WebkitUserSelect: enablePanZoom ? 'none' : 'auto',
+                userSelect: enablePanZoom ? 'none' : 'auto'
               }
         }
         onMouseDown={handleMouseDown}
@@ -333,7 +398,9 @@ const MermaidRenderer: React.FC<MermaidRendererProps> = ({
             overflowX: usePageScroll && !enablePanZoom ? 'auto' : 'visible',
             overflowY: enablePanZoom ? 'hidden' : 'visible',
             WebkitOverflowScrolling: usePageScroll ? 'touch' : 'auto',
-            userSelect: enablePanZoom ? 'none' : 'auto'
+            userSelect: enablePanZoom ? 'none' : 'auto',
+            touchAction: enablePanZoom ? 'none' : 'auto',
+            WebkitTouchCallout: enablePanZoom ? 'none' : 'default'
           }}
         />
       </div>

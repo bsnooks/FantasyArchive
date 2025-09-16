@@ -11,7 +11,18 @@ flowchart TD
     NODE_315dcdec-74d4-409e-a6de-7faeccc194c9("🔄 DeMarco Murray - Sep 2, 2015")
     TEAM_b2220d1a-ff75-4622-9757-09978901110f_5["The Bad Guys"]
     NODE_dcd01172-2bef-4dc5-abd7-0eccecc83647("🔄 Matt Forte - Sep 2, 2015")
+    NODE_44a2383f-0804-4816-b350-7ff50d03651e("🔒 Matt Forte - Kept - Sep 3, 2015")
     NODE_be7b4e4f-e076-4723-be82-ca938ed204cf("🔄 Mike Evans - Sep 2, 2015")
+    NODE_19581a71-a095-4f8f-a6e1-07f201726bf9("🔒 Mike Evans - Kept - Sep 3, 2015")
+    NODE_622127fe-6031-42af-9722-e66dab6360f8("🔒 Mike Evans - Kept - Sep 8, 2016")
+    NODE_e3685689-7b38-4cdf-8a1b-ab0bd6c08100("🔒 Mike Evans - Kept - Sep 9, 2017")
+    NODE_5ec7aac1-6c96-469a-9451-de164b76bedb("🔒 Mike Evans - Kept - Sep 6, 2018")
+    CHAMP_b2220d1a-ff75-4622-9757-09978901110f_2018["🏆 The Bad Guys - 2018 Champions!"]
+    NODE_1fd5d3cf-5226-4ead-a766-7888afe7ee3c("🔒 Mike Evans - Kept - Sep 1, 2019")
+    CHAMP_b2220d1a-ff75-4622-9757-09978901110f_2019["🏆 The Bad Guys - 2019 Champions!"]
+    NODE_458d1722-24ba-433d-867e-de70c938d18e("🔒 Mike Evans - Kept - Sep 8, 2020")
+    NODE_d9b1986a-9bbb-47a9-ac9a-1ec018f51767("🔒 Mike Evans - Kept - Aug 31, 2021")
+    NODE_a08af59e-0aaa-4146-bf63-a7c59aca86ce("🔒 Mike Evans - Kept - Sep 8, 2022")
     NODE_118e32c0-67e9-4389-a4ee-c08ac6807fae("🔄 Brandon Marshall - Oct 10, 2013")
     NODE_92c37598-7382-4b39-9000-5d1c3f39f94d("🔒 Brandon Marshall - Kept - Sep 4, 2014")
     NODE_4cce0e57-7dc5-4594-bee2-7c0628468f55("🔒 Brandon Marshall - Kept - Sep 3, 2015")
@@ -27,7 +38,18 @@ flowchart TD
     TEAM_825928a9-7194-43aa-b7ae-fc78c2510b16_4 --> NODE_315dcdec-74d4-409e-a6de-7faeccc194c9
     TRADE_010a40ad-8d41-4e6b-8d47-6fc59b9e957e_3 --> TEAM_b2220d1a-ff75-4622-9757-09978901110f_5
     TEAM_b2220d1a-ff75-4622-9757-09978901110f_5 --> NODE_dcd01172-2bef-4dc5-abd7-0eccecc83647
+    NODE_dcd01172-2bef-4dc5-abd7-0eccecc83647 --> NODE_44a2383f-0804-4816-b350-7ff50d03651e
     TEAM_b2220d1a-ff75-4622-9757-09978901110f_5 --> NODE_be7b4e4f-e076-4723-be82-ca938ed204cf
+    NODE_be7b4e4f-e076-4723-be82-ca938ed204cf --> NODE_19581a71-a095-4f8f-a6e1-07f201726bf9
+    NODE_19581a71-a095-4f8f-a6e1-07f201726bf9 --> NODE_622127fe-6031-42af-9722-e66dab6360f8
+    NODE_622127fe-6031-42af-9722-e66dab6360f8 --> NODE_e3685689-7b38-4cdf-8a1b-ab0bd6c08100
+    NODE_e3685689-7b38-4cdf-8a1b-ab0bd6c08100 --> NODE_5ec7aac1-6c96-469a-9451-de164b76bedb
+    NODE_5ec7aac1-6c96-469a-9451-de164b76bedb --> CHAMP_b2220d1a-ff75-4622-9757-09978901110f_2018
+    NODE_5ec7aac1-6c96-469a-9451-de164b76bedb --> NODE_1fd5d3cf-5226-4ead-a766-7888afe7ee3c
+    NODE_1fd5d3cf-5226-4ead-a766-7888afe7ee3c --> CHAMP_b2220d1a-ff75-4622-9757-09978901110f_2019
+    NODE_1fd5d3cf-5226-4ead-a766-7888afe7ee3c --> NODE_458d1722-24ba-433d-867e-de70c938d18e
+    NODE_458d1722-24ba-433d-867e-de70c938d18e --> NODE_d9b1986a-9bbb-47a9-ac9a-1ec018f51767
+    NODE_d9b1986a-9bbb-47a9-ac9a-1ec018f51767 --> NODE_a08af59e-0aaa-4146-bf63-a7c59aca86ce
     TEAM_2 --> NODE_118e32c0-67e9-4389-a4ee-c08ac6807fae
     NODE_118e32c0-67e9-4389-a4ee-c08ac6807fae --> NODE_92c37598-7382-4b39-9000-5d1c3f39f94d
     NODE_92c37598-7382-4b39-9000-5d1c3f39f94d --> NODE_4cce0e57-7dc5-4594-bee2-7c0628468f55
@@ -43,5 +65,6 @@ flowchart TD
     classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
 
     class TEAM_1,TEAM_2,TEAM_825928a9-7194-43aa-b7ae-fc78c2510b16_4,TEAM_b2220d1a-ff75-4622-9757-09978901110f_5 teamNode
+    class CHAMP_b2220d1a-ff75-4622-9757-09978901110f_2018,CHAMP_b2220d1a-ff75-4622-9757-09978901110f_2019 championshipNode
     class NODE_315dcdec-74d4-409e-a6de-7faeccc194c9 nonRootPlayerNode
-    class TRADE_MAIN tradeNode
+    class TRADE_MAIN,TRADE_010a40ad-8d41-4e6b-8d47-6fc59b9e957e_3 tradeNode

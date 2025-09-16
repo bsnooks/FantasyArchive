@@ -12,6 +12,8 @@ flowchart TD
     NODE_8693b68b-52d4-41b9-a27e-deb74f13b0fd("🔄 Stefon Diggs - Aug 26, 2023")
     TEAM_825928a9-7194-43aa-b7ae-fc78c2510b16_5["Laters"]
     NODE_9ea91788-ae08-495b-b3a7-b8ff0b925014("🔄 Lamar Jackson - Aug 26, 2023")
+    NODE_e5015bab-df7d-485f-b42f-14c4e4b42969("🔒 Lamar Jackson - Kept - Sep 7, 2023")
+    NODE_29f2638b-f53e-4faf-948a-772548197e37("🔒 Lamar Jackson - Kept - Sep 5, 2024")
     NODE_c452ef52-b38f-4f9c-b12c-edb79c80b4e4("🔄 CeeDee Lamb - Nov 20, 2021")
     NODE_f1573b14-4f7f-43c1-a1f1-f4122d3e78de("🔄 Carson Wentz - Nov 20, 2021")
 
@@ -26,6 +28,8 @@ flowchart TD
     TEAM_b2220d1a-ff75-4622-9757-09978901110f_4 --> NODE_8693b68b-52d4-41b9-a27e-deb74f13b0fd
     TRADE_5a76fc85-475f-48c2-aa65-be54a3c9237d_3 --> TEAM_825928a9-7194-43aa-b7ae-fc78c2510b16_5
     TEAM_825928a9-7194-43aa-b7ae-fc78c2510b16_5 --> NODE_9ea91788-ae08-495b-b3a7-b8ff0b925014
+    NODE_9ea91788-ae08-495b-b3a7-b8ff0b925014 --> NODE_e5015bab-df7d-485f-b42f-14c4e4b42969
+    NODE_e5015bab-df7d-485f-b42f-14c4e4b42969 --> NODE_29f2638b-f53e-4faf-948a-772548197e37
     TEAM_2 --> NODE_c452ef52-b38f-4f9c-b12c-edb79c80b4e4
     TEAM_2 --> NODE_f1573b14-4f7f-43c1-a1f1-f4122d3e78de
 
@@ -40,4 +44,4 @@ flowchart TD
 
     class TEAM_1,TEAM_2,TEAM_b2220d1a-ff75-4622-9757-09978901110f_4,TEAM_825928a9-7194-43aa-b7ae-fc78c2510b16_5 teamNode
     class NODE_6a8c0e8f-ec43-41b0-b11d-9819c411127a,NODE_07a45acd-130a-422a-ae42-31f806f3a986,NODE_8693b68b-52d4-41b9-a27e-deb74f13b0fd nonRootPlayerNode
-    class TRADE_MAIN tradeNode
+    class TRADE_MAIN,TRADE_5a76fc85-475f-48c2-aa65-be54a3c9237d_3 tradeNode

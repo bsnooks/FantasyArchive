@@ -14,6 +14,9 @@ flowchart TD
     NODE_b8ffbf1c-7a5f-46fa-a1d3-1191d35db114("🔄 Dominic Rhodes - Nov 11, 2008")
     NODE_ad03f81a-4fb3-4ddd-af19-16136dca43ea("🔄 Joseph Addai - Nov 11, 2008")
     NODE_3fce7705-dd16-41d8-832f-99c179faf58b("🔄 Randy Moss - Nov 11, 2008")
+    NODE_f95d2b46-697f-407c-b0fa-b1da97fdc045("🔒 Randy Moss - Kept - Sep 2, 2009")
+    NODE_5245c67e-9bea-48b6-a31f-d4d43de0ad0b("🔒 Randy Moss - Kept - Sep 4, 2010")
+    CHAMP_f5908944-6efd-40eb-af54-6c53004e0e2f_2010["🏆 Mad Guys - 2010 Champions!"]
     NODE_cab12902-399d-4859-a4ae-fc1259fe9c05("🔄 Kellen Clemens - Oct 25, 2007")
 
     TRADE_MAIN --> TEAM_1
@@ -29,6 +32,9 @@ flowchart TD
     TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_5 --> NODE_b8ffbf1c-7a5f-46fa-a1d3-1191d35db114
     TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_5 --> NODE_ad03f81a-4fb3-4ddd-af19-16136dca43ea
     TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_5 --> NODE_3fce7705-dd16-41d8-832f-99c179faf58b
+    NODE_3fce7705-dd16-41d8-832f-99c179faf58b --> NODE_f95d2b46-697f-407c-b0fa-b1da97fdc045
+    NODE_f95d2b46-697f-407c-b0fa-b1da97fdc045 --> NODE_5245c67e-9bea-48b6-a31f-d4d43de0ad0b
+    NODE_5245c67e-9bea-48b6-a31f-d4d43de0ad0b --> CHAMP_f5908944-6efd-40eb-af54-6c53004e0e2f_2010
     TEAM_2 --> NODE_cab12902-399d-4859-a4ae-fc1259fe9c05
 
     %% Node styling
@@ -41,5 +47,6 @@ flowchart TD
     classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
 
     class TEAM_1,TEAM_2,TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_4,TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_5 teamNode
+    class CHAMP_f5908944-6efd-40eb-af54-6c53004e0e2f_2010 championshipNode
     class NODE_bae7b97b-9cd3-465f-96e8-dccd9024c915,NODE_9f1b91c7-3766-403e-a565-1e431d45c342,NODE_0e11436e-f6b8-4944-83b9-a01495af4281 nonRootPlayerNode
-    class TRADE_MAIN tradeNode
+    class TRADE_MAIN,TRADE_6798db21-367e-4650-aecc-0e1c95d218c9_3 tradeNode

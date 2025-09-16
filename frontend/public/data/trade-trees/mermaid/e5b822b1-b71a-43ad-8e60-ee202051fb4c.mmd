@@ -21,6 +21,15 @@ flowchart TD
     NODE_895daed7-a1a7-442a-bd0e-a77576099400("🔄 Jay Cutler - Nov 20, 2014")
     NODE_eab7f6ea-bcc2-4538-9d5e-a8479a76eacc("🔄 Frank Gore - Nov 20, 2014")
     NODE_b249b045-4e64-4783-b84d-a9c8a0eb5b47("🔄 T.Y. Hilton - Nov 20, 2014")
+    NODE_4270cdd0-d934-4925-a55d-68669dff2a08("🔒 T.Y. Hilton - Kept - Sep 3, 2015")
+    CHAMP_4449259f-64af-44fd-9235-1facc0926234_2015["🏆 She's the Fastest - 2015 Champions!"]
+    TRADE_9d0f1444-426c-46c3-a54b-120357805d45_7("🔄 Trade - Nov 26, 2015")
+    TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_8["FB in the Groin"]
+    NODE_c1c08c0f-eff3-4159-98fe-478bf04f82ba("🔄 T.Y. Hilton - Nov 26, 2015")
+    NODE_44dbebca-f23f-480d-bd24-89e8e0380788("🔄 Alex Smith - Nov 26, 2015")
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_9["She's the Fastest"]
+    NODE_a09f5579-b9e8-4c33-8b6b-6ddb25a8392a("🔄 Blake Bortles - Nov 26, 2015")
+    NODE_c0189ab0-4f28-44f2-8b72-ef3b03205b1b("🔒 Blake Bortles - Kept - Sep 8, 2016")
     NODE_85244198-fd54-4009-b7dd-bb08d103d451("🔄 Stevan Ridley - Aug 30, 2013")
     NODE_b29d597e-c62f-4f07-b77f-b7f0b16e0374("🔒 Stevan Ridley - Kept - Aug 31, 2013")
 
@@ -47,6 +56,16 @@ flowchart TD
     NODE_eab7f6ea-bcc2-4538-9d5e-a8479a76eacc --> CHAMP_4449259f-64af-44fd-9235-1facc0926234_2014
     TEAM_4449259f-64af-44fd-9235-1facc0926234_6 --> NODE_b249b045-4e64-4783-b84d-a9c8a0eb5b47
     NODE_b249b045-4e64-4783-b84d-a9c8a0eb5b47 --> CHAMP_4449259f-64af-44fd-9235-1facc0926234_2014
+    NODE_b249b045-4e64-4783-b84d-a9c8a0eb5b47 --> NODE_4270cdd0-d934-4925-a55d-68669dff2a08
+    NODE_4270cdd0-d934-4925-a55d-68669dff2a08 --> CHAMP_4449259f-64af-44fd-9235-1facc0926234_2015
+    NODE_4270cdd0-d934-4925-a55d-68669dff2a08 --> TRADE_9d0f1444-426c-46c3-a54b-120357805d45_7
+    TRADE_9d0f1444-426c-46c3-a54b-120357805d45_7 --> TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_8
+    TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_8 --> NODE_c1c08c0f-eff3-4159-98fe-478bf04f82ba
+    TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_8 --> NODE_44dbebca-f23f-480d-bd24-89e8e0380788
+    TRADE_9d0f1444-426c-46c3-a54b-120357805d45_7 --> TEAM_4449259f-64af-44fd-9235-1facc0926234_9
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_9 --> NODE_a09f5579-b9e8-4c33-8b6b-6ddb25a8392a
+    NODE_a09f5579-b9e8-4c33-8b6b-6ddb25a8392a --> CHAMP_4449259f-64af-44fd-9235-1facc0926234_2015
+    NODE_a09f5579-b9e8-4c33-8b6b-6ddb25a8392a --> NODE_c0189ab0-4f28-44f2-8b72-ef3b03205b1b
     TEAM_2 --> NODE_85244198-fd54-4009-b7dd-bb08d103d451
     NODE_85244198-fd54-4009-b7dd-bb08d103d451 --> NODE_b29d597e-c62f-4f07-b77f-b7f0b16e0374
 
@@ -59,7 +78,7 @@ flowchart TD
     classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
     classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
 
-    class TEAM_1,TEAM_2,TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_3,TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_5,TEAM_4449259f-64af-44fd-9235-1facc0926234_6 teamNode
-    class CHAMP_4449259f-64af-44fd-9235-1facc0926234_2014 championshipNode
-    class NODE_ada06d8a-119b-4f11-860e-d09e84f0da7a,NODE_2f1c54b7-79b1-42ba-86be-368f9df9f8b8,NODE_2215c458-b5ef-4a39-ac64-9cdaf1009882,NODE_10a1599e-35fd-4ee2-ba67-ebaedc077a9c,NODE_9762ce52-b8af-4f54-b51b-f4694eaf83ba nonRootPlayerNode
-    class TRADE_MAIN tradeNode
+    class TEAM_1,TEAM_2,TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_3,TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_5,TEAM_4449259f-64af-44fd-9235-1facc0926234_6,TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_8,TEAM_4449259f-64af-44fd-9235-1facc0926234_9 teamNode
+    class CHAMP_4449259f-64af-44fd-9235-1facc0926234_2014,CHAMP_4449259f-64af-44fd-9235-1facc0926234_2015 championshipNode
+    class NODE_ada06d8a-119b-4f11-860e-d09e84f0da7a,NODE_2f1c54b7-79b1-42ba-86be-368f9df9f8b8,NODE_2215c458-b5ef-4a39-ac64-9cdaf1009882,NODE_10a1599e-35fd-4ee2-ba67-ebaedc077a9c,NODE_9762ce52-b8af-4f54-b51b-f4694eaf83ba,NODE_c1c08c0f-eff3-4159-98fe-478bf04f82ba,NODE_44dbebca-f23f-480d-bd24-89e8e0380788 nonRootPlayerNode
+    class TRADE_MAIN,TRADE_334fd2fc-3d88-4aa9-bd98-483f1a121a54_4,TRADE_9d0f1444-426c-46c3-a54b-120357805d45_7 tradeNode

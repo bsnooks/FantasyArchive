@@ -19,6 +19,8 @@ flowchart TD
     TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_5["Mad Guys"]
     NODE_48d34fc7-64b0-40fc-a2f7-5070efe85ac5("🔄 Tom Brady - Nov 13, 2018")
     NODE_042035f4-e889-4a12-9d3b-6d381a41e476("🔄 Leonard Fournette - Nov 13, 2018")
+    NODE_7d9dff9a-6804-4749-8dc7-449f0c4ef28d("🔒 Leonard Fournette - Kept - Sep 1, 2019")
+    NODE_39d6fee8-69ee-4c7f-8923-c42ccde87213("🔒 Leonard Fournette - Kept - Sep 8, 2020")
     NODE_0d10ae17-3629-4234-a0f6-d95769896b3e("🔄 Calvin Ridley - Nov 13, 2018")
 
     TRADE_MAIN --> TEAM_1
@@ -39,6 +41,8 @@ flowchart TD
     TRADE_71584b6e-bde0-48dd-aedb-da917acc6657_3 --> TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_5
     TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_5 --> NODE_48d34fc7-64b0-40fc-a2f7-5070efe85ac5
     TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_5 --> NODE_042035f4-e889-4a12-9d3b-6d381a41e476
+    NODE_042035f4-e889-4a12-9d3b-6d381a41e476 --> NODE_7d9dff9a-6804-4749-8dc7-449f0c4ef28d
+    NODE_7d9dff9a-6804-4749-8dc7-449f0c4ef28d --> NODE_39d6fee8-69ee-4c7f-8923-c42ccde87213
     TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_5 --> NODE_0d10ae17-3629-4234-a0f6-d95769896b3e
 
     %% Node styling
@@ -52,4 +56,4 @@ flowchart TD
 
     class TEAM_1,TEAM_2,TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4,TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_5 teamNode
     class NODE_b9ea11fb-8b61-4a37-972f-ae12e52f0997,NODE_7744e2af-5009-4007-8abb-6f69f1b655f4,NODE_1890d1d2-cb42-4002-8937-7f27c92ad735 nonRootPlayerNode
-    class TRADE_MAIN tradeNode
+    class TRADE_MAIN,TRADE_71584b6e-bde0-48dd-aedb-da917acc6657_3 tradeNode

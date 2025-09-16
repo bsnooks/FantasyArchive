@@ -33,6 +33,9 @@ flowchart TD
     NODE_b45fa4c8-b974-47f3-b697-cb85e118b640("🔄 Rob Gronkowski - Aug 27, 2018")
     TEAM_825928a9-7194-43aa-b7ae-fc78c2510b16_11["Laters"]
     NODE_579c84ce-db8e-4124-807c-b46740300dee("🔄 Jared Goff - Aug 27, 2018")
+    NODE_d43cf8a7-cdaf-4bbe-ba8f-92f827f69380("🔒 Jared Goff - Kept - Sep 6, 2018")
+    NODE_9bdb69d4-1541-4328-b113-7fc4cbd55219("🔒 Jared Goff - Kept - Sep 1, 2019")
+    NODE_024c0f11-7d1f-4aee-9fde-6d5c744778a4("🔒 Jared Goff - Kept - Sep 8, 2020")
 
     TRADE_MAIN --> TEAM_1
     TRADE_MAIN --> TEAM_2
@@ -66,6 +69,9 @@ flowchart TD
     TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_10 --> NODE_b45fa4c8-b974-47f3-b697-cb85e118b640
     TRADE_ce7f766f-c31a-4476-b7f0-5cf3746dfea7_9 --> TEAM_825928a9-7194-43aa-b7ae-fc78c2510b16_11
     TEAM_825928a9-7194-43aa-b7ae-fc78c2510b16_11 --> NODE_579c84ce-db8e-4124-807c-b46740300dee
+    NODE_579c84ce-db8e-4124-807c-b46740300dee --> NODE_d43cf8a7-cdaf-4bbe-ba8f-92f827f69380
+    NODE_d43cf8a7-cdaf-4bbe-ba8f-92f827f69380 --> NODE_9bdb69d4-1541-4328-b113-7fc4cbd55219
+    NODE_9bdb69d4-1541-4328-b113-7fc4cbd55219 --> NODE_024c0f11-7d1f-4aee-9fde-6d5c744778a4
 
     %% Node styling
     classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
@@ -79,4 +85,4 @@ flowchart TD
     class TEAM_1,TEAM_2,TEAM_2feaf03e-fb22-498e-ac8f-e596b6ba7810_4,TEAM_4449259f-64af-44fd-9235-1facc0926234_5,TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_7,TEAM_825928a9-7194-43aa-b7ae-fc78c2510b16_8,TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_10,TEAM_825928a9-7194-43aa-b7ae-fc78c2510b16_11 teamNode
     class CHAMP_825928a9-7194-43aa-b7ae-fc78c2510b16_2012 championshipNode
     class NODE_d658db76-f15a-4f96-ab00-0e1799749223,NODE_9cce0738-0e27-49f7-9e4b-701bbb3eec7c,NODE_34399eb1-7af4-49ce-88fa-7e1eda142ce4,NODE_b45fa4c8-b974-47f3-b697-cb85e118b640 nonRootPlayerNode
-    class TRADE_MAIN tradeNode
+    class TRADE_MAIN,TRADE_d7b31491-b826-48d7-862e-f557878fe5b7_3,TRADE_347511d1-8464-4416-9286-046b0c18f7eb_6,TRADE_ce7f766f-c31a-4476-b7f0-5cf3746dfea7_9 tradeNode

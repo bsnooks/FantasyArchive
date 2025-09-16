@@ -18,6 +18,10 @@ flowchart TD
     NODE_5d5d8e60-bf6b-445b-a0d4-1c55e9fa6097("🔄 Tony Pollard - Nov 11, 2021")
     TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5["FB in the Groin"]
     NODE_e07cacc3-49e5-4e21-a75f-83405ff4f57b("🔄 Justin Jefferson - Nov 11, 2021")
+    NODE_4946198b-20fe-4992-b2c1-86ea0927d0be("🔒 Justin Jefferson - Kept - Sep 8, 2022")
+    NODE_5ec147e7-5e82-4d0c-b521-0e892098b936("🔒 Justin Jefferson - Kept - Sep 7, 2023")
+    NODE_df0f34bb-4caf-4282-a80d-31c385b4ab7c("🔒 Justin Jefferson - Kept - Sep 5, 2024")
+    CHAMP_f483ecf1-cd17-4991-854b-e52dfc957b45_2024["🏆 FB in the Groin - 2024 Champions!"]
     NODE_580e8901-5bae-437e-8fae-ca50a9ef5c01("🔄 Zack Moss - Nov 11, 2021")
 
     TRADE_MAIN --> TEAM_1
@@ -38,6 +42,10 @@ flowchart TD
     NODE_5d5d8e60-bf6b-445b-a0d4-1c55e9fa6097 --> CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2021
     TRADE_451b2038-42ba-4ba2-9eed-7d7e59e4281d_3 --> TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5
     TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5 --> NODE_e07cacc3-49e5-4e21-a75f-83405ff4f57b
+    NODE_e07cacc3-49e5-4e21-a75f-83405ff4f57b --> NODE_4946198b-20fe-4992-b2c1-86ea0927d0be
+    NODE_4946198b-20fe-4992-b2c1-86ea0927d0be --> NODE_5ec147e7-5e82-4d0c-b521-0e892098b936
+    NODE_5ec147e7-5e82-4d0c-b521-0e892098b936 --> NODE_df0f34bb-4caf-4282-a80d-31c385b4ab7c
+    NODE_df0f34bb-4caf-4282-a80d-31c385b4ab7c --> CHAMP_f483ecf1-cd17-4991-854b-e52dfc957b45_2024
     TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5 --> NODE_580e8901-5bae-437e-8fae-ca50a9ef5c01
 
     %% Node styling
@@ -50,6 +58,6 @@ flowchart TD
     classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
 
     class TEAM_1,TEAM_2,TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_4,TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5 teamNode
-    class CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2021 championshipNode
+    class CHAMP_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2021,CHAMP_f483ecf1-cd17-4991-854b-e52dfc957b45_2024 championshipNode
     class NODE_4d79c91c-098e-498f-9aa9-ee835c90d399,NODE_5d5d8e60-bf6b-445b-a0d4-1c55e9fa6097 nonRootPlayerNode
-    class TRADE_MAIN tradeNode
+    class TRADE_MAIN,TRADE_451b2038-42ba-4ba2-9eed-7d7e59e4281d_3 tradeNode

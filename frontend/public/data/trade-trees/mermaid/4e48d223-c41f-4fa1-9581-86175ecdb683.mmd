@@ -12,6 +12,17 @@ flowchart TD
     NODE_88e39c37-4ef4-4dfe-95ab-8ef4fa6e7510("🔄 Jeff Garcia - Aug 30, 2003")
     TEAM_4449259f-64af-44fd-9235-1facc0926234_5["She's the Fastest"]
     NODE_54a38002-f7d6-42a1-b6d7-3d606c4d29eb("🔄 Ahman Green - Aug 30, 2003")
+    NODE_d90fa2bc-d615-4c15-b92e-ec3c0987bdcb("🔒 Ahman Green - Kept - Aug 31, 2003")
+    NODE_bb591076-00fd-46ff-8fca-57a733298354("🔒 Ahman Green - Kept - Aug 26, 2004")
+    NODE_72e8d4f1-c979-4872-b3d7-31fcb81f1deb("🔒 Ahman Green - Kept - Aug 31, 2005")
+    TRADE_ea3ce1e3-1a8d-483a-b2b4-fdb86202ab19_6("🔄 Trade - Oct 8, 2005")
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_7["The Mojos"]
+    NODE_5b2543a1-e7eb-408a-aa25-e48f4df3097f("🔄 Ahman Green - Oct 8, 2005")
+    NODE_f1432809-2834-46aa-a414-f2f0be38821d("🔄 Najeh Davenport - Oct 8, 2005")
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_8["She's the Fastest"]
+    NODE_a984137f-4a5a-4a83-9815-054c0f2aaaac("🔄 Chris Brown - Oct 8, 2005")
+    NODE_afabe833-f607-425f-a62c-2b3aca15d977("🔄 Alex Smith - Oct 8, 2005")
+    NODE_a2dcf430-d316-4b37-b35d-cf3ed0dca282("🔄 Travis Henry - Oct 8, 2005")
     NODE_69e80202-ccfb-4376-9fc9-a8f5e792e36e("🔄 Terry Glenn - Nov 12, 2002")
     NODE_deddad04-613b-468a-8549-d3919a601e67("🔄 Joey Harrington - Nov 12, 2002")
 
@@ -26,6 +37,17 @@ flowchart TD
     TEAM_2feaf03e-fb22-498e-ac8f-e596b6ba7810_4 --> NODE_88e39c37-4ef4-4dfe-95ab-8ef4fa6e7510
     TRADE_d1608bf6-f3da-462c-a2dd-a7b858982098_3 --> TEAM_4449259f-64af-44fd-9235-1facc0926234_5
     TEAM_4449259f-64af-44fd-9235-1facc0926234_5 --> NODE_54a38002-f7d6-42a1-b6d7-3d606c4d29eb
+    NODE_54a38002-f7d6-42a1-b6d7-3d606c4d29eb --> NODE_d90fa2bc-d615-4c15-b92e-ec3c0987bdcb
+    NODE_d90fa2bc-d615-4c15-b92e-ec3c0987bdcb --> NODE_bb591076-00fd-46ff-8fca-57a733298354
+    NODE_bb591076-00fd-46ff-8fca-57a733298354 --> NODE_72e8d4f1-c979-4872-b3d7-31fcb81f1deb
+    NODE_72e8d4f1-c979-4872-b3d7-31fcb81f1deb --> TRADE_ea3ce1e3-1a8d-483a-b2b4-fdb86202ab19_6
+    TRADE_ea3ce1e3-1a8d-483a-b2b4-fdb86202ab19_6 --> TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_7
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_7 --> NODE_5b2543a1-e7eb-408a-aa25-e48f4df3097f
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_7 --> NODE_f1432809-2834-46aa-a414-f2f0be38821d
+    TRADE_ea3ce1e3-1a8d-483a-b2b4-fdb86202ab19_6 --> TEAM_4449259f-64af-44fd-9235-1facc0926234_8
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_8 --> NODE_a984137f-4a5a-4a83-9815-054c0f2aaaac
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_8 --> NODE_afabe833-f607-425f-a62c-2b3aca15d977
+    TEAM_4449259f-64af-44fd-9235-1facc0926234_8 --> NODE_a2dcf430-d316-4b37-b35d-cf3ed0dca282
     TEAM_1 --> NODE_69e80202-ccfb-4376-9fc9-a8f5e792e36e
     TEAM_2 --> NODE_deddad04-613b-468a-8549-d3919a601e67
 
@@ -38,6 +60,6 @@ flowchart TD
     classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
     classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
 
-    class TEAM_1,TEAM_2,TEAM_2feaf03e-fb22-498e-ac8f-e596b6ba7810_4,TEAM_4449259f-64af-44fd-9235-1facc0926234_5 teamNode
-    class NODE_b2756f31-3303-4aaf-9dfe-101f92297c28,NODE_0c41bae0-18c2-4b22-b15b-3553d2ce6e6d,NODE_88e39c37-4ef4-4dfe-95ab-8ef4fa6e7510 nonRootPlayerNode
-    class TRADE_MAIN tradeNode
+    class TEAM_1,TEAM_2,TEAM_2feaf03e-fb22-498e-ac8f-e596b6ba7810_4,TEAM_4449259f-64af-44fd-9235-1facc0926234_5,TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_7,TEAM_4449259f-64af-44fd-9235-1facc0926234_8 teamNode
+    class NODE_b2756f31-3303-4aaf-9dfe-101f92297c28,NODE_0c41bae0-18c2-4b22-b15b-3553d2ce6e6d,NODE_88e39c37-4ef4-4dfe-95ab-8ef4fa6e7510,NODE_5b2543a1-e7eb-408a-aa25-e48f4df3097f,NODE_f1432809-2834-46aa-a414-f2f0be38821d nonRootPlayerNode
+    class TRADE_MAIN,TRADE_d1608bf6-f3da-462c-a2dd-a7b858982098_3,TRADE_ea3ce1e3-1a8d-483a-b2b4-fdb86202ab19_6 tradeNode

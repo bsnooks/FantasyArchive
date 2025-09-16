@@ -19,6 +19,7 @@ flowchart TD
     NODE_44dbebca-f23f-480d-bd24-89e8e0380788("🔄 Alex Smith - Nov 26, 2015")
     TEAM_4449259f-64af-44fd-9235-1facc0926234_5["She's the Fastest"]
     NODE_a09f5579-b9e8-4c33-8b6b-6ddb25a8392a("🔄 Blake Bortles - Nov 26, 2015")
+    NODE_c0189ab0-4f28-44f2-8b72-ef3b03205b1b("🔒 Blake Bortles - Kept - Sep 8, 2016")
     NODE_10a1599e-35fd-4ee2-ba67-ebaedc077a9c("🔄 Charles Sims - Nov 20, 2014")
     NODE_9762ce52-b8af-4f54-b51b-f4694eaf83ba("🔄 Ryan Mallett - Nov 20, 2014")
 
@@ -43,6 +44,7 @@ flowchart TD
     TRADE_9d0f1444-426c-46c3-a54b-120357805d45_3 --> TEAM_4449259f-64af-44fd-9235-1facc0926234_5
     TEAM_4449259f-64af-44fd-9235-1facc0926234_5 --> NODE_a09f5579-b9e8-4c33-8b6b-6ddb25a8392a
     NODE_a09f5579-b9e8-4c33-8b6b-6ddb25a8392a --> CHAMP_4449259f-64af-44fd-9235-1facc0926234_2015
+    NODE_a09f5579-b9e8-4c33-8b6b-6ddb25a8392a --> NODE_c0189ab0-4f28-44f2-8b72-ef3b03205b1b
     TEAM_1 --> NODE_10a1599e-35fd-4ee2-ba67-ebaedc077a9c
     TEAM_1 --> NODE_9762ce52-b8af-4f54-b51b-f4694eaf83ba
 
@@ -58,4 +60,4 @@ flowchart TD
     class TEAM_1,TEAM_2,TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_4,TEAM_4449259f-64af-44fd-9235-1facc0926234_5 teamNode
     class CHAMP_4449259f-64af-44fd-9235-1facc0926234_2014,CHAMP_4449259f-64af-44fd-9235-1facc0926234_2015 championshipNode
     class NODE_c1c08c0f-eff3-4159-98fe-478bf04f82ba,NODE_44dbebca-f23f-480d-bd24-89e8e0380788 nonRootPlayerNode
-    class TRADE_MAIN tradeNode
+    class TRADE_MAIN,TRADE_9d0f1444-426c-46c3-a54b-120357805d45_3 tradeNode
