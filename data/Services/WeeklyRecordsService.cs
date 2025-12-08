@@ -151,6 +151,65 @@ public class WeeklyRecordsService
             .Take(recordCount)
             .ToList();
 
+        // Calculate lowest winning scores and highest losing scores
+        var winnerRecords = new List<WeeklyRecord>();
+        var loserRecords = new List<WeeklyRecord>();
+
+        foreach (var match in seasonMatches.Where(m => !m.Tied))
+        {
+            var winnerScore = seasonScores.FirstOrDefault(s => s.TeamID == match.WinningTeamID && s.Week == match.Week);
+            var loserScore = seasonScores.FirstOrDefault(s => s.TeamID == match.LosingTeamID && s.Week == match.Week);
+            
+            if (winnerScore != null && loserScore != null)
+            {
+                // Lowest winning scores
+                winnerRecords.Add(new WeeklyRecord
+                {
+                    RecordType = "LowestWinningScore",
+                    Description = "Lowest Winning Score",
+                    Value = winnerScore.Points,
+                    FranchiseName = match.WinningTeam?.Franchise?.MainName ?? "Unknown",
+                    FranchiseId = match.WinningTeam?.FranchiseId ?? Guid.Empty,
+                    TeamName = match.WinningTeam?.Name ?? "Unknown",
+                    Year = match.Year,
+                    Week = match.Week,
+                    OpponentFranchiseName = match.LosingTeam?.Franchise?.MainName ?? "Unknown",
+                    OpponentFranchiseId = match.LosingTeam?.FranchiseId,
+                    OpponentTeamName = match.LosingTeam?.Name ?? "Unknown",
+                    OpponentScore = loserScore.Points
+                });
+
+                // Highest losing scores
+                loserRecords.Add(new WeeklyRecord
+                {
+                    RecordType = "HighestLosingScore",
+                    Description = "Highest Losing Score",
+                    Value = loserScore.Points,
+                    FranchiseName = match.LosingTeam?.Franchise?.MainName ?? "Unknown",
+                    FranchiseId = match.LosingTeam?.FranchiseId ?? Guid.Empty,
+                    TeamName = match.LosingTeam?.Name ?? "Unknown",
+                    Year = match.Year,
+                    Week = match.Week,
+                    OpponentFranchiseName = match.WinningTeam?.Franchise?.MainName ?? "Unknown",
+                    OpponentFranchiseId = match.WinningTeam?.FranchiseId,
+                    OpponentTeamName = match.WinningTeam?.Name ?? "Unknown",
+                    OpponentScore = winnerScore.Points
+                });
+            }
+        }
+
+        // Lowest winning scores
+        records.LowestWinningScores = winnerRecords
+            .OrderBy(r => r.Value)
+            .Take(recordCount)
+            .ToList();
+
+        // Highest losing scores
+        records.HighestLosingScores = loserRecords
+            .OrderByDescending(r => r.Value)
+            .Take(recordCount)
+            .ToList();
+
         return records;
     }
 
@@ -288,6 +347,65 @@ public class WeeklyRecordsService
         records.LowestScoringMatchups = matchupRecords
             .Where(r => r.Value > 0)
             .OrderBy(r => r.Value)
+            .Take(recordCount)
+            .ToList();
+
+        // Calculate lowest winning scores and highest losing scores
+        var winnerRecords = new List<WeeklyRecord>();
+        var loserRecords = new List<WeeklyRecord>();
+
+        foreach (var match in allMatches.Where(m => !m.Tied))
+        {
+            var winnerScore = allScores.FirstOrDefault(s => s.TeamID == match.WinningTeamID && s.Week == match.Week && s.Year == match.Year);
+            var loserScore = allScores.FirstOrDefault(s => s.TeamID == match.LosingTeamID && s.Week == match.Week && s.Year == match.Year);
+            
+            if (winnerScore != null && loserScore != null)
+            {
+                // Lowest winning scores
+                winnerRecords.Add(new WeeklyRecord
+                {
+                    RecordType = "LowestWinningScore",
+                    Description = "Lowest Winning Score",
+                    Value = winnerScore.Points,
+                    FranchiseName = match.WinningTeam?.Franchise?.MainName ?? "Unknown",
+                    FranchiseId = match.WinningTeam?.FranchiseId ?? Guid.Empty,
+                    TeamName = match.WinningTeam?.Name ?? "Unknown",
+                    Year = match.Year,
+                    Week = match.Week,
+                    OpponentFranchiseName = match.LosingTeam?.Franchise?.MainName ?? "Unknown",
+                    OpponentFranchiseId = match.LosingTeam?.FranchiseId,
+                    OpponentTeamName = match.LosingTeam?.Name ?? "Unknown",
+                    OpponentScore = loserScore.Points
+                });
+
+                // Highest losing scores
+                loserRecords.Add(new WeeklyRecord
+                {
+                    RecordType = "HighestLosingScore",
+                    Description = "Highest Losing Score",
+                    Value = loserScore.Points,
+                    FranchiseName = match.LosingTeam?.Franchise?.MainName ?? "Unknown",
+                    FranchiseId = match.LosingTeam?.FranchiseId ?? Guid.Empty,
+                    TeamName = match.LosingTeam?.Name ?? "Unknown",
+                    Year = match.Year,
+                    Week = match.Week,
+                    OpponentFranchiseName = match.WinningTeam?.Franchise?.MainName ?? "Unknown",
+                    OpponentFranchiseId = match.WinningTeam?.FranchiseId,
+                    OpponentTeamName = match.WinningTeam?.Name ?? "Unknown",
+                    OpponentScore = winnerScore.Points
+                });
+            }
+        }
+
+        // Lowest winning scores
+        records.LowestWinningScores = winnerRecords
+            .OrderBy(r => r.Value)
+            .Take(recordCount)
+            .ToList();
+
+        // Highest losing scores
+        records.HighestLosingScores = loserRecords
+            .OrderByDescending(r => r.Value)
             .Take(recordCount)
             .ToList();
 

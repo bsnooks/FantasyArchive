@@ -25,4 +25,6 @@ public class WeeklyRecordsCollection
     public List<WeeklyRecord> SmallestMarginsOfVictory { get; set; } = new();
     public List<WeeklyRecord> HighestScoringMatchups { get; set; } = new();
     public List<WeeklyRecord> LowestScoringMatchups { get; set; } = new();
+    public List<WeeklyRecord> LowestWinningScores { get; set; } = new();
+    public List<WeeklyRecord> HighestLosingScores { get; set; } = new();
 }

@@ -609,6 +609,69 @@ namespace FantasyArchive.Data.Services
                 });
             }
 
+            // Convert smallest victory margins
+            if (weeklyRecords.SmallestMarginsOfVictory.Any())
+            {
+                records.Add(new LeagueRecords
+                {
+                    RecordTitle = year.HasValue ? $"{year} Smallest Victory Margins" : "Smallest Victory Margins",
+                    PositiveRecord = false,
+                    RecordType = year.HasValue ? RecordType.Season : RecordType.AllTime,
+                    Records = weeklyRecords.SmallestMarginsOfVictory.Take(10).Select((wr, index) => new LeagueRecord
+                    {
+                        Rank = index + 1,
+                        FranchiseId = wr.FranchiseId,
+                        Franchise = wr.FranchiseId != Guid.Empty ? new Franchise { FranchiseId = wr.FranchiseId, MainName = wr.FranchiseName ?? "Unknown" } : null,
+                        RecordValue = $"{wr.Value:F1} pts",
+                        RecordNumericValue = wr.Value,
+                        Year = wr.Year,
+                        Week = wr.Week
+                    }).ToList()
+                });
+            }
+
+            // Convert lowest winning scores
+            if (weeklyRecords.LowestWinningScores.Any())
+            {
+                records.Add(new LeagueRecords
+                {
+                    RecordTitle = year.HasValue ? $"{year} Lowest Winning Scores" : "Lowest Winning Scores",
+                    PositiveRecord = false,
+                    RecordType = year.HasValue ? RecordType.Season : RecordType.AllTime,
+                    Records = weeklyRecords.LowestWinningScores.Take(10).Select((wr, index) => new LeagueRecord
+                    {
+                        Rank = index + 1,
+                        FranchiseId = wr.FranchiseId,
+                        Franchise = wr.FranchiseId != Guid.Empty ? new Franchise { FranchiseId = wr.FranchiseId, MainName = wr.FranchiseName ?? "Unknown" } : null,
+                        RecordValue = $"{wr.Value:F1} pts",
+                        RecordNumericValue = wr.Value,
+                        Year = wr.Year,
+                        Week = wr.Week
+                    }).ToList()
+                });
+            }
+
+            // Convert highest losing scores
+            if (weeklyRecords.HighestLosingScores.Any())
+            {
+                records.Add(new LeagueRecords
+                {
+                    RecordTitle = year.HasValue ? $"{year} Highest Losing Scores" : "Highest Losing Scores",
+                    PositiveRecord = true,
+                    RecordType = year.HasValue ? RecordType.Season : RecordType.AllTime,
+                    Records = weeklyRecords.HighestLosingScores.Take(10).Select((wr, index) => new LeagueRecord
+                    {
+                        Rank = index + 1,
+                        FranchiseId = wr.FranchiseId,
+                        Franchise = wr.FranchiseId != Guid.Empty ? new Franchise { FranchiseId = wr.FranchiseId, MainName = wr.FranchiseName ?? "Unknown" } : null,
+                        RecordValue = $"{wr.Value:F1} pts",
+                        RecordNumericValue = wr.Value,
+                        Year = wr.Year,
+                        Week = wr.Week
+                    }).ToList()
+                });
+            }
+
             return records;
         }
     }
