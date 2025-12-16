@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace FantasyArchive.Data.Models;
@@ -20,8 +21,10 @@ public class TeamScore
     public double Points { get; set; }
     
     public double? ProjectedPoints { get; set; }
-    
+
     // Navigation properties
+
+    public virtual League? League { get; set; }
     public virtual Team? Team { get; set; }
     public virtual Season? Season { get; set; }
 }

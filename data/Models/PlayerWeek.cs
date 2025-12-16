@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -23,7 +24,7 @@ namespace FantasyArchive.Data.Models
         
         [Required]
         [Column("TeamId")]
-        public Guid TeamId { get; set; }
+        public Guid? TeamId { get; set; }
         
         [Column("Started")]
         public bool Started { get; set; }
@@ -65,5 +66,16 @@ namespace FantasyArchive.Data.Models
         
         [ForeignKey("TeamId")]
         public virtual Team Team { get; set; } = null!;
+        [NotMapped]
+        public double Points => CalculatePoints();
+
+        public override string ToString()
+        {
+            return $"{PlayerID}.{Year}.{Week}";
+        }
+        public double CalculatePoints()
+        {
+            return PassYards / 25.0 + PassTDs * 4 + RushYards / 10.0 + RushTDs * 6 + RecYards / 10.0 + RecTDs * 6;
+        }
     }
 }

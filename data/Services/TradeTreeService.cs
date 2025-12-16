@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using FantasyArchive.Data.Models;
+using System.Collections.Generic;
+using System;
+using System.Threading.Tasks;
+using System.Linq;
 
 namespace FantasyArchive.Data.Services
 {
@@ -69,7 +73,7 @@ namespace FantasyArchive.Data.Services
                     FranchiseColor = group.Key.FranchiseColor,
                     Players = group.Select(t => new TradedPlayer
                     {
-                        PlayerId = t.Player?.PlayerID ?? 0,
+                        PlayerID = t.Player?.PlayerID ?? 0,
                         PlayerName = t.Player?.Name ?? "Unknown Player",
                         PrimaryPosition = t.Player?.PrimaryPosition ?? "Unknown"
                     }).ToList()
@@ -133,7 +137,7 @@ namespace FantasyArchive.Data.Services
                 };
 
                 // Follow this player's transaction history forward
-                await BuildTreeForward(rootNode, tradedTransaction.PlayerId, tradedTransaction.Date, tradedTransaction.TransactionId.ToString(), null, originalTradeTeamIds);
+                await BuildTreeForward(rootNode, tradedTransaction.PlayerID, tradedTransaction.Date, tradedTransaction.TransactionId.ToString(), null, originalTradeTeamIds);
                 tradeTree.RootNodes.Add(rootNode);
             }
 
@@ -153,7 +157,7 @@ namespace FantasyArchive.Data.Services
                 .Include(t => t.Player)
                 .Include(t => t.Team)
                     .ThenInclude(t => t!.Franchise)
-                .Where(t => t.PlayerId == playerId && t.Date >= fromDate);
+                .Where(t => t.PlayerID == playerId && t.Date >= fromDate);
                 
             if (excludeTransactionId != null)
             {
@@ -233,13 +237,13 @@ namespace FantasyArchive.Data.Services
                     IsEndNode = false
                 };
                 currentNode.Children.Add(childNode);
-                await BuildTreeForward(childNode, tradeTransaction.PlayerId, tradeTransaction.Date, tradeTransaction.TransactionId.ToString(), visitedTransactions, originalTradeTeamIds);
+                await BuildTreeForward(childNode, tradeTransaction.PlayerID, tradeTransaction.Date, tradeTransaction.TransactionId.ToString(), visitedTransactions, originalTradeTeamIds);
                 return;
             }
 
             // Get all traded transactions in this group, excluding the current player to avoid infinite loops
             var tradedTransactions = transactionGroup.Transactions
-                .Where(t => t.TransactionType == TransactionType.Traded && t.PlayerId != tradeTransaction.PlayerId)
+                .Where(t => t.TransactionType == TransactionType.Traded && t.PlayerID != tradeTransaction.PlayerID)
                 .ToList();
 
             // First, create the child node for the current player's trade
@@ -253,7 +257,7 @@ namespace FantasyArchive.Data.Services
             // Only continue following the current player's path if they go to an original trade team
             if (originalTradeTeamIds == null || originalTradeTeamIds.Contains(tradeTransaction.Team!.FranchiseId))
             {
-                await BuildTreeForward(currentPlayerChildNode, tradeTransaction.PlayerId, tradeTransaction.Date, tradeTransaction.TransactionId.ToString(), visitedTransactions, originalTradeTeamIds);
+                await BuildTreeForward(currentPlayerChildNode, tradeTransaction.PlayerID, tradeTransaction.Date, tradeTransaction.TransactionId.ToString(), visitedTransactions, originalTradeTeamIds);
             }
             else
             {
@@ -274,7 +278,7 @@ namespace FantasyArchive.Data.Services
                 // Only continue following each player's path if they go to an original trade team
                 if (originalTradeTeamIds == null || originalTradeTeamIds.Contains(tradedTx.Team!.FranchiseId))
                 {
-                    await BuildTreeForward(childNode, tradedTx.PlayerId, tradedTx.Date, tradedTx.TransactionId.ToString(), visitedTransactions, originalTradeTeamIds);
+                    await BuildTreeForward(childNode, tradedTx.PlayerID, tradedTx.Date, tradedTx.TransactionId.ToString(), visitedTransactions, originalTradeTeamIds);
                 }
                 else
                 {
@@ -346,7 +350,7 @@ namespace FantasyArchive.Data.Services
 
     public class TradedPlayer
     {
-        public int PlayerId { get; set; }
+        public int PlayerID { get; set; }
         public string PlayerName { get; set; } = string.Empty;
         public string PrimaryPosition { get; set; } = string.Empty;
     }

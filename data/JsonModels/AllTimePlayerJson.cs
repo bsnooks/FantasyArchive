@@ -1,8 +1,10 @@
+using System.Collections.Generic;
+
 namespace FantasyArchive.Data.JsonModels
 {
     public class AllTimePlayerJson
     {
-        public int PlayerId { get; set; }
+        public int PlayerID { get; set; }
         public string PlayerName { get; set; } = string.Empty;
         public string Position { get; set; } = string.Empty;
         public decimal TotalPoints { get; set; }

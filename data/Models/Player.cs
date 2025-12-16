@@ -34,6 +34,9 @@ namespace FantasyArchive.Data.Models
         public int BirthYear { get; set; }
         
         // Navigation properties
-        public virtual ICollection<PlayerWeek> PlayerWeeks { get; set; } = new List<PlayerWeek>();
+        public virtual ICollection<DraftPick> DraftPicks { get; set; }
+        public virtual ICollection<PlayerSeason> PlayerSeasons { get; set; }
+        public virtual ICollection<PlayerWeek> PlayerWeeks { get; set; }
+        public virtual ICollection<Transaction> Transactions { get; set; }
     }
 }

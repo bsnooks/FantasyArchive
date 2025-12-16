@@ -1,4 +1,8 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using FantasyArchive.Data.JsonModels;
 using FantasyArchive.Data.Models;
 using Microsoft.EntityFrameworkCore;
@@ -279,7 +283,7 @@ namespace FantasyArchive.Data.Services
 
             // Create transaction node
             var dateText = config.IncludeTransactionDates ? $" - {FormatDate(transaction.Date)}" : "";
-            var playerIdText = config.IncludePlayerIds ? $" ({transaction.PlayerId})" : "";
+            var playerIdText = config.IncludePlayerIds ? $" ({transaction.PlayerID})" : "";
             var transactionIcon = GetTransactionIcon(transaction.TransactionType);
 
             var nodeLabel = $"{transactionIcon} {transaction.PlayerName}{playerIdText}";
@@ -504,7 +508,7 @@ namespace FantasyArchive.Data.Services
                     
                     // Create player node
                     var dateText = config.IncludeTransactionDates ? $" - {FormatDate(transaction.Date)}" : "";
-                    var playerIdText = config.IncludePlayerIds ? $" ({transaction.PlayerId})" : "";
+                    var playerIdText = config.IncludePlayerIds ? $" ({transaction.PlayerID})" : "";
                     var transactionIcon = GetTransactionIcon(transaction.TransactionType);
 
                     var nodeLabel = $"{transactionIcon} {transaction.PlayerName}{playerIdText}{dateText}";

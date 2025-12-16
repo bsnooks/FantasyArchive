@@ -38,3 +38,6 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+.vs/
+backend/appsettings.Development.json
+backend/appsettings.json

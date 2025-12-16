@@ -5,7 +5,15 @@ namespace FantasyArchive.Data.Models
 {
     public class Season
     {
-        public Guid LeagueId { get; set; }
+        public Season()
+        {
+            Drafts = new HashSet<Draft>();
+            Matches = new HashSet<Match>();
+            TeamScores = new HashSet<TeamScore>();
+            Teams = new HashSet<Team>();
+        }
+
+        public Guid LeagueID { get; set; }
         public int Year { get; set; }
         public bool? Finished { get; set; }
         public int? YahooGameId { get; set; }
@@ -17,8 +25,12 @@ namespace FantasyArchive.Data.Models
         public int? WeeklyRosterSyncWeek { get; set; }
         public int? WeekStatsSyncWeek { get; set; }
         public int CurrentWeek { get; set; }
-        
-        // Navigation properties
-        public virtual ICollection<Team> Teams { get; set; } = new List<Team>();
+
+        public virtual League League { get; set; }
+        public virtual ICollection<Draft> Drafts { get; set; }
+        public virtual ICollection<Match> Matches { get; set; }
+        public virtual ICollection<TeamScore> TeamScores { get; set; }
+        public virtual ICollection<Team> Teams { get; set; }
+
     }
 }

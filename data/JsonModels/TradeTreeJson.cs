@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 namespace FantasyArchive.Data.JsonModels
 {
     public class TransactionJson
@@ -9,7 +12,7 @@ namespace FantasyArchive.Data.JsonModels
         public string FranchiseId { get; set; } = string.Empty;
         public string FranchiseName { get; set; } = string.Empty;
         public string TransactionType { get; set; } = string.Empty;
-        public int PlayerId { get; set; }
+        public int PlayerID { get; set; }
         public string PlayerName { get; set; } = string.Empty;
         public DateTime Date { get; set; }
         public string? Description { get; set; }
@@ -51,7 +54,7 @@ namespace FantasyArchive.Data.JsonModels
 
     public class TradedPlayerJson
     {
-        public int PlayerId { get; set; }
+        public int PlayerID { get; set; }
         public string PlayerName { get; set; } = string.Empty;
         public string PrimaryPosition { get; set; } = string.Empty;
     }

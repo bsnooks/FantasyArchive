@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fantasy Archive - Yahoo Sync</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .status {
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .status.info { background: #e3f2fd; color: #0277bd; border: 1px solid #81d4fa; }
+        .status.success { background: #e8f5e8; color: #2e7d32; border: 1px solid #81c784; }
+        .status.error { background: #ffebee; color: #c62828; border: 1px solid #ef9a9a; }
+        .status.warning { background: #fff3e0; color: #ef6c00; border: 1px solid #ffcc02; }
+        
+        .btn {
+            background: #1976d2;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn:hover { background: #1565c0; }
+        .btn:disabled { background: #ccc; cursor: not-allowed; }
+        .btn.success { background: #4caf50; }
+        .btn.success:hover { background: #45a049; }
+        
+        .form-group {
+            margin: 20px 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .sync-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+        
+        .setup-step {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #1976d2;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .setup-step h3 {
+            margin-top: 0;
+            color: #1976d2;
+        }
+        
+        .team-mapping {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #dee2e6;
+        }
+        
+        .team-mapping h4 {
+            margin-top: 0;
+            color: #495057;
+        }
+        
+        .mapping-controls {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .mapped {
+            border-left-color: #4caf50 !important;
+            background: #f8fff8 !important;
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .log {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            max-height: 300px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏈 Fantasy Archive - Yahoo Sync</h1>
+        
+        <div id="auth-section">
+            <h2>Step 1: Yahoo Authentication</h2>
+            <div id="auth-status" class="status info">
+                Ready to authenticate with Yahoo Fantasy Sports
+            </div>
+            
+            <button id="auth-btn" class="btn" onclick="startAuth()">
+                🔐 Authorize with Yahoo
+            </button>
+            
+            <div class="form-group" style="margin-top: 20px;">
+                <label for="league-key">League Key (e.g., 461.l.62201):</label>
+                <input type="text" id="league-key" placeholder="461.l.62201" value="461.l.62201">
+                <small style="color: #666;">Format: GameID.l.LeagueID (2025 NFL is game ID 461)</small>
+            </div>
+        </div>
+        
+        <div id="sync-section" class="sync-section" style="display: none;">
+            <h2>Fantasy Archive Setup</h2>
+            <div id="sync-status" class="status info">
+                Authentication successful! Follow the setup steps below.
+            </div>
+
+            <!-- Setup Steps -->
+            <div id="setup-steps">
+                <!-- Step 1: League Sync -->
+                <div class="setup-step" id="step-1">
+                    <h3>Step 1: Sync League Information</h3>
+                    <div id="step1-status" class="status info">
+                        First, we need to sync the basic league information from Yahoo.
+                    </div>
+                    <button id="step1-btn" class="btn success" onclick="syncLeague()">
+                        📊 Sync League Info
+                    </button>
+                </div>
+
+                <!-- Step 2: Teams Sync -->
+                <div class="setup-step" id="step-2" style="display: none;">
+                    <h3>Step 2: Sync Teams from Yahoo</h3>
+                    <div id="step2-status" class="status info">
+                        Now sync the teams from Yahoo Fantasy.
+                    </div>
+                    <button id="step2-btn" class="btn success" onclick="syncTeams()">
+                        Fetch Teams from Yahoo
+                    </button>
+                </div>
+
+                <!-- Step 3: Map Teams to Franchises -->
+                <div class="setup-step" id="step-3" style="display: none;">
+                    <h3>Step 3: Map Teams to Franchises & Owners</h3>
+                    <div id="step3-status" class="status info">
+                        Map each Yahoo team to existing franchises and owners.
+                    </div>
+                    
+                    <div id="team-mapping-container" style="margin-top: 20px;">
+                        <!-- Team mapping controls will be populated here -->
+                    </div>
+                    
+                    <button id="step3-btn" class="btn success" onclick="validateMappings()" style="margin-top: 20px;">
+                        ✅ Validate Mappings
+                    </button>
+                </div>
+
+                <!-- Step 4: Ready for Full Sync -->
+                <div class="setup-step" id="step-4" style="display: none;">
+                    <h3>Step 4: Ready for Data Sync</h3>
+                    <div id="step4-status" class="status success">
+                        🎉 Setup complete! You can now sync other data types.
+                    </div>
+                    
+                    <div style="margin: 20px 0;">
+                        <button class="btn success" onclick="syncData('transactions')">💰 Sync Transactions</button>
+                        <button class="btn success" onclick="syncData('matchups')">⚔️ Sync Matchups</button>
+                        <button class="btn success" onclick="syncData('standings')">🏆 Sync Standings</button>
+                        <button class="btn success" onclick="syncData('draft')">🎯 Sync Draft</button>
+                        <button class="btn success" onclick="syncData('keepers')">🔒 Sync Keepers</button>
+                    </div>
+                    
+                    <button class="btn" onclick="syncData('season')" style="font-size: 18px; padding: 15px 30px;">
+                        🚀 Sync Entire Season
+                    </button>
+                </div>
+            </div>
+            
+            <button class="btn" onclick="checkDatabase()" style="margin-top: 20px;">
+                🗄️ Check Database
+            </button>
+        </div>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Processing...</p>
+        </div>
+        
+        <div id="log-section" style="display: none;">
+            <h3>Sync Log</h3>
+            <div id="log" class="log"></div>
+        </div>
+    </div>
+
+    <script>
+        let accessToken = '';
+        let yahooTeams = [];
+        let franchises = [];
+        let owners = [];
+        
+        // Check if we're handling an OAuth callback
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const code = urlParams.get('code');
+            const error = urlParams.get('error');
+            
+            if (error) {
+                showStatus('auth-status', 'error', `OAuth Error: ${error} - ${urlParams.get('error_description')}`);
+            } else if (code) {
+                exchangeCodeForToken(code);
+            }
+        };
+        
+        function startAuth() {
+            const redirectUri = `${window.location.origin}/oauth/callback`;
+            const authUrl = `/api/auth/yahoo/url?redirectUri=${encodeURIComponent(redirectUri)}`;
+            
+            fetch(authUrl)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.authUrl) {
+                        window.location.href = data.authUrl;
+                    } else {
+                        showStatus('auth-status', 'error', 'Failed to get authorization URL');
+                    }
+                })
+                .catch(error => {
+                    showStatus('auth-status', 'error', `Error: ${error.message}`);
+                });
+        }
+        
+        function exchangeCodeForToken(code) {
+            showLoading(true);
+            showStatus('auth-status', 'info', 'Exchanging code for access token...');
+            
+            const redirectUri = `${window.location.origin}/oauth/callback`;
+            const tokenUrl = `/api/auth/yahoo/token?code=${encodeURIComponent(code)}&redirectUri=${encodeURIComponent(redirectUri)}`;
+            
+            fetch(tokenUrl)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.accessToken) {
+                        accessToken = data.accessToken;
+                        showStatus('auth-status', 'success', '✅ Authentication successful!');
+                        document.getElementById('auth-section').style.display = 'none';
+                        document.getElementById('sync-section').style.display = 'block';
+                        
+                        // Clean up URL
+                        window.history.replaceState({}, document.title, window.location.pathname);
+                        
+                        // Check setup status
+                        checkSetupStatus();
+                    } else {
+                        showStatus('auth-status', 'error', `Token exchange failed: ${data.error || 'Unknown error'}`);
+                    }
+                })
+                .catch(error => {
+                    showStatus('auth-status', 'error', `Error: ${error.message}`);
+                })
+                .finally(() => {
+                    showLoading(false);
+                });
+        }
+        
+        async function syncData(dataType) {
+            const leagueKey = document.getElementById('league-key').value;
+            if (!leagueKey) {
+                showStatus('sync-status', 'error', 'Please enter a league key');
+                return;
+            }
+            
+            showLoading(true);
+            showStatus('sync-status', 'info', `Syncing ${dataType}...`);
+            addToLog(`Starting ${dataType} sync for league ${leagueKey}...`);
+            
+            try {
+                const response = await fetch(`/api/yahoosync/${dataType}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${accessToken}`
+                    },
+                    body: JSON.stringify({
+                        leagueKey: leagueKey,
+                        year: 2025
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    showStatus('sync-status', 'success', `✅ ${dataType} sync completed successfully`);
+                    addToLog(`✅ ${dataType} sync completed: ${result.message}`);
+                } else {
+                    showStatus('sync-status', 'error', `❌ ${dataType} sync failed: ${result.error}`);
+                    addToLog(`❌ ${dataType} sync failed: ${result.error}`);
+                }
+            } catch (error) {
+                showStatus('sync-status', 'error', `❌ ${dataType} sync error: ${error.message}`);
+                addToLog(`❌ ${dataType} sync error: ${error.message}`);
+            } finally {
+                showLoading(false);
+            }
+        }
+        
+        async function syncAllData() {
+            const syncTypes = ['league', 'teams', 'players', 'transactions', 'draft'];
+            
+            for (const dataType of syncTypes) {
+                await syncData(dataType);
+                await new Promise(resolve => setTimeout(resolve, 1000)); // Wait 1 second between calls
+            }
+            
+            showStatus('sync-status', 'success', '🎉 All data synced successfully!');
+            addToLog('🎉 Full sync process completed!');
+        }
+        
+        async function checkDatabase() {
+            showLoading(true);
+            addToLog('Checking database contents...');
+            
+            try {
+                const response = await fetch('/api/database/check');
+                const result = await response.json();
+                
+                if (response.ok) {
+                    showStatus('sync-status', 'success', '📊 Database check completed');
+                    addToLog(`Database Status: ${result.databaseStatus}`);
+                    addToLog(`Record Counts - Seasons: ${result.recordCounts.seasons}, Teams: ${result.recordCounts.teams}, Franchises: ${result.recordCounts.franchises}`);
+                    
+                    if (result.recentTeams && result.recentTeams.length > 0) {
+                        addToLog('Recent Teams:');
+                        result.recentTeams.forEach(team => {
+                            addToLog(`  - ${team.name} (${team.year}) [Yahoo ID: ${team.yahooTeamId}]`);
+                        });
+                    }
+                } else {
+                    showStatus('sync-status', 'error', `❌ Database check failed: ${result.error}`);
+                    addToLog(`❌ Database check failed: ${result.error}`);
+                }
+            } catch (error) {
+                showStatus('sync-status', 'error', `❌ Database check error: ${error.message}`);
+                addToLog(`❌ Database check error: ${error.message}`);
+            } finally {
+                showLoading(false);
+            }
+        }
+        
+        async function checkSetupStatus() {
+            const leagueKey = document.getElementById('league-key').value;
+            
+            try {
+                const response = await fetch(`/api/setup/setup-status/${encodeURIComponent(leagueKey)}/2025`);
+                const status = await response.json();
+                
+                if (status.leagueSynced) {
+                    showStep(2);
+                    document.getElementById('step1-btn').textContent = '✅ League Synced';
+                    document.getElementById('step1-btn').disabled = true;
+                }
+                
+                if (status.teamsSynced) {
+                    showStep(3);
+                    document.getElementById('step2-btn').textContent = '✅ Teams Synced';
+                    document.getElementById('step2-btn').disabled = true;
+                    await loadTeamMappingData();
+                }
+                
+                if (status.teamsMapped) {
+                    showStep(4);
+                    document.getElementById('step3-btn').textContent = '✅ Mappings Complete';
+                    document.getElementById('step3-btn').disabled = true;
+                }
+                
+                if (status.canSyncOtherData) {
+                    addToLog('🎉 Setup complete! Ready for full data sync.');
+                }
+                
+            } catch (error) {
+                console.log('Setup status check failed:', error.message);
+            }
+        }
+        
+        function showStep(stepNumber) {
+            for (let i = 1; i <= stepNumber; i++) {
+                document.getElementById(`step-${i}`).style.display = 'block';
+            }
+        }
+        
+        async function syncLeague() {
+            const leagueKey = document.getElementById('league-key').value;
+            
+            showLoading(true);
+            showStatus('step1-status', 'info', 'Syncing league information...');
+            addToLog('Starting league sync...');
+            
+            try {
+                const response = await fetch('/api/yahoosync/league', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${accessToken}`
+                    },
+                    body: JSON.stringify({
+                        leagueKey: leagueKey,
+                        year: 2025
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    showStatus('step1-status', 'success', '✅ League sync completed!');
+                    addToLog('✅ League sync completed successfully');
+                    document.getElementById('step1-btn').textContent = '✅ League Synced';
+                    document.getElementById('step1-btn').disabled = true;
+                    showStep(2);
+                } else {
+                    showStatus('step1-status', 'error', `❌ League sync failed: ${result.error}`);
+                    addToLog(`❌ League sync failed: ${result.error}`);
+                }
+            } catch (error) {
+                showStatus('step1-status', 'error', `❌ League sync error: ${error.message}`);
+                addToLog(`❌ League sync error: ${error.message}`);
+            } finally {
+                showLoading(false);
+            }
+        }
+        
+        async function syncTeams() {
+            const leagueKey = document.getElementById('league-key').value;
+            
+            showLoading(true);
+            showStatus('step2-status', 'info', 'Fetching teams from Yahoo...');
+            addToLog('Starting teams fetch...');
+            
+            try {
+                const response = await fetch('/api/teammapping/fetch-yahoo-teams', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${accessToken}`
+                    },
+                    body: JSON.stringify({
+                        leagueKey: leagueKey
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    yahooTeams = result.teams;
+                    showStatus('step2-status', 'success', `✅ Teams fetched: ${yahooTeams.length} teams`);
+                    addToLog(`✅ Teams fetched successfully: ${yahooTeams.length} teams found`);
+                    document.getElementById('step2-btn').textContent = '✅ Teams Fetched';
+                    document.getElementById('step2-btn').disabled = true;
+                    showStep(3);
+                    await loadTeamMappingData();
+                } else {
+                    showStatus('step2-status', 'error', `❌ Teams fetch failed: ${result.error}`);
+                    addToLog(`❌ Teams fetch failed: ${result.error}`);
+                }
+            } catch (error) {
+                showStatus('step2-status', 'error', `❌ Teams fetch error: ${error.message}`);
+                addToLog(`❌ Teams fetch error: ${error.message}`);
+            } finally {
+                showLoading(false);
+            }
+        }
+        
+        async function loadTeamMappingData() {
+            try {
+                // Load franchises and owners from database
+                const response = await fetch('/api/teammapping/franchise-owner-data');
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    franchises = data.franchises;
+                    owners = data.owners;
+                    
+                    createTeamMappingUI();
+                    addToLog(`✅ Loaded ${franchises.length} franchises and ${owners.length} owners for mapping`);
+                } else {
+                    const error = await response.json();
+                    throw new Error(error.error || 'Failed to load franchise and owner data');
+                }
+                
+            } catch (error) {
+                addToLog(`❌ Failed to load mapping data: ${error.message}`);
+                showStatus('step3-status', 'error', `❌ Failed to load mapping data: ${error.message}`);
+            }
+        }
+        
+        function createTeamMappingUI() {
+            const container = document.getElementById('team-mapping-container');
+            container.innerHTML = '';
+            
+            if (yahooTeams.length === 0) {
+                container.innerHTML = '<p>No teams found. Please fetch teams first.</p>';
+                return;
+            }
+
+            // Add header with submit button
+            const headerDiv = document.createElement('div');
+            headerDiv.innerHTML = `
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h3>Map Teams to Franchises and Owners</h3>
+                    <button id="submit-mapping-btn" class="btn success" onclick="submitTeamMappings()" disabled>
+                        Create Teams in Database
+                    </button>
+                </div>
+                <p>Map each Yahoo team to an existing franchise and owner:</p>
+            `;
+            container.appendChild(headerDiv);
+            
+            yahooTeams.forEach(team => {
+                const teamDiv = document.createElement('div');
+                teamDiv.className = 'team-mapping';
+                teamDiv.id = `team-${team.yahooTeamId}`;
+                
+                teamDiv.innerHTML = `
+                    <h4>${team.teamName} (Manager: ${team.managerName})</h4>
+                    <p style="color: #666; font-size: 14px;">Yahoo Team ID: ${team.yahooTeamId}</p>
+                    <div class="mapping-controls">
+                        <div>
+                            <label>Franchise:</label>
+                            <select id="franchise-${team.yahooTeamId}" onchange="validateMappings()">
+                                <option value="">-- Select Franchise --</option>
+                                ${franchises.map(f => `
+                                    <option value="${f.franchiseId}">
+                                        ${f.mainName}
+                                    </option>
+                                `).join('')}
+                            </select>
+                        </div>
+                        <div>
+                            <label>Owner:</label>
+                            <select id="owner-${team.yahooTeamId}" onchange="validateMappings()">
+                                <option value="">-- Select Owner --</option>
+                                ${owners.map(o => `
+                                    <option value="${o.ownerId}">
+                                        ${o.name}
+                                    </option>
+                                `).join('')}
+                            </select>
+                        </div>
+                    </div>
+                `;
+                
+                container.appendChild(teamDiv);
+            });
+        }
+        
+        function validateMappings() {
+            const allMapped = yahooTeams.every(team => {
+                const franchiseSelect = document.getElementById(`franchise-${team.yahooTeamId}`);
+                const ownerSelect = document.getElementById(`owner-${team.yahooTeamId}`);
+                return franchiseSelect.value && ownerSelect.value;
+            });
+            
+            const submitBtn = document.getElementById('submit-mapping-btn');
+            submitBtn.disabled = !allMapped;
+            
+            if (allMapped) {
+                showStatus('step3-status', 'success', '✅ All teams ready to map!');
+            } else {
+                showStatus('step3-status', 'info', '⚠️ Please select franchise and owner for all teams');
+            }
+        }
+        
+        async function submitTeamMappings() {
+            const leagueKey = document.getElementById('league-key').value;
+            
+            // Collect all mappings
+            const teamMappings = yahooTeams.map(team => ({
+                yahooTeamId: team.yahooTeamId,
+                teamName: team.teamName,
+                franchiseId: document.getElementById(`franchise-${team.yahooTeamId}`).value,
+                ownerId: document.getElementById(`owner-${team.yahooTeamId}`).value
+            }));
+            
+            showLoading(true);
+            showStatus('step3-status', 'info', 'Creating teams in database...');
+            addToLog('Creating teams with franchise/owner mappings...');
+            
+            try {
+                const response = await fetch('/api/teammapping/create-mapped-teams', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${accessToken}`
+                    },
+                    body: JSON.stringify({
+                        leagueKey: leagueKey,
+                        year: 2025,
+                        teamMappings: teamMappings
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    showStatus('step3-status', 'success', `✅ Teams created: ${result.teamCount} teams`);
+                    addToLog(`✅ Teams created successfully: ${result.teamCount} teams with mappings`);
+                    document.getElementById('submit-mapping-btn').textContent = '✅ Teams Created';
+                    document.getElementById('submit-mapping-btn').disabled = true;
+                    showStep(4);
+                } else {
+                    showStatus('step3-status', 'error', `❌ Failed to create teams: ${result.error}`);
+                    addToLog(`❌ Failed to create teams: ${result.error}`);
+                }
+            } catch (error) {
+                showStatus('step3-status', 'error', `❌ Error creating teams: ${error.message}`);
+                addToLog(`❌ Error creating teams: ${error.message}`);
+            } finally {
+                showLoading(false);
+            }
+        }
+        
+        function showStatus(elementId, type, message) {
+            const element = document.getElementById(elementId);
+            element.className = `status ${type}`;
+            element.textContent = message;
+        }
+        
+        function showLoading(show) {
+            document.getElementById('loading').style.display = show ? 'block' : 'none';
+        }
+        
+        function addToLog(message) {
+            const logSection = document.getElementById('log-section');
+            const log = document.getElementById('log');
+            
+            logSection.style.display = 'block';
+            
+            const timestamp = new Date().toLocaleTimeString();
+            log.textContent += `[${timestamp}] ${message}\n`;
+            log.scrollTop = log.scrollHeight;
+        }
+    </script>
+</body>
+</html>

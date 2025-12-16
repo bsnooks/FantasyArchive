@@ -345,7 +345,7 @@ namespace FantasyArchive.Data.Services
                 Records = playerWeeks.Select((pw, index) => new LeagueRecord
                 {
                     Rank = index + 1,
-                    PlayerId = pw.PlayerID,
+                    PlayerID = pw.PlayerID,
                     Player = pw.Player,
                     RecordValue = $"{pw.CalculateFantasyPoints():F1} ({pw.Year} Week {pw.Week})",
                     RecordNumericValue = (double)pw.CalculateFantasyPoints(),
@@ -427,7 +427,7 @@ namespace FantasyArchive.Data.Services
                 Records = playerWeeks.Select((pw, index) => new LeagueRecord
                 {
                     Rank = index + 1,
-                    PlayerId = pw.PlayerID,
+                    PlayerID = pw.PlayerID,
                     Player = pw.Player,
                     RecordValue = $"{pw.CalculateFantasyPoints():F1} (Week {pw.Week})",
                     RecordNumericValue = (double)pw.CalculateFantasyPoints(),
@@ -511,7 +511,7 @@ namespace FantasyArchive.Data.Services
                 Records = playerWeeks.Select((pw, index) => new LeagueRecord
                 {
                     Rank = index + 1,
-                    PlayerId = pw.PlayerID,
+                    PlayerID = pw.PlayerID,
                     Player = pw.Player,
                     RecordValue = $"{pw.Player.Name} ({pw.Player.Position}): {pw.CalculateFantasyPoints():F1} ({pw.Year} Week {pw.Week})",
                     RecordNumericValue = (double)pw.CalculateFantasyPoints(),

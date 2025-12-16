@@ -7,7 +7,7 @@ namespace FantasyArchive.Data.Models
         public int Rank { get; set; }
         public Guid? FranchiseId { get; set; }
         public Guid? OtherFranchiseId { get; set; }
-        public int? PlayerId { get; set; }
+        public int? PlayerID { get; set; }
         public string RecordValue { get; set; } = string.Empty;
         public double RecordNumericValue { get; set; }
         public int? Year { get; set; }

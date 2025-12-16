@@ -15,7 +15,7 @@ Write-Host ""
 Write-Host "Frontend started! It should open in your browser shortly." -ForegroundColor Green
 Write-Host ""
 Write-Host "Available commands:" -ForegroundColor Cyan
-Write-Host "  To run the data exporter:" -ForegroundColor White
+Write-Host "  To run the data exporter (updates frontend data):" -ForegroundColor White
 Write-Host "    cd exporter && dotnet run" -ForegroundColor Gray
 Write-Host ""
 Write-Host "  To stop all services:" -ForegroundColor White

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyArchive.Api", "backend\FantasyArchive.Api.csproj", "{39F7B240-4652-4BA4-A7C4-B0E1DD4CA70D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyArchive.Data", "data\FantasyArchive.Data.csproj", "{8D3CE26F-B6E3-438F-A322-EDE67941051D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyArchive.Exporter", "exporter\FantasyArchive.Exporter.csproj", "{6E7E2BA5-CABA-4D05-A8BA-3D5DE08A01F2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39F7B240-4652-4BA4-A7C4-B0E1DD4CA70D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39F7B240-4652-4BA4-A7C4-B0E1DD4CA70D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39F7B240-4652-4BA4-A7C4-B0E1DD4CA70D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39F7B240-4652-4BA4-A7C4-B0E1DD4CA70D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D3CE26F-B6E3-438F-A322-EDE67941051D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D3CE26F-B6E3-438F-A322-EDE67941051D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D3CE26F-B6E3-438F-A322-EDE67941051D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D3CE26F-B6E3-438F-A322-EDE67941051D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E7E2BA5-CABA-4D05-A8BA-3D5DE08A01F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E7E2BA5-CABA-4D05-A8BA-3D5DE08A01F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E7E2BA5-CABA-4D05-A8BA-3D5DE08A01F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E7E2BA5-CABA-4D05-A8BA-3D5DE08A01F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

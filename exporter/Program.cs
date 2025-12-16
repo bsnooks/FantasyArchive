@@ -220,7 +220,7 @@ static async Task<AllTimeRosterJson> CalculateAllTimeRoster(FantasyArchiveContex
 
     // Get player weeks for these teams
     var playerWeeks = await context.PlayerWeeks
-        .Where(pw => pw.Started && teamIds.Contains(pw.TeamId))
+        .Where(pw => pw.Started && pw.TeamId.HasValue && teamIds.Contains(pw.TeamId.Value))
         .ToListAsync();
 
     // Load players separately
@@ -238,7 +238,7 @@ static async Task<AllTimeRosterJson> CalculateAllTimeRoster(FantasyArchiveContex
             var player = players[g.Key];
             return new
             {
-                PlayerId = g.Key,
+                PlayerID = g.Key,
                 PlayerName = player.Name,
                 Position = player.Position ?? "UNKNOWN",
                 // Calculate fantasy points using standard scoring
@@ -267,7 +267,7 @@ static async Task<AllTimeRosterJson> CalculateAllTimeRoster(FantasyArchiveContex
         .Take(3)
         .Select((p, index) => new AllTimePlayerJson
         {
-            PlayerId = p.PlayerId,
+            PlayerID = p.PlayerID,
             PlayerName = p.PlayerName,
             Position = p.Position,
             TotalPoints = Math.Round(p.TotalPoints, 1),
@@ -286,7 +286,7 @@ static async Task<AllTimeRosterJson> CalculateAllTimeRoster(FantasyArchiveContex
         .Take(3)
         .Select((p, index) => new AllTimePlayerJson
         {
-            PlayerId = p.PlayerId,
+            PlayerID = p.PlayerID,
             PlayerName = p.PlayerName,
             Position = p.Position,
             TotalPoints = Math.Round(p.TotalPoints, 1),
@@ -305,7 +305,7 @@ static async Task<AllTimeRosterJson> CalculateAllTimeRoster(FantasyArchiveContex
         .Take(4)
         .Select((p, index) => new AllTimePlayerJson
         {
-            PlayerId = p.PlayerId,
+            PlayerID = p.PlayerID,
             PlayerName = p.PlayerName,
             Position = p.Position,
             TotalPoints = Math.Round(p.TotalPoints, 1),
@@ -324,7 +324,7 @@ static async Task<AllTimeRosterJson> CalculateAllTimeRoster(FantasyArchiveContex
         .Take(2)
         .Select((p, index) => new AllTimePlayerJson
         {
-            PlayerId = p.PlayerId,
+            PlayerID = p.PlayerID,
             PlayerName = p.PlayerName,
             Position = p.Position,
             TotalPoints = Math.Round(p.TotalPoints, 1),
@@ -394,7 +394,7 @@ static List<LeagueRecordsJson> ConvertToJsonRecords(List<FantasyArchive.Data.Mod
             FranchiseName = record.Franchise?.MainName,
             OtherFranchiseId = record.OtherFranchiseId?.ToString(),
             OtherFranchiseName = record.OtherFranchise?.MainName,
-            PlayerId = record.PlayerId,
+            PlayerID = record.PlayerID,
             PlayerName = record.Player?.Name,
             PlayerPosition = record.Player?.Position,
             RecordValue = record.RecordValue,
@@ -450,7 +450,7 @@ static async Task ExportTradeTrees(FantasyArchiveContext context, string outputP
                 FranchiseColor = ts.FranchiseColor,
                 Players = ts.Players.Select(p => new TradedPlayerJson
                 {
-                    PlayerId = p.PlayerId,
+                    PlayerID = p.PlayerID,
                     PlayerName = p.PlayerName,
                     PrimaryPosition = p.PrimaryPosition
                 }).ToList()
@@ -512,7 +512,7 @@ static TradeTreeNodeJson ConvertToJsonTradeTreeNode(TradeTreeNode node)
             FranchiseId = node.Transaction.Team?.FranchiseId.ToString() ?? string.Empty,
             FranchiseName = node.Transaction.Team?.Franchise?.MainName ?? "Unknown Franchise",
             TransactionType = node.Transaction.TransactionType.ToString(),
-            PlayerId = node.Transaction.PlayerId,
+            PlayerID = node.Transaction.PlayerID,
             PlayerName = node.Transaction.Player?.Name ?? "Unknown Player",
             Date = node.Transaction.Date,
             Description = node.Transaction.Description,

@@ -7,7 +7,7 @@ namespace FantasyArchive.Data.JsonModels
         public string? FranchiseName { get; set; }
         public string? OtherFranchiseId { get; set; }
         public string? OtherFranchiseName { get; set; }
-        public int? PlayerId { get; set; }
+        public int? PlayerID { get; set; }
         public string? PlayerName { get; set; }
         public string? PlayerPosition { get; set; }
         public string RecordValue { get; set; } = string.Empty;
