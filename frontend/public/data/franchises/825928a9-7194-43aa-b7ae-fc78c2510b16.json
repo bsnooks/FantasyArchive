@@ -284,6 +284,18 @@
       "Standing": 9,
       "Champion": false,
       "SecondPlace": false
+    },
+    {
+      "Id": "0253546c-f214-4e5c-996a-e82a38e88b30",
+      "Year": 2025,
+      "TeamName": "Laters",
+      "Wins": 6,
+      "Losses": 8,
+      "Ties": 0,
+      "Points": 1475.48,
+      "Standing": 6,
+      "Champion": false,
+      "SecondPlace": false
     }
   ],
   "AllTimeRoster": {

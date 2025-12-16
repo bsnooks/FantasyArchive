@@ -285,6 +285,18 @@
       "Standing": 2,
       "Champion": false,
       "SecondPlace": true
+    },
+    {
+      "Id": "fb38eb86-5a78-4d52-be56-a054181000c9",
+      "Year": 2025,
+      "TeamName": "The Mojos",
+      "Wins": 10,
+      "Losses": 4,
+      "Ties": 0,
+      "Points": 1843.66,
+      "Standing": 2,
+      "Champion": false,
+      "SecondPlace": false
     }
   ],
   "AllTimeRoster": {

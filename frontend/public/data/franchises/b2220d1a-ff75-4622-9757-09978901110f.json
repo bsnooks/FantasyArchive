@@ -284,6 +284,18 @@
       "Standing": 10,
       "Champion": false,
       "SecondPlace": false
+    },
+    {
+      "Id": "e9f0c3e0-7689-4219-9483-e289ad81dee8",
+      "Year": 2025,
+      "TeamName": "The Bad Guys",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1564.84,
+      "Standing": 4,
+      "Champion": false,
+      "SecondPlace": false
     }
   ],
   "AllTimeRoster": {

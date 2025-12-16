@@ -104,13 +104,27 @@
         "PlayerID": null,
         "PlayerName": null,
         "PlayerPosition": null,
+        "RecordValue": "2025: 10-4 (1843.7 pts)",
+        "RecordNumericValue": 10,
+        "Year": 2025,
+        "Week": null
+      },
+      {
+        "Rank": 4,
+        "FranchiseId": "bbe2d0ad-54cf-4c22-be82-b2a5f262a157",
+        "FranchiseName": "The Mojos",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
         "RecordValue": "2022: 10-5 (1787.5 pts)",
         "RecordNumericValue": 10,
         "Year": 2022,
         "Week": null
       },
       {
-        "Rank": 4,
+        "Rank": 5,
         "FranchiseId": "bbe2d0ad-54cf-4c22-be82-b2a5f262a157",
         "FranchiseName": "The Mojos",
         "OtherFranchiseId": null,
@@ -124,7 +138,7 @@
         "Week": null
       },
       {
-        "Rank": 5,
+        "Rank": 6,
         "FranchiseId": "bbe2d0ad-54cf-4c22-be82-b2a5f262a157",
         "FranchiseName": "The Mojos",
         "OtherFranchiseId": null,
@@ -138,7 +152,7 @@
         "Week": null
       },
       {
-        "Rank": 6,
+        "Rank": 7,
         "FranchiseId": "bbe2d0ad-54cf-4c22-be82-b2a5f262a157",
         "FranchiseName": "The Mojos",
         "OtherFranchiseId": null,
@@ -152,7 +166,7 @@
         "Week": null
       },
       {
-        "Rank": 7,
+        "Rank": 8,
         "FranchiseId": "bbe2d0ad-54cf-4c22-be82-b2a5f262a157",
         "FranchiseName": "The Mojos",
         "OtherFranchiseId": null,
@@ -166,7 +180,7 @@
         "Week": null
       },
       {
-        "Rank": 8,
+        "Rank": 9,
         "FranchiseId": "bbe2d0ad-54cf-4c22-be82-b2a5f262a157",
         "FranchiseName": "The Mojos",
         "OtherFranchiseId": null,
@@ -180,7 +194,7 @@
         "Week": null
       },
       {
-        "Rank": 9,
+        "Rank": 10,
         "FranchiseId": "bbe2d0ad-54cf-4c22-be82-b2a5f262a157",
         "FranchiseName": "The Mojos",
         "OtherFranchiseId": null,
@@ -191,20 +205,6 @@
         "RecordValue": "2007: 7-7 (1587.0 pts)",
         "RecordNumericValue": 7,
         "Year": 2007,
-        "Week": null
-      },
-      {
-        "Rank": 10,
-        "FranchiseId": "bbe2d0ad-54cf-4c22-be82-b2a5f262a157",
-        "FranchiseName": "The Mojos",
-        "OtherFranchiseId": null,
-        "OtherFranchiseName": null,
-        "PlayerID": null,
-        "PlayerName": null,
-        "PlayerPosition": null,
-        "RecordValue": "2011: 7-7 (1537.1 pts)",
-        "RecordNumericValue": 7,
-        "Year": 2011,
         "Week": null
       }
     ]

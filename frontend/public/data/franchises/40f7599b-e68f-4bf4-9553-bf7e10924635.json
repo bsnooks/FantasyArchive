@@ -285,6 +285,18 @@
       "Standing": 3,
       "Champion": false,
       "SecondPlace": false
+    },
+    {
+      "Id": "7b736845-1497-4a5f-a935-ca3214ed5e47",
+      "Year": 2025,
+      "TeamName": "Army of Dakness",
+      "Wins": 5,
+      "Losses": 9,
+      "Ties": 0,
+      "Points": 1582.12,
+      "Standing": 7,
+      "Champion": false,
+      "SecondPlace": false
     }
   ],
   "AllTimeRoster": {

@@ -294,9 +294,156 @@
     ]
   },
   {
-    "RecordTitle": "2024 Weekly High Scores",
+    "RecordTitle": "2024 Highest Average Points per Week",
     "PositiveRecord": true,
     "RecordType": "Season",
+    "Records": [
+      {
+        "Rank": 1,
+        "FranchiseId": "4449259f-64af-44fd-9235-1facc0926234",
+        "FranchiseName": "She\u0027s the Fastest",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "122.4",
+        "RecordNumericValue": 122.43066666666667,
+        "Year": 2024,
+        "Week": null
+      },
+      {
+        "Rank": 2,
+        "FranchiseId": "f483ecf1-cd17-4991-854b-e52dfc957b45",
+        "FranchiseName": "FB in the Groin",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "118.2",
+        "RecordNumericValue": 118.16266666666667,
+        "Year": 2024,
+        "Week": null
+      },
+      {
+        "Rank": 3,
+        "FranchiseId": "40f7599b-e68f-4bf4-9553-bf7e10924635",
+        "FranchiseName": "Army of Dakness",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "116.6",
+        "RecordNumericValue": 116.60799999999999,
+        "Year": 2024,
+        "Week": null
+      },
+      {
+        "Rank": 4,
+        "FranchiseId": "2feaf03e-fb22-498e-ac8f-e596b6ba7810",
+        "FranchiseName": "Balero Boyz",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "116.1",
+        "RecordNumericValue": 116.12666666666668,
+        "Year": 2024,
+        "Week": null
+      },
+      {
+        "Rank": 5,
+        "FranchiseId": "66fb98f4-89a7-45f9-893a-b41d71e6249d",
+        "FranchiseName": "leaf16",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "115.4",
+        "RecordNumericValue": 115.38133333333333,
+        "Year": 2024,
+        "Week": null
+      },
+      {
+        "Rank": 6,
+        "FranchiseId": "f5908944-6efd-40eb-af54-6c53004e0e2f",
+        "FranchiseName": "Mad Guys",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "114.5",
+        "RecordNumericValue": 114.50266666666667,
+        "Year": 2024,
+        "Week": null
+      },
+      {
+        "Rank": 7,
+        "FranchiseId": "bbe2d0ad-54cf-4c22-be82-b2a5f262a157",
+        "FranchiseName": "The Mojos",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "114.5",
+        "RecordNumericValue": 114.49466666666667,
+        "Year": 2024,
+        "Week": null
+      },
+      {
+        "Rank": 8,
+        "FranchiseId": "8e9f18ff-62c3-40e8-bb10-32f74cf4ee33",
+        "FranchiseName": "Hot Loads",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "105.4",
+        "RecordNumericValue": 105.364,
+        "Year": 2024,
+        "Week": null
+      },
+      {
+        "Rank": 9,
+        "FranchiseId": "825928a9-7194-43aa-b7ae-fc78c2510b16",
+        "FranchiseName": "Laters",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "102.9",
+        "RecordNumericValue": 102.91066666666667,
+        "Year": 2024,
+        "Week": null
+      },
+      {
+        "Rank": 10,
+        "FranchiseId": "b2220d1a-ff75-4622-9757-09978901110f",
+        "FranchiseName": "The Bad Guys",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "96.7",
+        "RecordNumericValue": 96.68533333333333,
+        "Year": 2024,
+        "Week": null
+      }
+    ]
+  },
+  {
+    "RecordTitle": "2024 Weekly High Scores",
+    "PositiveRecord": true,
+    "RecordType": "Match",
     "Records": [
       {
         "Rank": 1,
@@ -422,7 +569,7 @@
         "RecordValue": "145.8 pts",
         "RecordNumericValue": 145.8,
         "Year": 2024,
-        "Week": 13
+        "Week": 10
       },
       {
         "Rank": 10,
@@ -436,14 +583,14 @@
         "RecordValue": "145.8 pts",
         "RecordNumericValue": 145.8,
         "Year": 2024,
-        "Week": 10
+        "Week": 13
       }
     ]
   },
   {
     "RecordTitle": "2024 Weekly Low Scores",
     "PositiveRecord": false,
-    "RecordType": "Season",
+    "RecordType": "Match",
     "Records": [
       {
         "Rank": 1,
@@ -590,7 +737,7 @@
   {
     "RecordTitle": "2024 Largest Victory Margins",
     "PositiveRecord": true,
-    "RecordType": "Season",
+    "RecordType": "Match",
     "Records": [
       {
         "Rank": 1,
@@ -737,7 +884,7 @@
   {
     "RecordTitle": "2024 Highest Matchup Totals",
     "PositiveRecord": true,
-    "RecordType": "Season",
+    "RecordType": "Match",
     "Records": [
       {
         "Rank": 1,
@@ -884,7 +1031,7 @@
   {
     "RecordTitle": "2024 Smallest Victory Margins",
     "PositiveRecord": false,
-    "RecordType": "Season",
+    "RecordType": "Match",
     "Records": [
       {
         "Rank": 1,
@@ -1031,7 +1178,7 @@
   {
     "RecordTitle": "2024 Lowest Winning Scores",
     "PositiveRecord": false,
-    "RecordType": "Season",
+    "RecordType": "Match",
     "Records": [
       {
         "Rank": 1,
@@ -1154,10 +1301,10 @@
         "PlayerID": null,
         "PlayerName": null,
         "PlayerPosition": null,
-        "RecordValue": "102.4 pts",
-        "RecordNumericValue": 102.44,
+        "RecordValue": "103.2 pts",
+        "RecordNumericValue": 103.16,
         "Year": 2024,
-        "Week": 17
+        "Week": 15
       },
       {
         "Rank": 10,
@@ -1168,34 +1315,20 @@
         "PlayerID": null,
         "PlayerName": null,
         "PlayerPosition": null,
-        "RecordValue": "103.2 pts",
-        "RecordNumericValue": 103.16,
+        "RecordValue": "104.9 pts",
+        "RecordNumericValue": 104.92,
         "Year": 2024,
-        "Week": 15
+        "Week": 9
       }
     ]
   },
   {
     "RecordTitle": "2024 Highest Losing Scores",
     "PositiveRecord": true,
-    "RecordType": "Season",
+    "RecordType": "Match",
     "Records": [
       {
         "Rank": 1,
-        "FranchiseId": "f5908944-6efd-40eb-af54-6c53004e0e2f",
-        "FranchiseName": "Mad Guys",
-        "OtherFranchiseId": null,
-        "OtherFranchiseName": null,
-        "PlayerID": null,
-        "PlayerName": null,
-        "PlayerPosition": null,
-        "RecordValue": "159.8 pts",
-        "RecordNumericValue": 159.8,
-        "Year": 2024,
-        "Week": 17
-      },
-      {
-        "Rank": 2,
         "FranchiseId": "f5908944-6efd-40eb-af54-6c53004e0e2f",
         "FranchiseName": "Mad Guys",
         "OtherFranchiseId": null,
@@ -1209,7 +1342,7 @@
         "Week": 11
       },
       {
-        "Rank": 3,
+        "Rank": 2,
         "FranchiseId": "2feaf03e-fb22-498e-ac8f-e596b6ba7810",
         "FranchiseName": "Balero Boyz",
         "OtherFranchiseId": null,
@@ -1223,7 +1356,7 @@
         "Week": 14
       },
       {
-        "Rank": 4,
+        "Rank": 3,
         "FranchiseId": "66fb98f4-89a7-45f9-893a-b41d71e6249d",
         "FranchiseName": "leaf16",
         "OtherFranchiseId": null,
@@ -1237,7 +1370,7 @@
         "Week": 1
       },
       {
-        "Rank": 5,
+        "Rank": 4,
         "FranchiseId": "40f7599b-e68f-4bf4-9553-bf7e10924635",
         "FranchiseName": "Army of Dakness",
         "OtherFranchiseId": null,
@@ -1251,7 +1384,7 @@
         "Week": 11
       },
       {
-        "Rank": 6,
+        "Rank": 5,
         "FranchiseId": "825928a9-7194-43aa-b7ae-fc78c2510b16",
         "FranchiseName": "Laters",
         "OtherFranchiseId": null,
@@ -1265,7 +1398,7 @@
         "Week": 12
       },
       {
-        "Rank": 7,
+        "Rank": 6,
         "FranchiseId": "4449259f-64af-44fd-9235-1facc0926234",
         "FranchiseName": "She\u0027s the Fastest",
         "OtherFranchiseId": null,
@@ -1279,7 +1412,7 @@
         "Week": 2
       },
       {
-        "Rank": 8,
+        "Rank": 7,
         "FranchiseId": "4449259f-64af-44fd-9235-1facc0926234",
         "FranchiseName": "She\u0027s the Fastest",
         "OtherFranchiseId": null,
@@ -1293,7 +1426,7 @@
         "Week": 16
       },
       {
-        "Rank": 9,
+        "Rank": 8,
         "FranchiseId": "f483ecf1-cd17-4991-854b-e52dfc957b45",
         "FranchiseName": "FB in the Groin",
         "OtherFranchiseId": null,
@@ -1307,7 +1440,7 @@
         "Week": 5
       },
       {
-        "Rank": 10,
+        "Rank": 9,
         "FranchiseId": "bbe2d0ad-54cf-4c22-be82-b2a5f262a157",
         "FranchiseName": "The Mojos",
         "OtherFranchiseId": null,
@@ -1319,6 +1452,20 @@
         "RecordNumericValue": 121.72,
         "Year": 2024,
         "Week": 15
+      },
+      {
+        "Rank": 10,
+        "FranchiseId": "2feaf03e-fb22-498e-ac8f-e596b6ba7810",
+        "FranchiseName": "Balero Boyz",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "121.1 pts",
+        "RecordNumericValue": 121.06,
+        "Year": 2024,
+        "Week": 5
       }
     ]
   }

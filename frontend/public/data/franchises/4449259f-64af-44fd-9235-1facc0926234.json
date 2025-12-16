@@ -284,6 +284,18 @@
       "Standing": 4,
       "Champion": false,
       "SecondPlace": false
+    },
+    {
+      "Id": "6eb662c8-2cbb-40eb-a1d0-222d5327da9f",
+      "Year": 2025,
+      "TeamName": "She\u0027s the Fastest",
+      "Wins": 12,
+      "Losses": 2,
+      "Ties": 0,
+      "Points": 1733.64,
+      "Standing": 1,
+      "Champion": false,
+      "SecondPlace": false
     }
   ],
   "AllTimeRoster": {

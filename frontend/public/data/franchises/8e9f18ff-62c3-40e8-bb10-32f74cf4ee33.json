@@ -285,6 +285,18 @@
       "Standing": 7,
       "Champion": false,
       "SecondPlace": false
+    },
+    {
+      "Id": "7ece921b-f115-42c1-9487-f745838a3540",
+      "Year": 2025,
+      "TeamName": "Hot Loads",
+      "Wins": 5,
+      "Losses": 9,
+      "Ties": 0,
+      "Points": 1400.88,
+      "Standing": 8,
+      "Champion": false,
+      "SecondPlace": false
     }
   ],
   "AllTimeRoster": {

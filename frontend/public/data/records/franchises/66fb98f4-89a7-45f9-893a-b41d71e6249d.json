@@ -62,13 +62,27 @@
         "PlayerID": null,
         "PlayerName": null,
         "PlayerPosition": null,
+        "RecordValue": "2025: 10-4 (1729.0 pts)",
+        "RecordNumericValue": 10,
+        "Year": 2025,
+        "Week": null
+      },
+      {
+        "Rank": 3,
+        "FranchiseId": "66fb98f4-89a7-45f9-893a-b41d71e6249d",
+        "FranchiseName": "leaf16",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
         "RecordValue": "2015: 10-4 (1668.9 pts)",
         "RecordNumericValue": 10,
         "Year": 2015,
         "Week": null
       },
       {
-        "Rank": 3,
+        "Rank": 4,
         "FranchiseId": "66fb98f4-89a7-45f9-893a-b41d71e6249d",
         "FranchiseName": "leaf16",
         "OtherFranchiseId": null,
@@ -82,7 +96,7 @@
         "Week": null
       },
       {
-        "Rank": 4,
+        "Rank": 5,
         "FranchiseId": "66fb98f4-89a7-45f9-893a-b41d71e6249d",
         "FranchiseName": "leaf16",
         "OtherFranchiseId": null,
@@ -96,7 +110,7 @@
         "Week": null
       },
       {
-        "Rank": 5,
+        "Rank": 6,
         "FranchiseId": "66fb98f4-89a7-45f9-893a-b41d71e6249d",
         "FranchiseName": "leaf16",
         "OtherFranchiseId": null,
@@ -110,7 +124,7 @@
         "Week": null
       },
       {
-        "Rank": 6,
+        "Rank": 7,
         "FranchiseId": "66fb98f4-89a7-45f9-893a-b41d71e6249d",
         "FranchiseName": "leaf16",
         "OtherFranchiseId": null,
@@ -124,7 +138,7 @@
         "Week": null
       },
       {
-        "Rank": 7,
+        "Rank": 8,
         "FranchiseId": "66fb98f4-89a7-45f9-893a-b41d71e6249d",
         "FranchiseName": "leaf16",
         "OtherFranchiseId": null,
@@ -138,7 +152,7 @@
         "Week": null
       },
       {
-        "Rank": 8,
+        "Rank": 9,
         "FranchiseId": "66fb98f4-89a7-45f9-893a-b41d71e6249d",
         "FranchiseName": "leaf16",
         "OtherFranchiseId": null,
@@ -152,7 +166,7 @@
         "Week": null
       },
       {
-        "Rank": 9,
+        "Rank": 10,
         "FranchiseId": "66fb98f4-89a7-45f9-893a-b41d71e6249d",
         "FranchiseName": "leaf16",
         "OtherFranchiseId": null,
@@ -163,20 +177,6 @@
         "RecordValue": "2024: 8-7 (1730.7 pts)",
         "RecordNumericValue": 8,
         "Year": 2024,
-        "Week": null
-      },
-      {
-        "Rank": 10,
-        "FranchiseId": "66fb98f4-89a7-45f9-893a-b41d71e6249d",
-        "FranchiseName": "leaf16",
-        "OtherFranchiseId": null,
-        "OtherFranchiseName": null,
-        "PlayerID": null,
-        "PlayerName": null,
-        "PlayerPosition": null,
-        "RecordValue": "2014: 8-6 (1566.1 pts)",
-        "RecordNumericValue": 8,
-        "Year": 2014,
         "Week": null
       }
     ]

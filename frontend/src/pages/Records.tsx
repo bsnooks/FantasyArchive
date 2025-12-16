@@ -1,5 +1,18 @@
 import React, { useState } from 'react';
-import { TrophyOutlined, RiseOutlined, FallOutlined, DownOutlined, UpOutlined } from '@ant-design/icons';
+import { 
+  TrophyOutlined, 
+  RiseOutlined, 
+  FallOutlined, 
+  DownOutlined, 
+  UpOutlined,
+  ClockCircleOutlined,
+  CalendarOutlined,
+  UserOutlined,
+  TeamOutlined,
+  CrownOutlined,
+  FireOutlined,
+  ThunderboltOutlined
+} from '@ant-design/icons';
 import { Button, Typography } from 'antd';
 import { useRecords } from '../hooks/useRecords';
 import { useAppSelector } from '../store/hooks';
@@ -20,11 +33,11 @@ const Records: React.FC = () => {
 
   // State for filtering and expansion
   const [filters, setFilters] = useState({
-    AllTime: true,
-    Season: true,
-    Weekly: true,
-    PlayerStats: true,
-    Franchise: true
+    AllTime: false,
+    Season: false,
+    Weekly: false,
+    Player: false,
+    Franchise: false
   });
   const [expandedGroups, setExpandedGroups] = useState<Record<number, boolean>>({});
 
@@ -35,7 +48,9 @@ const Records: React.FC = () => {
   };
 
   // Filter records based on active filters
+  const hasActiveFilters = Object.values(filters).some(filter => filter);
   const filteredRecords = records?.filter(recordGroup => {
+    if (!hasActiveFilters) return true; // Show all when no filters are active
     const category = getRecordCategory(recordGroup.RecordType, recordGroup.RecordTitle);
     return filters[category as keyof typeof filters];
   }) || [];
@@ -86,14 +101,50 @@ const Records: React.FC = () => {
     }
   };
 
-  const getRecordIcon = (recordType: string, isPositive: boolean) => {
+  const getRecordIcon = (recordType: string, recordTitle: string, isPositive: boolean) => {
+    const title = recordTitle.toLowerCase();
+    
+    // Championship and franchise success records
+    if (title.includes('championship') || title.includes('title')) {
+      return <CrownOutlined className="record-icon trophy" />;
+    }
+    
+    // All-time and franchise records get trophies
     if (recordType === 'AllTime' || recordType === 'Franchise') {
       return <TrophyOutlined className="record-icon trophy" />;
-    } else if (isPositive) {
-      return <RiseOutlined className="record-icon positive" />;
-    } else {
-      return <FallOutlined className="record-icon negative" />;
     }
+    
+    // Weekly records - use clock for time-based
+    if (title.includes('weekly') || title.includes('week')) {
+      return <ClockCircleOutlined className={`record-icon ${isPositive ? 'positive' : 'negative'}`} />;
+    }
+    
+    // Season records - use calendar
+    if (recordType === 'Season' || title.includes('season')) {
+      return <CalendarOutlined className={`record-icon ${isPositive ? 'positive' : 'negative'}`} />;
+    }
+    
+    // Player records - use user icon for individual achievements
+    if (recordType === 'Player' || title.includes('player')) {
+      // Special cases for exciting records
+      if (title.includes('points') || title.includes('score')) {
+        return <FireOutlined className={`record-icon ${isPositive ? 'positive' : 'negative'}`} />;
+      }
+      if (title.includes('performance') || title.includes('percent')) {
+        return <ThunderboltOutlined className={`record-icon ${isPositive ? 'positive' : 'negative'}`} />;
+      }
+      return <UserOutlined className={`record-icon ${isPositive ? 'positive' : 'negative'}`} />;
+    }
+    
+    // Team/franchise specific records
+    if (title.includes('team') || title.includes('franchise')) {
+      return <TeamOutlined className={`record-icon ${isPositive ? 'positive' : 'negative'}`} />;
+    }
+    
+    // Default fallback
+    return isPositive ? 
+      <RiseOutlined className="record-icon positive" /> : 
+      <FallOutlined className="record-icon negative" />;
   };
 
   const renderRecord = (record: any, index: number, isExpanded: boolean) => {
@@ -193,7 +244,9 @@ const Records: React.FC = () => {
         
         {/* Filter Controls */}
         <div className="records-filters">
-          <Text strong style={{ marginRight: 16, display: 'block', marginBottom: 12 }}>Filter by type:</Text>
+          <Text strong style={{ marginRight: 16, display: 'block', marginBottom: 12 }}>
+            Filter by type: {hasActiveFilters ? `(${Object.values(filters).filter(f => f).length} active)` : '(showing all)'}
+          </Text>
           <div className="filter-button-groups">
             <Button.Group>
               <Button 
@@ -218,11 +271,11 @@ const Records: React.FC = () => {
                 Weekly
               </Button>
               <Button 
-                type={filters.PlayerStats ? 'primary' : 'default'}
+                type={filters.Player ? 'primary' : 'default'}
                 size="small"
-                onClick={() => toggleFilter('PlayerStats')}
+                onClick={() => toggleFilter('Player')}
               >
-                Player Stats
+                Player Records
               </Button>
               <Button 
                 type={filters.Franchise ? 'primary' : 'default'}
@@ -251,7 +304,7 @@ const Records: React.FC = () => {
               return (
                 <div key={groupIndex} className="record-group">
                   <div className="record-group-header">
-                    {getRecordIcon(recordGroup.RecordType, recordGroup.PositiveRecord)}
+                    {getRecordIcon(recordGroup.RecordType, recordGroup.RecordTitle, recordGroup.PositiveRecord)}
                     <h2 className="record-group-title">{recordGroup.RecordTitle}</h2>
                     <span className={`record-type ${recordGroup.PositiveRecord ? 'positive' : 'negative'}`}>
                       {getRecordCategory(recordGroup.RecordType, recordGroup.RecordTitle)}

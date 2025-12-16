@@ -285,6 +285,18 @@
         "Standing": 10,
         "Champion": false,
         "SecondPlace": false
+      },
+      {
+        "Id": "e9f0c3e0-7689-4219-9483-e289ad81dee8",
+        "Year": 2025,
+        "TeamName": "The Bad Guys",
+        "Wins": 7,
+        "Losses": 7,
+        "Ties": 0,
+        "Points": 1564.84,
+        "Standing": 4,
+        "Champion": false,
+        "SecondPlace": false
       }
     ],
     "AllTimeRoster": {
@@ -779,6 +791,18 @@
         "Ties": 0,
         "Points": 1836.46,
         "Standing": 4,
+        "Champion": false,
+        "SecondPlace": false
+      },
+      {
+        "Id": "6eb662c8-2cbb-40eb-a1d0-222d5327da9f",
+        "Year": 2025,
+        "TeamName": "She\u0027s the Fastest",
+        "Wins": 12,
+        "Losses": 2,
+        "Ties": 0,
+        "Points": 1733.64,
+        "Standing": 1,
         "Champion": false,
         "SecondPlace": false
       }
@@ -1278,6 +1302,18 @@
         "Ties": 0,
         "Points": 1580.46,
         "Standing": 7,
+        "Champion": false,
+        "SecondPlace": false
+      },
+      {
+        "Id": "7ece921b-f115-42c1-9487-f745838a3540",
+        "Year": 2025,
+        "TeamName": "Hot Loads",
+        "Wins": 5,
+        "Losses": 9,
+        "Ties": 0,
+        "Points": 1400.88,
+        "Standing": 8,
         "Champion": false,
         "SecondPlace": false
       }
@@ -1790,6 +1826,18 @@
         "Standing": 6,
         "Champion": false,
         "SecondPlace": false
+      },
+      {
+        "Id": "a303d7fa-b081-4f51-abd2-35fbb161957d",
+        "Year": 2025,
+        "TeamName": "The Band-Aid Guys",
+        "Wins": 7,
+        "Losses": 7,
+        "Ties": 0,
+        "Points": 1395.7,
+        "Standing": 5,
+        "Champion": false,
+        "SecondPlace": false
       }
     ],
     "AllTimeRoster": {
@@ -2277,6 +2325,18 @@
         "Standing": 2,
         "Champion": false,
         "SecondPlace": true
+      },
+      {
+        "Id": "fb38eb86-5a78-4d52-be56-a054181000c9",
+        "Year": 2025,
+        "TeamName": "The Mojos",
+        "Wins": 10,
+        "Losses": 4,
+        "Ties": 0,
+        "Points": 1843.66,
+        "Standing": 2,
+        "Champion": false,
+        "SecondPlace": false
       }
     ],
     "AllTimeRoster": {
@@ -2765,6 +2825,18 @@
         "Ties": 0,
         "Points": 1730.72,
         "Standing": 8,
+        "Champion": false,
+        "SecondPlace": false
+      },
+      {
+        "Id": "36de4ba0-a1ad-4d77-aec4-227b81aea100",
+        "Year": 2025,
+        "TeamName": "leaf16",
+        "Wins": 10,
+        "Losses": 4,
+        "Ties": 0,
+        "Points": 1728.98,
+        "Standing": 3,
         "Champion": false,
         "SecondPlace": false
       }
@@ -3273,6 +3345,18 @@
         "Standing": 3,
         "Champion": false,
         "SecondPlace": false
+      },
+      {
+        "Id": "7b736845-1497-4a5f-a935-ca3214ed5e47",
+        "Year": 2025,
+        "TeamName": "Army of Dakness",
+        "Wins": 5,
+        "Losses": 9,
+        "Ties": 0,
+        "Points": 1582.12,
+        "Standing": 7,
+        "Champion": false,
+        "SecondPlace": false
       }
     ],
     "AllTimeRoster": {
@@ -3775,6 +3859,18 @@
         "Standing": 1,
         "Champion": true,
         "SecondPlace": false
+      },
+      {
+        "Id": "d74b3f5e-c7cb-4bdf-93fe-f735783841d3",
+        "Year": 2025,
+        "TeamName": "Football in the Groin",
+        "Wins": 4,
+        "Losses": 10,
+        "Ties": 0,
+        "Points": 1439.48,
+        "Standing": 10,
+        "Champion": false,
+        "SecondPlace": false
       }
     ],
     "AllTimeRoster": {
@@ -4272,6 +4368,18 @@
         "Standing": 5,
         "Champion": false,
         "SecondPlace": false
+      },
+      {
+        "Id": "2ef5a900-1305-4e09-bccd-e2a9b52569d3",
+        "Year": 2025,
+        "TeamName": "Balero Boyz",
+        "Wins": 4,
+        "Losses": 10,
+        "Ties": 0,
+        "Points": 1496.38,
+        "Standing": 9,
+        "Champion": false,
+        "SecondPlace": false
       }
     ],
     "AllTimeRoster": {
@@ -4767,6 +4875,18 @@
         "Ties": 0,
         "Points": 1543.66,
         "Standing": 9,
+        "Champion": false,
+        "SecondPlace": false
+      },
+      {
+        "Id": "0253546c-f214-4e5c-996a-e82a38e88b30",
+        "Year": 2025,
+        "TeamName": "Laters",
+        "Wins": 6,
+        "Losses": 8,
+        "Ties": 0,
+        "Points": 1475.48,
+        "Standing": 6,
         "Champion": false,
         "SecondPlace": false
       }

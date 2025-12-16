@@ -90,13 +90,27 @@
         "PlayerID": null,
         "PlayerName": null,
         "PlayerPosition": null,
+        "RecordValue": "2025: 12-2 (1733.6 pts)",
+        "RecordNumericValue": 12,
+        "Year": 2025,
+        "Week": null
+      },
+      {
+        "Rank": 4,
+        "FranchiseId": "4449259f-64af-44fd-9235-1facc0926234",
+        "FranchiseName": "She\u0027s the Fastest",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
         "RecordValue": "2014: 11-3 (1739.7 pts)",
         "RecordNumericValue": 11,
         "Year": 2014,
         "Week": null
       },
       {
-        "Rank": 4,
+        "Rank": 5,
         "FranchiseId": "4449259f-64af-44fd-9235-1facc0926234",
         "FranchiseName": "She\u0027s the Fastest",
         "OtherFranchiseId": null,
@@ -110,7 +124,7 @@
         "Week": null
       },
       {
-        "Rank": 5,
+        "Rank": 6,
         "FranchiseId": "4449259f-64af-44fd-9235-1facc0926234",
         "FranchiseName": "She\u0027s the Fastest",
         "OtherFranchiseId": null,
@@ -124,7 +138,7 @@
         "Week": null
       },
       {
-        "Rank": 6,
+        "Rank": 7,
         "FranchiseId": "4449259f-64af-44fd-9235-1facc0926234",
         "FranchiseName": "She\u0027s the Fastest",
         "OtherFranchiseId": null,
@@ -138,7 +152,7 @@
         "Week": null
       },
       {
-        "Rank": 7,
+        "Rank": 8,
         "FranchiseId": "4449259f-64af-44fd-9235-1facc0926234",
         "FranchiseName": "She\u0027s the Fastest",
         "OtherFranchiseId": null,
@@ -152,7 +166,7 @@
         "Week": null
       },
       {
-        "Rank": 8,
+        "Rank": 9,
         "FranchiseId": "4449259f-64af-44fd-9235-1facc0926234",
         "FranchiseName": "She\u0027s the Fastest",
         "OtherFranchiseId": null,
@@ -166,7 +180,7 @@
         "Week": null
       },
       {
-        "Rank": 9,
+        "Rank": 10,
         "FranchiseId": "4449259f-64af-44fd-9235-1facc0926234",
         "FranchiseName": "She\u0027s the Fastest",
         "OtherFranchiseId": null,
@@ -177,20 +191,6 @@
         "RecordValue": "2021: 9-6 (1751.8 pts)",
         "RecordNumericValue": 9,
         "Year": 2021,
-        "Week": null
-      },
-      {
-        "Rank": 10,
-        "FranchiseId": "4449259f-64af-44fd-9235-1facc0926234",
-        "FranchiseName": "She\u0027s the Fastest",
-        "OtherFranchiseId": null,
-        "OtherFranchiseName": null,
-        "PlayerID": null,
-        "PlayerName": null,
-        "PlayerPosition": null,
-        "RecordValue": "2022: 9-6 (1745.6 pts)",
-        "RecordNumericValue": 9,
-        "Year": 2022,
         "Week": null
       }
     ]

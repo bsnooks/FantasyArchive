@@ -294,9 +294,156 @@
     ]
   },
   {
-    "RecordTitle": "2014 Weekly High Scores",
+    "RecordTitle": "2014 Highest Average Points per Week",
     "PositiveRecord": true,
     "RecordType": "Season",
+    "Records": [
+      {
+        "Rank": 1,
+        "FranchiseId": "825928a9-7194-43aa-b7ae-fc78c2510b16",
+        "FranchiseName": "Laters",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "128.5",
+        "RecordNumericValue": 128.48142857142858,
+        "Year": 2014,
+        "Week": null
+      },
+      {
+        "Rank": 2,
+        "FranchiseId": "4449259f-64af-44fd-9235-1facc0926234",
+        "FranchiseName": "She\u0027s the Fastest",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "124.3",
+        "RecordNumericValue": 124.26714285714286,
+        "Year": 2014,
+        "Week": null
+      },
+      {
+        "Rank": 3,
+        "FranchiseId": "bbe2d0ad-54cf-4c22-be82-b2a5f262a157",
+        "FranchiseName": "The Mojos",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "121.7",
+        "RecordNumericValue": 121.67,
+        "Year": 2014,
+        "Week": null
+      },
+      {
+        "Rank": 4,
+        "FranchiseId": "40f7599b-e68f-4bf4-9553-bf7e10924635",
+        "FranchiseName": "Army of Dakness",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "115.7",
+        "RecordNumericValue": 115.70857142857143,
+        "Year": 2014,
+        "Week": null
+      },
+      {
+        "Rank": 5,
+        "FranchiseId": "f483ecf1-cd17-4991-854b-e52dfc957b45",
+        "FranchiseName": "FB in the Groin",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "114.9",
+        "RecordNumericValue": 114.85714285714288,
+        "Year": 2014,
+        "Week": null
+      },
+      {
+        "Rank": 6,
+        "FranchiseId": "2feaf03e-fb22-498e-ac8f-e596b6ba7810",
+        "FranchiseName": "Balero Boyz",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "114.1",
+        "RecordNumericValue": 114.06000000000002,
+        "Year": 2014,
+        "Week": null
+      },
+      {
+        "Rank": 7,
+        "FranchiseId": "66fb98f4-89a7-45f9-893a-b41d71e6249d",
+        "FranchiseName": "leaf16",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "111.9",
+        "RecordNumericValue": 111.86142857142856,
+        "Year": 2014,
+        "Week": null
+      },
+      {
+        "Rank": 8,
+        "FranchiseId": "f5908944-6efd-40eb-af54-6c53004e0e2f",
+        "FranchiseName": "Mad Guys",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "106.6",
+        "RecordNumericValue": 106.55857142857143,
+        "Year": 2014,
+        "Week": null
+      },
+      {
+        "Rank": 9,
+        "FranchiseId": "b2220d1a-ff75-4622-9757-09978901110f",
+        "FranchiseName": "The Bad Guys",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "100.7",
+        "RecordNumericValue": 100.74714285714286,
+        "Year": 2014,
+        "Week": null
+      },
+      {
+        "Rank": 10,
+        "FranchiseId": "8e9f18ff-62c3-40e8-bb10-32f74cf4ee33",
+        "FranchiseName": "Hot Loads",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "93.0",
+        "RecordNumericValue": 93.01571428571428,
+        "Year": 2014,
+        "Week": null
+      }
+    ]
+  },
+  {
+    "RecordTitle": "2014 Weekly High Scores",
+    "PositiveRecord": true,
+    "RecordType": "Match",
     "Records": [
       {
         "Rank": 1,
@@ -443,7 +590,7 @@
   {
     "RecordTitle": "2014 Weekly Low Scores",
     "PositiveRecord": false,
-    "RecordType": "Season",
+    "RecordType": "Match",
     "Records": [
       {
         "Rank": 1,
@@ -590,7 +737,7 @@
   {
     "RecordTitle": "2014 Largest Victory Margins",
     "PositiveRecord": true,
-    "RecordType": "Season",
+    "RecordType": "Match",
     "Records": [
       {
         "Rank": 1,
@@ -737,7 +884,7 @@
   {
     "RecordTitle": "2014 Highest Matchup Totals",
     "PositiveRecord": true,
-    "RecordType": "Season",
+    "RecordType": "Match",
     "Records": [
       {
         "Rank": 1,
@@ -884,7 +1031,7 @@
   {
     "RecordTitle": "2014 Smallest Victory Margins",
     "PositiveRecord": false,
-    "RecordType": "Season",
+    "RecordType": "Match",
     "Records": [
       {
         "Rank": 1,
@@ -930,20 +1077,6 @@
       },
       {
         "Rank": 4,
-        "FranchiseId": "66fb98f4-89a7-45f9-893a-b41d71e6249d",
-        "FranchiseName": "leaf16",
-        "OtherFranchiseId": null,
-        "OtherFranchiseName": null,
-        "PlayerID": null,
-        "PlayerName": null,
-        "PlayerPosition": null,
-        "RecordValue": "3.2 pts",
-        "RecordNumericValue": 3.1799999999999926,
-        "Year": 2014,
-        "Week": 16
-      },
-      {
-        "Rank": 5,
         "FranchiseId": "825928a9-7194-43aa-b7ae-fc78c2510b16",
         "FranchiseName": "Laters",
         "OtherFranchiseId": null,
@@ -957,7 +1090,7 @@
         "Week": 4
       },
       {
-        "Rank": 6,
+        "Rank": 5,
         "FranchiseId": "8e9f18ff-62c3-40e8-bb10-32f74cf4ee33",
         "FranchiseName": "Hot Loads",
         "OtherFranchiseId": null,
@@ -971,7 +1104,7 @@
         "Week": 10
       },
       {
-        "Rank": 7,
+        "Rank": 6,
         "FranchiseId": "825928a9-7194-43aa-b7ae-fc78c2510b16",
         "FranchiseName": "Laters",
         "OtherFranchiseId": null,
@@ -985,7 +1118,7 @@
         "Week": 3
       },
       {
-        "Rank": 8,
+        "Rank": 7,
         "FranchiseId": "4449259f-64af-44fd-9235-1facc0926234",
         "FranchiseName": "She\u0027s the Fastest",
         "OtherFranchiseId": null,
@@ -999,7 +1132,7 @@
         "Week": 3
       },
       {
-        "Rank": 9,
+        "Rank": 8,
         "FranchiseId": "4449259f-64af-44fd-9235-1facc0926234",
         "FranchiseName": "She\u0027s the Fastest",
         "OtherFranchiseId": null,
@@ -1013,7 +1146,7 @@
         "Week": 15
       },
       {
-        "Rank": 10,
+        "Rank": 9,
         "FranchiseId": "825928a9-7194-43aa-b7ae-fc78c2510b16",
         "FranchiseName": "Laters",
         "OtherFranchiseId": null,
@@ -1025,13 +1158,27 @@
         "RecordNumericValue": 7.079999999999998,
         "Year": 2014,
         "Week": 7
+      },
+      {
+        "Rank": 10,
+        "FranchiseId": "66fb98f4-89a7-45f9-893a-b41d71e6249d",
+        "FranchiseName": "leaf16",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "7.3 pts",
+        "RecordNumericValue": 7.280000000000001,
+        "Year": 2014,
+        "Week": 1
       }
     ]
   },
   {
     "RecordTitle": "2014 Lowest Winning Scores",
     "PositiveRecord": false,
-    "RecordType": "Season",
+    "RecordType": "Match",
     "Records": [
       {
         "Rank": 1,
@@ -1178,7 +1325,7 @@
   {
     "RecordTitle": "2014 Highest Losing Scores",
     "PositiveRecord": true,
-    "RecordType": "Season",
+    "RecordType": "Match",
     "Records": [
       {
         "Rank": 1,

@@ -285,6 +285,18 @@
       "Standing": 5,
       "Champion": false,
       "SecondPlace": false
+    },
+    {
+      "Id": "2ef5a900-1305-4e09-bccd-e2a9b52569d3",
+      "Year": 2025,
+      "TeamName": "Balero Boyz",
+      "Wins": 4,
+      "Losses": 10,
+      "Ties": 0,
+      "Points": 1496.38,
+      "Standing": 9,
+      "Champion": false,
+      "SecondPlace": false
     }
   ],
   "AllTimeRoster": {

@@ -14,6 +14,7 @@ flowchart TD
     NODE_e8bdf6a1-8c34-4264-91c3-ed9756c64d65("🔄 DeVonta Smith - Oct 8, 2023")
     TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_6["Hot Loads"]
     NODE_3d2fea6c-8561-4790-b988-b6600351154b("🔒 DeVonta Smith - Kept - Sep 5, 2024")
+    NODE_97f8b9d4-84f8-49fc-880e-92e873f7d0fa("🔒 DeVonta Smith - Kept - Sep 4, 2025")
 
     TRADE_MAIN --> TEAM_1
     TRADE_MAIN --> TEAM_2
@@ -28,6 +29,7 @@ flowchart TD
     TEAM_2 --> NODE_e8bdf6a1-8c34-4264-91c3-ed9756c64d65
     NODE_e8bdf6a1-8c34-4264-91c3-ed9756c64d65 --> TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_6
     TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_6 --> NODE_3d2fea6c-8561-4790-b988-b6600351154b
+    NODE_3d2fea6c-8561-4790-b988-b6600351154b --> NODE_97f8b9d4-84f8-49fc-880e-92e873f7d0fa
 
     %% Node styling
     classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
@@ -39,5 +41,5 @@ flowchart TD
     classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
 
     class TEAM_1,TEAM_2,TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_4,TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_5,TEAM_8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_6 teamNode
-    class NODE_b9408fc7-fd6f-4f10-a06e-806e9e16968c,NODE_616b064f-09a2-4209-bb8a-16a3f48fcfee,NODE_3d2fea6c-8561-4790-b988-b6600351154b nonRootPlayerNode
+    class NODE_b9408fc7-fd6f-4f10-a06e-806e9e16968c,NODE_616b064f-09a2-4209-bb8a-16a3f48fcfee,NODE_3d2fea6c-8561-4790-b988-b6600351154b,NODE_97f8b9d4-84f8-49fc-880e-92e873f7d0fa nonRootPlayerNode
     class TRADE_MAIN,TRADE_f080b4c2-7209-4757-924a-c6cffdf730c2_3 tradeNode

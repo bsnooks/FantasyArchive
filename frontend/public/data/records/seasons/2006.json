@@ -294,9 +294,156 @@
     ]
   },
   {
-    "RecordTitle": "2006 Weekly High Scores",
+    "RecordTitle": "2006 Highest Average Points per Week",
     "PositiveRecord": true,
     "RecordType": "Season",
+    "Records": [
+      {
+        "Rank": 1,
+        "FranchiseId": "825928a9-7194-43aa-b7ae-fc78c2510b16",
+        "FranchiseName": "Laters",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "110.0",
+        "RecordNumericValue": 109.96428571428571,
+        "Year": 2006,
+        "Week": null
+      },
+      {
+        "Rank": 2,
+        "FranchiseId": "b2220d1a-ff75-4622-9757-09978901110f",
+        "FranchiseName": "The Bad Guys",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "109.6",
+        "RecordNumericValue": 109.60714285714286,
+        "Year": 2006,
+        "Week": null
+      },
+      {
+        "Rank": 3,
+        "FranchiseId": "66fb98f4-89a7-45f9-893a-b41d71e6249d",
+        "FranchiseName": "leaf16",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "103.5",
+        "RecordNumericValue": 103.46428571428571,
+        "Year": 2006,
+        "Week": null
+      },
+      {
+        "Rank": 4,
+        "FranchiseId": "4449259f-64af-44fd-9235-1facc0926234",
+        "FranchiseName": "She\u0027s the Fastest",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "100.8",
+        "RecordNumericValue": 100.82142857142857,
+        "Year": 2006,
+        "Week": null
+      },
+      {
+        "Rank": 5,
+        "FranchiseId": "f5908944-6efd-40eb-af54-6c53004e0e2f",
+        "FranchiseName": "Mad Guys",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "99.7",
+        "RecordNumericValue": 99.67857142857143,
+        "Year": 2006,
+        "Week": null
+      },
+      {
+        "Rank": 6,
+        "FranchiseId": "8e9f18ff-62c3-40e8-bb10-32f74cf4ee33",
+        "FranchiseName": "Hot Loads",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "99.5",
+        "RecordNumericValue": 99.46428571428571,
+        "Year": 2006,
+        "Week": null
+      },
+      {
+        "Rank": 7,
+        "FranchiseId": "f483ecf1-cd17-4991-854b-e52dfc957b45",
+        "FranchiseName": "FB in the Groin",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "97.9",
+        "RecordNumericValue": 97.92857142857143,
+        "Year": 2006,
+        "Week": null
+      },
+      {
+        "Rank": 8,
+        "FranchiseId": "40f7599b-e68f-4bf4-9553-bf7e10924635",
+        "FranchiseName": "Army of Dakness",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "96.4",
+        "RecordNumericValue": 96.39285714285714,
+        "Year": 2006,
+        "Week": null
+      },
+      {
+        "Rank": 9,
+        "FranchiseId": "2feaf03e-fb22-498e-ac8f-e596b6ba7810",
+        "FranchiseName": "Balero Boyz",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "94.0",
+        "RecordNumericValue": 94.03571428571429,
+        "Year": 2006,
+        "Week": null
+      },
+      {
+        "Rank": 10,
+        "FranchiseId": "bbe2d0ad-54cf-4c22-be82-b2a5f262a157",
+        "FranchiseName": "The Mojos",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "91.0",
+        "RecordNumericValue": 91,
+        "Year": 2006,
+        "Week": null
+      }
+    ]
+  },
+  {
+    "RecordTitle": "2006 Weekly High Scores",
+    "PositiveRecord": true,
+    "RecordType": "Match",
     "Records": [
       {
         "Rank": 1,
@@ -443,7 +590,7 @@
   {
     "RecordTitle": "2006 Weekly Low Scores",
     "PositiveRecord": false,
-    "RecordType": "Season",
+    "RecordType": "Match",
     "Records": [
       {
         "Rank": 1,
@@ -590,7 +737,7 @@
   {
     "RecordTitle": "2006 Largest Victory Margins",
     "PositiveRecord": true,
-    "RecordType": "Season",
+    "RecordType": "Match",
     "Records": [
       {
         "Rank": 1,
@@ -636,20 +783,6 @@
       },
       {
         "Rank": 4,
-        "FranchiseId": "4449259f-64af-44fd-9235-1facc0926234",
-        "FranchiseName": "She\u0027s the Fastest",
-        "OtherFranchiseId": null,
-        "OtherFranchiseName": null,
-        "PlayerID": null,
-        "PlayerName": null,
-        "PlayerPosition": null,
-        "RecordValue": "62.5 pts",
-        "RecordNumericValue": 62.5,
-        "Year": 2006,
-        "Week": 15
-      },
-      {
-        "Rank": 5,
         "FranchiseId": "825928a9-7194-43aa-b7ae-fc78c2510b16",
         "FranchiseName": "Laters",
         "OtherFranchiseId": null,
@@ -663,7 +796,7 @@
         "Week": 11
       },
       {
-        "Rank": 6,
+        "Rank": 5,
         "FranchiseId": "4449259f-64af-44fd-9235-1facc0926234",
         "FranchiseName": "She\u0027s the Fastest",
         "OtherFranchiseId": null,
@@ -677,7 +810,7 @@
         "Week": 10
       },
       {
-        "Rank": 7,
+        "Rank": 6,
         "FranchiseId": "2feaf03e-fb22-498e-ac8f-e596b6ba7810",
         "FranchiseName": "Balero Boyz",
         "OtherFranchiseId": null,
@@ -691,7 +824,7 @@
         "Week": 2
       },
       {
-        "Rank": 8,
+        "Rank": 7,
         "FranchiseId": "4449259f-64af-44fd-9235-1facc0926234",
         "FranchiseName": "She\u0027s the Fastest",
         "OtherFranchiseId": null,
@@ -705,7 +838,7 @@
         "Week": 7
       },
       {
-        "Rank": 9,
+        "Rank": 8,
         "FranchiseId": "825928a9-7194-43aa-b7ae-fc78c2510b16",
         "FranchiseName": "Laters",
         "OtherFranchiseId": null,
@@ -719,7 +852,7 @@
         "Week": 2
       },
       {
-        "Rank": 10,
+        "Rank": 9,
         "FranchiseId": "bbe2d0ad-54cf-4c22-be82-b2a5f262a157",
         "FranchiseName": "The Mojos",
         "OtherFranchiseId": null,
@@ -731,13 +864,27 @@
         "RecordNumericValue": 51.5,
         "Year": 2006,
         "Week": 6
+      },
+      {
+        "Rank": 10,
+        "FranchiseId": "f5908944-6efd-40eb-af54-6c53004e0e2f",
+        "FranchiseName": "Mad Guys",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "48.5 pts",
+        "RecordNumericValue": 48.5,
+        "Year": 2006,
+        "Week": 12
       }
     ]
   },
   {
     "RecordTitle": "2006 Highest Matchup Totals",
     "PositiveRecord": true,
-    "RecordType": "Season",
+    "RecordType": "Match",
     "Records": [
       {
         "Rank": 1,
@@ -884,7 +1031,7 @@
   {
     "RecordTitle": "2006 Smallest Victory Margins",
     "PositiveRecord": false,
-    "RecordType": "Season",
+    "RecordType": "Match",
     "Records": [
       {
         "Rank": 1,
@@ -944,20 +1091,6 @@
       },
       {
         "Rank": 5,
-        "FranchiseId": "b2220d1a-ff75-4622-9757-09978901110f",
-        "FranchiseName": "The Bad Guys",
-        "OtherFranchiseId": null,
-        "OtherFranchiseName": null,
-        "PlayerID": null,
-        "PlayerName": null,
-        "PlayerPosition": null,
-        "RecordValue": "4.5 pts",
-        "RecordNumericValue": 4.5,
-        "Year": 2006,
-        "Week": 16
-      },
-      {
-        "Rank": 6,
         "FranchiseId": "f483ecf1-cd17-4991-854b-e52dfc957b45",
         "FranchiseName": "FB in the Groin",
         "OtherFranchiseId": null,
@@ -971,7 +1104,7 @@
         "Week": 5
       },
       {
-        "Rank": 7,
+        "Rank": 6,
         "FranchiseId": "8e9f18ff-62c3-40e8-bb10-32f74cf4ee33",
         "FranchiseName": "Hot Loads",
         "OtherFranchiseId": null,
@@ -985,7 +1118,7 @@
         "Week": 9
       },
       {
-        "Rank": 8,
+        "Rank": 7,
         "FranchiseId": "2feaf03e-fb22-498e-ac8f-e596b6ba7810",
         "FranchiseName": "Balero Boyz",
         "OtherFranchiseId": null,
@@ -999,7 +1132,7 @@
         "Week": 7
       },
       {
-        "Rank": 9,
+        "Rank": 8,
         "FranchiseId": "825928a9-7194-43aa-b7ae-fc78c2510b16",
         "FranchiseName": "Laters",
         "OtherFranchiseId": null,
@@ -1013,9 +1146,23 @@
         "Week": 10
       },
       {
-        "Rank": 10,
+        "Rank": 9,
         "FranchiseId": "66fb98f4-89a7-45f9-893a-b41d71e6249d",
         "FranchiseName": "leaf16",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "6.0 pts",
+        "RecordNumericValue": 6,
+        "Year": 2006,
+        "Week": 6
+      },
+      {
+        "Rank": 10,
+        "FranchiseId": "4449259f-64af-44fd-9235-1facc0926234",
+        "FranchiseName": "She\u0027s the Fastest",
         "OtherFranchiseId": null,
         "OtherFranchiseName": null,
         "PlayerID": null,
@@ -1031,7 +1178,7 @@
   {
     "RecordTitle": "2006 Lowest Winning Scores",
     "PositiveRecord": false,
-    "RecordType": "Season",
+    "RecordType": "Match",
     "Records": [
       {
         "Rank": 1,
@@ -1147,20 +1294,6 @@
       },
       {
         "Rank": 9,
-        "FranchiseId": "40f7599b-e68f-4bf4-9553-bf7e10924635",
-        "FranchiseName": "Army of Dakness",
-        "OtherFranchiseId": null,
-        "OtherFranchiseName": null,
-        "PlayerID": null,
-        "PlayerName": null,
-        "PlayerPosition": null,
-        "RecordValue": "90.0 pts",
-        "RecordNumericValue": 90,
-        "Year": 2006,
-        "Week": 16
-      },
-      {
-        "Rank": 10,
         "FranchiseId": "8e9f18ff-62c3-40e8-bb10-32f74cf4ee33",
         "FranchiseName": "Hot Loads",
         "OtherFranchiseId": null,
@@ -1172,13 +1305,27 @@
         "RecordNumericValue": 90,
         "Year": 2006,
         "Week": 15
+      },
+      {
+        "Rank": 10,
+        "FranchiseId": "bbe2d0ad-54cf-4c22-be82-b2a5f262a157",
+        "FranchiseName": "The Mojos",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
+        "RecordValue": "91.0 pts",
+        "RecordNumericValue": 91,
+        "Year": 2006,
+        "Week": 2
       }
     ]
   },
   {
     "RecordTitle": "2006 Highest Losing Scores",
     "PositiveRecord": true,
-    "RecordType": "Season",
+    "RecordType": "Match",
     "Records": [
       {
         "Rank": 1,

@@ -284,6 +284,18 @@
       "Standing": 8,
       "Champion": false,
       "SecondPlace": false
+    },
+    {
+      "Id": "36de4ba0-a1ad-4d77-aec4-227b81aea100",
+      "Year": 2025,
+      "TeamName": "leaf16",
+      "Wins": 10,
+      "Losses": 4,
+      "Ties": 0,
+      "Points": 1728.98,
+      "Standing": 3,
+      "Champion": false,
+      "SecondPlace": false
     }
   ],
   "AllTimeRoster": {

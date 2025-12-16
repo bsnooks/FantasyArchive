@@ -5,13 +5,17 @@ flowchart TD
     TEAM_2("The Bad Guys")
     NODE_1a7e90bb-694a-430b-a9c6-0cf0083f5a1d("🔄 Russell Wilson - Nov 14, 2024")
     NODE_ca4dcfc8-9ab7-43d0-a591-1d01b1317754("🔄 Mike Evans - Nov 14, 2024")
+    NODE_e8b2d058-a582-4417-88d0-d3b5f15adeb1("🔒 Mike Evans - Kept - Sep 4, 2025")
     NODE_fa0e74d1-3b4c-4e75-b098-589783324f71("🔄 Rashee Rice - Nov 14, 2024")
+    NODE_893a6362-fd5e-4b2b-ba4d-aa9655521b2a("🔒 Rashee Rice - Kept - Sep 4, 2025")
 
     TRADE_MAIN --> TEAM_1
     TRADE_MAIN --> TEAM_2
     TEAM_1 --> NODE_1a7e90bb-694a-430b-a9c6-0cf0083f5a1d
     TEAM_1 --> NODE_ca4dcfc8-9ab7-43d0-a591-1d01b1317754
+    NODE_ca4dcfc8-9ab7-43d0-a591-1d01b1317754 --> NODE_e8b2d058-a582-4417-88d0-d3b5f15adeb1
     TEAM_2 --> NODE_fa0e74d1-3b4c-4e75-b098-589783324f71
+    NODE_fa0e74d1-3b4c-4e75-b098-589783324f71 --> NODE_893a6362-fd5e-4b2b-ba4d-aa9655521b2a
 
     %% Node styling
     classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px

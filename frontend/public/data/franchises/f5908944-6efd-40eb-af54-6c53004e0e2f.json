@@ -286,6 +286,18 @@
       "Standing": 6,
       "Champion": false,
       "SecondPlace": false
+    },
+    {
+      "Id": "a303d7fa-b081-4f51-abd2-35fbb161957d",
+      "Year": 2025,
+      "TeamName": "The Band-Aid Guys",
+      "Wins": 7,
+      "Losses": 7,
+      "Ties": 0,
+      "Points": 1395.7,
+      "Standing": 5,
+      "Champion": false,
+      "SecondPlace": false
     }
   ],
   "AllTimeRoster": {

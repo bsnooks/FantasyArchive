@@ -286,6 +286,18 @@
       "Standing": 1,
       "Champion": true,
       "SecondPlace": false
+    },
+    {
+      "Id": "d74b3f5e-c7cb-4bdf-93fe-f735783841d3",
+      "Year": 2025,
+      "TeamName": "Football in the Groin",
+      "Wins": 4,
+      "Losses": 10,
+      "Ties": 0,
+      "Points": 1439.48,
+      "Standing": 10,
+      "Champion": false,
+      "SecondPlace": false
     }
   ],
   "AllTimeRoster": {

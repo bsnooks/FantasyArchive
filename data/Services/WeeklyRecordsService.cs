@@ -72,7 +72,7 @@ public class WeeklyRecordsService
         // Calculate margins of victory
         var marginRecords = new List<WeeklyRecord>();
         
-        foreach (var match in seasonMatches.Where(m => !m.Tied))
+        foreach (var match in seasonMatches.Where(m => !m.Tied && m.MatchTypeId != MatchType.Consolation))
         {
             var winnerScore = seasonScores.FirstOrDefault(s => s.TeamID == match.WinningTeamID && s.Week == match.Week);
             var loserScore = seasonScores.FirstOrDefault(s => s.TeamID == match.LosingTeamID && s.Week == match.Week);
@@ -159,7 +159,7 @@ public class WeeklyRecordsService
         var winnerRecords = new List<WeeklyRecord>();
         var loserRecords = new List<WeeklyRecord>();
 
-        foreach (var match in seasonMatches.Where(m => !m.Tied))
+        foreach (var match in seasonMatches.Where(m => !m.Tied && m.MatchTypeId != MatchType.Consolation))
         {
             var winnerScore = seasonScores.FirstOrDefault(s => s.TeamID == match.WinningTeamID && s.Week == match.Week);
             var loserScore = seasonScores.FirstOrDefault(s => s.TeamID == match.LosingTeamID && s.Week == match.Week);
@@ -271,7 +271,7 @@ public class WeeklyRecordsService
         // Calculate margins of victory for all time
         var marginRecords = new List<WeeklyRecord>();
         
-        foreach (var match in allMatches.Where(m => !m.Tied))
+        foreach (var match in allMatches.Where(m => !m.Tied && m.MatchTypeId != MatchType.Consolation))
         {
             var winnerScore = allScores.FirstOrDefault(s => s.TeamID == match.WinningTeamID && s.Week == match.Week && s.Year == match.Year);
             var loserScore = allScores.FirstOrDefault(s => s.TeamID == match.LosingTeamID && s.Week == match.Week && s.Year == match.Year);
@@ -358,7 +358,7 @@ public class WeeklyRecordsService
         var winnerRecords = new List<WeeklyRecord>();
         var loserRecords = new List<WeeklyRecord>();
 
-        foreach (var match in allMatches.Where(m => !m.Tied))
+        foreach (var match in allMatches.Where(m => !m.Tied && m.MatchTypeId != MatchType.Consolation))
         {
             var winnerScore = allScores.FirstOrDefault(s => s.TeamID == match.WinningTeamID && s.Week == match.Week && s.Year == match.Year);
             var loserScore = allScores.FirstOrDefault(s => s.TeamID == match.LosingTeamID && s.Week == match.Week && s.Year == match.Year);
