@@ -11,7 +11,6 @@ import {
   Avatar, 
   List, 
   Tag,
-  Divider,
   Space,
   Alert
 } from 'antd';
@@ -28,34 +27,10 @@ import { useFranchises, useWrappedData } from '../hooks/useFantasyData';
 import LoadingSkeleton from '../components/LoadingSkeleton';
 import FranchiseLogo from '../components/FranchiseLogo';
 
-const { Title, Text, Paragraph } = Typography;
+const { Title, Text } = Typography;
 
-interface WrappedData {
-  FranchiseId: string;
-  FranchiseName: string;
-  Owner: string;
-  Year: number;
-  SeasonSummary: {
-    Wins: number;
-    Losses: number;
-    Ties: number;
-    Points: number;
-    Standing: number;
-    TotalTeams: number;
-    Champion: boolean;
-    SecondPlace: boolean;
-    MadePlayoffs: boolean;
-    SeasonOutcome: string;
-  };
-  Performance: {
-    BestWeek: {
-      Week: number;
-      Points: number;
-      Opponent: string;
-      OpponentPoints: number;
-      Won: boolean;
-      Margin: number;
-    };
+const WrappedSeason: React.FC = () => {
+  const { franchiseId, year } = useParams<{ franchiseId: string; year: string }>();
     WorstWeek: {
       Week: number;
       Points: number;
@@ -124,8 +99,6 @@ const WrappedSeason: React.FC = () => {
   const { data: franchises, isLoading: franchisesLoading } = useFranchises();
   const { data: wrappedData, isLoading: wrappedLoading, error } = useWrappedData(franchiseId, year);
 
-  const franchise = franchises?.find(f => f.Id === franchiseId);
-
   if (franchisesLoading || wrappedLoading) {
     return (
       <div style={{ padding: '24px' }}>
@@ -166,12 +139,6 @@ const WrappedSeason: React.FC = () => {
       case 'DST': return '🛡️';
       default: return '⚡';
     }
-  };
-
-  const getOutcomeColor = (outcome: string) => {
-    if (outcome.includes('Champion')) return '#52c41a';
-    if (outcome.includes('Runner-up') || outcome.includes('Playoffs')) return '#1890ff';
-    return '#8c8c8c';
   };
 
   return (

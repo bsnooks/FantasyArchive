@@ -4,7 +4,7 @@ import { useFranchises, useSeasons } from '../hooks/useFantasyData';
 import LoadingSkeleton from '../components/LoadingSkeleton';
 import EmptyState from '../components/EmptyState';
 import FranchiseLogo from '../components/FranchiseLogo';
-import { Result, Card, Statistic, Row, Col, Button, Space } from 'antd';
+import { Result, Card, Statistic, Row, Col, Button } from 'antd';
 import { CalendarOutlined, TrophyOutlined, TeamOutlined, GiftOutlined } from '@ant-design/icons';
 
 const FranchiseSeasonDetail: React.FC = () => {
