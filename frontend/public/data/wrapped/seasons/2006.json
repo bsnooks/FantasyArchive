@@ -1,0 +1,62 @@
+[
+  {
+    "FranchiseId": "b2220d1a-ff75-4622-9757-09978901110f",
+    "FranchiseName": "The Bad Guys",
+    "Year": 2006,
+    "FilePath": "franchises/b2220d1a-ff75-4622-9757-09978901110f_2006.json"
+  },
+  {
+    "FranchiseId": "4449259f-64af-44fd-9235-1facc0926234",
+    "FranchiseName": "She\u0027s the Fastest",
+    "Year": 2006,
+    "FilePath": "franchises/4449259f-64af-44fd-9235-1facc0926234_2006.json"
+  },
+  {
+    "FranchiseId": "8e9f18ff-62c3-40e8-bb10-32f74cf4ee33",
+    "FranchiseName": "Hot Loads",
+    "Year": 2006,
+    "FilePath": "franchises/8e9f18ff-62c3-40e8-bb10-32f74cf4ee33_2006.json"
+  },
+  {
+    "FranchiseId": "f5908944-6efd-40eb-af54-6c53004e0e2f",
+    "FranchiseName": "Mad Guys",
+    "Year": 2006,
+    "FilePath": "franchises/f5908944-6efd-40eb-af54-6c53004e0e2f_2006.json"
+  },
+  {
+    "FranchiseId": "bbe2d0ad-54cf-4c22-be82-b2a5f262a157",
+    "FranchiseName": "The Mojos",
+    "Year": 2006,
+    "FilePath": "franchises/bbe2d0ad-54cf-4c22-be82-b2a5f262a157_2006.json"
+  },
+  {
+    "FranchiseId": "66fb98f4-89a7-45f9-893a-b41d71e6249d",
+    "FranchiseName": "leaf16",
+    "Year": 2006,
+    "FilePath": "franchises/66fb98f4-89a7-45f9-893a-b41d71e6249d_2006.json"
+  },
+  {
+    "FranchiseId": "40f7599b-e68f-4bf4-9553-bf7e10924635",
+    "FranchiseName": "Army of Dakness",
+    "Year": 2006,
+    "FilePath": "franchises/40f7599b-e68f-4bf4-9553-bf7e10924635_2006.json"
+  },
+  {
+    "FranchiseId": "f483ecf1-cd17-4991-854b-e52dfc957b45",
+    "FranchiseName": "FB in the Groin",
+    "Year": 2006,
+    "FilePath": "franchises/f483ecf1-cd17-4991-854b-e52dfc957b45_2006.json"
+  },
+  {
+    "FranchiseId": "2feaf03e-fb22-498e-ac8f-e596b6ba7810",
+    "FranchiseName": "Balero Boyz",
+    "Year": 2006,
+    "FilePath": "franchises/2feaf03e-fb22-498e-ac8f-e596b6ba7810_2006.json"
+  },
+  {
+    "FranchiseId": "825928a9-7194-43aa-b7ae-fc78c2510b16",
+    "FranchiseName": "Laters",
+    "Year": 2006,
+    "FilePath": "franchises/825928a9-7194-43aa-b7ae-fc78c2510b16_2006.json"
+  }
+]

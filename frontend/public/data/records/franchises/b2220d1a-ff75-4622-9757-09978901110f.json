@@ -118,13 +118,27 @@
         "PlayerID": null,
         "PlayerName": null,
         "PlayerPosition": null,
+        "RecordValue": "2025: 8-7 (1679.8 pts)",
+        "RecordNumericValue": 8,
+        "Year": 2025,
+        "Week": null
+      },
+      {
+        "Rank": 7,
+        "FranchiseId": "b2220d1a-ff75-4622-9757-09978901110f",
+        "FranchiseName": "The Bad Guys",
+        "OtherFranchiseId": null,
+        "OtherFranchiseName": null,
+        "PlayerID": null,
+        "PlayerName": null,
+        "PlayerPosition": null,
         "RecordValue": "2006: 8-6 (1534.5 pts)",
         "RecordNumericValue": 8,
         "Year": 2006,
         "Week": null
       },
       {
-        "Rank": 7,
+        "Rank": 8,
         "FranchiseId": "b2220d1a-ff75-4622-9757-09978901110f",
         "FranchiseName": "The Bad Guys",
         "OtherFranchiseId": null,
@@ -138,7 +152,7 @@
         "Week": null
       },
       {
-        "Rank": 8,
+        "Rank": 9,
         "FranchiseId": "b2220d1a-ff75-4622-9757-09978901110f",
         "FranchiseName": "The Bad Guys",
         "OtherFranchiseId": null,
@@ -152,7 +166,7 @@
         "Week": null
       },
       {
-        "Rank": 9,
+        "Rank": 10,
         "FranchiseId": "b2220d1a-ff75-4622-9757-09978901110f",
         "FranchiseName": "The Bad Guys",
         "OtherFranchiseId": null,
@@ -163,20 +177,6 @@
         "RecordValue": "2016: 8-6 (1491.0 pts)",
         "RecordNumericValue": 8,
         "Year": 2016,
-        "Week": null
-      },
-      {
-        "Rank": 10,
-        "FranchiseId": "b2220d1a-ff75-4622-9757-09978901110f",
-        "FranchiseName": "The Bad Guys",
-        "OtherFranchiseId": null,
-        "OtherFranchiseName": null,
-        "PlayerID": null,
-        "PlayerName": null,
-        "PlayerPosition": null,
-        "RecordValue": "2022: 7-8 (1566.8 pts)",
-        "RecordNumericValue": 7,
-        "Year": 2022,
         "Week": null
       }
     ]

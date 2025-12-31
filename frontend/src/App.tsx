@@ -19,6 +19,8 @@ import TradeTrees from "./pages/TradeTrees";
 import TradeDetail from "./pages/TradeDetail";
 import Records from "./pages/Records";
 import PlayerProfile from "./pages/PlayerProfile";
+import WrappedSeason from "./pages/WrappedSeason";
+import Wrapped from "./components/Wrapped";
 import "./App.css";
 
 // Create a client
@@ -147,11 +149,16 @@ const App: React.FC = () => {
                       path="/franchise/:franchiseId/season/:year"
                       element={<FranchiseSeasonDetail />}
                     />
+                    <Route
+                      path="/franchise/:franchiseId/season/:year/wrapped"
+                      element={<WrappedSeason />}
+                    />
                     <Route path="/season/:year" element={<SeasonDetail />} />
                     <Route path="/drafts" element={<Drafts />} />
                     <Route path="/trade-trees" element={<TradeTrees />} />
                     <Route path="/trade/:tradeId" element={<TradeDetail />} />
                     <Route path="/records" element={<Records />} />
+                    <Route path="/wrapped" element={<Wrapped />} />
                     <Route
                       path="/player/:playerId"
                       element={<PlayerProfile />}

@@ -291,10 +291,10 @@
       "Id": "a303d7fa-b081-4f51-abd2-35fbb161957d",
       "Year": 2025,
       "TeamName": "The Band-Aid Guys",
-      "Wins": 7,
+      "Wins": 8,
       "Losses": 7,
       "Ties": 0,
-      "Points": 1395.7,
+      "Points": 1524.08,
       "Standing": 5,
       "Champion": false,
       "SecondPlace": false
@@ -306,15 +306,16 @@
         "PlayerID": 32671,
         "PlayerName": "Joe Burrow",
         "Position": "QB",
-        "TotalPoints": 1325.6,
-        "WeeksStarted": 72,
-        "AveragePoints": 18.4,
+        "TotalPoints": 1439.0,
+        "WeeksStarted": 79,
+        "AveragePoints": 18.2,
         "SeasonsWithFranchise": [
           2020,
           2021,
           2022,
           2023,
-          2024
+          2024,
+          2025
         ],
         "IsBench": false
       },
@@ -388,15 +389,15 @@
         "IsBench": false
       },
       {
-        "PlayerID": 9317,
-        "PlayerName": "LeSean McCoy",
+        "PlayerID": 29279,
+        "PlayerName": "Derrick Henry",
         "Position": "RB",
-        "TotalPoints": 337.9,
-        "WeeksStarted": 25,
-        "AveragePoints": 13.5,
+        "TotalPoints": 382.0,
+        "WeeksStarted": 23,
+        "AveragePoints": 16.6,
         "SeasonsWithFranchise": [
-          2012,
-          2017
+          2024,
+          2025
         ],
         "IsBench": true
       }
@@ -406,9 +407,9 @@
         "PlayerID": 29399,
         "PlayerName": "Tyreek Hill",
         "Position": "WR",
-        "TotalPoints": 1480.0,
-        "WeeksStarted": 117,
-        "AveragePoints": 12.6,
+        "TotalPoints": 1505.8,
+        "WeeksStarted": 120,
+        "AveragePoints": 12.5,
         "SeasonsWithFranchise": [
           2017,
           2018,
@@ -417,7 +418,8 @@
           2021,
           2022,
           2023,
-          2024
+          2024,
+          2025
         ],
         "IsBench": false
       },

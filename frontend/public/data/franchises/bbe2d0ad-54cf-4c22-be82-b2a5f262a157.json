@@ -290,10 +290,10 @@
       "Id": "fb38eb86-5a78-4d52-be56-a054181000c9",
       "Year": 2025,
       "TeamName": "The Mojos",
-      "Wins": 10,
+      "Wins": 11,
       "Losses": 4,
       "Ties": 0,
-      "Points": 1843.66,
+      "Points": 1993,
       "Standing": 2,
       "Champion": false,
       "SecondPlace": false
@@ -323,6 +323,22 @@
         "IsBench": false
       },
       {
+        "PlayerID": 30977,
+        "PlayerName": "Josh Allen",
+        "Position": "QB",
+        "TotalPoints": 1780.9,
+        "WeeksStarted": 79,
+        "AveragePoints": 22.5,
+        "SeasonsWithFranchise": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "IsBench": false
+      },
+      {
         "PlayerID": 25711,
         "PlayerName": "Andrew Luck",
         "Position": "QB",
@@ -336,21 +352,6 @@
           2015,
           2016,
           2018
-        ],
-        "IsBench": false
-      },
-      {
-        "PlayerID": 30977,
-        "PlayerName": "Josh Allen",
-        "Position": "QB",
-        "TotalPoints": 1404.2,
-        "WeeksStarted": 63,
-        "AveragePoints": 22.3,
-        "SeasonsWithFranchise": [
-          2021,
-          2022,
-          2023,
-          2024
         ],
         "IsBench": true
       }
@@ -374,6 +375,20 @@
         "IsBench": false
       },
       {
+        "PlayerID": 34019,
+        "PlayerName": "James Cook",
+        "Position": "RB",
+        "TotalPoints": 574.8,
+        "WeeksStarted": 41,
+        "AveragePoints": 14.0,
+        "SeasonsWithFranchise": [
+          2023,
+          2024,
+          2025
+        ],
+        "IsBench": false
+      },
+      {
         "PlayerID": 3937,
         "PlayerName": "Tiki Barber",
         "Position": "RB",
@@ -384,19 +399,6 @@
           2004,
           2005,
           2006
-        ],
-        "IsBench": false
-      },
-      {
-        "PlayerID": 29279,
-        "PlayerName": "Derrick Henry",
-        "Position": "RB",
-        "TotalPoints": 443.7,
-        "WeeksStarted": 24,
-        "AveragePoints": 18.5,
-        "SeasonsWithFranchise": [
-          2019,
-          2020
         ],
         "IsBench": true
       }
@@ -486,15 +488,15 @@
         "IsBench": false
       },
       {
-        "PlayerID": 28592,
-        "PlayerName": "Darren Waller",
+        "PlayerID": 34010,
+        "PlayerName": "Trey McBride",
         "Position": "TE",
-        "TotalPoints": 215.7,
-        "WeeksStarted": 27,
-        "AveragePoints": 8.0,
+        "TotalPoints": 247.0,
+        "WeeksStarted": 24,
+        "AveragePoints": 10.3,
         "SeasonsWithFranchise": [
-          2020,
-          2021
+          2023,
+          2025
         ],
         "IsBench": true
       }

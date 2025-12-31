@@ -1,0 +1,24 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 19, 2025")
+    TEAM_1("leaf16")
+    TEAM_2("FB in the Groin")
+    NODE_27137699-cee1-4b15-8f13-254bbd2d05df("🔄 Aaron Jones - Nov 19, 2025")
+    NODE_f9da3776-0842-42db-9719-6211e3988da3("🔄 Kirk Cousins - Nov 19, 2025")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_27137699-cee1-4b15-8f13-254bbd2d05df
+    TEAM_2 --> NODE_f9da3776-0842-42db-9719-6211e3988da3
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

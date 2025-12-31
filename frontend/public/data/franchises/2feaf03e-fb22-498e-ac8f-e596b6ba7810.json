@@ -291,9 +291,9 @@
       "Year": 2025,
       "TeamName": "Balero Boyz",
       "Wins": 4,
-      "Losses": 10,
+      "Losses": 11,
       "Ties": 0,
-      "Points": 1496.38,
+      "Points": 1613.8,
       "Standing": 9,
       "Champion": false,
       "SecondPlace": false
@@ -388,18 +388,16 @@
         "IsBench": false
       },
       {
-        "PlayerID": 5036,
-        "PlayerName": "Thomas Jones",
+        "PlayerID": 40055,
+        "PlayerName": "Bijan Robinson",
         "Position": "RB",
-        "TotalPoints": 583.2,
-        "WeeksStarted": 52,
-        "AveragePoints": 11.2,
+        "TotalPoints": 669.5,
+        "WeeksStarted": 47,
+        "AveragePoints": 14.2,
         "SeasonsWithFranchise": [
-          2004,
-          2005,
-          2006,
-          2007,
-          2009
+          2023,
+          2024,
+          2025
         ],
         "IsBench": true
       }
@@ -444,13 +442,14 @@
         "PlayerID": 32687,
         "PlayerName": "CeeDee Lamb",
         "Position": "WR",
-        "TotalPoints": 543.0,
-        "WeeksStarted": 47,
-        "AveragePoints": 11.6,
+        "TotalPoints": 668.5,
+        "WeeksStarted": 60,
+        "AveragePoints": 11.1,
         "SeasonsWithFranchise": [
           2022,
           2023,
-          2024
+          2024,
+          2025
         ],
         "IsBench": false
       },
@@ -494,14 +493,15 @@
         "PlayerID": 26658,
         "PlayerName": "Zach Ertz",
         "Position": "TE",
-        "TotalPoints": 408.8,
-        "WeeksStarted": 45,
-        "AveragePoints": 9.1,
+        "TotalPoints": 413.0,
+        "WeeksStarted": 46,
+        "AveragePoints": 9.0,
         "SeasonsWithFranchise": [
           2016,
           2017,
           2018,
-          2019
+          2019,
+          2025
         ],
         "IsBench": true
       }

@@ -22,7 +22,6 @@ namespace FantasyArchive.Data.Models
         [Column("Week")]
         public int Week { get; set; }
         
-        [Required]
         [Column("TeamId")]
         public Guid? TeamId { get; set; }
         

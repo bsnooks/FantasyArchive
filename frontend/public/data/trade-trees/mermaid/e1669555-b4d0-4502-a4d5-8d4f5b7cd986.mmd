@@ -6,6 +6,11 @@ flowchart TD
     NODE_1a7e90bb-694a-430b-a9c6-0cf0083f5a1d("🔄 Russell Wilson - Nov 14, 2024")
     NODE_ca4dcfc8-9ab7-43d0-a591-1d01b1317754("🔄 Mike Evans - Nov 14, 2024")
     NODE_e8b2d058-a582-4417-88d0-d3b5f15adeb1("🔒 Mike Evans - Kept - Sep 4, 2025")
+    TRADE_4acea087-f061-4ce9-8f12-52c5020d2fa2_3("🔄 Trade - Sep 25, 2025")
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_4["The Mojos"]
+    NODE_5f3d4835-edcb-480e-8d78-2468a7659871("🔄 Mike Evans - Sep 25, 2025")
+    TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_5["Mad Guys"]
+    NODE_b6db8bce-dedf-4291-850b-d7138b482261("🔄 Cam Ward - Sep 25, 2025")
     NODE_fa0e74d1-3b4c-4e75-b098-589783324f71("🔄 Rashee Rice - Nov 14, 2024")
     NODE_893a6362-fd5e-4b2b-ba4d-aa9655521b2a("🔒 Rashee Rice - Kept - Sep 4, 2025")
 
@@ -14,6 +19,11 @@ flowchart TD
     TEAM_1 --> NODE_1a7e90bb-694a-430b-a9c6-0cf0083f5a1d
     TEAM_1 --> NODE_ca4dcfc8-9ab7-43d0-a591-1d01b1317754
     NODE_ca4dcfc8-9ab7-43d0-a591-1d01b1317754 --> NODE_e8b2d058-a582-4417-88d0-d3b5f15adeb1
+    NODE_e8b2d058-a582-4417-88d0-d3b5f15adeb1 --> TRADE_4acea087-f061-4ce9-8f12-52c5020d2fa2_3
+    TRADE_4acea087-f061-4ce9-8f12-52c5020d2fa2_3 --> TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_4
+    TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_4 --> NODE_5f3d4835-edcb-480e-8d78-2468a7659871
+    TRADE_4acea087-f061-4ce9-8f12-52c5020d2fa2_3 --> TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_5
+    TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_5 --> NODE_b6db8bce-dedf-4291-850b-d7138b482261
     TEAM_2 --> NODE_fa0e74d1-3b4c-4e75-b098-589783324f71
     NODE_fa0e74d1-3b4c-4e75-b098-589783324f71 --> NODE_893a6362-fd5e-4b2b-ba4d-aa9655521b2a
 
@@ -26,5 +36,6 @@ flowchart TD
     classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
     classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
 
-    class TEAM_1,TEAM_2 teamNode
-    class TRADE_MAIN tradeNode
+    class TEAM_1,TEAM_2,TEAM_bbe2d0ad-54cf-4c22-be82-b2a5f262a157_4,TEAM_f5908944-6efd-40eb-af54-6c53004e0e2f_5 teamNode
+    class NODE_5f3d4835-edcb-480e-8d78-2468a7659871 nonRootPlayerNode
+    class TRADE_MAIN,TRADE_4acea087-f061-4ce9-8f12-52c5020d2fa2_3 tradeNode

@@ -290,11 +290,11 @@
         "Id": "e9f0c3e0-7689-4219-9483-e289ad81dee8",
         "Year": 2025,
         "TeamName": "The Bad Guys",
-        "Wins": 7,
+        "Wins": 8,
         "Losses": 7,
         "Ties": 0,
-        "Points": 1564.84,
-        "Standing": 4,
+        "Points": 1679.8,
+        "Standing": 3,
         "Champion": false,
         "SecondPlace": false
       }
@@ -354,9 +354,9 @@
           "PlayerID": 30121,
           "PlayerName": "Christian McCaffrey",
           "Position": "RB",
-          "TotalPoints": 1486.0,
-          "WeeksStarted": 102,
-          "AveragePoints": 14.6,
+          "TotalPoints": 1798.9,
+          "WeeksStarted": 118,
+          "AveragePoints": 15.2,
           "SeasonsWithFranchise": [
             2017,
             2018,
@@ -365,7 +365,8 @@
             2021,
             2022,
             2023,
-            2024
+            2024,
+            2025
           ],
           "IsBench": false
         },
@@ -477,16 +478,17 @@
           "PlayerID": 31056,
           "PlayerName": "Mark Andrews",
           "Position": "TE",
-          "TotalPoints": 672.5,
-          "WeeksStarted": 77,
-          "AveragePoints": 8.7,
+          "TotalPoints": 673.0,
+          "WeeksStarted": 78,
+          "AveragePoints": 8.6,
           "SeasonsWithFranchise": [
             2019,
             2020,
             2021,
             2022,
             2023,
-            2024
+            2024,
+            2025
           ],
           "IsBench": false
         },
@@ -798,10 +800,10 @@
         "Id": "6eb662c8-2cbb-40eb-a1d0-222d5327da9f",
         "Year": 2025,
         "TeamName": "She\u0027s the Fastest",
-        "Wins": 12,
+        "Wins": 13,
         "Losses": 2,
         "Ties": 0,
-        "Points": 1733.64,
+        "Points": 1915.06,
         "Standing": 1,
         "Champion": false,
         "SecondPlace": false
@@ -835,15 +837,16 @@
           "PlayerID": 31833,
           "PlayerName": "Kyler Murray",
           "Position": "QB",
-          "TotalPoints": 1269.1,
-          "WeeksStarted": 60,
-          "AveragePoints": 21.2,
+          "TotalPoints": 1348.8,
+          "WeeksStarted": 65,
+          "AveragePoints": 20.8,
           "SeasonsWithFranchise": [
             2019,
             2020,
             2021,
             2022,
-            2024
+            2024,
+            2025
           ],
           "IsBench": false
         },
@@ -851,18 +854,36 @@
           "PlayerID": 9265,
           "PlayerName": "Matthew Stafford",
           "Position": "QB",
-          "TotalPoints": 627.6,
-          "WeeksStarted": 36,
-          "AveragePoints": 17.4,
+          "TotalPoints": 916.6,
+          "WeeksStarted": 49,
+          "AveragePoints": 18.7,
           "SeasonsWithFranchise": [
             2013,
             2014,
-            2024
+            2024,
+            2025
           ],
           "IsBench": true
         }
       ],
       "RunningBacks": [
+        {
+          "PlayerID": 32711,
+          "PlayerName": "Jonathan Taylor",
+          "Position": "RB",
+          "TotalPoints": 1115.8,
+          "WeeksStarted": 70,
+          "AveragePoints": 15.9,
+          "SeasonsWithFranchise": [
+            2020,
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
+          ],
+          "IsBench": false
+        },
         {
           "PlayerID": 8801,
           "PlayerName": "Chris Johnson",
@@ -891,22 +912,6 @@
             2017,
             2018,
             2019
-          ],
-          "IsBench": false
-        },
-        {
-          "PlayerID": 32711,
-          "PlayerName": "Jonathan Taylor",
-          "Position": "RB",
-          "TotalPoints": 801.4,
-          "WeeksStarted": 54,
-          "AveragePoints": 14.8,
-          "SeasonsWithFranchise": [
-            2020,
-            2021,
-            2022,
-            2023,
-            2024
           ],
           "IsBench": true
         }
@@ -968,18 +973,17 @@
           "IsBench": false
         },
         {
-          "PlayerID": 31896,
-          "PlayerName": "DK Metcalf",
+          "PlayerID": 33500,
+          "PlayerName": "Amon-Ra St. Brown",
           "Position": "WR",
-          "TotalPoints": 532.0,
-          "WeeksStarted": 51,
-          "AveragePoints": 10.4,
+          "TotalPoints": 676.0,
+          "WeeksStarted": 60,
+          "AveragePoints": 11.3,
           "SeasonsWithFranchise": [
-            2019,
-            2020,
-            2021,
             2022,
-            2024
+            2023,
+            2024,
+            2025
           ],
           "IsBench": true
         }
@@ -1310,10 +1314,10 @@
         "Year": 2025,
         "TeamName": "Hot Loads",
         "Wins": 5,
-        "Losses": 9,
+        "Losses": 10,
         "Ties": 0,
-        "Points": 1400.88,
-        "Standing": 8,
+        "Points": 1491.8,
+        "Standing": 7,
         "Champion": false,
         "SecondPlace": false
       }
@@ -1831,10 +1835,10 @@
         "Id": "a303d7fa-b081-4f51-abd2-35fbb161957d",
         "Year": 2025,
         "TeamName": "The Band-Aid Guys",
-        "Wins": 7,
+        "Wins": 8,
         "Losses": 7,
         "Ties": 0,
-        "Points": 1395.7,
+        "Points": 1524.08,
         "Standing": 5,
         "Champion": false,
         "SecondPlace": false
@@ -1846,15 +1850,16 @@
           "PlayerID": 32671,
           "PlayerName": "Joe Burrow",
           "Position": "QB",
-          "TotalPoints": 1325.6,
-          "WeeksStarted": 72,
-          "AveragePoints": 18.4,
+          "TotalPoints": 1439.0,
+          "WeeksStarted": 79,
+          "AveragePoints": 18.2,
           "SeasonsWithFranchise": [
             2020,
             2021,
             2022,
             2023,
-            2024
+            2024,
+            2025
           ],
           "IsBench": false
         },
@@ -1928,15 +1933,15 @@
           "IsBench": false
         },
         {
-          "PlayerID": 9317,
-          "PlayerName": "LeSean McCoy",
+          "PlayerID": 29279,
+          "PlayerName": "Derrick Henry",
           "Position": "RB",
-          "TotalPoints": 337.9,
-          "WeeksStarted": 25,
-          "AveragePoints": 13.5,
+          "TotalPoints": 382.0,
+          "WeeksStarted": 23,
+          "AveragePoints": 16.6,
           "SeasonsWithFranchise": [
-            2012,
-            2017
+            2024,
+            2025
           ],
           "IsBench": true
         }
@@ -1946,9 +1951,9 @@
           "PlayerID": 29399,
           "PlayerName": "Tyreek Hill",
           "Position": "WR",
-          "TotalPoints": 1480.0,
-          "WeeksStarted": 117,
-          "AveragePoints": 12.6,
+          "TotalPoints": 1505.8,
+          "WeeksStarted": 120,
+          "AveragePoints": 12.5,
           "SeasonsWithFranchise": [
             2017,
             2018,
@@ -1957,7 +1962,8 @@
             2021,
             2022,
             2023,
-            2024
+            2024,
+            2025
           ],
           "IsBench": false
         },
@@ -2330,10 +2336,10 @@
         "Id": "fb38eb86-5a78-4d52-be56-a054181000c9",
         "Year": 2025,
         "TeamName": "The Mojos",
-        "Wins": 10,
+        "Wins": 11,
         "Losses": 4,
         "Ties": 0,
-        "Points": 1843.66,
+        "Points": 1993,
         "Standing": 2,
         "Champion": false,
         "SecondPlace": false
@@ -2363,6 +2369,22 @@
           "IsBench": false
         },
         {
+          "PlayerID": 30977,
+          "PlayerName": "Josh Allen",
+          "Position": "QB",
+          "TotalPoints": 1780.9,
+          "WeeksStarted": 79,
+          "AveragePoints": 22.5,
+          "SeasonsWithFranchise": [
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
+          ],
+          "IsBench": false
+        },
+        {
           "PlayerID": 25711,
           "PlayerName": "Andrew Luck",
           "Position": "QB",
@@ -2376,21 +2398,6 @@
             2015,
             2016,
             2018
-          ],
-          "IsBench": false
-        },
-        {
-          "PlayerID": 30977,
-          "PlayerName": "Josh Allen",
-          "Position": "QB",
-          "TotalPoints": 1404.2,
-          "WeeksStarted": 63,
-          "AveragePoints": 22.3,
-          "SeasonsWithFranchise": [
-            2021,
-            2022,
-            2023,
-            2024
           ],
           "IsBench": true
         }
@@ -2414,6 +2421,20 @@
           "IsBench": false
         },
         {
+          "PlayerID": 34019,
+          "PlayerName": "James Cook",
+          "Position": "RB",
+          "TotalPoints": 574.8,
+          "WeeksStarted": 41,
+          "AveragePoints": 14.0,
+          "SeasonsWithFranchise": [
+            2023,
+            2024,
+            2025
+          ],
+          "IsBench": false
+        },
+        {
           "PlayerID": 3937,
           "PlayerName": "Tiki Barber",
           "Position": "RB",
@@ -2424,19 +2445,6 @@
             2004,
             2005,
             2006
-          ],
-          "IsBench": false
-        },
-        {
-          "PlayerID": 29279,
-          "PlayerName": "Derrick Henry",
-          "Position": "RB",
-          "TotalPoints": 443.7,
-          "WeeksStarted": 24,
-          "AveragePoints": 18.5,
-          "SeasonsWithFranchise": [
-            2019,
-            2020
           ],
           "IsBench": true
         }
@@ -2526,15 +2534,15 @@
           "IsBench": false
         },
         {
-          "PlayerID": 28592,
-          "PlayerName": "Darren Waller",
+          "PlayerID": 34010,
+          "PlayerName": "Trey McBride",
           "Position": "TE",
-          "TotalPoints": 215.7,
-          "WeeksStarted": 27,
-          "AveragePoints": 8.0,
+          "TotalPoints": 247.0,
+          "WeeksStarted": 24,
+          "AveragePoints": 10.3,
           "SeasonsWithFranchise": [
-            2020,
-            2021
+            2023,
+            2025
           ],
           "IsBench": true
         }
@@ -2832,11 +2840,11 @@
         "Id": "36de4ba0-a1ad-4d77-aec4-227b81aea100",
         "Year": 2025,
         "TeamName": "leaf16",
-        "Wins": 10,
+        "Wins": 11,
         "Losses": 4,
         "Ties": 0,
-        "Points": 1728.98,
-        "Standing": 3,
+        "Points": 1858.12,
+        "Standing": 4,
         "Champion": false,
         "SecondPlace": false
       }
@@ -2890,14 +2898,15 @@
           "PlayerID": 32723,
           "PlayerName": "Jalen Hurts",
           "Position": "QB",
-          "TotalPoints": 1303.5,
-          "WeeksStarted": 60,
-          "AveragePoints": 21.7,
+          "TotalPoints": 1618.6,
+          "WeeksStarted": 76,
+          "AveragePoints": 21.3,
           "SeasonsWithFranchise": [
             2021,
             2022,
             2023,
-            2024
+            2024,
+            2025
           ],
           "IsBench": true
         }
@@ -3009,18 +3018,16 @@
           "IsBench": false
         },
         {
-          "PlayerID": 24057,
-          "PlayerName": "Emmanuel Sanders",
+          "PlayerID": 31883,
+          "PlayerName": "A.J. Brown",
           "Position": "WR",
-          "TotalPoints": 438.0,
-          "WeeksStarted": 46,
-          "AveragePoints": 9.5,
+          "TotalPoints": 442.0,
+          "WeeksStarted": 44,
+          "AveragePoints": 10.0,
           "SeasonsWithFranchise": [
-            2014,
-            2015,
-            2016,
-            2017,
-            2019
+            2023,
+            2024,
+            2025
           ],
           "IsBench": true
         }
@@ -3041,17 +3048,17 @@
           "IsBench": false
         },
         {
-          "PlayerID": 6405,
-          "PlayerName": "Jason Witten",
+          "PlayerID": 30259,
+          "PlayerName": "George Kittle",
           "Position": "TE",
-          "TotalPoints": 238.8,
-          "WeeksStarted": 31,
-          "AveragePoints": 7.7,
+          "TotalPoints": 283.6,
+          "WeeksStarted": 36,
+          "AveragePoints": 7.9,
           "SeasonsWithFranchise": [
-            2012,
-            2013,
-            2017,
-            2019
+            2019,
+            2020,
+            2024,
+            2025
           ],
           "IsBench": true
         }
@@ -3351,10 +3358,10 @@
         "Year": 2025,
         "TeamName": "Army of Dakness",
         "Wins": 5,
-        "Losses": 9,
+        "Losses": 10,
         "Ties": 0,
-        "Points": 1582.12,
-        "Standing": 7,
+        "Points": 1684.84,
+        "Standing": 6,
         "Champion": false,
         "SecondPlace": false
       }
@@ -3365,9 +3372,9 @@
           "PlayerID": 30123,
           "PlayerName": "Patrick Mahomes",
           "Position": "QB",
-          "TotalPoints": 2318.7,
-          "WeeksStarted": 106,
-          "AveragePoints": 21.9,
+          "TotalPoints": 2605.4,
+          "WeeksStarted": 120,
+          "AveragePoints": 21.7,
           "SeasonsWithFranchise": [
             2018,
             2019,
@@ -3375,7 +3382,29 @@
             2021,
             2022,
             2023,
-            2024
+            2024,
+            2025
+          ],
+          "IsBench": false
+        },
+        {
+          "PlayerID": 29369,
+          "PlayerName": "Dak Prescott",
+          "Position": "QB",
+          "TotalPoints": 2290.7,
+          "WeeksStarted": 134,
+          "AveragePoints": 17.1,
+          "SeasonsWithFranchise": [
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
           ],
           "IsBench": false
         },
@@ -3397,26 +3426,6 @@
             2013,
             2014,
             2015
-          ],
-          "IsBench": false
-        },
-        {
-          "PlayerID": 29369,
-          "PlayerName": "Dak Prescott",
-          "Position": "QB",
-          "TotalPoints": 2019.9,
-          "WeeksStarted": 120,
-          "AveragePoints": 16.8,
-          "SeasonsWithFranchise": [
-            2016,
-            2017,
-            2018,
-            2019,
-            2020,
-            2021,
-            2022,
-            2023,
-            2024
           ],
           "IsBench": true
         }
@@ -3491,6 +3500,22 @@
           "IsBench": false
         },
         {
+          "PlayerID": 33393,
+          "PlayerName": "Ja\u0027Marr Chase",
+          "Position": "WR",
+          "TotalPoints": 870.6,
+          "WeeksStarted": 70,
+          "AveragePoints": 12.4,
+          "SeasonsWithFranchise": [
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
+          ],
+          "IsBench": false
+        },
+        {
           "PlayerID": 23997,
           "PlayerName": "Demaryius Thomas",
           "Position": "WR",
@@ -3503,21 +3528,6 @@
             2014,
             2015,
             2016
-          ],
-          "IsBench": false
-        },
-        {
-          "PlayerID": 33393,
-          "PlayerName": "Ja\u0027Marr Chase",
-          "Position": "WR",
-          "TotalPoints": 695.6,
-          "WeeksStarted": 55,
-          "AveragePoints": 12.6,
-          "SeasonsWithFranchise": [
-            2021,
-            2022,
-            2023,
-            2024
           ],
           "IsBench": false
         },
@@ -3865,9 +3875,9 @@
         "Year": 2025,
         "TeamName": "Football in the Groin",
         "Wins": 4,
-        "Losses": 10,
+        "Losses": 11,
         "Ties": 0,
-        "Points": 1439.48,
+        "Points": 1546.82,
         "Standing": 10,
         "Champion": false,
         "SecondPlace": false
@@ -4006,14 +4016,15 @@
           "PlayerID": 32692,
           "PlayerName": "Justin Jefferson",
           "Position": "WR",
-          "TotalPoints": 654.9,
-          "WeeksStarted": 48,
-          "AveragePoints": 13.6,
+          "TotalPoints": 762.0,
+          "WeeksStarted": 64,
+          "AveragePoints": 11.9,
           "SeasonsWithFranchise": [
             2021,
             2022,
             2023,
-            2024
+            2024,
+            2025
           ],
           "IsBench": false
         },
@@ -4374,9 +4385,9 @@
         "Year": 2025,
         "TeamName": "Balero Boyz",
         "Wins": 4,
-        "Losses": 10,
+        "Losses": 11,
         "Ties": 0,
-        "Points": 1496.38,
+        "Points": 1613.8,
         "Standing": 9,
         "Champion": false,
         "SecondPlace": false
@@ -4471,18 +4482,16 @@
           "IsBench": false
         },
         {
-          "PlayerID": 5036,
-          "PlayerName": "Thomas Jones",
+          "PlayerID": 40055,
+          "PlayerName": "Bijan Robinson",
           "Position": "RB",
-          "TotalPoints": 583.2,
-          "WeeksStarted": 52,
-          "AveragePoints": 11.2,
+          "TotalPoints": 669.5,
+          "WeeksStarted": 47,
+          "AveragePoints": 14.2,
           "SeasonsWithFranchise": [
-            2004,
-            2005,
-            2006,
-            2007,
-            2009
+            2023,
+            2024,
+            2025
           ],
           "IsBench": true
         }
@@ -4527,13 +4536,14 @@
           "PlayerID": 32687,
           "PlayerName": "CeeDee Lamb",
           "Position": "WR",
-          "TotalPoints": 543.0,
-          "WeeksStarted": 47,
-          "AveragePoints": 11.6,
+          "TotalPoints": 668.5,
+          "WeeksStarted": 60,
+          "AveragePoints": 11.1,
           "SeasonsWithFranchise": [
             2022,
             2023,
-            2024
+            2024,
+            2025
           ],
           "IsBench": false
         },
@@ -4577,14 +4587,15 @@
           "PlayerID": 26658,
           "PlayerName": "Zach Ertz",
           "Position": "TE",
-          "TotalPoints": 408.8,
-          "WeeksStarted": 45,
-          "AveragePoints": 9.1,
+          "TotalPoints": 413.0,
+          "WeeksStarted": 46,
+          "AveragePoints": 9.0,
           "SeasonsWithFranchise": [
             2016,
             2017,
             2018,
-            2019
+            2019,
+            2025
           ],
           "IsBench": true
         }
@@ -4883,10 +4894,10 @@
         "Year": 2025,
         "TeamName": "Laters",
         "Wins": 6,
-        "Losses": 8,
+        "Losses": 9,
         "Ties": 0,
-        "Points": 1475.48,
-        "Standing": 6,
+        "Points": 1576.38,
+        "Standing": 8,
         "Champion": false,
         "SecondPlace": false
       }
@@ -4942,15 +4953,16 @@
           "PlayerID": 32676,
           "PlayerName": "Justin Herbert",
           "Position": "QB",
-          "TotalPoints": 1268.2,
-          "WeeksStarted": 69,
+          "TotalPoints": 1567.1,
+          "WeeksStarted": 85,
           "AveragePoints": 18.4,
           "SeasonsWithFranchise": [
             2020,
             2021,
             2022,
             2023,
-            2024
+            2024,
+            2025
           ],
           "IsBench": true
         }

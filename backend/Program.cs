@@ -20,7 +20,10 @@ builder.Services.AddOpenApi();
 builder.Services.AddDbContext<FantasyArchiveContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("DefaultConnection"),
-        sqlOptions => sqlOptions.EnableRetryOnFailure()));
+        sqlOptions => sqlOptions.EnableRetryOnFailure())
+    .EnableSensitiveDataLogging(false)
+    .EnableDetailedErrors(false)
+    .ConfigureWarnings(warnings => warnings.Ignore(Microsoft.EntityFrameworkCore.Diagnostics.CoreEventId.SensitiveDataLoggingEnabledWarning)));
 
 // Add HTTP client for Yahoo API calls
 builder.Services.AddHttpClient<IYahooAuthService, YahooAuthService>();

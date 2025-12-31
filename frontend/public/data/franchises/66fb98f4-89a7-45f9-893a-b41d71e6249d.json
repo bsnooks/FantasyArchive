@@ -289,11 +289,11 @@
       "Id": "36de4ba0-a1ad-4d77-aec4-227b81aea100",
       "Year": 2025,
       "TeamName": "leaf16",
-      "Wins": 10,
+      "Wins": 11,
       "Losses": 4,
       "Ties": 0,
-      "Points": 1728.98,
-      "Standing": 3,
+      "Points": 1858.12,
+      "Standing": 4,
       "Champion": false,
       "SecondPlace": false
     }
@@ -347,14 +347,15 @@
         "PlayerID": 32723,
         "PlayerName": "Jalen Hurts",
         "Position": "QB",
-        "TotalPoints": 1303.5,
-        "WeeksStarted": 60,
-        "AveragePoints": 21.7,
+        "TotalPoints": 1618.6,
+        "WeeksStarted": 76,
+        "AveragePoints": 21.3,
         "SeasonsWithFranchise": [
           2021,
           2022,
           2023,
-          2024
+          2024,
+          2025
         ],
         "IsBench": true
       }
@@ -466,18 +467,16 @@
         "IsBench": false
       },
       {
-        "PlayerID": 24057,
-        "PlayerName": "Emmanuel Sanders",
+        "PlayerID": 31883,
+        "PlayerName": "A.J. Brown",
         "Position": "WR",
-        "TotalPoints": 438.0,
-        "WeeksStarted": 46,
-        "AveragePoints": 9.5,
+        "TotalPoints": 442.0,
+        "WeeksStarted": 44,
+        "AveragePoints": 10.0,
         "SeasonsWithFranchise": [
-          2014,
-          2015,
-          2016,
-          2017,
-          2019
+          2023,
+          2024,
+          2025
         ],
         "IsBench": true
       }
@@ -498,17 +497,17 @@
         "IsBench": false
       },
       {
-        "PlayerID": 6405,
-        "PlayerName": "Jason Witten",
+        "PlayerID": 30259,
+        "PlayerName": "George Kittle",
         "Position": "TE",
-        "TotalPoints": 238.8,
-        "WeeksStarted": 31,
-        "AveragePoints": 7.7,
+        "TotalPoints": 283.6,
+        "WeeksStarted": 36,
+        "AveragePoints": 7.9,
         "SeasonsWithFranchise": [
-          2012,
-          2013,
-          2017,
-          2019
+          2019,
+          2020,
+          2024,
+          2025
         ],
         "IsBench": true
       }

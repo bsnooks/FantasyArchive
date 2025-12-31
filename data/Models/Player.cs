@@ -31,7 +31,7 @@ namespace FantasyArchive.Data.Models
         public string? ShortName { get; set; }
         
         [Column("BirthYear")]
-        public int BirthYear { get; set; }
+        public int? BirthYear { get; set; }
         
         // Navigation properties
         public virtual ICollection<DraftPick> DraftPicks { get; set; }

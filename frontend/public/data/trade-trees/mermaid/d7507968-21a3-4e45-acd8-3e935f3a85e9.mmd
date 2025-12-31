@@ -1,0 +1,35 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 31, 2025")
+    TEAM_1("FB in the Groin")
+    TEAM_2("The Bad Guys")
+    NODE_c804ff26-6e17-436f-99fe-6f49bfce869c("🔄 Aaron Jones - Oct 31, 2025")
+    TRADE_18502be8-640e-4622-90b6-ad44fa76285d_3("🔄 Trade - Nov 19, 2025")
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4["leaf16"]
+    NODE_27137699-cee1-4b15-8f13-254bbd2d05df("🔄 Aaron Jones - Nov 19, 2025")
+    TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5["FB in the Groin"]
+    NODE_f9da3776-0842-42db-9719-6211e3988da3("🔄 Kirk Cousins - Nov 19, 2025")
+    NODE_f9d4f3e6-7e5f-406f-a986-c15552a499e7("🔄 Mac Jones - Oct 31, 2025")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_c804ff26-6e17-436f-99fe-6f49bfce869c
+    NODE_c804ff26-6e17-436f-99fe-6f49bfce869c --> TRADE_18502be8-640e-4622-90b6-ad44fa76285d_3
+    TRADE_18502be8-640e-4622-90b6-ad44fa76285d_3 --> TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4
+    TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4 --> NODE_27137699-cee1-4b15-8f13-254bbd2d05df
+    TRADE_18502be8-640e-4622-90b6-ad44fa76285d_3 --> TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5
+    TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5 --> NODE_f9da3776-0842-42db-9719-6211e3988da3
+    TEAM_2 --> NODE_f9d4f3e6-7e5f-406f-a986-c15552a499e7
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2,TEAM_66fb98f4-89a7-45f9-893a-b41d71e6249d_4,TEAM_f483ecf1-cd17-4991-854b-e52dfc957b45_5 teamNode
+    class NODE_27137699-cee1-4b15-8f13-254bbd2d05df nonRootPlayerNode
+    class TRADE_MAIN,TRADE_18502be8-640e-4622-90b6-ad44fa76285d_3 tradeNode

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Breadcrumb, Space, Dropdown, Button } from "antd";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
@@ -26,9 +26,10 @@ const ContextBreadcrumb: React.FC = () => {
   const location = useLocation();
   const { data: franchises } = useFranchises();
   const { data: seasons } = useSeasons();
+  const [seasonDropdownOpen, setSeasonDropdownOpen] = useState(false);
 
-  // Don't show breadcrumb on homepage or trade detail pages
-  if (location.pathname === '/' || location.pathname.startsWith('/trade/')) {
+  // Don't show breadcrumb on homepage, trade detail pages, or wrapped page
+  if (location.pathname === '/' || location.pathname.startsWith('/trade/') || location.pathname.endsWith('/wrapped') ||location.pathname === '/wrapped') {
     return null;
   }
 
@@ -62,6 +63,7 @@ const ContextBreadcrumb: React.FC = () => {
   // Handle season switching
   const handleSeasonChange = (year: number) => {
     dispatch(setSelectedSeason(year));
+    setSeasonDropdownOpen(false); // Close dropdown after selection
     
     if (isRecordsPage) {
       // Stay on records page but update context
@@ -94,6 +96,7 @@ const ContextBreadcrumb: React.FC = () => {
   // Handle clearing season context
   const handleClearSeason = () => {
     dispatch(clearSelectedSeason());
+    setSeasonDropdownOpen(false); // Close dropdown after selection
     if (isRecordsPage) {
       // Stay on records page but clear season context
       navigate('/records');
@@ -126,25 +129,61 @@ const ContextBreadcrumb: React.FC = () => {
     },
   ];
 
-  // Create season dropdown menu
-  const seasonMenuItems: MenuProps["items"] = [
-    ...(seasons
-      ?.sort((a, b) => b.Year - a.Year) // Sort by year descending (most recent first)
-      .map((season) => ({
-        key: season.Year,
-        label: season.Name,
-        onClick: () => handleSeasonChange(season.Year),
-      })) || []),
-    // Add separator and "All Seasons" option
-    {
-      type: "divider",
-    },
-    {
-      key: "all-seasons",
-      label: "All Seasons",
-      onClick: handleClearSeason,
-    },
-  ];
+  // Create season dropdown menu with multiple columns for mobile
+  const seasonDropdownOverlay = (
+    <div style={{ 
+      background: 'white', 
+      borderRadius: '8px', 
+      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
+      padding: '8px',
+      minWidth: '320px',
+      maxHeight: '400px',
+      overflowY: 'auto'
+    }}>
+      <div style={{ 
+        display: 'grid', 
+        gridTemplateColumns: 'repeat(auto-fill, minmax(80px, 1fr))',
+        gap: '4px'
+      }}>
+        {seasons
+          ?.sort((a, b) => b.Year - a.Year)
+          .map((season) => (
+            <Button
+              key={season.Year}
+              type="text"
+              size="small"
+              onClick={() => handleSeasonChange(season.Year)}
+              style={{
+                height: '32px',
+                padding: '4px 8px',
+                fontSize: '13px',
+                textAlign: 'center',
+                border: selectedSeason === season.Year ? '1px solid #1890ff' : '1px solid transparent',
+                backgroundColor: selectedSeason === season.Year ? '#e6f7ff' : 'transparent'
+              }}
+            >
+              {season.Year}
+            </Button>
+          ))}
+      </div>
+      <div style={{ borderTop: '1px solid #f0f0f0', marginTop: '8px', paddingTop: '8px' }}>
+        <Button
+          type="text"
+          size="small"
+          onClick={handleClearSeason}
+          style={{
+            width: '100%',
+            height: '32px',
+            fontSize: '13px',
+            border: !selectedSeason ? '1px solid #1890ff' : '1px solid transparent',
+            backgroundColor: !selectedSeason ? '#e6f7ff' : 'transparent'
+          }}
+        >
+          All Seasons
+        </Button>
+      </div>
+    </div>
+  );
 
   // Handle going home (clear all context)
   const handleGoHome = () => {
@@ -174,9 +213,11 @@ const ContextBreadcrumb: React.FC = () => {
   items.push({
     title: (
       <Dropdown
-        menu={{ items: seasonMenuItems }}
+        dropdownRender={() => seasonDropdownOverlay}
         trigger={["click"]}
         placement="bottomLeft"
+        open={seasonDropdownOpen}
+        onOpenChange={setSeasonDropdownOpen}
       >
         <Button type="text" className="breadcrumb-dropdown">
           <Space>

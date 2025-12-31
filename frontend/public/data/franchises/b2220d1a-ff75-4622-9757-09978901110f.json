@@ -289,11 +289,11 @@
       "Id": "e9f0c3e0-7689-4219-9483-e289ad81dee8",
       "Year": 2025,
       "TeamName": "The Bad Guys",
-      "Wins": 7,
+      "Wins": 8,
       "Losses": 7,
       "Ties": 0,
-      "Points": 1564.84,
-      "Standing": 4,
+      "Points": 1679.8,
+      "Standing": 3,
       "Champion": false,
       "SecondPlace": false
     }
@@ -353,9 +353,9 @@
         "PlayerID": 30121,
         "PlayerName": "Christian McCaffrey",
         "Position": "RB",
-        "TotalPoints": 1486.0,
-        "WeeksStarted": 102,
-        "AveragePoints": 14.6,
+        "TotalPoints": 1798.9,
+        "WeeksStarted": 118,
+        "AveragePoints": 15.2,
         "SeasonsWithFranchise": [
           2017,
           2018,
@@ -364,7 +364,8 @@
           2021,
           2022,
           2023,
-          2024
+          2024,
+          2025
         ],
         "IsBench": false
       },
@@ -476,16 +477,17 @@
         "PlayerID": 31056,
         "PlayerName": "Mark Andrews",
         "Position": "TE",
-        "TotalPoints": 672.5,
-        "WeeksStarted": 77,
-        "AveragePoints": 8.7,
+        "TotalPoints": 673.0,
+        "WeeksStarted": 78,
+        "AveragePoints": 8.6,
         "SeasonsWithFranchise": [
           2019,
           2020,
           2021,
           2022,
           2023,
-          2024
+          2024,
+          2025
         ],
         "IsBench": false
       },

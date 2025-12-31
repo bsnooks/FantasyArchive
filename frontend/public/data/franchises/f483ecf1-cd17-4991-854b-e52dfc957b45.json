@@ -292,9 +292,9 @@
       "Year": 2025,
       "TeamName": "Football in the Groin",
       "Wins": 4,
-      "Losses": 10,
+      "Losses": 11,
       "Ties": 0,
-      "Points": 1439.48,
+      "Points": 1546.82,
       "Standing": 10,
       "Champion": false,
       "SecondPlace": false
@@ -433,14 +433,15 @@
         "PlayerID": 32692,
         "PlayerName": "Justin Jefferson",
         "Position": "WR",
-        "TotalPoints": 654.9,
-        "WeeksStarted": 48,
-        "AveragePoints": 13.6,
+        "TotalPoints": 762.0,
+        "WeeksStarted": 64,
+        "AveragePoints": 11.9,
         "SeasonsWithFranchise": [
           2021,
           2022,
           2023,
-          2024
+          2024,
+          2025
         ],
         "IsBench": false
       },

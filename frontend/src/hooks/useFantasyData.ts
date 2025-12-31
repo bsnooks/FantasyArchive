@@ -18,6 +18,14 @@ const fetchSeasons = async (): Promise<Season[]> => {
   return response.json();
 };
 
+const fetchWrappedData = async (franchiseId: string, year: string): Promise<any> => {
+  const response = await fetch(`/data/wrapped/franchises/${franchiseId}_${year}.json`);
+  if (!response.ok) {
+    throw new Error(`Wrapped data not found for ${year}`);
+  }
+  return response.json();
+};
+
 // React Query hooks
 export const useFranchises = () => {
   return useQuery({
@@ -34,5 +42,15 @@ export const useSeasons = () => {
     queryFn: fetchSeasons,
     staleTime: 1000 * 60 * 5, // 5 minutes
     retry: 3,
+  });
+};
+
+export const useWrappedData = (franchiseId?: string, year?: string) => {
+  return useQuery({
+    queryKey: ['wrapped', franchiseId, year],
+    queryFn: () => fetchWrappedData(franchiseId!, year!),
+    enabled: !!(franchiseId && year),
+    staleTime: 1000 * 60 * 30, // 30 minutes - wrapped data changes less frequently
+    retry: 1,
   });
 };

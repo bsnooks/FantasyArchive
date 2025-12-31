@@ -1,0 +1,28 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Nov 27, 2025")
+    TEAM_1("FB in the Groin")
+    TEAM_2("She's the Fastest")
+    NODE_93d1bb38-612e-48ac-9bf0-35f1e8df02fa("🔄 Rhamondre Stevenson - Nov 27, 2025")
+    NODE_58aa0b10-a570-4257-b688-386b413df68a("🔄 TreVeyon Henderson - Nov 27, 2025")
+    NODE_eb2227f6-3559-49e9-b86c-60895c683e42("🔄 Jameson Williams - Nov 27, 2025")
+    NODE_cb47a200-3003-4b4d-a50c-df037cefdce4("🔄 Chase Brown - Nov 27, 2025")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_93d1bb38-612e-48ac-9bf0-35f1e8df02fa
+    TEAM_1 --> NODE_58aa0b10-a570-4257-b688-386b413df68a
+    TEAM_2 --> NODE_eb2227f6-3559-49e9-b86c-60895c683e42
+    TEAM_2 --> NODE_cb47a200-3003-4b4d-a50c-df037cefdce4
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

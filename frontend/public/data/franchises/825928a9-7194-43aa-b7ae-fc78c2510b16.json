@@ -290,10 +290,10 @@
       "Year": 2025,
       "TeamName": "Laters",
       "Wins": 6,
-      "Losses": 8,
+      "Losses": 9,
       "Ties": 0,
-      "Points": 1475.48,
-      "Standing": 6,
+      "Points": 1576.38,
+      "Standing": 8,
       "Champion": false,
       "SecondPlace": false
     }
@@ -349,15 +349,16 @@
         "PlayerID": 32676,
         "PlayerName": "Justin Herbert",
         "Position": "QB",
-        "TotalPoints": 1268.2,
-        "WeeksStarted": 69,
+        "TotalPoints": 1567.1,
+        "WeeksStarted": 85,
         "AveragePoints": 18.4,
         "SeasonsWithFranchise": [
           2020,
           2021,
           2022,
           2023,
-          2024
+          2024,
+          2025
         ],
         "IsBench": true
       }

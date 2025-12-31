@@ -361,7 +361,8 @@ namespace FantasyArchive.Data
 
                 entity.Property(e => e.TransactionGroupId).HasColumnName("TransactionGroupID");
 
-                entity.Property(e => e.TransactionType).HasDefaultValueSql("((1))");
+                entity.Property(e => e.TransactionType)
+                    .HasDefaultValueSql("((1))");
 
                 entity.HasOne(d => d.DraftPick)
                     .WithMany(p => p.Transactions)

@@ -1,0 +1,24 @@
+flowchart TD
+
+    TRADE_MAIN("🔄 Initial Trade - Oct 15, 2025")
+    TEAM_1("Laters")
+    TEAM_2("She's the Fastest")
+    NODE_bcdcb9e7-1cec-4bcf-a482-dd5b45d74ea4("🔄 Jordan Addison - Oct 15, 2025")
+    NODE_879226da-a131-4ec5-a68a-ef2687254b6d("🔄 D'Andre Swift - Oct 15, 2025")
+
+    TRADE_MAIN --> TEAM_1
+    TRADE_MAIN --> TEAM_2
+    TEAM_1 --> NODE_bcdcb9e7-1cec-4bcf-a482-dd5b45d74ea4
+    TEAM_2 --> NODE_879226da-a131-4ec5-a68a-ef2687254b6d
+
+    %% Node styling
+    classDef teamNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef tradeNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef playerNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    classDef nonRootPlayerNode fill:#f5f5f5,stroke:#757575,stroke-width:1px
+    classDef endNode fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef waiverNode fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef championshipNode fill:#fff9c4,stroke:#f57f17,stroke-width:3px
+
+    class TEAM_1,TEAM_2 teamNode
+    class TRADE_MAIN tradeNode

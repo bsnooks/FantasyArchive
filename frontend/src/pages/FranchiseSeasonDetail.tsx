@@ -1,14 +1,15 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useFranchises, useSeasons } from '../hooks/useFantasyData';
 import LoadingSkeleton from '../components/LoadingSkeleton';
 import EmptyState from '../components/EmptyState';
 import FranchiseLogo from '../components/FranchiseLogo';
-import { Result, Card, Statistic, Row, Col } from 'antd';
-import { CalendarOutlined, TrophyOutlined, TeamOutlined } from '@ant-design/icons';
+import { Result, Card, Statistic, Row, Col, Button, Space } from 'antd';
+import { CalendarOutlined, TrophyOutlined, TeamOutlined, GiftOutlined } from '@ant-design/icons';
 
 const FranchiseSeasonDetail: React.FC = () => {
   const { franchiseId, year } = useParams<{ franchiseId: string; year: string }>();
+  const navigate = useNavigate();
   const { data: franchises, isLoading: franchisesLoading } = useFranchises();
   const { data: seasons, isLoading: seasonsLoading } = useSeasons();
 
@@ -47,12 +48,25 @@ const FranchiseSeasonDetail: React.FC = () => {
           size="large"
           className="rounded shadow"
         />
-        <div>
+        <div style={{ flex: 1 }}>
           <h1 style={{ margin: 0 }}>{team.TeamName}</h1>
           <p style={{ margin: 0, fontSize: '16px', color: '#666' }}>
             {franchise.Name} • {year} Season
           </p>
         </div>
+        <Button 
+          type="primary"
+          icon={<GiftOutlined />}
+          size="large"
+          onClick={() => navigate(`/franchise/${franchiseId}/season/${year}/wrapped`)}
+          style={{ 
+            background: 'linear-gradient(45deg, #1890ff, #52c41a)',
+            border: 'none',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.15)'
+          }}
+        >
+          View {year} Wrapped
+        </Button>
       </div>
 
       <Row gutter={[16, 16]} style={{ marginBottom: '24px' }}>

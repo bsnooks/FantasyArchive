@@ -291,10 +291,10 @@
       "Year": 2025,
       "TeamName": "Army of Dakness",
       "Wins": 5,
-      "Losses": 9,
+      "Losses": 10,
       "Ties": 0,
-      "Points": 1582.12,
-      "Standing": 7,
+      "Points": 1684.84,
+      "Standing": 6,
       "Champion": false,
       "SecondPlace": false
     }
@@ -305,9 +305,9 @@
         "PlayerID": 30123,
         "PlayerName": "Patrick Mahomes",
         "Position": "QB",
-        "TotalPoints": 2318.7,
-        "WeeksStarted": 106,
-        "AveragePoints": 21.9,
+        "TotalPoints": 2605.4,
+        "WeeksStarted": 120,
+        "AveragePoints": 21.7,
         "SeasonsWithFranchise": [
           2018,
           2019,
@@ -315,7 +315,29 @@
           2021,
           2022,
           2023,
-          2024
+          2024,
+          2025
+        ],
+        "IsBench": false
+      },
+      {
+        "PlayerID": 29369,
+        "PlayerName": "Dak Prescott",
+        "Position": "QB",
+        "TotalPoints": 2290.7,
+        "WeeksStarted": 134,
+        "AveragePoints": 17.1,
+        "SeasonsWithFranchise": [
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
         ],
         "IsBench": false
       },
@@ -337,26 +359,6 @@
           2013,
           2014,
           2015
-        ],
-        "IsBench": false
-      },
-      {
-        "PlayerID": 29369,
-        "PlayerName": "Dak Prescott",
-        "Position": "QB",
-        "TotalPoints": 2019.9,
-        "WeeksStarted": 120,
-        "AveragePoints": 16.8,
-        "SeasonsWithFranchise": [
-          2016,
-          2017,
-          2018,
-          2019,
-          2020,
-          2021,
-          2022,
-          2023,
-          2024
         ],
         "IsBench": true
       }
@@ -431,6 +433,22 @@
         "IsBench": false
       },
       {
+        "PlayerID": 33393,
+        "PlayerName": "Ja\u0027Marr Chase",
+        "Position": "WR",
+        "TotalPoints": 870.6,
+        "WeeksStarted": 70,
+        "AveragePoints": 12.4,
+        "SeasonsWithFranchise": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "IsBench": false
+      },
+      {
         "PlayerID": 23997,
         "PlayerName": "Demaryius Thomas",
         "Position": "WR",
@@ -443,21 +461,6 @@
           2014,
           2015,
           2016
-        ],
-        "IsBench": false
-      },
-      {
-        "PlayerID": 33393,
-        "PlayerName": "Ja\u0027Marr Chase",
-        "Position": "WR",
-        "TotalPoints": 695.6,
-        "WeeksStarted": 55,
-        "AveragePoints": 12.6,
-        "SeasonsWithFranchise": [
-          2021,
-          2022,
-          2023,
-          2024
         ],
         "IsBench": false
       },

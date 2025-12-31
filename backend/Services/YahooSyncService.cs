@@ -298,7 +298,7 @@ namespace FantasyArchive.Api.Services
 
                             if (!playerCache.ContainsKey(yahooPlayerId))
                             {
-                                Console.Write($"Need to add {yahooPlayerId}");
+                                Console.WriteLine($"Need to add {yahooPlayerId}");
                                 playerCache.Add(yahooPlayerId, await SyncPlayer(client, season, yahooPlayerId, cancellationToken));
                             }
                             else
@@ -508,23 +508,27 @@ namespace FantasyArchive.Api.Services
 
             if (result != null)
             {
-                IDictionary<int, Team> teamCache = season.Teams.ToDictionary(s => s.YahooTeamId.Value, s => s);
+                // Query teams directly from database to avoid tracking conflicts
+                var teams = await dbContext.Teams
+                    .Where(t => t.LeagueID == season.LeagueID && t.Year == season.Year)
+                    .ToListAsync(cancellationToken);
+                    
+                IDictionary<int, Team> teamCache = teams.ToDictionary(s => s.YahooTeamId.Value, s => s);
 
-                IList<Match> matches = new List<Match>();
-                IList<TeamScore> teamScores = new List<TeamScore>();
                 foreach (var yahooStanding in result.Standings.TeamList.Teams)
                 {
                     var team = teamCache[yahooStanding.TeamId];
+                    
+                    // Update the properties directly on the tracked entity
                     team.Standing = yahooStanding.TeamStandings.Rank;
                     team.Points = yahooStanding.TeamStandings.PointsFor;
                     team.Wins = yahooStanding.TeamStandings.OutcomeTotals.Wins;
                     team.Loses = yahooStanding.TeamStandings.OutcomeTotals.Losses;
                     team.Ties = yahooStanding.TeamStandings.OutcomeTotals.Ties;
-
+                    
                     Console.WriteLine($"{yahooStanding.TeamKey} in {yahooStanding.TeamStandings.Rank} place");
                 }
 
-                dbContext.Seasons.Update(season);
                 await dbContext.SaveChangesAsync(cancellationToken);
             }
         }
@@ -838,7 +842,9 @@ namespace FantasyArchive.Api.Services
             if (existingPlayer != null && !existingPlayer.PlayerSeasons.Any(x => x.Year == season.Year))
             {
                 Console.WriteLine($"Added {existingPlayer.Name} ({existingPlayer.PrimaryPosition}): to {season.Year}");
-                await playerRepository.UpdatePlayerSeasons(
+                try
+                {
+                    await playerRepository.UpdatePlayerSeasons(
                                     new PlayerSeason()
                                     {
                                         PlayerID = existingPlayer.PlayerID,
@@ -848,6 +854,11 @@ namespace FantasyArchive.Api.Services
                                         PositionRankPpg = 0,
                                         GamesPlayed = 0,
                                     });
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Player likely already added to season");
+                }
             }
         }
 

@@ -6,7 +6,8 @@ import {
   CalendarOutlined, 
   TeamOutlined, 
   TrophyOutlined,
-  PartitionOutlined
+  PartitionOutlined,
+  GiftOutlined
 } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import './Navigation.css';
@@ -19,6 +20,7 @@ const Navigation: React.FC = () => {
   const navItems = [
     { path: '/', label: 'Home', icon: <HomeOutlined /> },
     { path: '/records', label: 'Records', icon: <TrophyOutlined /> },
+    { path: '/wrapped', label: 'Wrapped', icon: <GiftOutlined /> },
     { path: '/seasons', label: 'Seasons', icon: <CalendarOutlined /> },
     { path: '/franchises', label: 'Franchises', icon: <TeamOutlined /> },
     { path: '/trade-trees', label: 'Trade Trees', icon: <PartitionOutlined /> },

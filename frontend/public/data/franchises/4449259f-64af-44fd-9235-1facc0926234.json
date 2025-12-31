@@ -289,10 +289,10 @@
       "Id": "6eb662c8-2cbb-40eb-a1d0-222d5327da9f",
       "Year": 2025,
       "TeamName": "She\u0027s the Fastest",
-      "Wins": 12,
+      "Wins": 13,
       "Losses": 2,
       "Ties": 0,
-      "Points": 1733.64,
+      "Points": 1915.06,
       "Standing": 1,
       "Champion": false,
       "SecondPlace": false
@@ -326,15 +326,16 @@
         "PlayerID": 31833,
         "PlayerName": "Kyler Murray",
         "Position": "QB",
-        "TotalPoints": 1269.1,
-        "WeeksStarted": 60,
-        "AveragePoints": 21.2,
+        "TotalPoints": 1348.8,
+        "WeeksStarted": 65,
+        "AveragePoints": 20.8,
         "SeasonsWithFranchise": [
           2019,
           2020,
           2021,
           2022,
-          2024
+          2024,
+          2025
         ],
         "IsBench": false
       },
@@ -342,18 +343,36 @@
         "PlayerID": 9265,
         "PlayerName": "Matthew Stafford",
         "Position": "QB",
-        "TotalPoints": 627.6,
-        "WeeksStarted": 36,
-        "AveragePoints": 17.4,
+        "TotalPoints": 916.6,
+        "WeeksStarted": 49,
+        "AveragePoints": 18.7,
         "SeasonsWithFranchise": [
           2013,
           2014,
-          2024
+          2024,
+          2025
         ],
         "IsBench": true
       }
     ],
     "RunningBacks": [
+      {
+        "PlayerID": 32711,
+        "PlayerName": "Jonathan Taylor",
+        "Position": "RB",
+        "TotalPoints": 1115.8,
+        "WeeksStarted": 70,
+        "AveragePoints": 15.9,
+        "SeasonsWithFranchise": [
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "IsBench": false
+      },
       {
         "PlayerID": 8801,
         "PlayerName": "Chris Johnson",
@@ -382,22 +401,6 @@
           2017,
           2018,
           2019
-        ],
-        "IsBench": false
-      },
-      {
-        "PlayerID": 32711,
-        "PlayerName": "Jonathan Taylor",
-        "Position": "RB",
-        "TotalPoints": 801.4,
-        "WeeksStarted": 54,
-        "AveragePoints": 14.8,
-        "SeasonsWithFranchise": [
-          2020,
-          2021,
-          2022,
-          2023,
-          2024
         ],
         "IsBench": true
       }
@@ -459,18 +462,17 @@
         "IsBench": false
       },
       {
-        "PlayerID": 31896,
-        "PlayerName": "DK Metcalf",
+        "PlayerID": 33500,
+        "PlayerName": "Amon-Ra St. Brown",
         "Position": "WR",
-        "TotalPoints": 532.0,
-        "WeeksStarted": 51,
-        "AveragePoints": 10.4,
+        "TotalPoints": 676.0,
+        "WeeksStarted": 60,
+        "AveragePoints": 11.3,
         "SeasonsWithFranchise": [
-          2019,
-          2020,
-          2021,
           2022,
-          2024
+          2023,
+          2024,
+          2025
         ],
         "IsBench": true
       }

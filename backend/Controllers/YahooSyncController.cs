@@ -56,6 +56,8 @@ namespace FantasyArchive.Api.Controllers
             }
             catch (Exception ex)
             {
+                Console.WriteLine($"SyncSeason error: {ex.Message}");
+                Console.WriteLine($"Stack trace: {ex.StackTrace}");
                 return StatusCode(500, new { error = ex.Message });
             }
         }
@@ -84,6 +86,8 @@ namespace FantasyArchive.Api.Controllers
             }
             catch (Exception ex)
             {
+                Console.WriteLine($"SyncKeepers error: {ex.Message}");
+                Console.WriteLine($"Stack trace: {ex.StackTrace}");
                 return StatusCode(500, new { error = ex.Message });
             }
         }
@@ -112,6 +116,8 @@ namespace FantasyArchive.Api.Controllers
             }
             catch (Exception ex)
             {
+                Console.WriteLine($"SyncTransactions error: {ex.Message}");
+                Console.WriteLine($"Stack trace: {ex.StackTrace}");
                 return StatusCode(500, new { error = ex.Message });
             }
         }
@@ -140,6 +146,8 @@ namespace FantasyArchive.Api.Controllers
             }
             catch (Exception ex)
             {
+                Console.WriteLine($"SyncMatchups error: {ex.Message}");
+                Console.WriteLine($"Stack trace: {ex.StackTrace}");
                 return StatusCode(500, new { error = ex.Message });
             }
         }
@@ -168,6 +176,8 @@ namespace FantasyArchive.Api.Controllers
             }
             catch (Exception ex)
             {
+                Console.WriteLine($"SyncStandings error: {ex.Message}");
+                Console.WriteLine($"Stack trace: {ex.StackTrace}");
                 return StatusCode(500, new { error = ex.Message });
             }
         }
@@ -196,6 +206,8 @@ namespace FantasyArchive.Api.Controllers
             }
             catch (Exception ex)
             {
+                Console.WriteLine($"SyncDraft error: {ex.Message}");
+                Console.WriteLine($"Stack trace: {ex.StackTrace}");
                 return StatusCode(500, new { error = ex.Message });
             }
         }
@@ -224,6 +236,8 @@ namespace FantasyArchive.Api.Controllers
             }
             catch (Exception ex)
             {
+                Console.WriteLine($"SyncCurrentWeek error: {ex.Message}");
+                Console.WriteLine($"Stack trace: {ex.StackTrace}");
                 return StatusCode(500, new { error = ex.Message });
             }
         }
@@ -252,6 +266,8 @@ namespace FantasyArchive.Api.Controllers
             }
             catch (Exception ex)
             {
+                Console.WriteLine($"SyncPlayerStats error: {ex.Message}");
+                Console.WriteLine($"Stack trace: {ex.StackTrace}");
                 return StatusCode(500, new { error = ex.Message });
             }
         }
@@ -280,6 +296,8 @@ namespace FantasyArchive.Api.Controllers
             }
             catch (Exception ex)
             {
+                Console.WriteLine($"SyncPlayerRoster error: {ex.Message}");
+                Console.WriteLine($"Stack trace: {ex.StackTrace}");
                 return StatusCode(500, new { error = ex.Message });
             }
         }
@@ -308,6 +326,8 @@ namespace FantasyArchive.Api.Controllers
             }
             catch (Exception ex)
             {
+                Console.WriteLine($"SyncWeeklyRoster error: {ex.Message}");
+                Console.WriteLine($"Stack trace: {ex.StackTrace}");
                 return StatusCode(500, new { error = ex.Message });
             }
         }
@@ -336,6 +356,8 @@ namespace FantasyArchive.Api.Controllers
             }
             catch (Exception ex)
             {
+                Console.WriteLine($"SyncWeeklyPlayerStats error: {ex.Message}");
+                Console.WriteLine($"Stack trace: {ex.StackTrace}");
                 return StatusCode(500, new { error = ex.Message });
             }
         }
