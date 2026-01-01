@@ -29,54 +29,6 @@ import FranchiseLogo from '../components/FranchiseLogo';
 
 const { Title, Text } = Typography;
 
-const WrappedSeason: React.FC = () => {
-  const { franchiseId, year } = useParams<{ franchiseId: string; year: string }>();
-    WorstWeek: {
-      Week: number;
-      Points: number;
-      Opponent: string;
-      OpponentPoints: number;
-      Won: boolean;
-      Margin: number;
-    };
-    AverageWeeklyScore: number;
-    HighestWeeklyScore: number;
-    LowestWeeklyScore: number;
-    WeeksAsHighScorer: number;
-    WeeksAsLowScorer: number;
-    PointsAgainst: number;
-    AverageMarginOfVictory: number;
-    AverageMarginOfDefeat: number;
-    BlowoutWins: number;
-    HeartbreakLosses: number;
-  };
-  Players: {
-    MVP: PlayerHighlight;
-    MostConsistent: PlayerHighlight;
-    Breakout: PlayerHighlight;
-    Disappointment: PlayerHighlight;
-    BestDraftPick: PlayerHighlight;
-    WorstDraftPick: PlayerHighlight;
-    TopStarters: PlayerHighlight[];
-  };
-  LeagueComparisons: {
-    PointsRank: number;
-    PointsRankSuffix: string;
-    PointsAboveAverage: number;
-    WinsRank: number;
-    WinsRankSuffix: string;
-    WinPercentage: number;
-    LeagueAverageWinPercentage: number;
-    HighScoreWeeksRank: number;
-    ConsistencyRank: number;
-    StrongestPosition: string;
-    WeakestPosition: string;
-  };
-  FunFacts: string[];
-  Achievements: any[];
-  HeadToHeadRecords: any[];
-}
-
 interface PlayerHighlight {
   PlayerID: number;
   PlayerName: string;
@@ -96,7 +48,7 @@ interface PlayerHighlight {
 const WrappedSeason: React.FC = () => {
   const { franchiseId, year } = useParams<{ franchiseId: string; year: string }>();
   const navigate = useNavigate();
-  const { data: franchises, isLoading: franchisesLoading } = useFranchises();
+  const { isLoading: franchisesLoading } = useFranchises();
   const { data: wrappedData, isLoading: wrappedLoading, error } = useWrappedData(franchiseId, year);
 
   if (franchisesLoading || wrappedLoading) {
